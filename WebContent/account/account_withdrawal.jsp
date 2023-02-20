@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../assets/account/account_withdrawal.css">
+<link rel="stylesheet" href="../assets/css/account/account_withdrawal.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -21,7 +21,7 @@
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="../assets/img/logo.png">
+						<img alt="" src="../assets/img/account/logo.png">
 					</header>
 					<div id="withdrawal_select">
 						<h1 style="position: relative">

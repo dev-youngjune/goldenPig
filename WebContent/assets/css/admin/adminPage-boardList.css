@@ -2,7 +2,7 @@
 
 .container {
 	width: 100%;
-	margin-left: 300px;
+	margin-left: 250px;
 }
 
 tr {
@@ -11,8 +11,7 @@ tr {
 }
 
 table th, table td {
-	text-align: left;
-	font-size: 20px;
+	font-size: 12px;
 	padding-left: 10px;
 }
 
@@ -21,24 +20,28 @@ table td {
 }
 
 table {
+	text-align : center;
 	width: 100%;
 	border-collapse: collapse
 }
 
-.board-info-box-layout {
-	margin: 20px;
-}
-
 .board-info-box {
 	border: 0.0625rem solid #f2f2f2;
-	border-radius: 10px;
-	background: #fff;
+    box-shadow: 11px 13px 11px -14px grey;
+    background: #fff;
+}
+
+.info-title-box-flex {
+	display: flex;
+	justify-content: flex-start;
 }
 
 .info-title-box {
 	width: 100%;
-	height: 54px;
-	background: #ca3e47;
+	height: 55px;
+	border-radius: 3px;
+	background: #fff;
+	box-shadow: 11px 13px 11px -14px grey;
 }
 
 .info-table {
@@ -51,6 +54,45 @@ table {
 }
 
 .board-info-title-box {
-	font-size: 30px;
+	font-size: 15px;
 	font-weight: bold;
+}
+
+.logo-box img {
+	width: 100px;
+}
+
+.logo-box {
+	padding: 5px 43px 0px;
+}
+
+.logo-box-layout {
+	width: 250px;	
+}
+
+.select-name {
+	padding-top : 20px;
+	padding-left: 5px;
+}
+
+.delete-box {
+	text-align: right;
+}
+
+.delete-button {
+	box-shadow: 2px 2px 7px -2px grey;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: none;
+    width: 120px;
+    height: 50px;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.container-margin {
+	margin: 40px 100px 0px;
+}
+
+.board-info-box-layout {
+	margin-top: 30px;	
 }

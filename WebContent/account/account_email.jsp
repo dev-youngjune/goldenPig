@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이메일 변경하기</title>
-<link rel="stylesheet" href="../assets/account/account_email.css">
+<link rel="stylesheet" href="../assets/css/account/account_email.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -21,7 +21,7 @@
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="../assets/img/logo.png" style="width: 96px; height: 54px; cursor: pointer">
+						<img alt="" src="../assets/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
 					</header>
 					<div id="withdrawal_select">
 							<h1 style="position: relative">
@@ -31,7 +31,7 @@
 								<span style="font-weight: 600;--tw-text-opacity: 1; color: rgba(156, 165, 179, var(--tw-text-opacity));">자주 사용하는 이메일을 입력해 주세요!</span>
 							</div>
 						<div style="display: block; padding-top: 2.5rem">
-							<label>이메일</label>
+							<span>이메일</span>
 							<div id="input_email">
 								<input id="email_text" type="text" placeholder="이메일을 입력해 주세요.">
 							</div>
