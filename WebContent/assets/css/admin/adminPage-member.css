@@ -2,7 +2,7 @@
 
 .container {
 	width: 100%;
-	padding-left: 300px;
+	padding-left: 250px;
 }
 
 .member-info-box-layout {
@@ -10,7 +10,7 @@
 }
 
 .member-info-box {
-	width: 35rem;
+	width: 22rem;
 	border: 0.0625rem solid #f2f2f2;
 	border-radius: 10px;
 	background: #fff;
@@ -19,11 +19,12 @@
 
 .info-title-box {
 	width: 100%;
-	height: 54px;
-	background: #ca3e47;
+	height: 35px;
+	background: #b1b1b1;
 }
 
 .notice-title-box-layout {
+	box-shadow: 0px -2px 11px -3px #b1b1b1;
 	padding: 20px;
 }
 
@@ -56,21 +57,16 @@ p {
 .member-img {
 	/* 현재는 기본이미지 */
 	background-image: url('../../img/admin/nomal_person_icon.png');
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	margin: 0 auto;
 	border-radius: 50%;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.info-flex {
-	display: flex;
-	justify-content: space-around;
-}
-
 .member-nickname {
-	font-size: 20px;
+	font-size: 15px;
 }
 
 .info-tag {
@@ -93,7 +89,8 @@ p {
 }
 
 .prev {
-	width: 30px;
+	margin-top: 5px;
+	width: 20px;
 }
 
 .edit-relative {
@@ -101,11 +98,15 @@ p {
 	padding-left: 18px;
 }
 
+.edit-relative a {
+	font-size: 13px;	
+}
+
 .edit {
 	position: absolute;
 	left: 0;
-	top: 5px;
-	width: 15px;
+	top: 8px;
+	width: 13px;;
 	filter: invert(68%) sepia(19%) saturate(17%) hue-rotate(6deg)
 		brightness(90%) contrast(90%);
 }
