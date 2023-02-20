@@ -21,7 +21,7 @@
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="../assets/img/logo.png">
+						<img alt="" src="../assets/img/account/logo.png">
 					</header>
 					<div id="withdrawal_select">
 						<h1 style="position: relative">
