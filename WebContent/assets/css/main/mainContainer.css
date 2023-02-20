@@ -1,6 +1,15 @@
 @charset "EUC-KR";
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
 
 body {
+    font-family: "Pretendard",Helvetica,Arial,sans-serif;
 	background-color: #f8f8f8;
     text-shadow: none;
 }
@@ -75,8 +84,6 @@ div.home-button-wrapper a button {
 }
 
 .home-buttons div a button span {
-/* 	position: absolute;
-	top: 0;*/
 	vertical-align: top;
 	font-size: 1.125rem;
 	font-weight: 500;
@@ -162,6 +169,8 @@ button, input, select, textarea {
 .home-section-categoryCard div {
 	height: 134px;
     border: 1px solid #e3e3e3;
+   	background-color: white;
+   	border-radius: 8px;
 }
 
 .categoryCard img{
@@ -169,8 +178,19 @@ button, input, select, textarea {
 	height: 40px;
 }
 
+.home-section-categoryCard div div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
 
+.home-section-categoryCard div div a img{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
 
-
-
-
+.membership-desktop-img {
+	width: 560px;
+	height: 100px;
+}
