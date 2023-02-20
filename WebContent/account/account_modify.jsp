@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 수정</title>
-<link rel="stylesheet" href="../assets/account/account_modify.css">
+<link rel="stylesheet" href="../assets/css/account/account_modify.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';

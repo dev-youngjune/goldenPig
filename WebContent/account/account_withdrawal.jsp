@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../assets/account/account_withdrawal.css">
+<link rel="stylesheet" href="../assets/css/account/account_withdrawal.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
