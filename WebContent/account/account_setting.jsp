@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>계정 관리</title>
-<link rel="stylesheet" href="../assets/account/account_setting.css">
+<link rel="stylesheet" href="../assets/css/account/account_setting.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';

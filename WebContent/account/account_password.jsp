@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>비밀번호 재설정</title>
-<link rel="stylesheet" href="../assets/account/account_password.css">
+<link rel="stylesheet" href="../assets/css/account/account_password.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';

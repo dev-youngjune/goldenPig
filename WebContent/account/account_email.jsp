@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이메일 변경하기</title>
-<link rel="stylesheet" href="../assets/css/account_email.css">
+<link rel="stylesheet" href="../assets/css/account/account_email.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
