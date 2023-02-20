@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지- 공지사항 작성</title>
+<title>관리자 페이지- 공지사항 수정</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -12,44 +12,62 @@
 </head>
 <body>
 	<div>
-		<!-- 사이드 바 -->
-		<div id="side-bar"></div>
-		<!-- 사이드 바 끝-->
-		<div class="wrap">
-			<!-- 목록 -->
+		<div class="info-title-box info-title-box-flex">
+			<div class="logo-box-layout">
+				<div class="logo-box">
+					<img src="../assets/img/admin/logo_icon.png">
+				</div>
+			</div>
+			<div>
+				<div class="select-name">
+					<span>공지사항 수정</span>	
+				</div>
+			</div>
+		</div>
+		<div class="wrap"> 
+		
+			<!-- 사이드 바 -->
+			<div id="side-bar"></div>
+			<!-- 사이드 바 끝-->
+		
 			<div class="container">
-				<div class="info-title-box"></div>
-				<section class="notice-info-box-layout">
-					<div class="notice-info-box">
-						<div class="notice-info-title-box">
-							<span>공지사항 수정</span>
+				<div class="container-margin">
+					<!-- 헤더 -->
+					<div class="prev-button-layout">
+						<div>
+							<a>
+								<img src="../assets/img/admin/prev_icon.png" class="prev-icon">
+								<span class="prev-title">리스트로 돌아가기</span>
+							</a>
 						</div>
-						<form action="" class="notice-info-form">
-							<div class="notice-info">
-								<div>
-									<div class="form-title">
-										<span>제목</span>
-									</div>
-									<div class="form-input-box">
-										<input type="text" class="title" placeholder="제목을 입력해주세요.">
-									</div>
-								</div>
-								<div>
-									<div class="form-title form-margin">
-										<span>내용</span>
-									</div>
-									<div class="form-input-box">
-										<textarea class="content" spellcheck="false"
-											placeholder="내용을 입력해주세요."></textarea>
-									</div>
-								</div>
-								<div class="form-button-box">
-									<button>변경</button>
-								</div>
-							</div>
-						</form>
 					</div>
-				</section>
+					
+					<!-- 내용 섹션 -->
+					<section class="board-info-box-layout">
+						
+						<div class="board-info-box">
+							<div class="board-info-title-box">
+								<span>공지사항 수정하기</span>
+							</div>
+							<hr>
+							<div class="info-table">
+							<form action="">
+								<div>
+									<input type="text" class="notice-title" name="noticeTitle" placeholder="제목을 입력해주세요.">
+								</div>
+								<hr>
+								<div>
+									<textarea class="notice-content" name="noticeContent" placeholder="내용을 입력해주세요."></textarea>
+								</div>
+								<hr>
+								<div>
+									<button>등록</button>
+								</div>
+							</form>	
+							</div>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 	</div>
