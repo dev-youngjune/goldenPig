@@ -1,0 +1,182 @@
+@charset "UTF-8";
+body{
+	letter-spacing: -.15rem!important;
+}
+
+#wrap{
+	position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* mediaquary 나중에 넣을꺼 */
+#wrap{
+	padding: 152px 0 80px;
+    background: #f3f5f9;
+}
+main{
+	height: 100%;
+    width: 100%;
+}
+/* mediaquary 나중에 넣을꺼 */
+main{
+	margin: auto;
+    border-radius: 0.25rem;
+    max-width: 464px;
+    max-height: 650px;
+}
+#secession_board{
+	display: flex;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #fff;
+}
+/* mediaquary 나중에 넣을꺼 */
+#secession_board{
+	position: relative;
+    border-width: 1px;
+}
+header{
+	z-index: 10;
+	display: flex;
+    width: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 44px;
+    box-shadow: 0 1px 4px rgb(38 38 38 / 20%);
+}
+/* mediaquary 나중에 넣을꺼 */
+header{
+	position: absolute;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    top: -72px;
+    left: -24px;
+}
+#withdrawal_select{
+	height: 100%;
+    overflow: auto;
+    min-height: 344px;
+    padding-top: 10vh;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 384px;
+}
+/* mediaquary 나중에 넣을꺼 */
+#withdrawal_select{
+	padding-top: 40px;
+}
+h1{
+	font-size: 1.5rem;
+    line-height: 2rem;
+	font-weight: 700;
+	margin: 0;
+}
+#element:after{
+	position: absolute;
+    margin-left: 0.25rem;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    content: "";
+    width: 6px;
+    height: 6px;
+    bottom: 2px;
+}
+label{
+	cursor: pointer;
+}
+footer{
+	--tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-radius: 0 0 8px 8px;
+}
+a{
+	margin-top: 0px;
+    margin-right: 0.25rem;
+	font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    width: 100%;
+    color: inherit;
+    text-decoration: inherit;
+    cursor: pointer;
+    border: 1px solid;
+	border-color: rgba(230, 230, 230);
+}
+button{
+	border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgba(86, 130, 239, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(126, 165, 242, var(--tw-text-opacity));
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    width: 100%;
+    padding: 0;
+    background-image: none;
+    text-transform: none;
+    margin: 0;
+}
+label{
+	display: block;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    --tw-text-opacity: 1;
+    color: rgba(34, 37, 43, var(--tw-text-opacity));
+    margin-bottom: 1px;
+}
+#input_email{
+	--tw-border-opacity: 1;
+    border-color: rgba(229, 26, 7, var(--tw-border-opacity));
+    position: relative;
+    margin-bottom: 0.75rem;
+    border-bottom-width: 1px;
+    padding-bottom: 0.5rem;
+}
+#email_text{
+	display: block;
+    width: 100%;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    line-height: 1;
+    caret-color: #0206af;
+    height: 28px;
+    padding: 0;
+    color: inherit;
+    font-family: inherit;
+    margin: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+input::placeholder{
+	--tw-text-opacity: 1;
+    color: rgba(199, 199, 199, var(--tw-text-opacity));
+}
+

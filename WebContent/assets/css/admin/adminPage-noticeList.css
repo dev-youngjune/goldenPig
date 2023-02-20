@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+tr {
+	border-bottom: 0.5px solid #ca3e47;
+	line-height: 50px;
+}
+
+table th, table td {
+	text-align: left;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+table td {
+	white-space: nowrap;
+	font-weight: 300;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+
+.container {
+	width: 100%;
+	padding-left: 300px;
+}
+
+.menu-title-layout {
+	margin: 0 18px 0px 46px;;
+}
+
+.board-info-box-layout {
+	margin: 20px;
+}
+
+.board-info-box {
+	border: 0.0625rem solid #f2f2f2;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.info-title-box {
+	width: 100%;
+	height: 54px;
+	background: #ca3e47;
+}
+
+.info-table {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.board-info-title-box {
+	padding: 20px 27px 0;
+}
+
+.board-info-title-box {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.board-title-box-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.notice-write-button {
+	position: relative;
+	padding: 20px 27px 0;
+}
+
+.notice-write-button .icon {
+	position: absolute;
+	filter: none;
+	left: 0px;
+	padding: 0px;
+	width: 23px;
+}
+
+.modify-button {
+	padding-right: 20px;
+}
+
+.info-table .modify-button {
+	width: 10px;
+	font-weight: 500;
+}
+
+.modify-button button {
+	border: none;
+	background: none;
+	font-size: inherit;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 500;
+	margin-left: 5px;
+}

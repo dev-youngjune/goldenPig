@@ -1,0 +1,390 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Pdroject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pretendard","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    --tw-text-opacity: 1;
+    color: rgba(28, 26, 24, var(--tw-text-opacity));
+}
+
+body, body input {
+    letter-spacing: -.038rem!important;
+}
+
+body {
+    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
+}
+
+body {
+    font-family: inherit;
+    line-height: inherit;
+}
+
+body {
+    font-family: system-ui, -apple-system, /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+*, ::before, ::after {
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+*, ::before, ::after {
+    --tw-shadow: 0 0 #0000;
+}
+
+*, ::before, ::after {
+    --tw-border-opacity: 1;
+    border-color: rgba(230, 230, 230, var(--tw-border-opacity));
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+   /*  border-color: currentColor; */
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: block; 
+    margin : 0px!important;
+}
+
+.textTitle span {
+    position: relative;
+    font-size: 23px;
+    letter-spacing: -3px;
+}
+
+
+.layoutDefault {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* @media (min-width: 768px) */
+.layoutDefault {
+    padding: 152px 0 80px;
+    background: #f3f5f9;
+}
+
+.layoutDefault_view {
+    height: 100%;
+    width: 100%;
+}
+
+/* @media (min-width: 768px) */
+.layoutDefault_view {
+    margin: auto;
+    border-radius: 0.25rem;
+    max-width: 464px;
+    max-height: 650px;
+}
+
+.a_headerLogo {
+	width: 95px;
+    height: 55px;
+}
+
+main {
+    display: block;
+}
+
+.theFindAccount {
+    height: 100%;
+}
+
+.theScreen {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* @media (min-width: 768px) */
+.theScreen {
+    position: relative;
+    border-width: 1px;
+}
+
+.theScreen_header {
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 44px;
+    box-shadow: 0 1px 4px rgb(38 38 38 / 20%);
+}
+
+/* @media (min-width: 768px) */
+.theScreen_header {
+    position: absolute;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    top: -68px;
+}
+
+.theScreen_headerButton.-left {
+    left: 0px;
+}
+
+/* @media (min-width: 768px) */
+.theScreen_headerButton.-left {
+    display: none;
+}
+
+.theScreen_headerButton {
+    position: absolute;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    line-height: 1;
+    height: 44px;
+}
+
+/* @media (min-width: 768px) */
+.theScreen_headerButton.-left {
+    display: none;
+}
+
+
+button, [type='button'], [type='submit'] {
+    -webkit-appearance: button;
+}
+
+body button {
+    display: inline-flex;
+    align-items: center;
+}
+
+button, input, optgroup, select, textarea {
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    background-image: none;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    /* font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ; */
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+.theScreen_headerLogo {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.theScreen_body {
+    height: 100%;
+    overflow: auto;
+    min-height: 344px;
+    padding-top: 10vh;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* @media (min-width: 768px) */
+.theScreen_body {
+    padding-top: 40px;
+}
+
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+    margin: 0;
+}
+
+*, ::before, ::after {
+    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgba(59, 130, 246, 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.theFindAccount_message {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    --tw-text-opacity: 1;
+    color: rgba(156, 165, 179, var(--tw-text-opacity));
+    font-size: 14px;
+    word-break: keep-all;
+}
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+    margin: 0;
+}
+
+.textTitle span {
+    position: relative;
+}
+
+.textTitle span:after {
+    position: absolute;
+    margin-left: 0.25rem;
+    border-radius: 9999px;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    content: "";
+    width: 6px;
+    height: 6px;
+    bottom: 2px;
+}
+
+.theScreen_footer {
+    position: relative;
+    --tw-bg-opacity: 1;
+    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.Button.-primary.-filled {
+    border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.Button.-primary {
+    --tw-border-opacity: 1;
+    border-color: rgba(86, 130, 239, var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(2, 6, 175, var(--tw-text-opacity));
+}
+
+.Button.-large {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+}
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+}
+
+.w-full {
+    width: 100%;
+}
+

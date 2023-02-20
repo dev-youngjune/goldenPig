@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+
+#title_container{
+	max-width: 1400px;
+	width: 100%;
+	padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 734px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h3{
+	font-size: 24px;
+	margin-top: 25px;
+    margin-bottom: 12.5px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.3;
+    color: inherit;
+	margin: 0;
+}
+
+#management-color{
+	--bg-opacity: 1;
+    background-color: #fff;
+    background-color: rgba(255,255,255,var(--bg-opacity));
+}
+
+#management-margin{
+	margin-bottom: 1.25rem;
+	margin-top: 1.25rem;
+	justify-content: center;
+	display: flex;
+}
+#management-setting{
+	display: flex;
+	margin: 0;
+	margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+	color: #18181c;
+    padding: 8px 12px!important;
+    border-radius: 25px;
+}
+/* mediaquary 나중에 넣을꺼 */
+#management-setting{
+	float: left;
+    margin: 0;
+}
+.management-ul{
+	display: flex;
+}
+.link-li{
+	padding: 8px 20px!important;
+	border-radius: 25px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+#management-basic{
+	display: flex;
+	background-color: #f6f6f6;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	margin: 0;
+	
+}
+/* mediaquary 나중에 넣을꺼 */
+#management-basic{
+	overflow: hidden;
+	font-size: 1rem;
+	line-height: inherit;
+	white-space: normal;
+}
+#account-change {
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-top: 1.25rem;
+    margin-bottom: 8rem;
+    --bg-opacity: 1;
+    background-color: rgba(2,6,175,var(--bg-opacity));
+    --text-opacity: 1;
+    border-color: rgba(2,6,175,var(--border-opacity));
+	font-weight: 400;
+	border-radius: 8px;
+	border: 1px solid #eee;
+	height: 35px;
+	color: #fff;
+}
+ul{
+	font-family: 'Pretendard-Regular';
+}
+li{
+	font-family: 'Pretendard-Regular';
+}
+span {
+	font-family: 'Pretendard-Regular';
+}
+
+

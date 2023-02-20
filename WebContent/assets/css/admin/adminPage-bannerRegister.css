@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+.container {
+	width: 100%;
+	padding-left: 300px;
+}
+
+.banner-info-box-layout {
+	margin: 20px 10px;
+}
+
+.banner-info-box {
+	width: 35rem;
+	border: 0.0625rem solid #f2f2f2;
+	border-radius: 10px;
+	background: #fff;
+	margin: 0 auto;
+}
+
+.info-title-box {
+	width: 100%;
+	height: 54px;
+	background: #ca3e47;
+}
+
+.notice-title-box-layout {
+	padding: 20px;
+}
+
+h2 {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.3;
+	color: inherit;
+}
+
+.notice-title-box-layout .title {
+	word-wrap: break-word;
+	word-break: break-all;
+	margin: 20px 0;
+}
+
+.regist-date {
+	color: #b1b1b1;
+	font-size: 16px;
+}
+
+p {
+	margin: 0 0 12.5px;
+}
+
+.banner-img-box {
+	text-align: center;
+}
+
+.banner-img {
+	/* 현재는 기본이미지 */
+	background-image: url('../../img/admin/default_banner.png');
+	width: 100%;
+    height: 100px;
+    margin-top: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.info-flex {
+	display: flex;
+	justify-content: space-around;
+}
+
+.banner-nickname {
+	font-size: 20px;
+}
+
+.info-tag {
+	color: #b1b1b1;
+	font-size: 15px;
+}
+
+.info-margin {
+	margin: 22px 0;
+}
+
+.write-count-box {
+	display: flex;
+	width: 80px;
+	justify-content: space-between;
+}
+
+.write-count-box span {
+	font-weight: bold;
+}
+
+.prev {
+	width: 30px;
+}
+
+.edit-relative {
+	position: relative;
+	padding-left: 18px;
+}
+
+.edit {
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 15px;
+	filter: invert(68%) sepia(19%) saturate(17%) hue-rotate(6deg)
+		brightness(90%) contrast(90%);
+}
+
+.button-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+input {
+	font-family: 'Noto Sans KR', sans-serif;
+	outline: none;
+	border: none;
+	background: none;
+	padding-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.banner-input-box {
+	width: 50%;
+	height: 34px;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.form-last-flex {
+	display: flex;
+	width: 100%;
+}
+
+.form-last-flex .info-margin {
+	width: 50%;
+}
+
+.form-last-flex .form-button-box {
+	margin-top: 47px;
+	width: 50%;
+}
+
+.form-button-box button {
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-left: 10px;
+	font-weight: bold;
+	width: 90%;
+	height: 34px;
+	border: none;
+}
+
+.form-last-flex .banner-input-box {
+	width: 100%;
+}

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+body{
+	letter-spacing: -2px;
+}
+
+#wrap{
+	max-width: 600px!important;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* mediaquary 나중에 넣을꺼 */
+#wrap{
+	padding-left: 0px;
+    padding-right: 0px;
+}
+h1{
+	margin: 0px;
+	display: block;
+	padding-top: 28px;
+	padding-bottom: 20px;
+	font-size: 24px;
+	line-height: 2rem;
+	font-weight: 700;
+}
+/* mediaquary 나중에 넣을꺼 */
+h1 {
+	padding-top: 52px;
+    font-size: 28px;
+}
+h2{
+	margin-bottom: 0.75rem;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+.board{
+	border-radius: 10px;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    padding: 1.25rem;
+    border: solid;
+    border-width: 2px;
+    border-color: rgba(230, 230, 230, var(--tw-border-opacity));
+}
+/* mediaquary 나중에 넣을꺼 */
+.board{
+	padding: 20px 80px;
+}
+.board_name{
+	margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+	font-weight: 700;
+}
+#kakao_board{
+	display: flex;
+    align-items: center;
+	border-radius: 10px;
+    --tw-bg-opacity: 1;
+    background-color: rgba(245, 245, 245, var(--tw-bg-opacity));
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.change_button{
+	width: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    cursor: pointer;
+}
+
+button.all_button{
+	font-size: 1rem;
+    line-height: 1.5rem;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    background-color: white;
+    cursor: pointer;
+}
+#password{
+	--tw-border-opacity: 1;
+	border-color: rgba(86, 130, 239, var(--tw-border-opacity));
+	--tw-text-opacity: 1;
+	color: rgba(2, 6, 175, var(--tw-text-opacity));
+	font-size: 1rem; 
+	line-height: 1.5rem; 
+	height: 48px; 
+	margin-right: 0.25rem;
+	width: 296px;
+	cursor: pointer;
+}
+#log_out{
+	border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 48px;
+    width: 296px;
+    cursor: pointer;
+}
+a{
+	--tw-text-opacity: 1;
+    color: rgba(182, 190, 204, var(--tw-text-opacity));
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    align-items: center;
+    display: inline-flex;
+    text-decoration: inherit;
+    position: relative;
+}
+
+
+
+

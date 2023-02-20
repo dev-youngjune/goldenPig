@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+input {
+	font-family: 'Noto Sans KR', sans-serif;
+	outline: none;
+	border: none;
+	background: none;
+	padding-top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.member-input-box {
+	width: 50%;
+	height: 34px;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.form-last-flex {
+	display: flex;
+	width: 100%;
+}
+
+.form-last-flex .info-margin {
+	width: 50%;
+}
+
+.form-last-flex .form-button-box {
+	margin-top: 47px;
+	width: 50%;
+}
+
+.form-button-box button {
+	font-family: 'Noto Sans KR', sans-serif;
+	margin-left: 10px;
+	font-weight: bold;
+	width: 90%;
+	height: 34px;
+	border: none;
+}
+
+.form-last-flex .member-input-box {
+	width: 100%;
+}

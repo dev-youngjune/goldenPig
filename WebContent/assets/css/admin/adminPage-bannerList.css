@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+.container {
+	width: 100%;
+	margin-left: 300px;
+}
+
+tr {
+	border-bottom: 0.5px solid #ca3e47;
+	line-height: 50px;
+}
+
+table th, table td {
+	text-align: left;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+table td {
+	font-weight: 300;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse
+}
+
+th:last-child {
+	padding-left: 0;
+	width: 10%;
+}
+
+td:last-child {
+	padding-left: 0;
+}
+
+td:last-child div:first-child {
+	margin-right: 8px;
+}
+
+.info-table .modify-button {
+	width: 10px;
+	font-weight: 500;
+}
+
+.modify-button button {
+	border: none;
+	background: none;
+	font-size: inherit;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 500;
+}
+
+.banner-img-box {
+	width: 165px;
+}
+
+.banner-img {
+	width: 165px;
+	height: 30px;
+	background-image: url('../../img/admin/default_banner.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+}
+
+.banner-info-box-layout {
+	margin: 20px;
+}
+
+.banner-info-box {
+	border: 0.0625rem solid #f2f2f2;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.info-title-box {
+	width: 100%;
+	height: 54px;
+	background: #ca3e47;
+}
+
+.info-table {
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.banner-info-title-box {
+	display: flex;
+	padding: 20px 27px 0;
+	justify-content: space-between;
+}
+
+.banner-info-title-box a {
+	padding: 0px 23px;
+	font-size : 17px;	
+	background: #cacaca;
+	font-weight: 500;
+}
+
+
+.banner-info-title-box {
+	font-size: 30px;
+	font-weight: bold;
+}
