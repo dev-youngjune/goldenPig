@@ -7,16 +7,40 @@
 <title>회원 정보 수정</title>
 <link rel="stylesheet" href="../assets/css/account/account_modify.css">
 <style>
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
+
+input, button, span{
+	font-family: 'Pretendard-Regular';
+}
 </style>
 </head>
 <body>
+	<div>
+		<header id="header">
+			<div id="header_div">
+				<img alt="" src="../assets/img/account/logo.png" style="width: 60px">
+			</div>
+		</header>
+	</div>
 	<div id="wrap">
+		<div id="modal">
+			<div>
+				<h4 style="font-size: 18px">휴대폰 번호를 변경하였어요.</h4>
+				<div style="margin-top: 0.5rem;text-align: center; color: #484c53; word-break: keep-all;">이제 변경한 번호로 골든피그를 이용할 수 있어요.</div>
+			</div>
+			<footer style="margin-top: 2.5rem; display: flex; justify-content: flex-end;">
+				<button id="modal_btn">확인</button>
+			</footer>
+		</div>
+		<div>
+		</div>
 		<h1>인증센터</h1>
 		<section style="margin-top: 20px">
 			<h2>
@@ -42,7 +66,7 @@
 			<h2 class ="board_name">휴대폰 번호</h2>
 			<div class="board" style="justify-content: space-between; display: flex">
 				<span style="padding-top: 12px; letter-spacing: 0">01057587653</span>
-				<button class="change_button all_button" style="border-color: rgba(230, 230, 230, var(--tw-border-opacity))">변경</button>
+				<button class="change_button all_button" id="change_modal" style="border-color: rgba(230, 230, 230, var(--tw-border-opacity))">변경</button>
 			</div>
 		</section>
 		<section style="margin-top: 48px; display: flex">
@@ -51,10 +75,23 @@
 		</section>
 		<section style="margin-top: 20px; text-align: right">
 			<a style="margin-right: 0.25rem; display: inline; vertical-align: middle; cursor: pointer">
-				<img alt="" src="../assets/img/minus.png" style="position: absolute">
+				<img alt="" src="../assets/img/account/minus.png" style="position: absolute">
 				회원 탈퇴
 			</a>
 		</section>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	const btn = document.querySelector("#change_modal");
+	const modal = document.querySelector("#modal");
+	const modal_btn = document.querySelector("#modal_btn");
+	btn.addEventListener("click",() => {
+		modal.style.display = "flex";
+	});
+	
+	modal_btn.addEventListener("click",() =>{
+		modal.style.display = "none";
+	})	
+</script>
 </html>
