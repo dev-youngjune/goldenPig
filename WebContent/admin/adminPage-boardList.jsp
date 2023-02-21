@@ -46,12 +46,13 @@
 							<div class="board-info-title-box">
 								<span>전체 게시판 목록</span>
 							</div>
+							
 							<div class="info-table">
 								<table>
 									<thead>
 										<tr>
 											<th>
-												<input type="checkbox">
+												<input type="checkbox" id="allSelect">
 											</th>
 											<th>No</th>
 											<th>카테고리</th>
@@ -62,7 +63,7 @@
 									</thead>
 									<tr>
 										<td>
-											<input type="checkbox">
+											<input type="checkbox" name="check">
 										</td>
 										<td>1</td>
 										<td>저축 게시판</td>
@@ -72,7 +73,7 @@
 									</tr>
 									<tr>
 										<td>
-											<input type="checkbox">
+											<input type="checkbox" name="check">
 										</td>
 										<td>2</td>
 										<td>자유 게시판</td>
@@ -88,11 +89,31 @@
 					<!-- 페이지 버튼 -->
 					<div class="page-button-box-layout">
 						<div class="page-button-box">
-							<div>
-							
+							<!-- 페이지 번호 -->
+							<div class="page-button-active page-button button-check">
+								<div class="page-button-margin">
+									<div>
+										<span>1</span>
+									</div>
+								</div>
+							</div>
+							<div class="page-button button-check">
+								<div class="page-button-margin">
+									<div>
+										<span>2</span>
+									</div>
+								</div>
+							</div>
+							<div class="page-button button-check">
+								<div class="page-button-margin">
+									<div>
+										<span>3</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
+					<!-- 페이지 버튼 끝 -->
 				</div>
 			</div>
 		</div>
@@ -100,4 +121,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/checkbox.js"></script>
 </html>

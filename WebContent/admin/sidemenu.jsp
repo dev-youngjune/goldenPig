@@ -12,10 +12,10 @@
 				<div>
 					<div class="menu-title-layout">
 						<div class="menu-title">
-							<div>
+							<%-- <div>
 								<a href="<!-- 메인 페이지 경로 -->"> <img src="../assets/img/admin/home__icon.png" class="icon">
 								</a>
-							</div>
+							</div> --%>
 							<div class="menu-name">
 								MENU
 							</div>
@@ -36,17 +36,17 @@
 							</div>
 							<ul class="menus1 menus" style="display: none;">
 								<li class="select-menu">
-									<a> 
+									<a href="adminPage-boardList.jsp"> 
 										<span>전체 게시판</span>
 									</a>
 								</li>
 								<li class="select-menu">
-									<a> 
+									<a href="adminPage-freeBoardList.jsp"> 
 										<span>자유 게시판</span>
 									</a>
 								</li>
 								<li class="select-menu">
-									<a> 
+									<a href="adminPage-bankList.jsp"> 
 										<span>저축 게시판</span>
 									</a>
 								</li>
@@ -67,12 +67,12 @@
 							</div>
 							<ul class="menus2 menus" style="display:none;">
 								<li class="select-menu">
-									<a>
+									<a href="adminPage-noticeList.jsp">
 										<span>공지사항 목록</span>
 									</a>
 								</li>
 								<li class="select-menu">
-									<a>
+									<a href="adminPage-noticeWrite.jsp">
 										<span>공지사항 작성</span>
 									</a>
 								</li>
@@ -83,7 +83,7 @@
 								<div>
 									<img src="../assets/img/admin/user_icon.png" class="icon">
 								</div> 
-								<a>
+								<a href="adminPage-memberList.jsp">
 									<span>회원정보 관리</span>
 								</a>
 							</div>
@@ -94,8 +94,8 @@
 								<div>
 									<img src="../assets/img/admin/banner_icon.png" class="icon">
 								</div> 
-								<a> 
-								<span>배너 관리</span>
+								<a href="adminPage-bannerList.jsp"> 
+									<span>배너 관리</span>
 								</a>
 							</div>
 						</li>
