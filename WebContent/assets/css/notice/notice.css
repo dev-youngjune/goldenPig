@@ -5,9 +5,13 @@ body ::selection{
 	text-shadow: none;
 }
 
-:after{
+*, :after, :before{
 	border: 0 soild #e3e3e3;
 	box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
 }
 
 .contaier:after, .container:before{
@@ -64,3 +68,29 @@ position: relative;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.h4, h4 {
+    font-size: 20px;
+}
+
+.title{
+    margin: 0;
+}
+
+.card {
+    transition: transform .3s ease-in-out,opacity .2s ease-in-out,max-height .27s ease-in-out,padding .3s ease-in-out,margin .28s ease-in-out;
+    max-height: 1000px;
+}
+
+.card {
+    width: 100%;
+    padding: 1rem 1rem 13px;
+    background-color: #fff;
+    margin-bottom: 2px;
+    position: relative;
+
+

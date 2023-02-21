@@ -2,39 +2,52 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<style>
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+	h1{
+	font-family: 'Pretendard-Regular';
+	
+	}
+
+</style>
 <head>
 <meta charset="UTF-8">
 <title>FAQ</title>
-<link rel="stylesheet" href="assets/css/faq.css">
-<!-- <img src= "/WebContent/WEB-INF/arrow01.png/"> --> <!-- ????  -->
+<link rel="stylesheet" href="../assets/css/notice/faq.css">
 </head>
 <body>
 	<!-- FAQ 전체  -->
 	<div class="container page">
-	
 		<!-- ::before -->
 			<!--FAQ 타이틀  -->
-			<h1 class="title text-center title-font" >
+			<h1 class="title text-center jalnan-font title-font">
 				FAQ
 			</h1>
 				<!-- FAQ 아래 내용 전체 div-->
 				<div>
 					<!-- 첫번째 FAQ -->
 					<div class="arcoItem active"> <!-- accordion-item  -->
-						<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);"> <!--accordian-item-title  -->
+						<div class="titleArco"> <!--accordian-item-title  -->
 							<button class="itemtrigger"> <!-- accordian-item-trigger --><!-- button, h4 flex -->
 								<!-- FAQ 제목 -->
 								<h4 class="faq-name"> <!-- accordian-item-title-text -->
 									서비스와 관련된 문의사항은 어디에 문의해야 하나요?
 								</h4>
-									<span class="triggerIcon"> <!-- accordian-item-trigger-icon -->
+									<span class="icon" > <!-- accordian-item-trigger-icon -->
 									</span>
 							</button>
 						</div>
 						<!-- FAQ내용 -->
 						<div class="faq-content"> <!-- accordion-item-details -->
 							<div class="faq-content-in"> <!-- accordion-item-details-inner -->
-								<p>
+								<p>					
 									하단의 아하봇 또는
 									<button>
 											<span class="highlight">
@@ -48,7 +61,7 @@
 					</div>
 						<!-- 두번째 FAQ  -->
 						<div class="arcoItem active">
-							<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+							<div class="titleArco">
 								<button class="itemtrigger"><!-- button, h4 flex -->
 									<!--FAQ 제목  -->
 									<div>
@@ -56,7 +69,7 @@
 											질문은 아무나 할 수 있나요?
 										</h4>
 									</div>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -78,13 +91,13 @@
 					</div>
 					<!--세번째 FAQ -->
 					<div class="arcoItem active">
-							<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+							<div class="titleArco">
 								<button class="itemtrigger"><!-- button, h4 flex -->
 									<!-- FAQ 제목  -->
 									<h4 class="faq-name">
 										답변은 아무나 할 수 있나요?
 									</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -109,13 +122,13 @@
 					</div>
 					<!-- 네번째 FAQ  -->
 					<div class="arcoItem active">
-							<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+							<div class="titleArco">
 								<button class="itemtrigger"><!-- button, h4 flex -->
 									<!--FAQ 제목  -->
 									<h4 class="faq-name">
 										아하토큰이 무엇인가요?
 									</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -131,13 +144,13 @@
 					</div>
 					<!-- 다섯번째 FAQ  -->
 					<div class="arcoItem active">
-						<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+						<div class="titleArco">
 							<button class="itemtrigger"><!-- button, h4 flex -->
 								<!-- FAQ 제목 -->
 								<h4 class="faq-name">
 									아하토큰은 어떻게 모을 수 있나요?
 								</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -155,13 +168,13 @@
 					</div>
 					<!-- 여섯번째 FAQ  -->
 					<div class="arcoItem active">
-						<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+						<div class="titleArco">  <!-- style="background-color: rbg(245,245,250); color: rbg(97,88,242);" -->
 							<button class="itemtrigger"><!-- button, h4 flex -->
 								<!-- FAQ 제목 -->
 								<h4 class="faq-name">
 									계정 정보 또는 비밀번호를 잃어버렸습니다.
 								</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -188,13 +201,13 @@
 					</div>
 					<!--일곱번째 FAQ  -->
 					<div class="arcoItem active">
-						<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+						<div class="titleArco">
 							<button class="itemtrigger"><!-- button, h4 flex -->
 								<!-- FAQ 제목 -->
 								<h4 class="faq-name">
 									전화번호가 변경되었습니다. 로그인 및 서비스 사용에는 문제가 없나요?
 								</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -222,13 +235,13 @@
 					</div>
 					<!-- 여덟번째 FAQ -->
 					<div class="arcoItem active">
-						<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+						<div class="titleArco">
 							<button class="itemtrigger"><!-- button, h4 flex -->
 								<!-- FAQ 제목 -->
 								<h4 class="faq-name">
 									소셜 계정(카카오톡, 네이버)이 바뀌어 로그인이 되지 않습니다.
 								</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -259,13 +272,13 @@
 					</div>
 					<!--아홉번쨰 FAQ  -->
 					<div class="arcoItem active">
-						<div class="titleArco" style="background-color: rbg(245,245,250); color: rbg(97,88,242);">
+						<div class="titleArco">
 							<button class="itemtrigger"><!-- button, h4 flex -->
 								<!-- FAQ 제목 -->
 								<h4 class="faq-name">
 									회원 탈퇴를 하고 싶습니다.
 								</h4>
-									<span class="triggerIcon">
+									<span class="icon">
 									</span>
 							</button>
 						</div>
@@ -284,4 +297,45 @@
 					<!-- ::after  -->
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+
+/* FAQ 슬라이드 코드  */
+
+
+	$(".icon").each((i, e) => {
+	
+	    var index = i;
+	   var $dom = $(e);
+	   var $faq = $($(".faq-content")[index]); 
+	   var $change = $($(".titleArco")[index]);
+	   var $itemtrigger = $($(".itemtrigger")[index]);
+	   let checkSlide;
+	   let makeColor; 
+	   
+	   $dom.on("click", function(e) {
+	      e.preventDefault();
+	      
+	      if(checkSlide){
+	    	 $itemtrigger.css("background-color","#fff");
+	    	 $itemtrigger.css("color","black");
+	         $dom.removeClass("triggerIcon");
+	         $faq.slideUp();
+	         checkSlide = false;
+	      } else{
+	    	 $itemtrigger.css("background-color","rgb(245, 245, 250)");
+		     $itemtrigger.css("color","rgb(97, 88, 242)");
+	         $dom.addClass("triggerIcon");
+	         $faq.slideDown();
+	         checkSlide = true;
+	      }
+	   });
+	});
+    
+let faqAnimate = (function(){
+	function change(value){
+		
+	}
+})();    
+</script>
 </html>

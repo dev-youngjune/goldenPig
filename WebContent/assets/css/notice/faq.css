@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
- 
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -8,10 +7,26 @@
     font-style: normal;
 }
 
+.title-font {
+    text-align: center;
+}
+
+/* .jalnan-font {
+    font-family: "Jalnan",sans-serif;
+}
+ */
+button {
+	outline: none;	
+}
+
+
 body ::selection {
     background-color: #e8f0f9;
     text-shadow: none;
     font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
 
 *, :after, :before {
@@ -104,11 +119,6 @@ h1{
     color: inherit;
 }
 
-/* FAQ 타이틀 폰트 */
-/* .jalnan-font{
-    font-family: "Jalnan",sans-serif;
-} */
-
 .text-center {
     text-align: center;
 }
@@ -120,12 +130,12 @@ h1{
 
 .arcoItem{
     border-top: 2px solid #222;
-    padding: 11px 1px 2px 13px;
 }
 
 .titleArco{
     position: relative;
-    padding: initial;
+    /* padding: 0px 16px 11px 11px; */
+    padding: 0;
 }
 
 button {
@@ -154,6 +164,7 @@ button {
     background: none;
 }
 
+
 .itemtrigger{
     font-size: 16px;
     text-align: left;
@@ -162,6 +173,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px;
 }
 
 
@@ -175,26 +187,38 @@ button {
     max-width: calc(400% - 1.12em - 10px);
 }
 
+/* url 이렇게 주는 거 아닌가 */
 .is-active .triggerIcon {
     transform: rotate(180deg);
-	background-image: url('../img/arrow02.png');
+	background-image: url('../../img/notice/arrow01.png'); 
 }
 
-.triggerIcon{
-    width: 1.12em;
-    height: 1.67em;
-    margin-left: 10px;
+.active .itemtrigger .triggerIcon{
+	transform: rotate(180deg);
     transition: transform .24s ease;
-    background-image: url('../img/arrow01.png');
+    background-image: url('../../img/notice/arrow02.png');
+     background-color: rgb(245, 245, 250);
+    color: rgb(97, 88, 242);
+}
+
+.itemtrigger .icon {
+	transform: rotate(360deg);
+	 transition: transform .24s ease;
+	background-image: url('../../img/notice/arrow01.png'); 
+	width: 1.12em;
+    height: 0.67em;
+    margin-left: 10px;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: 10px;
+    background-color: rgb(245, 245, 250);
+    color: rgb(97, 88, 242);
 }
+
 
 /* FAQ내용 숨겨짐 */
 .faq-content{ 
-    overflow: hidden;
-    max-height: 0;
-    transition: all .2s ease;
+	display :none;
 }
 
 .faq-content-in{
