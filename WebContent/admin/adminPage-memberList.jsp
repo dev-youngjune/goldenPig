@@ -86,24 +86,38 @@
 					<div class="page-button-box-layout">
 						<div class="page-button-box">
 							<!-- 페이지 번호 -->
-							<div class="page-button-active page-button button-check">
+							<div class="">
+								<div class="page-button-margin">
+									<div>
+										<img src="../assets/img/admin/left_icon.png" class="left-button">
+									</div>
+								</div>
+							</div>
+							<div class="page-button-active page-button">
 								<div class="page-button-margin">
 									<div>
 										<span>1</span>
 									</div>
 								</div>
 							</div>
-							<div class="page-button button-check">
+							<div class="page-button">
 								<div class="page-button-margin">
 									<div>
 										<span>2</span>
 									</div>
 								</div>
 							</div>
-							<div class="page-button button-check">
+							<div class="page-button">
 								<div class="page-button-margin">
 									<div>
 										<span>3</span>
+									</div>
+								</div>
+							</div>
+							<div class="">
+								<div class="page-button-margin">
+									<div>
+										<img src="../assets/img/admin/right_icon.png" class="right-button">
 									</div>
 								</div>
 							</div>
@@ -117,30 +131,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
-<script>
-	$("#allSelect").click(function() {
-	    if($("#allSelect").is(":checked")) $("input[name=check]").prop("checked", true);
-	    else $("input[name=check]").prop("checked", false);
-	});
-	
-	$("input[name=check]").click(function() {
-	    var total = $("input[name=check]").length;
-	    var checked = $("input[name=check]:checked").length;
-	
-	    if(total != checked) $("#allSelect").prop("checked", false);
-	    else $("#allSelect").prop("checked", true); 
-	});
-	
-	const pageButton = $(".page-button");
-	
-/* 	pageButton.click(function(){
-		if(pageButton.hasClass("page-button-active")){
-			pageButton.removeClass("page-button-active");
-		}else {
-			pageButton.addClass("page-button-active");
-		}
-	}); */
-		
-	
-</script>
+<script src="../assets/js/admin/checkbox.js"></script>
+<script src="../assets/js/admin/page.js"></script>
 </html>

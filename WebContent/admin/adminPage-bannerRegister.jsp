@@ -36,7 +36,7 @@
 					<div style="margin: 0 auto;width: 70%;">
 						<div class="prev-button-layout">
 							<div>
-								<a>
+								<a href="">
 									<img src="../assets/img/admin/prev_icon.png" class="prev-icon">
 									<span class="prev-title">리스트로 돌아가기</span>
 								</a>
@@ -53,10 +53,13 @@
 								<hr>
 								<div class="board-info-box">
 									<div class="banner-img-box">
-									<div class="banner-img"></div>
-										<div class="banner-name-box">
-											<span></span>
+										<div class="info-margin-bottom">
+											<span class="info-tag">배너 이미지 파일</span>
 										</div>
+										<label class="banner-img">
+											<img src="../assets/img/admin/default_banner.png" class="banner">
+											<input type="file" style="display:none;">
+										</label>
 									</div>
 									<div class="member-info-box">
 										<form action="">
@@ -68,27 +71,13 @@
 												</div>
 											</div>	
 											<div class="member-info-tag-box">
-												<span class="info-tag">이메일</span>
-												<!-- 이메일 -->
-												<div class="info">
-													<input type="text" class="member-email" name="memberEmail">
-												</div>
-											</div>
-											<div class="member-info-tag-box">
-												<span class="info-tag">생년월일</span>
+												<span class="info-tag">기간</span>
 												<div class="info">
 													<input type="text" class="member-birth" name="memberBirth">
 												</div>
 											</div>
-											<div class="member-info-tag-box">
-												<span class="info-tag">핸드폰 번호</span>
-												<!-- 핸드폰 번호 -->
-												<div class="info">
-													<input type="text" class="member-phone" name="memberPhoneNumber">
-												</div>
-											</div>
 											<div class="button-box">
-												<button>변경</button>
+												<button>등록</button>
 											</div>
 										</form>
 									</div>	
@@ -103,4 +92,20 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/prev.js"></script>
+<script>
+	const $file = $("input[type=file]");
+	
+	$file.change(function(e){
+		let file = e.target.files[0];
+		let reader = new FileReader();
+	
+		reader.onload = function(e){
+			let result = e.target.result;
+			$(".banner").attr("src", result);
+		}
+		
+		reader.readAsDataURL(file);
+	});
+</script>
 </html>
