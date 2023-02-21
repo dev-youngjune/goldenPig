@@ -13,6 +13,9 @@
     font-weight: 400;
     font-style: normal;
 }
+input, button, span{
+	font-family: 'Pretendard-Regular';
+}
 div.eye {
     cursor: pointer;
     width: 50px;
@@ -60,7 +63,7 @@ div.hide {
 						</div>
 					</div>
 					<footer>
-						<button> 재설정 후 자동로그인 </button>
+						<button id="confirm"> 재설정 후 자동로그인 </button>
 					</footer>
 				</div>
 			</div>
@@ -71,18 +74,19 @@ div.hide {
 <script>
 let userInput = $(".email_text");
 
-$("div.hide").click(function(){
+$("div.eye").click(function(){
 	console.log("input.hide 나옴");
 	var thisDiv = $(this);
-    if(userInput.attr("type") == "password"){
-    	userInput.attr("type","text");
+	var thisInput = thisDiv.parent().children().first();
+    if(thisInput.attr("type") == "password"){
+    	thisInput.attr("type","text");
     	thisDiv.attr("class","show eye");
-    }else if(userInput.attr("type") == "text"){
-    	userInput.attr("type","password");
+    }else if(thisInput.attr("type") == "text"){
+    	thisInput.attr("type","password");
         thisDiv.attr("class","hide eye");
     }
 });
-$("div.show").click(function(){
+/* $("div.show").click(function(){
 	console.log("input.show 나옴");
 	var thisDiv = $(this);
     if(userInput.attr("type") == "password"){
@@ -92,6 +96,6 @@ $("div.show").click(function(){
     	userInput.attr("type","password");
     	thisDiv.attr("class","show eye");
     }
-});
+}); */
 </script>
 </html>

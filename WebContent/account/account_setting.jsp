@@ -13,13 +13,17 @@
     font-weight: 400;
     font-style: normal;
 }
+input, button, span{
+	font-family: 'Pretendard-Regular';
+}
 </style>
 </head>
 <body>
+<jsp:include page="/main/header.jsp" flush="true" />
 	<section style="padding-top: 1.25rem">
 		<div id="title_container">
 			<div>
-				<h3 style="text-align: center;">계정 설정</h3>
+				<h3 style="text-align: center; margin-top: 62px; font-weight: 600">계정 설정</h3>
 			</div>
 		</div>
 		<div id="management-color">

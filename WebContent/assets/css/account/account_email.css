@@ -1,6 +1,13 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 body{
-	letter-spacing: -.15rem!important;
+	letter-spacing: -.05rem!important;
+	font-family: 'Pretendard-Regular';
 }
 
 #wrap{
@@ -13,7 +20,7 @@ body{
 }
 /* mediaquary 나중에 넣을꺼 */
 #wrap{
-	padding: 152px 0 80px;
+	padding: 106px 0 8px;
     background: #f3f5f9;
 }
 main{
@@ -101,26 +108,7 @@ footer{
     padding-bottom: 1.25rem;
     border-radius: 0 0 8px 8px;
 }
-a{
-	margin-top: 0px;
-    margin-right: 0.25rem;
-	font-size: 1rem;
-    line-height: 1.5rem;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    border-width: 1px;
-    font-weight: 500;
-    width: 100%;
-    color: inherit;
-    text-decoration: inherit;
-    cursor: pointer;
-    border: 1px solid;
-	border-color: rgba(230, 230, 230);
-}
-button{
+#confirm{
 	border-color: transparent;
     --tw-bg-opacity: 1;
     background-color: rgba(86, 130, 239, var(--tw-bg-opacity));
@@ -175,9 +163,12 @@ label{
     border-left: none;
     border-right: none;
     outline: none;
+    --tw-border-opacity: 1;
+    border-color: rgba(230, 230, 230, var(--tw-border-opacity));
 }
 input::placeholder{
 	--tw-text-opacity: 1;
     color: rgba(199, 199, 199, var(--tw-text-opacity));
+    font-size: 15px;
 }
 input:focus {outline: none;}
