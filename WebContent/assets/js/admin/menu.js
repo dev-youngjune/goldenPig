@@ -1,28 +1,22 @@
-	const $boardButton = $(".board-button");
-	const $noticeButton = $(".notice-button");
-
-	$boardButton.click(function() {
-
-		if ($(".board-icon").hasClass("triangle")) {
-			$(".board-icon").addClass("triangle-acitve");
-			$(".board-icon").removeClass("triangle");
-			$(".menus1").slideDown();
-		} else {
-			$(".board-icon").addClass("triangle");
-			$(".board-icon").removeClass("triangle-acitve");
-			$(".menus1").slideUp();
-		}
-	});
-
-	$noticeButton.click(function() {
-
-		if ($(".notice-icon").hasClass("triangle")) {
-			$(".notice-icon").addClass("triangle-acitve");
-			$(".notice-icon").removeClass("triangle");
-			$(".menus2").slideDown();
-		} else {
-			$(".notice-icon").addClass("triangle");
-			$(".notice-icon").removeClass("triangle-acitve");
-			$(".menus2").slideUp();
-		}
-});
+$(".triangle-button").each((i, e) => {
+		
+		   var index = i;
+		   var $dom = $(e);
+		   var $menus = $($(".menus")[index]);   
+		   let checkSlide;
+		   
+		   $dom.on("click", function(e) {
+		      e.preventDefault();
+		      console.log($menus);
+		      
+		      if(checkSlide){
+		         $dom.removeClass("triangle-acitve");
+		         $menus.slideUp();
+		         checkSlide = false;
+		      } else{
+		         $dom.addClass("triangle-acitve");
+		         $menus.slideDown();
+		         checkSlide = true;
+		      }
+		   });
+		});

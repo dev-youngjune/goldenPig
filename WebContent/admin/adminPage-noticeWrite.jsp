@@ -61,7 +61,7 @@
 								</div>
 								<hr>
 								<div>
-									<button>보내기</button>
+									<button id="notice-button">보내기</button>
 								</div>
 							</form>	
 							</div>
@@ -74,4 +74,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/notice-write.js"></script>
+<script src="../assets/js/admin/prev.js"></script>
 </html>

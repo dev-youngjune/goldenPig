@@ -30,8 +30,8 @@
 								<a href=""> 
 									<span>게시판 관리</span>
 								</a>
-								<div class="board-button">
-									<img src="../assets/img/admin/arrow_icon.png" class="icon board-icon triangle">
+								<div class="triangle-button">
+									<img src="../assets/img/admin/arrow_icon.png" class="icon triangle-icon triangle">
 								</div>
 							</div>
 							<ul class="menus1 menus" style="display: none;">
@@ -61,8 +61,8 @@
 								<a> 
 									<span>공지사항 관리</span>
 								</a>
-								<div class="notice-button">
-									<img src="../assets/img/admin/arrow_icon.png" class="icon notice-icon triangle">
+								<div class="triangle-button">
+									<img src="../assets/img/admin/arrow_icon.png" class="icon triangle-icon triangle">
 								</div>
 							</div>
 							<ul class="menus2 menus" style="display:none;">

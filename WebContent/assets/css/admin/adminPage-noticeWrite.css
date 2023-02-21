@@ -95,6 +95,7 @@ input[type=text] {
 
 textarea {
 	font-family: 'GmarketSansMedium';
+	overflow: hidden;
 	width: 100%;
 	border: none;
 	outline: none;
