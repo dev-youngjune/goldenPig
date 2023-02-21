@@ -4,81 +4,98 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지- 유저 정보 수정</title>
+<title>관리자 페이지- 유저 수정</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/admin/adminPage-member.css">
 <link rel="stylesheet" href="../assets/css/admin/adminPage-modifyMember.css">
 </head>
 <body>
 	<div>
-		<div class="wrap">
+		<div class="info-title-box info-title-box-flex">
+			<div class="logo-box-layout">
+				<div class="logo-box">
+					<img src="../assets/img/admin/logo_icon.png">
+				</div>
+			</div>
+			<div>
+				<div class="select-name">
+					<span>회원 상세보기</span>	
+				</div>
+			</div>
+		</div>
+		<div class="wrap"> 
 		
 			<!-- 사이드 바 -->
 			<div id="side-bar"></div>
 			<!-- 사이드 바 끝-->
-			
-			<!-- 목록 -->
+		
 			<div class="container">
-				<div class="info-title-box"></div>
-				<div class="info-flex">
-					<section class="member-info-box-layout">
-						<div class="member-info-box">
-							<div class="notice-title-box-layout">
-								<div class="member-info">
-									<div>
-										<a href=""><!-- 이전 경로로 이동 (회원 상세보기 페이지) -->
-											<img src="../assets/img/admin/prev_icon.png" class="prev">
-										</a>
-									</div>
-									<div class="member-img-box">
-										<!-- 유저 이미지-->
-										<div class="member-img"></div>
-										<span class="member-nickname">벅벅코딩</span>
-									</div>
-									<div class="info-margin">
-										<h2>회원 정보</h2>
-									</div>
-									<div class="info-margin">
-										<span class="info-tag">이름</span>
-										<h4>임**</h4>
-									</div>
-									<form action="" class="member-modify-form">
-										<div class="info-margin">
-											<span class="info-tag">생년월일</span>
-											<!-- 유저 생년월일 -->
-											<div class="member-input-box">
-												<!-- 기존 유저 데이터 가져와서 데이터(생년월일) 넣기 -->
-												<input type="text" class="member-input" name="memberBirth">
-											</div>
-										</div>
-										<div class="info-margin">
-											<span class="info-tag">이메일</span>
-											<!-- 유저 이메일 -->
-											<div class="member-input-box">
-												<!-- 기존 유저 데이터 가져와서 데이터(이메일) 넣기 -->
-												<input type="text" class="member-input" name="memberEmail">
-											</div>
-										</div>
-										<div class="form-last-flex">
-											<div class="info-margin">
-												<span class="info-tag">핸드폰 번호</span>
-												<!-- 유저 핸드폰 번호-->
-												<div class="member-input-box">
-												<!-- 기존 유저 데이터 가져와서 데이터(핸드폰 번호) 넣기 -->
-													<input type="text" class="member-input" name="memberPhoneNumber">
-												</div>
-											</div>
-											<div class="form-button-box">
-												<button>정보 변경</button>
-											</div>
-										</div>
-									</form>
-								</div>
+				<div class="container-margin">
+					<!-- 헤더 -->
+					<div style="margin: 0 auto;width: 70%;">
+						<div class="prev-button-layout">
+							<div>
+								<a>
+									<img src="../assets/img/admin/prev_icon.png" class="prev-icon">
+									<span class="prev-title">회원정보로 돌아가기</span>
+								</a>
 							</div>
 						</div>
-					</section>
+						<!-- 내용 섹션 -->
+						<div class="info-flex">
+							<section class="board-info-box-layout" style="width: 100%;">
+								<div class="board-info-box">
+									<div class="board-info-title-box">
+										<span>회원 정보</span>
+									</div>
+								</div>
+								<hr>
+								<div class="board-info-box">
+									<div class="member-img-box">
+									<div class="member-img"></div>
+										<div class="member-nickname-box">
+											<span>벅벅코딩</span>
+										</div>
+									</div>
+									<div class="member-info-box">
+										<div class="member-info-tag-box">
+											<span class="info-tag">이름</span>
+											<!-- 이름 -->
+											<div class="info info-name">
+												<span>임**</span>
+											</div>
+										</div>	
+										<form action="">
+											<div class="member-info-tag-box">
+												<span class="info-tag">이메일</span>
+												<!-- 이메일 -->
+												<div class="info">
+													<input type="text" class="member-email" name="memberEmail">
+												</div>
+											</div>
+											<div class="member-info-tag-box">
+												<span class="info-tag">생년월일</span>
+												<div class="info">
+													<input type="text" class="member-birth" name="memberBirth">
+												</div>
+											</div>
+											<div class="member-info-tag-box">
+												<span class="info-tag">핸드폰 번호</span>
+												<!-- 핸드폰 번호 -->
+												<div class="info">
+													<input type="text" class="member-phone" name="memberPhoneNumber">
+												</div>
+											</div>
+											<div class="button-box">
+												<button id ="modify-button">변경</button>
+											</div>
+										</form>
+									</div>	
+								</div>
+							</section>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -86,4 +103,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/modify-member.js"></script>
+<script src="../assets/js/admin/prev.js"></script>
 </html>

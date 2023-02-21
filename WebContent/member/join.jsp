@@ -21,7 +21,7 @@
 										<img src="">
 									</button>
 									<a class="theScreen_headerLoga">
-										<img class="a_headerLogo" src="../assets/img/logo.png">
+										<img class="a_headerLogo" src="../assets/img/account/logo.png">
 									</a>
 								</header>
 								
@@ -85,47 +85,47 @@
 												</div>
 											</div>
 										</div>
-							<!-- 			 <div class="birth">
-                                <div class="birth-div">
-                                	<label class="TextField_label">생년월일</label>
-                                	<div class="TextField">
-                                    <div class="birth-div-div" height="40">
-                                        <input type="text" class="birth-inputbox" placeholder="YYYY" height="40">
-                                    </div>
-                                </div>
-                                <span class="birth-span"></span>
-                                <div class="birth-div">
-                                    <div class="birth-div-div">
-                                        <input type="text" class="birth-inputbox" placeholder="MM" height="40">
-                                    </div>
-                                </div>
-                                <span class="birth-span"></span>
-                                <div class="birth-div">
-                                    <div class="birth-div-div">
-                                        <input type="text" class="birth-inputbox" placeholder="DD" height="40">
-                                    </div>
-                                    
-                                </div>
-                                </div>
-                            </div>
-										 -->
-									<div class="theJoin_bodyInput">
+										<!-- <div class="theJoin_bodyInput">
 											<div class="TextField">
 												<label class="TextField_label">생년월일</label>
 												<div class="TextField_body">
 													<input type="text" placeholder="생년월일을 입력해주세요." class="TextField_bodyInput" autocomplete value>
 												</div>
 											</div>
+										</div> -->
+										<div class="TextField">
+											<label class="TextField_label">생년월일</label>
+											<div class="TextField_body">
+												<div class="birth_">
+													<div class="birth_div">
+														<div class="birth_div_div">
+															<div class="birth_div_div_div">
+																<input class="birth_div_div_div_input" name="birthYear" placeholder="YYYY" type="text">
+															</div>
+														</div>
+														<span class="birth_span"></span>
+														<div class="birth_div_div">
+															<div class="birth_div_div_div">
+																<input class="birth_div_div_div_input" name="birthYear" placeholder="MM" type="text">
+															</div>
+														</div>
+														<span class="birth_span"></span>
+														<div class="birth_div_div">
+															<div class="birth_div_div_div">
+																<input class="birth_div_div_div_input" name="birthYear" placeholder="DD" type="text">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
-								
-										
 									</div>
 								</div>
 								<!-- footer -->
 								<footer class="theScreen_footer">
 									<button type="submit" class="Button -large w-full -primary -filled">회원가입</button>
 									<button class="Button mt-2 -large w-full -transparent">
-										<a href="https://auth.a-ha.io/login/email">
+										<a href="">
 										아이디가 존재하나요?
 										</a>
 									</button>

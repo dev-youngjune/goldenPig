@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지 - 자유게시판 목록</title>
+<title>관리자 페이지- 자유 게시판 목록</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -12,50 +12,119 @@
 </head>
 <body>
 	<div>
+		<div class="info-title-box info-title-box-flex">
+			<div class="logo-box-layout">
+				<div class="logo-box">
+					<img src="../assets/img/admin/logo_icon.png">
+				</div>
+			</div>
+			<div>
+				<div class="select-name">
+					<span>자유 게시판 관리</span>	
+				</div>
+			</div>
+		</div>
 		<div class="wrap"> 
+		
 			<!-- 사이드 바 -->
 			<div id="side-bar"></div>
 			<!-- 사이드 바 끝-->
-			<!-- 목록 -->
+		
 			<div class="container">
-				<div class="info-title-box"></div>
-				<section class="board-info-box-layout">
-					<div class="board-info-box">
-						<div class="board-info-title-box">
-							<span> 자유 게시판 목록</span>
-						</div>
-						<div class="info-table">
-							<table>
-								<thead>
+				<div class="container-margin">
+					<!-- 헤더 -->
+					<div class="delete-box-layout">
+							<div class="delete-box">
+								<button class="delete-button">선택 게시물 삭제</button>
+							</div>
+					</div>
+					
+					<!-- 내용 섹션 -->
+					<section class="board-info-box-layout">
+						
+						<div class="board-info-box">
+							<div class="board-info-title-box">
+								<span>자유 게시판 목록</span>
+							</div>
+							
+							<div class="info-table">
+								<table>
+									<thead>
+										<tr>
+											<th>
+												<input type="checkbox" id="allSelect">
+											</th>
+											<th>No</th>
+											<th>카테고리</th>
+											<th>게시판 제목</th>
+											<th>작성자 명</th>
+											<th>작성 날짜</th>
+										</tr>
+									</thead>
 									<tr>
-										<th>No</th>
-										<th>카테고리</th>
-										<th>게시판 제목</th>
-										<th>작성자 명</th>
-										<th>작성 날짜</th>
+										<td>
+											<input type="checkbox" name="check">
+										</td>
+										<td>1</td>
+										<td>자유 게시판</td>
+										<td>언제 돈 모아요..?</td>
+										<td>이**</td>
+										<td>2023.02.11</td>
 									</tr>
-								</thead>
-								<tr>
-									<td>1</td>
-									<td>자유 게시판</td>
-									<td><a href="<!-- 상세보기 페이지 -->">물어볼게요.</a></td>
-									<td>임**</td>
-									<td>2023.01.11</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>자유 게시판</td>
-									<td><a href="<!-- 상세보기 페이지 -->">언제 돈 모아요?</a></td>
-									<td>이**</td>
-									<td>2023.02.11</td>
-								</tr>
-							</table>
+								</table>
+							</div>
+						</div>
+					</section>
+					
+					<!-- 페이지 버튼 -->
+					<div class="page-button-box-layout">
+						<div class="page-button-box">
+							<!-- 페이지 번호 -->
+							<div class="">
+								<div class="page-button-margin">
+									<div>
+										<img src="../assets/img/admin/left_icon.png" class="left-button">
+									</div>
+								</div>
+							</div>
+							<div class="page-button-active page-button">
+								<div class="page-button-margin">
+									<div>
+										<span>1</span>
+									</div>
+								</div>
+							</div>
+							<div class="page-button">
+								<div class="page-button-margin">
+									<div>
+										<span>2</span>
+									</div>
+								</div>
+							</div>
+							<div class="page-button">
+								<div class="page-button-margin">
+									<div>
+										<span>3</span>
+									</div>
+								</div>
+							</div>
+							<div class="">
+								<div class="page-button-margin">
+									<div>
+										<img src="../assets/img/admin/right_icon.png" class="right-button">
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</section>
+					<!-- 페이지 버튼 끝 -->
+				</div>
 			</div>
 		</div>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menuLoad.js"></script></html>
+<script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/checkbox.js"></script>
+<script src="../assets/js/admin/page.js"></script>
+</html>

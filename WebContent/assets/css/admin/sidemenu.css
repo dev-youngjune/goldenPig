@@ -1,8 +1,15 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
-	margin: 0;
-	padding: 0;
+		margin: 0;
+		padding: 0;
 }
 
 a {
@@ -17,7 +24,7 @@ li {
 
 body {
 	background-color: #f1f1f1;
-	font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'GmarketSansMedium';
 }
 
 button {
@@ -52,7 +59,7 @@ button {
 }
 
 .menus .select-menu {
-	font-size: 13px;
+	font-size: 11px;
 	color: #fff;
 	margin-left: 67px;;
 }
@@ -79,12 +86,11 @@ button {
 }
 
 .triangle {
-	padding-top: 0px;
+	padding-top: 5px;
 	width: 12px;
 }
 
 .menu .triangle-acitve {
-	padding-top : 0px;
 	transform: rotate(180deg);
 	width: 12px;
 }
@@ -107,7 +113,14 @@ button {
 }
 
 .menu-name {
-	margin-left: 7px;	
+	color:#fff;
+	font-size: 20px;
+	margin-top: 6px;
 	font-weight: bold;
+}
+
+.info-margin-bottom {
+	margin-bottom: 10px;
+	
 }
 

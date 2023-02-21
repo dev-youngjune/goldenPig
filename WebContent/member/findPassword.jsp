@@ -18,8 +18,8 @@
 								<button type="button" class="theScreen_headerButton -left">
 									<img>
 								</button>
-								<a href="https://www.a-ha.io/" class="theScreen_headerLogo">
-									<img class="a_headerLogo" src="../assets/img/logo.png">
+								<a href="" class="theScreen_headerLogo">
+									<img class="a_headerLogo" src="../assets/img/account/logo.png">
 								</a>
 							</header>
 							<div class="theScreen_body px-5">
