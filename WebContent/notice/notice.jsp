@@ -5,35 +5,33 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" href="notice.css">
+<link rel="stylesheet" href="../assets/css/notice/notice.css">
 </head>
 
 <body>
 <div>
-	<section>
+	<section class="container no-padding-xs" style="height: auto !important;">
 		<!-- ::before  -->
-		<div class="row">
+		<div class="row" style="height: auto !important;">
 			<!-- ::before -->
 				<!-- 사이드 베너 -->
-				<aside>
-					<div></div>
-				</aside>
+					<aside></aside>
 	<!-- 페이지 전체  -->
 	<main class="all-col"> 
 		<!-- 공지사항 쪽  -->
-		<div> 
+		<div class="card card-header tw-bg-white"> 
 			<h4 class="title">공지사항</h4>
 		</div> 
 			<!-- [필독] 공지사항 첫번째 글  -->
 			<article class="card"> <!-- 이태원 -->
 				<div class="card-body">
 					<!--공지사항 들어가는 링크  -->
-					<a href="">
+					<a href="" class>
 						<!--공지사항 제목  -->
 						<h3>
 							<!--필독 라벨  -->
-							<span class="label">
-								<i class="icon">
+							<span class="label pull-left">
+								<i class="icon icon-check tw-text-white">
 									<!-- before?????????? -->
 								</i>
 									필독
@@ -41,9 +39,9 @@
 					        [공지] 프리미엄 멤버십 혜택 추가 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2023.02.02
 							</span>
 						</p>
@@ -58,7 +56,7 @@
 									<h3>
 										<!--필독 라벨  -->
 										<span class="label">
-											<i class="icon">
+											<i class="icon tw-text-white">
 											<!-- before?????????? -->
 											</i>
 											필독
@@ -66,9 +64,9 @@
 					        		[공지] 베이직 멤버십 30% 할인 이벤트 중!
 									</h3>
 								</a>
-									<p>
+									<p class="cardFoot">
 										<!--공지사항 작성 날짜  -->
-										<span class="date">
+										<span class="date txt-mute word-spacing">
 											2023.02.01
 										</span>
 									</p>
@@ -78,12 +76,12 @@
 			<article class="card"> 
 				<div class="card-body">
 					<!--공지사항 들어가는 링크  -->
-					<a href="">
+					<a href="" class>
 						<!--공지사항 제목  -->
 						<h3>
 							<!--필독 라벨  -->
-							<span class="label">
-								<i class="icon">
+							<span class="label pull-left">
+								<i class="icon icon-check tw-text-white">
 									<!-- before?????????? -->
 								</i>
 									필독
@@ -91,9 +89,9 @@
 					        [공지] 애플 iOS 회원 멤버십 구독 방법 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2023.01.06
 							</span>
 						</p>
@@ -107,8 +105,8 @@
 						<!--공지사항 제목  -->
 						<h3>
 							<!--필독 라벨  -->
-							<span class="label">
-								<i class="icon">
+							<span class="label pull-left">
+								<i class="icon icon-check tw-text-white">
 									<!-- before?????????? -->
 								</i>
 									필독
@@ -116,9 +114,9 @@
 	 				       [공지] 아하 커뮤니티 패널티 정책
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2022.11.30
 							</span>
 						</p>
@@ -132,8 +130,8 @@
 						<!--공지사항 제목  -->
 						<h3>
 							<!--필독 라벨  -->
-							<span class="label">
-								<i class="icon">
+							<span class="label pull-left">
+								<i class="icon icon-check tw-text-white">
 									<!-- before?????????? -->
 								</i>
 									필독
@@ -141,9 +139,9 @@
 	 				       [공지] 아하 질문 콘텐츠 관리정책
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2022.7.18
 							</span>
 						</p>
@@ -157,8 +155,8 @@
 						<!--공지사항 제목  -->
 						<h3>
 							<!--필독 라벨  -->
-							<span class="label">
-								<i class="icon">
+							<span class="label pull-left">
+								<i class="icon icon-check tw-text-white">
 									<!-- before?????????? -->
 								</i>
 									필독
@@ -166,9 +164,9 @@
 	 				       [공지] 아하 전문Q&amp;A 답변 콘텐츠 관리 정책 
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2022.7.18
 							</span>
 						</p>
@@ -182,8 +180,8 @@
 						<!--공지사항 제목  -->
 						<h3>
 							<!--필독 라벨  -->
-							<span class="label">
-								<i class="icon">
+							<span class="label pull-left"> <!-- pull-left? -->
+								<i class="icon icon-check tw-text-white">
 									<!-- before?????????? -->
 								</i>
 									필독
@@ -191,9 +189,9 @@
 	 				       [공지] 아하 오픈Q&amp;A 답변 콘텐츠 관리 정책
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2022.7.18
 							</span>
 						</p>
@@ -211,9 +209,9 @@
 	 				       [공지] 아하토큰 일일 최대 출금 수량 변경 안내(재수정)
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2023.02.13
 							</span>
 						</p>
@@ -229,9 +227,9 @@
 	 				       [공지] 프리미엄 멤버십 혜택 추가 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date txt-mute word-spacing">
 								2023.01.16
 							</span>
 						</p>
@@ -247,9 +245,9 @@
 	 				       멤버십 복권 이벤트 당첨자 발표
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2023.01.09
 							</span>
 						</p>
@@ -265,9 +263,9 @@
 	 				       멤버십 회원을 위한 깜짝 아하 복권 이벤트
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.12.22
 							</span>
 						</p>
@@ -283,9 +281,9 @@
 	 				       [공지] 연말정산 특별관 개설 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.12.19
 							</span>
 						</p>
@@ -301,9 +299,9 @@
 	 				       [공지] 보상량 1.5배 UP 이벤트 종료 및 활동 보상 풀 수량 변경 안내
 						</h3>
 					</a>
-						<p>
+						<p class="card-foot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.12.14
 							</span>
 						</p>
@@ -319,9 +317,9 @@
 	 				       [공지] 아하 멤버십 프로그램 론칭 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.12.01
 							</span>
 						</p>
@@ -337,9 +335,9 @@
 	 				       [공지] 아하 멤버십 론칭 예정 안내(수정)
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.11.14
 							</span>
 						</p>
@@ -355,9 +353,9 @@
 	 				       [공지] 신고 보상 제도 변경/출금 수량 기준 변경/공유 보상 제거 관련 사전 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.11.08
 							</span>
 						</p>
@@ -373,9 +371,9 @@
 	 				       [공지] 콘텐츠 관리 정책 변경 사전 안내
 						</h3>
 					</a>
-						<p>
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
-							<span class="date">
+							<span class="date text-mute word-spacing">
 								2022.11.04
 							</span>
 						</p>
