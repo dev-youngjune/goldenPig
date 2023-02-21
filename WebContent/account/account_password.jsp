@@ -47,14 +47,14 @@ div.hide {
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">비밀번호</span>
 							<div id="input_email">
-								<input id="email_text" type="text" placeholder="새로운 비밀번호를 입력해 주세요.">
+								<input class="email_text" id="new_password" type="text" placeholder="새로운 비밀번호를 입력해 주세요.">
 								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
 							</div>
 						</div>
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">비밀번호 확인</span>
 							<div id="input_email">
-								<input id="email_text" type="text" placeholder="비밀번호를 다시 한번 입력해 주세요.">
+								<input class="email_text" id="repeat_password"type="text" placeholder="비밀번호를 다시 한번 입력해 주세요.">
 								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
 							</div>
 						</div>
@@ -69,28 +69,30 @@ div.hide {
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-let userPassword = $("#email_text");
+let userPassword = $(".email_text");
 
-$(".hide").click(function(){
+$("div.hide").click(function(){
+	console.log("input.hide 나옴");
     if(userPassword.attr("type") == "password"){
-        $(".hide").attr("src","../assets/img/account/hide.PNG");
+        /* $(".hide").attr("style","background-image: url(../assets/img/account/hide.PNG)"); */
         userPassword.attr("type","text");
-        userPassword.attr("class","show");
+        $("div.hide").attr("class","show eye");
     }else if(userPassword.attr("type") == "text"){
-        $(".show").attr("src","../assets/img/account/show.PNG");
+        /* $(".show").attr("style","background-image: url(../assets/img/account/show.PNG)"); */
         userPassword.attr("type","password");
-        userPassword.attr("class","hide");
+        $("div.show").attr("class","hide eye");
     }
 });
-$(".show").click(function(){
+$("div.show").click(function(){
+	console.log("input.show 나옴");
     if(userPassword.attr("type") == "password"){
-        $(".show").attr("src","../assets/img/account/hide.PNG");
+        /* $(".show").attr("style","background-image: url(../assets/img/account/hide.PNG)"); */
         userPassword.attr("type","text");
-        userPassword.attr("class","hide eye");
+        $("div.show").attr("class","hide eye");
     }else if(userPassword.attr("type") == "text"){
-        $(".hide").attr("src","../assets/img/account/show.PNG");
+        /* $(".hide").attr("style","background-image: url(../assets/img/account/show.PNG)"); */
         userPassword.attr("type","password");
-        userPassword.attr("class","show eye");
+        $("div.hide").attr("class","show eye");
     }
 });
 </script>
