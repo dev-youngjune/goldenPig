@@ -20,7 +20,7 @@
 										<img src="">
 									</button>
 									<a class="theScreen_headerLoga">
-										<img class="a_headerLogo" src="../assets/img/logo.png">
+										<img class="a_headerLogo" src="../assets/img/account/logo.png">
 									</a>
 								</header>
 								<div class="theScreen_body px-5">
