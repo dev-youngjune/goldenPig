@@ -8,11 +8,28 @@
 <link rel="stylesheet" href="../assets/css/main/mainBanner.css">
 <link rel="stylesheet" href="../assets/css/main/mainContainer.css">
 <title>메인 페이지</title>
+<style type="text/css">
+	body {
+		margin: 0;
+	}
+</style>
 </head>
+<!-- 헤더 넣는 js코드 -->
+<!-- <script type="text/javascript">
+	$(document).ready(function() {
+		$("#headers").load("/main/header.jsp"); //헤더 인클루드
+		$("#footers").load("footer.jsp"); //푸터부분 인클루드
+	});
+</script> -->
 <body>
 	<div class="wrapper">
+	<div id="headers"></div>
 		<!-- 헤더 넣는 jsp 코드 -->
-		<%@ include file="/main/header.jsp"%>
+		<%-- <%@ include file="/main/header.jsp"%> --%>
+		
+		<!-- 헤더 넣는 jsp 코드() -->
+		<jsp:include page="/main/header.jsp" flush="false" />
+		
 		<main>
 			<header class="banner"></header>
 			<article class="home-container">
@@ -170,16 +187,10 @@
 			</article>
 		</main>
 
-		<footer id="footers"></footer>
+<!-- 		<footer id="footers"></footer> -->
+		<jsp:include page="/main/footer.jsp" flush="false" />
 	</div>
 </body>
-<!-- 헤더 넣는 js코드 -->
-<!--
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#headers").load("/header.jsp"); //헤더 인클루드
-		$("#footers").load("/footer.jsp"); //푸터부분 인클루드
-	});
-</script>
--->
+
+
 </html>
