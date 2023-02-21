@@ -232,23 +232,33 @@ svg:not(:root) {
 
 /* nav */
 .profile_tabs {
-	border-top-width: 0;
 	--bg-opacity: 1;
     background-color: #fff;
     background-color: rgba(255,255,255,var(--bg-opacity));
     border-top-width: 1px;
     border-bottom-width: 1px;
 	display: block;
+	padding: 11px 0px 10px;
     
+}
+
+.profile_tabs {
+	border-top-width: 0;
+}
+
+.profile_tabs_container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile_tabs_container{
+	display: flex;
+    max-width: 1500px;
 }
 
 .profile_tabs_container{
 	padding-left: calc(360px + 3.5rem);
-	display: flex;
-    max-width: 1500px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 ui {
@@ -292,6 +302,8 @@ ui {
 
 .profile_aside {
 	width: 360px;
+	background-color: #fafafa;
+    margin-left: 35px;
 }
 
 .aside_user {
@@ -303,22 +315,28 @@ ui {
     background-color: rgba(255,255,255,var(--bg-opacity));
     position: relative;
     text-align: center;
-    padding: 20px 15px 32px;
     z-index: 200;
     margin-top: -10rem;
+	box-shadow: 0 0 15px 0 rgb(0 0 0 / 7%)
 }
 
 .aside_user_img {
 	align-items: center;
 	flex-direction: column;
 	display: flex;
+	height: 129.6px;
+    width: 330px;
 }
 
 .aside_user_img_div {
-	--bg-opacity: 1;
+    --bg-opacity: 1;
+    background-color: #fff;
     background-color: rgba(255,255,255,var(--bg-opacity));
     position: relative;
-	border-radius: 9999px;
+}
+
+.aside_user_img_div {
+    border-radius: 9999px;
     border-width: 1px;
     display: inline-block;
     margin-top: 0.5rem;
@@ -338,9 +356,29 @@ ui {
     vertical-align: middle;
 }
 
+.aside_user_img_div_div{
+	isplay: flex;
+    border-radius: 9999px;
+    opacity: 0;
+    position: absolute;
+    --text-opacity: 1;
+    color: #fff;
+    color: rgba(255,255,255,var(--text-opacity));
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.7);
+    width: 110px;
+    height: 110px;
+    top: 5px;
+    left: 5px;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .1s ease-in;
+}
 
-
-.aside_user_ima_div_div svg {
+.aside_user_img_div_div svg {
 	width: 30px;
     height: 27px;
 }
@@ -405,6 +443,17 @@ ui {
 .profile_user_status_item {
 	display: flex;
     justify-content: space-between;
+    height: 25.6px;
+}
+
+.profile_user_status_item:nth-child(3) {
+    margin-top: 1rem;
+}
+.profile_user_status_item:nth-child(4) {
+    margin-top: 1rem;
+}
+.profile_user_status_item:nth-child(5) {
+    margin-top: 1rem;
 }
 
 .profile_user_status_item_span {
@@ -425,27 +474,30 @@ ui {
     margin-right: 0.75rem;
 }
 
-.svg {
+svg {
 	display: inline;
 }
 
-
+audio, canvas, embed, iframe, img, object, svg, video {
+    display: block;
+    vertical-align: middle;
+}
 
 .profile_main {
 	padding-left: 2rem;
     width: calc(100% - 360px);
     width: 100%;
+    ckground-color: #fafafa;
 }
 
-/* main 안에 div가 3~4개 */
 
 .profile_Index {
 	padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
+    ckground-color: #fafafa;
 }
-
 
 .profile_Answers {
 	padding-top: 2rem;
@@ -457,7 +509,7 @@ ui {
     margin-bottom: 0.75rem;
 }
 
-.profileCQuestions {
+.profileC_Questions {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }

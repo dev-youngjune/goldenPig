@@ -57,9 +57,9 @@
 								<div class="aside_user">
 									<div>
 										<div class="aside_user_img">
-											<div class="aside_user_ima_div">
+											<div class="aside_user_img_div">
 												<span class="aside_user_img_div_span"></span>
-													<div class="aside_user_ima_div_div">
+													<div class="aside_user_img_div_div">
 														<svg data-v-1bfbf0fb="" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use  href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera" xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"></use></svg>
 													</div>
 													<button class="aside_user_img_div_button">
@@ -67,11 +67,8 @@
 													</button>
 												</div>
 											</div>
-										</div>
 										<div class="aside_user_nickname">
-											<div class="aside_user_nickname_div">
-												<span>세심한 곽두철씨</span>
-											</div>
+											<span>세심한 곽두철</span>
 										</div>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
@@ -124,12 +121,24 @@
 											</div>
 										</div>
 									</div>
-								</aside>	
+								</div>
+							</aside>	
 							
 							<!-- main -->	
 								<main class="profile_main">
 									<div class="profile_Index">
 										<div class="profile_main_body">
+											<div class="profile_Card">
+												<h4 class="profile_Card_Title">저금</h4>
+												<div class="profile_Card_Content">
+													<div class="profile_Card_Content_noItem">
+														<div class="profile_Card_Content_noItem_Inner">
+															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 저금이 없어요</span>
+														</div>
+													</div>
+												</div>
+											</div>
 											<div class="profile_Card">
 												<h4 class="profile_Card_Title">목표</h4>
 												<div class="profile_Card_Content">
@@ -142,23 +151,12 @@
 												</div>
 											</div>
 											<div class="profile_Card">
-												<h4 class="profile_Card_Title">저금 현황</h4>
+												<h4 class="profile_Card_Title">현황</h4>
 												<div class="profile_Card_Content">
 													<div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
 															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 저금 현황이 없어요</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="profile_Card">
-												<h4 class="profile_Card_Title">대출</h4>
-												<div class="profile_Card_Content">
-													<div class="profile_Card_Content_noItem">
-														<div class="profile_Card_Content_noItem_Inner">
-															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 대출이 없어요</span>
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 현황이 없어요</span>
 														</div>
 													</div>
 												</div>
