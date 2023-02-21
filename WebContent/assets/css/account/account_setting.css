@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+body{
+	font-family: 'Pretendard-Regular';
+}
 
 #title_container{
 	max-width: 1400px;

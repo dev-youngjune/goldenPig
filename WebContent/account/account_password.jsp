@@ -13,6 +13,9 @@
     font-weight: 400;
     font-style: normal;
 }
+input, button, span{
+	font-family: 'Pretendard-Regular';
+}
 div.eye {
     cursor: pointer;
     width: 50px;
@@ -47,20 +50,20 @@ div.hide {
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">비밀번호</span>
 							<div id="input_email">
-								<input id="email_text" type="text" placeholder="새로운 비밀번호를 입력해 주세요.">
+								<input class="email_text" id="new_password" type="text" placeholder="새로운 비밀번호를 입력해 주세요.">
 								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
 							</div>
 						</div>
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">비밀번호 확인</span>
 							<div id="input_email">
-								<input id="email_text" type="text" placeholder="비밀번호를 다시 한번 입력해 주세요.">
+								<input class="email_text" id="repeat_password"type="text" placeholder="비밀번호를 다시 한번 입력해 주세요.">
 								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
 							</div>
 						</div>
 					</div>
 					<footer>
-						<button> 재설정 후 자동로그인 </button>
+						<button id="confirm"> 재설정 후 자동로그인 </button>
 					</footer>
 				</div>
 			</div>
@@ -69,29 +72,30 @@ div.hide {
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-let userPassword = $("#email_text");
+let userInput = $(".email_text");
 
-$(".hide").click(function(){
-    if(userPassword.attr("type") == "password"){
-        $(".hide").attr("src","../assets/img/account/hide.PNG");
-        userPassword.attr("type","text");
-        userPassword.attr("class","show");
-    }else if(userPassword.attr("type") == "text"){
-        $(".show").attr("src","../assets/img/account/show.PNG");
-        userPassword.attr("type","password");
-        userPassword.attr("class","hide");
+$("div.eye").click(function(){
+	console.log("input.hide 나옴");
+	var thisDiv = $(this);
+	var thisInput = thisDiv.parent().children().first();
+    if(thisInput.attr("type") == "password"){
+    	thisInput.attr("type","text");
+    	thisDiv.attr("class","show eye");
+    }else if(thisInput.attr("type") == "text"){
+    	thisInput.attr("type","password");
+        thisDiv.attr("class","hide eye");
     }
 });
-$(".show").click(function(){
-    if(userPassword.attr("type") == "password"){
-        $(".show").attr("src","../assets/img/account/hide.PNG");
-        userPassword.attr("type","text");
-        userPassword.attr("class","hide eye");
-    }else if(userPassword.attr("type") == "text"){
-        $(".hide").attr("src","../assets/img/account/show.PNG");
-        userPassword.attr("type","password");
-        userPassword.attr("class","show eye");
+/* $("div.show").click(function(){
+	console.log("input.show 나옴");
+	var thisDiv = $(this);
+    if(userInput.attr("type") == "password"){
+    	userInput.attr("type","text");
+    	thisDiv.attr("class","hide eye");
+    }else if(userInput.attr("type") == "text"){
+    	userInput.attr("type","password");
+    	thisDiv.attr("class","show eye");
     }
-});
+}); */
 </script>
 </html>

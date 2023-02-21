@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원탈퇴</title>
 <link rel="stylesheet" href="../assets/css/account/account_withdrawal.css">
 <style>
 @font-face {
@@ -12,6 +12,9 @@
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+}
+input, button, span{
+	font-family: 'Pretendard-Regular';
 }
 </style>
 </head>
@@ -74,8 +77,8 @@
 					</div>
 					<footer>
 						<div style="display: flex; align-items: center; justify-content: space-between">
-							<a> 취소 </a>
-							<button> 탈퇴하기 </button>
+							<a id="cancel"> 취소 </a>
+							<button id="confirm"> 탈퇴하기 </button>
 						</div>
 					</footer>
 				</div>
