@@ -17,6 +17,9 @@
 				<div class="logo-box">
 					<img src="../assets/img/admin/logo_icon.png">
 				</div>
+				<div class="logo-title">
+					<span>골든 피그</span>
+				</div>
 			</div>
 			<div>
 				<div class="select-name">
@@ -67,13 +70,13 @@
 												<span class="info-tag">배너 명</span>
 												<!-- 이름 -->
 												<div class="info info-name">
-													<input type="text" class="banner-name" name="bannerName">
+													<input type="text" class="banner-name" name="bannerName" placeholder="배너명을 입력해주세요.">
 												</div>
 											</div>	
 											<div class="member-info-tag-box">
 												<span class="info-tag">기간</span>
 												<div class="info">
-													<input type="text" class="member-birth" name="memberBirth">
+													<input type="text" class="banner-date" name="bannerDate" placeholder="등록기간을 입력해주세요.">
 												</div>
 											</div>
 											<div class="button-box">
