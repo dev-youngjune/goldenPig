@@ -53,7 +53,7 @@
 							<div class="info-table">
 							<form action="">
 								<div>
-									<input type="text" class="notice-title" name="noticeTitle" placeholder="제목을 입력해주세요.">
+									<input type="text" class="notice-title" name="noticeTitle" placeholder="제목을 입력해주세요." autocomplete="off">
 								</div>
 								<hr>
 								<div>
@@ -74,4 +74,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/notice-write.js"></script>
+<script src="../assets/js/admin/prev.js"></script>
 </html>

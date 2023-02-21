@@ -38,7 +38,7 @@
 							<div>
 								<a>
 									<img src="../assets/img/admin/prev_icon.png" class="prev-icon">
-									<span class="prev-title">리스트로 돌아가기</span>
+									<span class="prev-title">회원정보로 돌아가기</span>
 								</a>
 							</div>
 						</div>
@@ -88,7 +88,7 @@
 												</div>
 											</div>
 											<div class="button-box">
-												<button>변경</button>
+												<button id ="modify-button">변경</button>
 											</div>
 										</form>
 									</div>	
@@ -103,4 +103,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
+<script src="../assets/js/admin/modify-member.js"></script>
+<script src="../assets/js/admin/prev.js"></script>
 </html>
