@@ -44,27 +44,208 @@
 							<div class="flex">
 								<div class="buttons">
 									<div class="star-icon position">
-										<img src="../assets/img/board/star.png" class="absolute">
-										<span class="margin-left color-blue">관심질문 <span class="star-count">0</span></span>
+										<img src="../assets/img/board/star-icon.png" class="absolute">
+										<span class="margin-left color-blue star-text">관심질문 <span class="star-count">0</span></span>
 									</div>
 									<div class="like-icon position">
 										<img src="../assets/img/board/like.png" class="absolute">
-										<span class="margin-left">좋아요 <span class="like-count">0</span></span>
+										<span class="margin-left like-text">좋아요 <span class="like-count">0</span></span>
 									</div>
 									<div class="reply-icon position">
-										<img src="../assets/img/board/reply.png" class="absolute">
-										<span class="margin-left">댓글 <span>0</span></span>
+										<img src="../assets/img/board/comment-icon.png" class="absolute">
+										<span class="margin-left comment-text">댓글 <span class="comment-count">0</span></span>
 									</div>	
+								</div>
+							</div>
+							
+							
+							<!-- ----------------------댓글 작성---------------------- -->
+							
+							
+							<div class="comment-wrap" style="display: none;">
+								<div class="comment-list">
+									<div class="comment-write">
+										<div class="comment-flex-justify-between">
+											<div class="comment-user-info">
+												<div class="comment-user-image">
+													<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+													<span>상냥한너구리168</span>
+												</div>
+												<div class="comment-input-button">
+													<input type="button" value="댓글 등록">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="comment-editor">
+										<textarea rows="6" cols="6" placeholder="댓글을 입력해주세요."></textarea>
+									</div>
+									
+									
+									<!-- ----------------------댓글 목록---------------------- -->
+									
+									
+									<div class="comment-list-list" style="display: none">
+										<div class="comment-list-padding-top">
+											<div class="comment-list-padding-left">
+												<div class="comment-list-flex-justify-between">
+													<div class="comment-list-user-info-flex">
+														<div class="comment-user-image">
+															<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+															<span>상냥한너구리168</span>
+														</div>
+													</div>
+													<div class="comment-list-buttons">
+														<input type="button" value="수정">
+														<span>|</span>
+														<input type="button" value="삭제">
+													</div>
+												</div>
+												<div class="margin-top-left">
+													<p class="comment-list-reply">오 감사합니다 !</p>
+												</div>
+												<span class="card-header-register-date margin-left-32px">2023. 02. 18. 09:53</span>
+											</div>
+										</div>
+									</div>
+									
+									
 								</div>
 							</div>
 						</footer>
 					</div>
 				</article>
 			</section>
-			<div class="answer-button">
-				<input type="button" value="답변하기">
+			
+			
+			<!-- ----------------------------- 답변 ----------------------------- -->
+			
+			
+			<div class="answer-wrap">
+				<div class="answer-button">
+					<input type="button" value="답변하기">
+				</div>
+				<h4 class="answer-title">총 1개의 답변이 있어요.</h4>
+				<div class="asnwer-content-wrap">
+					<article>
+						<div class="card-main">
+							<header class="card-header">
+								<div class="answer-user-image">
+									<div class="user-image-wrap">
+										<a class="answer-image">
+											<span class=img></span>
+											<img src="https://media.a-ha.io/aha-qna/users/kmrjG9vnAZYCaygPbjtZK">
+										</a>
+									</div>
+									<div class="user-name">
+										<span class="anwer-name">송윤경 세무사</span>
+										<img src="https://www.a-ha.io/_nuxt/img/badge_expert.f392019.svg">
+									</div>
+								</div>
+							</header>
+							<div class="card-content">
+								<div class="editor-content">
+									<p>
+										지금 현재 직장인이고 연말정산 회사에 서류제출 하였습니다....
+										작년에 투잡으로  500만원정도 소득이 발생했습니다..  그러면 제가 따로 5월에 신고 해야하나요?
+									</p>
+									<span class="card-header-register-date">2023. 02. 18. 09:53</span>
+								</div>
+							</div>
+							<footer class="card-footer">
+								<div class="flex">
+									<div class="buttons">
+										<div class="like-icon position">
+											<img src="../assets/img/board/like.png" class="absolute">
+											<span class="margin-left">좋아요 <span class="like-count">0</span></span>
+										</div>
+										<div class="reply-icon position">
+											<img src="../assets/img/board/comment-icon.png" class="absolute">
+											<span class="margin-left">댓글 <span>0</span></span>
+										</div>	
+									</div>
+								</div>
+								
+								
+								<!-- ----------------------댓글 작성---------------------- -->
+								
+								
+								<div class="comment-wrap" style="display: none;">
+									<div class="comment-list">
+										<div class="comment-write">
+											<div class="comment-flex-justify-between">
+												<div class="comment-user-info">
+													<div class="comment-user-image">
+														<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+														<span>상냥한너구리168</span>
+													</div>
+													<div class="comment-input-button">
+														<input type="button" value="댓글 등록">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comment-editor">
+											<textarea rows="6" cols="6" placeholder="댓글을 입력해주세요."></textarea>
+										</div>
+										
+										
+										<!-- ----------------------댓글 목록---------------------- -->
+										
+										
+										<div class="comment-list-list" style="display: none">
+											<div class="comment-list-padding-top">
+												<div class="comment-list-padding-left">
+													<div class="comment-list-flex-justify-between">
+														<div class="comment-list-user-info-flex">
+															<div class="comment-user-image">
+																<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+																<span>상냥한너구리168</span>
+															</div>
+														</div>
+														<div class="comment-list-buttons">
+															<input type="button" value="수정">
+															<span>|</span>
+															<input type="button" value="삭제">
+														</div>
+													</div>
+													<div class="margin-top-left">
+														<p class="comment-list-reply">오 감사합니다 !</p>
+													</div>
+													<span class="card-header-register-date margin-left-32px">2023. 02. 18. 09:53</span>
+												</div>
+											</div>
+										</div>
+										
+										
+									</div>
+								</div>
+							</footer>
+						</div>
+					</article>
+				</div>
 			</div>
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="../assets/js/board/board_detail.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

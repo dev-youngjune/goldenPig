@@ -40,7 +40,8 @@
 											<div class="qeusetion-body">
 												<div class="qeustion-content">
 													<div class="question-padding">
-														<input type="text" name="content" placeholder="연말정산에 질문을 해주세요.">
+														<!-- <input type="text" name="content" placeholder="연말정산에 질문을 해주세요."> -->
+														<textarea placeholder="연말정산에 질문을 해주세요."></textarea>
 													</div>
 												</div>
 											</div>
