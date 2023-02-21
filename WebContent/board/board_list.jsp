@@ -47,7 +47,7 @@
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star.png">
+														<img class="star" src="../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
@@ -90,7 +90,7 @@
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star.png">
+														<img class="star" src="../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
@@ -133,7 +133,7 @@
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star.png">
+														<img class="star" src="../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
@@ -176,7 +176,7 @@
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star.png">
+														<img class="star" src="../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
@@ -218,7 +218,7 @@
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star.png">
+														<img class="star" src="../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
