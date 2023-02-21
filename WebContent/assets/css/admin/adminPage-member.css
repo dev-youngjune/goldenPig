@@ -44,15 +44,24 @@
 }
 
 .logo-box img {
-	width: 100px;
+	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg) brightness(104%) contrast(110%);
+	width: 80px;
 }
 
 .logo-box {
-	padding: 5px 43px 0px;
+	padding: 4px 10px 0px 25px;
 }
 
 .logo-box-layout {
+	display: flex;
 	width: 250px;	
+}
+
+.logo-title {
+	color: #EAE847;
+	padding-top: 10px;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 .select-name {
