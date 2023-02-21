@@ -20,7 +20,7 @@
 				<div class="logo-title">
 					<span>골든 피그</span>
 				</div>
-			</div>>
+			</div>
 			<div>
 				<div class="select-name">
 					<span>저축 게시판 관리</span>	
