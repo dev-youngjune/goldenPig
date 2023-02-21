@@ -69,30 +69,28 @@ div.hide {
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-let userPassword = $(".email_text");
+let userInput = $(".email_text");
 
 $("div.hide").click(function(){
 	console.log("input.hide 나옴");
-    if(userPassword.attr("type") == "password"){
-        /* $(".hide").attr("style","background-image: url(../assets/img/account/hide.PNG)"); */
-        userPassword.attr("type","text");
-        $("div.hide").attr("class","show eye");
-    }else if(userPassword.attr("type") == "text"){
-        /* $(".show").attr("style","background-image: url(../assets/img/account/show.PNG)"); */
-        userPassword.attr("type","password");
-        $("div.show").attr("class","hide eye");
+	var thisDiv = $(this);
+    if(userInput.attr("type") == "password"){
+    	userInput.attr("type","text");
+    	thisDiv.attr("class","show eye");
+    }else if(userInput.attr("type") == "text"){
+    	userInput.attr("type","password");
+        thisDiv.attr("class","hide eye");
     }
 });
 $("div.show").click(function(){
 	console.log("input.show 나옴");
-    if(userPassword.attr("type") == "password"){
-        /* $(".show").attr("style","background-image: url(../assets/img/account/hide.PNG)"); */
-        userPassword.attr("type","text");
-        $("div.show").attr("class","hide eye");
-    }else if(userPassword.attr("type") == "text"){
-        /* $(".hide").attr("style","background-image: url(../assets/img/account/show.PNG)"); */
-        userPassword.attr("type","password");
-        $("div.hide").attr("class","show eye");
+	var thisDiv = $(this);
+    if(userInput.attr("type") == "password"){
+    	userInput.attr("type","text");
+    	thisDiv.attr("class","hide eye");
+    }else if(userInput.attr("type") == "text"){
+    	userInput.attr("type","password");
+    	thisDiv.attr("class","show eye");
     }
 });
 </script>
