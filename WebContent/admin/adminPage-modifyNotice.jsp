@@ -17,6 +17,9 @@
 				<div class="logo-box">
 					<img src="../assets/img/admin/logo_icon.png">
 				</div>
+				<div class="logo-title">
+					<span>골든 피그</span>
+				</div>
 			</div>
 			<div>
 				<div class="select-name">
