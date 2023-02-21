@@ -16,6 +16,7 @@
 </style>
 </head>
 <body>
+<jsp:include page="/main/header.jsp" flush="true" />
 	<div id="wrap">
 		<h1>인증센터</h1>
 		<section style="margin-top: 20px">
@@ -51,7 +52,7 @@
 		</section>
 		<section style="margin-top: 20px; text-align: right">
 			<a style="margin-right: 0.25rem; display: inline; vertical-align: middle; cursor: pointer">
-				<img alt="" src="../assets/img/minus.png" style="position: absolute">
+				<img alt="" src="../assets/img/account/minus.png" style="position: absolute">
 				회원 탈퇴
 			</a>
 		</section>

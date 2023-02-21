@@ -174,9 +174,10 @@ label{
     border-top: none;
     border-left: none;
     border-right: none;
+    outline: none;
 }
 input::placeholder{
 	--tw-text-opacity: 1;
     color: rgba(199, 199, 199, var(--tw-text-opacity));
 }
-
+input:focus {outline: none;}
