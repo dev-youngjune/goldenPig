@@ -1,5 +1,9 @@
 @charset "EUC-KR";
 
+a {
+	display: inline;
+}
+
 .navigation {
 	width: 100%;
 	height: 62px;
@@ -64,9 +68,7 @@
 	height: 60px;
 }
 
-.nav-right-item {;
-	
-}
+/* .nav-right-item {;} */
 
 .nav-search {
 	position: relative;
@@ -115,10 +117,23 @@
 }
 
 a.nav-right-button {
-	padding: 0.5rem 2rem;
-	font-size: 1rem;
-	font-weight: 500;
-	border-radius: 9999px;
-	background-color: #EC4352;
-	color: rgb(255, 255, 255);
+	padding: 1rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 9999px;
+    background-color: #EC4352;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav-notification{
+	
+}
+
+.nav-profile {
+	
+}
+
+body {
+	margin: 0;
 }

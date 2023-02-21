@@ -7,6 +7,23 @@
 <!-- <link rel="stylesheet" href="../assets/css/main/bulma.css"> -->
 <link rel="stylesheet" href="../assets/css/header.css">
 <title>Insert title here</title>
+<style type="text/css">
+
+	.nav-notification img {
+		width: 32px;
+		/* background-color: #9E9E9E; */
+		/* font-family: "Consolas", "Menlo", "Ubuntu Mono", monospace; */
+		filter: invert(54%) sepia(87%) saturate(0%) hue-rotate(279deg) brightness(94%) contrast(115%);
+	}
+
+	.show-img {
+		display: flex;
+	}
+	
+	.hide-img {
+		display: none;
+	}
+</style>
 </head>
 <body>
 	<nav class="navigation">
@@ -29,9 +46,12 @@
 							</button>
 						</form>
 					</div>
-					<div class="nav-right-item nav-register is-inline-block">
-						<a href="#" class="nav-right-button">로그인</a>
-						<a href="#" class="nav-right-button">회원가입</a>
+					<div class="nav-right-item nav-notification">
+						<img class="show-img" src="../assets/img/main/bell.png" alt="">
+						<img class="hide-img" src="../assets/img/main/bell-alert.png" alt="">
+					</div>
+					<div class="nav-right-item nav-profile">
+						
 					</div>
 				</div>
 			</div>
