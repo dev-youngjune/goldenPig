@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="../assets/css/main/bulma.css">
 <link rel="stylesheet" href="../assets/css/main/mainBanner.css">
 <link rel="stylesheet" href="../assets/css/main/mainContainer.css">
+<link rel="stylesheet" href="../assets/css/font/fontFamily.css">
+
 <title>메인 페이지</title>
 <style type="text/css">
 	body {
@@ -24,8 +26,6 @@
 <body>
 	<div class="wrapper">
 	<div id="headers"></div>
-		<!-- 헤더 넣는 jsp 코드 -->
-		<%-- <%@ include file="/main/header.jsp"%> --%>
 		
 		<!-- 헤더 넣는 jsp 코드() -->
 		<jsp:include page="/header/header.jsp" flush="false" />
@@ -38,9 +38,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<svg class="">
-									
-								</svg>
+								<img alt="" src="../assets/img/main/coin_icon.svg">
 								<span>보유 저축</span>
 							</button>
 						</a>
@@ -48,24 +46,24 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<svg></svg>
-								<span>버튼2</span>
+								<img alt="" src="../assets/img/main/search-64.png">
+								<span>전문가 신청</span>
 							</button>
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<svg></svg>
-								<span>버튼3</span>
+								<img alt="" src="../assets/img/main/membership_card-64.png">
+								<span>멤버십</span>
 							</button>
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<svg></svg>
-								<span>버튼4</span>
+								<img alt="" src="../assets/img/main/user_avatar-64.png">
+								<span>계정 설정</span>
 							</button>
 						</a>
 					</div>
@@ -99,9 +97,8 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="categoryCard-wrapper">
-										<a class="categoryCard is-align-content-center"> <img
-											alt=""
-											src="../assets/img/main/5310117_coin_dollar_money_icon.svg">
+										<a href="#" class="categoryCard is-align-content-center">
+										<img alt="" src="../assets/img/main/coin_icon.svg">
 										</a> <span class="is-align-content-center">연말정산</span>
 									</div>
 								</div>
@@ -109,28 +106,36 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="categoryCard-wrapper">
-										<a class="categoryCard"> </a> <span>이자</span>
+										<a href="#" class="categoryCard">
+											<img alt="" src="../assets/img/main/loan_interest-64.png">
+										</a> <span>이자</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>금리</span>
+										<a href="#" class="categoryCard">
+											<img alt="" src="../assets/img/main/interest_rate-64.png">
+										</a> <span>금리</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>의료</span>
+										<a href="#" class="categoryCard">
+											<img alt="" src="../assets/img/main/medical_icon-64.png">
+										</a> <span>의료</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>보험</span>
+										<a href="#" class="categoryCard">
+											<img alt="" src="../assets/img/main/life_insurance-64.png">
+										</a> <span>보험</span>
 									</div>
 								</div>
 							</article>
@@ -148,35 +153,45 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>생활꿀팁</span>
+										<a class="categoryCard">
+											<img alt="" src="../assets/img/main/vision_eye_idea-64.png">
+										</a> <span>생활꿀팁</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>청소</span>
+										<a class="categoryCard">
+											<img alt="" src="../assets/img/main/home_cleaning-64.png">
+										</a> <span>청소</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>세탁</span>
+										<a class="categoryCard">
+											<img alt="" src="../assets/img/main/laundry_icon-64.png">
+										</a> <span>세탁</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>자동차</span>
+										<a class="categoryCard">
+											<img alt="" src="../assets/img/main/car1-64.png">
+										</a> <span>자동차</span>
 									</div>
 								</div>
 							</article>
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard"> </a> <span>등산</span>
+										<a class="categoryCard">
+											<img alt="" src="../assets/img/main/mountain_adventure-64.png">
+										</a> <span>등산</span>
 									</div>
 								</div>
 							</article>
@@ -184,14 +199,17 @@
 					</div>
 				</section>
 				<!-- 아래쪽 내용들은 다 home-section으로 묶임 -->
-				<section class="home-section"></section>
+				<section class="home-section">
+					<div></div>
+					<div></div>
+				</section>
 			</article>
 		</main>
 
 <!-- 		<footer id="footers"></footer> -->
-		<jsp:include page="/header/footer-main.jsp" flush="false" />
+		<jsp:include page="/header/footer-main.jsp" flush="false"/>
 	</div>
 </body>
-
-
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="../assets/js/main/main.js"></script>
 </html>
