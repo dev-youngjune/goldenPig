@@ -19,7 +19,6 @@ input, button, span{
 </style>
 </head>
 <body>
-<jsp:include page="/main/header.jsp" flush="false" />
 	<div id="wrap">
 		<main>
 			<div>
