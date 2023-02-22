@@ -9,8 +9,8 @@
 </head>
 
 <body>
-<div>
-	<section class="container no-padding-xs" style="height: auto !important;">
+<div class="size-controll">
+	<div class="container no-padding-xs"> <!-- style="height: auto !important;" -->
 		<!-- ::before  -->
 		<div class="row" style="height: auto !important;">
 			<!-- ::before -->
@@ -55,8 +55,8 @@
 							<!--공지사항 제목  -->
 									<h3>
 										<!--필독 라벨  -->
-										<span class="label">
-											<i class="icon tw-text-white">
+										<span class="label pull-left">
+											<i class="icon icon-check tw-text-white">
 											<!-- before?????????? -->
 											</i>
 											필독
@@ -76,21 +76,20 @@
 			<article class="card"> 
 				<div class="card-body">
 					<!--공지사항 들어가는 링크  -->
-					<a href="" class>
-						<!--공지사항 제목  -->
+						<a href="" class>
+						<!-- 공지사항 제목 --> 
 						<h3>
-							<!--필독 라벨  -->
+							필독 라벨 
 							<span class="label pull-left">
 								<i class="icon icon-check tw-text-white">
-									<!-- before?????????? -->
 								</i>
-									필독
+							필독
 							</span>						
 					        [공지] 애플 iOS 회원 멤버십 구독 방법 안내
 						</h3>
 					</a>
 						<p class="cardFoot">
-							<!--공지사항 작성 날짜  -->
+							<!--공지사항 작성 날짜 -->
 							<span class="date txt-mute word-spacing">
 								2023.01.06
 							</span>
@@ -299,7 +298,7 @@
 	 				       [공지] 보상량 1.5배 UP 이벤트 종료 및 활동 보상 풀 수량 변경 안내
 						</h3>
 					</a>
-						<p class="card-foot">
+						<p class="cardFoot">
 							<!--공지사항 작성 날짜  -->
 							<span class="date text-mute word-spacing">
 								2022.12.14
@@ -410,7 +409,7 @@
 	<!-- ::after  -->
 	</div>	
 	<!-- ::after  -->
-	</section>
+	</div>
 </div>	
 </body>
 </html>
