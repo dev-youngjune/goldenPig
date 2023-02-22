@@ -284,6 +284,11 @@ ui {
 	text-decoration: none;
 }
 
+.profile_tabs_container .profile_tabsItem .myProfile_Questions{
+	font-weight: 700;
+    color: black!important;
+}
+
 /* section */
 .ptofile_section {
 	display: flex;
