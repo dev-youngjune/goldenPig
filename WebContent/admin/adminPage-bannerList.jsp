@@ -214,5 +214,5 @@
 <script src="../assets/js/admin/menuLoad.js"></script>
 <script src="../assets/js/admin/checkbox.js"></script>
 <script src="../assets/js/admin/page.js"></script>
-<script type="text/javascript" src="../assets/js/admin/slide.js"></script>
+<script src="../assets/js/admin/slide.js"></script>
 </html>
