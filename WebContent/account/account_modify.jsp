@@ -33,11 +33,44 @@ input, button, span{
 	<div id="wrap">
 		<div id="modal">
 			<div>
+				<h4 style="font-size: 18px">통신사를 선택해 주세요.</h4>
+				<label>
+					<input type="checkbox" name="option" onclick="uncheckOthers(this)">SKT				
+				</label>
+				<label>
+					<input type="checkbox" name="option" onclick="uncheckOthers(this)">KT				
+				</label>
+				<label>
+					<input type="checkbox" name="option" onclick="uncheckOthers(this)">LG U+				
+				</label>
+				<label>
+					<input type="checkbox" name="option" onclick="uncheckOthers(this)">알뜰폰				
+				</label>
+			</div>
+			<div style="margin-top: 2.5rem; text-align: center;">
+				이름
+			</div>
+			<input type="text"; placeholder="성명 입력" style="height: 25px">
+			<div style="margin-top: 2.5rem; text-align: center;">
+				휴대폰 번호
+			</div>
+			<input type="text"; placeholder="숫자만 입력" style="height: 25px">
+			<div style="display: flex;">
+				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
+					<button id="modal_btn_cancel">취소</button>
+				</footer>
+				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
+					<button id="modal_btn">확인</button>
+				</footer>
+			</div>
+		</div>
+		<div id="modal_phone">
+			<div>
 				<h4 style="font-size: 18px">휴대폰 번호를 변경하였어요.</h4>
 				<div style="margin-top: 0.5rem;text-align: center; color: #484c53; word-break: keep-all;">이제 변경한 번호로 골든피그를 이용할 수 있어요.</div>
 			</div>
 			<footer style="margin-top: 2.5rem; display: flex; justify-content: flex-end;">
-				<button id="modal_btn">확인</button>
+				<button id="modal_phone_btn">확인</button>
 			</footer>
 		</div>
 		<div>
@@ -99,12 +132,34 @@ input, button, span{
 	const btn = document.querySelector("#change_modal");
 	const modal = document.querySelector("#modal");
 	const modal_btn = document.querySelector("#modal_btn");
+	const modal_btn_cancel = document.querySelector("#modal_btn_cancel");
+	const modal_phone = document.querySelector("#modal_phone");
+	const modal_phone_btn = document.querySelector("#modal_phone_btn");
+	
 	btn.addEventListener("click",() => {
 		modal.style.display = "flex";
 	});
 	
+	modal_btn_cancel.addEventListener("click",() =>{
+		modal.style.display = "none";
+	});
+	
 	modal_btn.addEventListener("click",() =>{
 		modal.style.display = "none";
-	})	
+		modal_phone.style.display = "flex";
+	});
+	
+	modal_phone_btn.addEventListener("click",() =>{
+		modal_phone.style.display = "none";
+	});
+	
+	function uncheckOthers(checkbox) {
+	var checkboxes = document.getElementsByName('option');
+	for (var i = 0; i < checkboxes.length; i++) {
+		if (checkboxes[i] !== checkbox) {
+			checkboxes[i].checked = false;
+		}
+	}
+}
 </script>
 </html>
