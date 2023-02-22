@@ -126,14 +126,29 @@ a.nav-right-button {
     text-decoration: none;
 }
 
-.nav-notification{
+/* .nav-notification{
 	
 }
 
 .nav-profile {
 	
-}
+} */
 
 body {
 	margin: 0;
+}
+
+.nav-notification img {
+	width: 32px;
+	/* background-color: #9E9E9E; */
+	/* font-family: "Consolas", "Menlo", "Ubuntu Mono", monospace; */
+	filter: invert(54%) sepia(87%) saturate(0%) hue-rotate(279deg) brightness(94%) contrast(115%);
+}
+
+.show-img {
+	display: flex;
+}
+
+.hide-img {
+	display: none;
 }
