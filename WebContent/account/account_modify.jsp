@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 수정</title>
+<link rel="stylesheet" href="../assets/css/account/account_modify_footer.css">
 <link rel="stylesheet" href="../assets/css/account/account_modify.css">
 <style>
 
@@ -42,19 +43,6 @@ input, button, span{
 		<div>
 		</div>
 		<h1>인증센터</h1>
-		<section style="margin-top: 20px">
-			<h2>
-				<span class ="board_name">연동 되어있는 SNS 계정</span>
-			</h2>
-			<div>
-				<div class="board">
-					<div id="kakao_board">
-						<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSq4OD%2Fbtqzlkr13eD%2FdYwFnscXEA6YIOHckdPDDk%2Fimg.jpg" style="width: 24px; height:24px" >
-						<span>카카오</span>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section>
 			<h2 class ="board_name">이메일</h2>
 			<div class="board" style="justify-content: space-between; display: flex">
@@ -75,10 +63,35 @@ input, button, span{
 		</section>
 		<section style="margin-top: 20px; text-align: right">
 			<a style="margin-right: 0.25rem; display: inline; vertical-align: middle; cursor: pointer">
-				<img alt="" src="../assets/img/account/minus.png" style="position: absolute">
+				<img alt="" src="../assets/img/account/minus.png" style="position: absolute; width: 23px; left: -23px; top: -2px">
 				회원 탈퇴
 			</a>
 		</section>
+	</div>
+	<div>
+		<footer class="footer">
+			<hr style="border: solid 0.1px #e6e6e6">
+			<div class="footer-container container-base">
+				<div class="footer-container-left">
+					<div class="logo-wrapper">
+						<a href="#">
+							<img class="logo-img" src="../assets/img/account/logo.png" alt="">
+						</a>
+					</div>
+					<article class="footer-contents">
+						<ul class="footer-menu">
+							<li class="mr-3"><a href="#">서비스 이용약관</a></li>
+							<li class="mr-3"><a href="#">유료 서비스 이용약관</a></li>
+							<li class="mr-3"><a href="#">개인정보취급방침</a></li>
+						</ul>
+						<div class="all-rights">
+           				 	© 2023 Aha. All rights reserved.
+						</div>
+					</article>
+				</div>
+				<div class="footer-container-right"></div>
+			</div>
+		</footer>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
