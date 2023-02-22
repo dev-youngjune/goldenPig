@@ -199,7 +199,10 @@
 					</div>
 				</section>
 				<!-- 아래쪽 내용들은 다 home-section으로 묶임 -->
-				<section class="home-section"></section>
+				<section class="home-section">
+					<div></div>
+					<div></div>
+				</section>
 			</article>
 		</main>
 
