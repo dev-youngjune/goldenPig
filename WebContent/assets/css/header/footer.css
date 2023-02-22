@@ -75,7 +75,7 @@ img.logo-img {
 }
 
 a {
-	color: black;
+	color: black !important;
 	text-decoration: none;
 	background-color: transparent;
 	box-sizing: border-box;
