@@ -37,12 +37,12 @@
 						<a href="#" class="nav-right-button">로그인</a>
 						<a href="#" class="nav-right-button">회원가입</a>
 					</div>
-					<div class="<!-- is-hidden -->">
-						<div class="nav-right-item nav-notification">
+					<div class="nav-right-item profile-wrapper"><!-- is-hidden -->
+						<div class="nav-notification">
 							<img class="show-img" src="../assets/img/main/bell.png" alt="">
 						</div>
-						<div class="nav-right-item nav-profile">
-							
+						<div class="nav-profile">
+							<img class="show-img" src="../assets/img/member/user_icon.png" alt="">
 						</div>
 					</div>
 				</div>

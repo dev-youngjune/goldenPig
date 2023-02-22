@@ -43,6 +43,8 @@ a {
 	line-height: inherit;
 	color: inherit;
 	margin: 0;
+	padding-top: 18px;
+    padding-left: 17px;	
 }
 
 .nav-left {
@@ -151,4 +153,17 @@ body {
 
 .hide-img {
 	display: none;
+}
+
+.profile-wrapper {
+	display: flex;
+}
+
+.profile-wrapper div{
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.nav-profile {
+	width: 40px;
 }
