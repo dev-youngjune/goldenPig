@@ -25,14 +25,12 @@
 </script> -->
 <body>
 	<div class="wrapper">
-	<div id="headers"></div>
-		
 		<!-- 헤더 넣는 jsp 코드() -->
 		<jsp:include page="/header/header.jsp" flush="false" />
 		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>
-			<header class="banner"></header>
+		<jsp:include page="/banner/banner.jsp" flush="false" />
 			<article class="home-container">
 				<section class="home-buttons columns is-relative">
 					<div class="home-button-wrapper column is-one-quarter">
@@ -203,13 +201,148 @@
 					<header class="home-section-title home-section-hotQuestion title is-5 ">
 						<h4 class="home-section-title-content">모두가 궁금해하는 질문</h4>
 						<span class="home-section-hotQuestion-time"> 2023.02.22 18:00 기준</span>
-					</header> 
-					<div></div>
+					</header>
+					
+					<!-- 첫번째 줄 -->
+					<div class="home-section-categoryCards tile is-ancestor">
+						<div class="home-section-categoryCards-wrapper tile is-parent">
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+								<section class="home-section">
+					<header class="home-section-title home-section-hotQuestion title is-5 ">
+						<h4 class="home-section-title-content">모두가 궁금해하는 질문</h4>
+						<span class="home-section-hotQuestion-time"> 2023.02.22 18:00 기준</span>
+					</header>
+					
+					<!-- 첫번째 줄 -->
+					<div class="home-section-categoryCards tile is-ancestor">
+						<div class="home-section-categoryCards-wrapper tile is-parent">
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
 				</section>
 			</article>
 		</main>
-
-<!-- 		<footer id="footers"></footer> -->
 		<jsp:include page="/header/footer-main.jsp" flush="false"/>
 	</div>
 </body>
