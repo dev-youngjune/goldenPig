@@ -73,11 +73,6 @@ input, button, span{
 			<hr style="border: solid 0.1px #e6e6e6">
 			<div class="footer-container container-base">
 				<div class="footer-container-left">
-					<div class="logo-wrapper">
-						<a href="#">
-							<img class="logo-img" src="../assets/img/account/logo.png" alt="">
-						</a>
-					</div>
 					<article class="footer-contents">
 						<ul class="footer-menu">
 							<li class="mr-3"><a href="#">서비스 이용약관</a></li>
@@ -88,6 +83,11 @@ input, button, span{
            				 	© 2023 Aha. All rights reserved.
 						</div>
 					</article>
+					<div class="logo-wrapper">
+						<a href="#">
+							<img class="logo-img" src="../assets/img/account/logo.png" alt="">
+						</a>
+					</div>
 				</div>
 				<div class="footer-container-right"></div>
 			</div>
