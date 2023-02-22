@@ -7,9 +7,9 @@
 <title>공지사항</title>
 <link rel="stylesheet" href="../assets/css/notice/notice.css">
 </head>
-
 <body>
-<div class="size-controll">
+<jsp:include page="/header/header.jsp" flush="false" /> 
+<div class="size-controll" style="background-color: rgb(250,250,250);">
 	<div class="container no-padding-xs"> <!-- style="height: auto !important;" -->
 		<!-- ::before  -->
 		<div class="row" style="height: auto !important;">
