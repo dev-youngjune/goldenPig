@@ -28,7 +28,8 @@
 		<%-- <%@ include file="/main/header.jsp"%> --%>
 		
 		<!-- 헤더 넣는 jsp 코드() -->
-		<jsp:include page="/main/header.jsp" flush="false" />
+		<jsp:include page="/header/header.jsp" flush="false" />
+		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>
 			<header class="banner"></header>
@@ -188,7 +189,7 @@
 		</main>
 
 <!-- 		<footer id="footers"></footer> -->
-		<jsp:include page="/main/footer.jsp" flush="false" />
+		<jsp:include page="/header/footer-main.jsp" flush="false" />
 	</div>
 </body>
 
