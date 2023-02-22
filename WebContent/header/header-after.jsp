@@ -5,7 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <!-- <link rel="stylesheet" href="../assets/css/main/bulma.css"> -->
-<link rel="stylesheet" href="../assets/css/header.css">
+<link rel="stylesheet" href="../assets/css/header/header.css">
 <title>Insert title here</title>
 <style type="text/css">
 
