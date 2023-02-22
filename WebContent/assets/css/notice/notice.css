@@ -330,17 +330,16 @@ button {
 
 .container {
 	margin-top: 1rem;
-	width: 1008px;
+	width: 930px;
     margin: 0 auto;
     margin-top: 268px;
 }
 
 /* 8470  */
 .tw-bg-white {
-	-bg-opacity: 1;
 	background-color: #fff;
-	background-color: rgba(255, 255, 255, var(- -bg-opacity));
 }
+
 /* 8787 */
 .tw-inline-block {
 	display: inline-block;
