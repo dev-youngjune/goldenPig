@@ -27,6 +27,20 @@ div {
 	display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a {
+    background-color: transparent;
+}
+
+
 /* profile page */
 .layout {
 	margin-top: 0;
@@ -157,9 +171,6 @@ button {
 	font-weight: 500;
 }
 
-/* .header_container_button {
-position: absolute;
-} */
 .header_container_button {
 	padding-left: 1.25rem;
 	padding-right: 1.25rem;
@@ -283,6 +294,207 @@ ui {
 	padding-bottom: 12px;
 	text-decoration: none;
 }
+
+.profile_tabs_container .profile_tabsItem .myProfile_Answers{
+	font-weight: 700;
+    color: black!important;
+}
+
+/*  *//*  */
+
+.profile_Editor {
+	position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.a-modal .scroll.-open {
+	position: relative;
+    overflow-y: auto;	
+}
+
+.a-modal .scroll.-open {
+    height: 100vh;
+    padding-bottom: 2.5rem;
+}
+
+.a-modal_inner {
+	position: relative;
+    --bg-opacity: 1;
+    background-color: #fff;
+    background-color: rgba(255,255,255,var(--bg-opacity));
+    border-radius: 12px;
+    padding: 0;
+    margin: auto auto 2.5rem;
+    width: 750px;
+    max-width: 90%;
+    top: 35px;
+    z-index: 1200;
+}
+
+.a-modal_inner {
+	width: 700px;
+}
+
+.a-modal_innerBody {
+	padding: 1rem 2rem 2.5rem;
+	border-radius: 12px;
+}
+
+.close_button {
+	background: none;
+}
+.close_button {
+	position: absolute;
+    right: 48px;
+    top: 40px;
+}
+.close_button {
+	    display: none;
+}
+
+.sprite-icons {
+	width: 1rem;
+    height: 1rem;
+    display: inline;
+}
+
+.a-model_inner_header {
+	position: relative;
+    width: auto;
+    text-align: center;
+    border-bottom: 1px solid #e3e3e3;
+    margin-left: -32px;
+    margin-right: -32px;
+    padding-bottom: 14px;
+	display: block;
+}
+
+.a-model_inner_header span {
+	font-size: 1.125rem;
+	font-weight: 500;
+}
+
+.a-model_inner_header_button {
+	position: absolute;
+    right: 22px;
+}
+
+.a-model_profile_box {
+	padding: 2rem 0;
+}
+
+.row {
+	margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+.row:after, .row:before {
+    content: " ";
+    display: table;
+}
+
+.a-model_profile_image_box {
+	text-align: center;	
+}
+
+.tw-mb-5 {
+	margin-bottom: 1.25rem;
+}
+
+.a-model_profile_image_span {
+	display: inline-block;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    vertical-align: middle;
+}
+
+.a-model_profile_image_span {
+	width: 120px!important;
+    height: 120px!important;
+}
+
+.a-model_profile_image_span {
+	background-image: url(https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg);
+}
+
+.a-model_profile_image_cropper_button {
+	width: 100%;
+    --text-opacity: 1;
+    color: #fff;
+    color: rgba(255,255,255,var(--text-opacity));
+    font-weight: 500;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.a-model_profile_image_cropper_button {
+    height: 48px;
+}
+
+.a-model_profile_image_cropper_button {
+	--text-opacity: 1;
+    color: #0f27d1;
+    color: rgba(15,39,209,var(--text-opacity));
+    --bg-opacity: 1;
+    background-color: #e8f0f9;
+    background-color: rgba(232,240,249,var(--bg-opacity));
+}
+.a-model_profile_image_cropper_button {
+	margin-top: 1rem;
+	
+}
+
+
+.a-model_profile_text {
+	text-align: center;
+	padding: 0;
+	width: 100%;
+    max-width: 734px;
+    margin: 0 auto;
+}
+
+.a-model_profile_text_medium {
+    font-weight: 500;
+}
+
+.a-model_profile_text_medium {
+	color: rgb(20, 129, 227);
+    word-break: keep-all;
+}
+
+.a-model_profile_text_medium_span1 {
+	font-weight: 700;
+}
+
+.a-model_profile_text_medium_span2 {
+	position: relative;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.a-modal_profile_icon_left {
+	position: absolute;
+    top: -45px;
+    left: -140px;
+}
+
+.a-modal_profile_icon_right {
+	    position: absolute;
+    top: -45px;
+    right: -140px;
+}
+
+
+
+
+
+
+
 
 /* section */
 .ptofile_section {
@@ -545,12 +757,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
 	margin-left: 0.5rem;
 	white-space: nowrap;
 }
-
-
-
-
-
-
 
 /*  */ /*  */ /*  */ /*  */
 .profile_mian_div {
