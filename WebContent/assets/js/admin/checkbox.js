@@ -11,4 +11,3 @@
 	    else $("#allSelect").prop("checked", true); 
 	});
 	
-	const pageButton = $(".page-button");
