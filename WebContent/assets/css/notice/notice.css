@@ -143,6 +143,11 @@ a {
     color: inherit;
 }
 
+/* 1151 */
+button, select {
+    text-transform: none;
+}
+
 /* 1553 */
 .h4, .h5, .h6, h4, h5, h6 {
     margin-top: 12.5px;
@@ -157,26 +162,42 @@ a {
     color: #aaa;
 }
 
-/* 1700대 */
+/* 1656 */
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* 1673 */
+@media (min-width: 768px){
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 734px;
+	}
+}
+/* 1681 */
+@media (min-width: 992px){
+.container {
+    width: 100%;
+	}
+}
+
+/* 1730 */
+@media (min-width: 768px){
+.row {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+	}	
+}
 
 all-col{
 	position: relative;
     min-height: 1px;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
-
-@media (min-width: 768px){
-body {
-    font-family: "Pretendard",Helvetica,Arial,sans-serif;
-	}
-}
-
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 @media (min-width: 768px){
@@ -293,6 +314,13 @@ button {
     display: none;
 	}
 }
+
+/* 11785 */
+.container {
+    margin-top: 1rem;
+}
+
+
 /* 12034 */
 .card{
     transition: transform .3s ease-in-out,opacity .2s ease-in-out,max-height .27s ease-in-out,padding .3s ease-in-out,margin .28s ease-in-out;
