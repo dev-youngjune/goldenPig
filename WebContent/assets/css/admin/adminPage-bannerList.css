@@ -274,3 +274,16 @@ table {
 .preview-image-box {
 	float: left;
 }
+
+.review-image {
+	transform: translate(-700px);	
+}
+
+.title-box {
+	display: flex;
+    justify-content: space-between;
+}
+
+.exit-button {
+	cursor: pointer;	
+}
