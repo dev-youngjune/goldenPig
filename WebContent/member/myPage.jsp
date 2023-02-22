@@ -11,7 +11,6 @@
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
-					<jsp:include page="/header/header.jsp" flush="false" />
 				<div class="layout">
 					<div class="profile_page">
 					
@@ -36,7 +35,7 @@
 											<div class="a-model_inner_header">
 												<span >프로필 편집</span>
 												<button class="a-model_inner_header_button">
-													<svg data-v-70a8efa8="" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use data-v-70a8efa8="" href="https://www.a-ha.io/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-cancel" xlink:href="https://www.a-ha.io/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-cancel"></use></svg>
+													<img src="../assets/img/member/X.png" class="icons">
 												</button>
 											</div>
 											<div class="a-model_profile_box row">
@@ -52,8 +51,8 @@
 															<span class="a-model_profile_text_medium_span2">
 																<div class="a-modal_profile_icon_left">
 																	<img src="../assets/img/member/id_Card.png">
-																	멋있는 프로필을 완성해 주세요
 																</div>
+																멋있는 프로필을 완성해주세요.
 																<div class="a-modal_profile_icon_right">
 																	<img src="../assets/img/member/id_File.png">
 																</div>
@@ -67,15 +66,43 @@
 														<div class="gray_box_description">
 															<div>
 																<div class="div_relative">
-																	<input>
-																	<span></span>
-																	
+																	<input type="text" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
+																	<span class="available_length"></span>
+																	<div class="description">
+																		<img src= "../assets/img/member/alert_.png" class="info_alet icons">
+																		닉네임은 질문 작성시에 노출되며, 답변에는 실명으로 노출 됩니다.
+																	</div>
 																</div>
 															</div>
 														</div>
+														<div class="gray_box">
+															<div class=gray_box_title>저금</div>
+															<input type="text" class="gray_box_Input" placeholder="저축을 입력해주세요.">
+														</div>
+														<div class="gray_box">
+															<div class=gray_box_title>목표</div>
+															<input type="text" class="gray_box_Input" placeholder="목표를 입력해주세요.">
+														</div>
+														<div class="gray_box">
+															<div class=gray_box_title>대출</div>
+															<input type="text" class="gray_box_Input" placeholder="대출을 입력해주세요.">
+														</div>		
+														<div class="gray_box">
+															<div class=gray_box_title>인사말</div>					
+															<div class="enroll_Textarea_Wrapper">
+																<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea"></textarea>
+																<span class="available_length">0 / 60자</span>
+															</div>
+															<div class="gray_color">
+																<img src= "../assets/img/member/alert_.png" class="info_alet icons">
+																더 좋은 프로필을 위해, 인사말을 입력해보세요.
+															</div>
+														</div>	
 													</div>
 												</div>
-												<div class="tw-flex tw-justify-center tw-mt-6"></div>
+												<div class="save">
+													<button class="save_Button">저장</button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -209,12 +236,23 @@
 											<div class="profile_Card">
 												<h4 class="profile_Card_Title">현황</h4>
 												<div class="profile_Card_Content">
-													<div class="profile_Card_Content_noItem">
+												
+													<!-- <div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
 															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
 															<span class="profile_Card_Content_noItem_Inner_span">등록된 현황이 없어요</span>
 														</div>
-													</div>
+													</div> -->
+													
+													<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">저금 목표 100만원!</div>
+															<div class="text-font-sub-medium">현재 금액 50만원!</div>
+														</li>
+													</ul>
+													
+																										
 												</div>
 											</div>
 										</div>
@@ -227,6 +265,5 @@
 			</div>
 		</div>
 	</div>
-<%-- <jsp:include page="/header/footer.jsp" flush="false" /> --%>
 </body>
 </html>

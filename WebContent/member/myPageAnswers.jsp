@@ -207,5 +207,6 @@
 		</div>
 	</div>
 	</div>
+	<%-- <jsp:include page="/header/footer.jsp" flush="false" /> --%>
 </body>
 </html>
