@@ -19,7 +19,6 @@ input, button, span{
 </style>
 </head>
 <body>
-<jsp:include page="/main/header.jsp" flush="true" />
 	<section style="padding-top: 1.25rem">
 		<div id="title_container">
 			<div>
