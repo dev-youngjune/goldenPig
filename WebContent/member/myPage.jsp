@@ -60,7 +60,7 @@
 											<div class="aside_user_img_div">
 												<span class="aside_user_img_div_span"></span>
 													<div class="aside_user_img_div_div">
-														<svg data-v-1bfbf0fb="" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use  href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera" xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"></use></svg>
+<!-- 														<svg data-v-1bfbf0fb="" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use  href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera" xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"></use></svg> -->
 													</div>
 													<button class="aside_user_img_div_button">
 														<svg  xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use  href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera" xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"></use></svg>><use></use></svg> 
@@ -75,15 +75,15 @@
 												<h5>지식활동</h5>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-question" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-question" ></use></svg>
-														질문
+														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2" data-v-2f2021a4=""><use href="https://www.a-ha.io/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-question" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-question" data-v-2f2021a4=""></use></svg>
+															질문
 													</span>
 													<span>0개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer" ></use></svg>
-														답변
+														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2" ><use href="https://www.a-ha.io/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer" xlink:href="https://www.a-ha.io/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer" ></use></svg>
+														답변 
 													</span>
 													<span>0개</span>
 												</div>
