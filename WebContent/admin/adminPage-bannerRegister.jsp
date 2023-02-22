@@ -55,6 +55,7 @@
 								</div>
 								<hr>
 								<div class="board-info-box">
+								<form action="">
 									<div class="banner-img-box">
 										<div class="info-margin-bottom">
 											<span class="info-tag">배너 이미지 파일</span>
@@ -65,50 +66,36 @@
 										</label>
 									</div>
 									<div class="member-info-box">
-										<form action="">
-											<div class="member-info-tag-box">
-												<span class="info-tag">배너 명</span>
-												<!-- 이름 -->
-												<div class="info info-name">
-													<input type="text" class="banner-name" name="bannerName" placeholder="배너명을 입력해주세요.">
-												</div>
-											</div>	
-											<div class="member-info-tag-box">
-												<span class="info-tag">기간</span>
-												<div class="info">
-													<input type="text" class="banner-date" name="bannerDate" placeholder="등록기간을 입력해주세요.">
-												</div>
+										<div class="member-info-tag-box">
+											<span class="info-tag">배너 명</span>
+											<!-- 이름 -->
+											<div class="info info-name">
+												<input type="text" class="banner-name" name="bannerName" placeholder="배너명을 입력해주세요.">
 											</div>
-											<div class="button-box">
-												<button>등록</button>
+										</div>	
+										<div class="member-info-tag-box">
+											<span class="info-tag">기간</span>
+											<div class="info">
+												<input type="text" class="banner-date" name="bannerDate" placeholder="등록기간을 입력해주세요.">
 											</div>
-										</form>
+										</div>
+										<div class="button-box">
+											<button id="regist-button">등록</button>
+										</div>
 									</div>	
-								</div>
-							</section>
-						</div>
+								</form>
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/admin/menuLoad.js"></script>
 <script src="../assets/js/admin/prev.js"></script>
-<script>
-	const $file = $("input[type=file]");
-	
-	$file.change(function(e){
-		let file = e.target.files[0];
-		let reader = new FileReader();
-	
-		reader.onload = function(e){
-			let result = e.target.result;
-			$(".banner").attr("src", result);
-		}
-		
-		reader.readAsDataURL(file);
-	});
-</script>
+<script src="../assets/js/admin/thumbnail.js"></script>
+<script src="../assets/js/admin/adminPage-bannerRegister-registButton.js"></script>
 </html>
