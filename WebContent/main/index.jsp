@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="../assets/css/main/bulma.css">
 <link rel="stylesheet" href="../assets/css/main/mainBanner.css">
 <link rel="stylesheet" href="../assets/css/main/mainContainer.css">
+<link rel="stylesheet" href="../assets/css/font/fontFamily.css">
+
 <title>메인 페이지</title>
 <style type="text/css">
 	body {
@@ -24,8 +26,6 @@
 <body>
 	<div class="wrapper">
 	<div id="headers"></div>
-		<!-- 헤더 넣는 jsp 코드 -->
-		<%-- <%@ include file="/main/header.jsp"%> --%>
 		
 		<!-- 헤더 넣는 jsp 코드() -->
 		<jsp:include page="/header/header.jsp" flush="false" />
@@ -189,7 +189,7 @@
 		</main>
 
 <!-- 		<footer id="footers"></footer> -->
-		<jsp:include page="/header/footer-main.jsp" flush="false" />
+		<jsp:include page="/header/footer-main.jsp" flush="false"/>
 	</div>
 </body>
 

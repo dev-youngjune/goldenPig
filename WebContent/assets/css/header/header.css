@@ -44,7 +44,8 @@ a {
 	color: inherit;
 	margin: 0;
 	padding-top: 18px;
-    padding-left: 17px;	
+    padding-left: 17px;
+    cursor: pointer;
 }
 
 .nav-left {
@@ -102,6 +103,7 @@ a {
 	left: 0;
 	top: 0;
 	border: 0 solid;
+	outline: none;
 }
 
 .form-search button {
@@ -159,11 +161,43 @@ body {
 	display: flex;
 }
 
-.profile-wrapper div{
-	display: inline-flex;
-	flex-wrap: wrap;
+.nav-notification {
+	margin-right: 2rem;
+	margin-top: 0.25rem;
 }
 
 .nav-profile {
 	width: 40px;
+}
+
+.sidebar-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(0,0,0,.6);
+    transition: opacity .2s ease;
+    z-index: 1001;
+}
+
+.sidebar {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1002;
+    width: 320px;
+    max-width: 90%;
+}
+
+.modal-active.-active {
+	opacity: 1;
+}
+
+.primary {
+    background-color: #0206af;
+    background-color: rgb(2,6,175);
 }
