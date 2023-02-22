@@ -23,6 +23,7 @@ input, button, span{
 </style>
 </head>
 <body>
+<!-- 헤더 -->
 	<div>
 		<header id="header">
 			<div id="header_div">
@@ -31,31 +32,22 @@ input, button, span{
 		</header>
 	</div>
 	<div id="wrap">
+	<!-- 휴대폰 번호 변경을 누르면 나오는 모달창 -->
 		<div id="modal">
+			<h3>휴대폰 번호 인증</h3>
 			<div>
-				<h4 style="font-size: 18px">통신사를 선택해 주세요.</h4>
-				<label>
-					<input type="checkbox" name="option" onclick="uncheckOthers(this)">SKT				
-				</label>
-				<label>
-					<input type="checkbox" name="option" onclick="uncheckOthers(this)">KT				
-				</label>
-				<label>
-					<input type="checkbox" name="option" onclick="uncheckOthers(this)">LG U+				
-				</label>
-				<label>
-					<input type="checkbox" name="option" onclick="uncheckOthers(this)">알뜰폰				
-				</label>
+				<div style="margin-top: 2.5rem; width: 74%;">
+					이름
+				</div>
+				<input type="text"; placeholder="성명 입력" style="height: 30px; outline: none; border-top: none; border-right: none; border-left: none;">
 			</div>
-			<div style="margin-top: 2.5rem; text-align: center;">
-				이름
+			<div>
+				<div style="margin-top: 2.5rem; width: 81%;">
+					휴대폰 번호
+				</div>
+				<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none; border-right: none; border-left: none;">
 			</div>
-			<input type="text"; placeholder="성명 입력" style="height: 25px">
-			<div style="margin-top: 2.5rem; text-align: center;">
-				휴대폰 번호
-			</div>
-			<input type="text"; placeholder="숫자만 입력" style="height: 25px">
-			<div style="display: flex;">
+			<div style="display: flex; margin: auto;">
 				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
 					<button id="modal_btn_cancel">취소</button>
 				</footer>
@@ -64,6 +56,7 @@ input, button, span{
 				</footer>
 			</div>
 		</div>
+		<!-- 휴대폰 번호 변경을 완료한후 나오는 모달창 -->
 		<div id="modal_phone">
 			<div>
 				<h4 style="font-size: 18px">휴대폰 번호를 변경하였어요.</h4>
@@ -73,8 +66,7 @@ input, button, span{
 				<button id="modal_phone_btn">확인</button>
 			</footer>
 		</div>
-		<div>
-		</div>
+		<div></div>
 		<h1>인증센터</h1>
 		<section>
 			<h2 class ="board_name">이메일</h2>
@@ -153,13 +145,5 @@ input, button, span{
 		modal_phone.style.display = "none";
 	});
 	
-	function uncheckOthers(checkbox) {
-	var checkboxes = document.getElementsByName('option');
-	for (var i = 0; i < checkboxes.length; i++) {
-		if (checkboxes[i] !== checkbox) {
-			checkboxes[i].checked = false;
-		}
-	}
-}
 </script>
 </html>
