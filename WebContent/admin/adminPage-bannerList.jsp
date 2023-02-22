@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,11 +31,52 @@
 			<!-- 사이드 바 -->
 			<div id="side-bar"></div>
 			<!-- 사이드 바 끝-->
-		
+			
+			<!-- 모달 창 -->
+			<div id="modal">
+				<div class="modal-wrap">
+					<div class="modal-content-box">
+						<div class="title-box">
+							<h3>배너 미리보기</h3>
+						</div>
+						<div class="modal-preview-layout">
+						<div class="modal-flex">
+							<div>
+							<div class="banner-preview-box">
+								<!-- 이미지 뿌려주는 곳 -->
+								<div class="banner-preview">
+									<!-- 배너 이미지 경로  -->
+									<div class="preview-image-box">
+										<img src="../assets/img/admin/001.png" class="review-image">
+										<img src="../assets/img/admin/002.png" class="review-image">
+										<img src="../assets/img/admin/003.png" class="review-image">
+										<img src="../assets/img/admin/004.png" class="review-image">
+										<img src="../assets/img/admin/005.png" class="review-image">
+									</div>
+								</div>						
+							</div>
+							</div>
+							<img src="../assets/img/admin/left_icon.png" class="preview-left">
+							<img src="../assets/img/admin/right_icon.png" class="preview-right">
+						</div>
+						<div class="banner-name">
+									<!-- 배너 이름  -->
+									<span>기본 배너</span>
+								</div>	
+						</div>	
+					</div>
+				</div>
+			</div>
+					
 			<div class="container">
 				<div class="container-margin">
 					<!-- 헤더 -->
 					<div class="update-button-flex">
+						<div class="delete-box-layout ">
+								<div class="delete-box">
+									<button id="review-button" class="register-button">미리보기</button>
+								</div>
+						</div>
 						<div class="delete-box-layout ">
 								<div class="delete-box">
 									<button class="register-button">배너 등록</button>
@@ -68,7 +108,7 @@
 											<th>코드</th>
 											<th>배너명</th>
 											<th>상태</th>
-											<th class="img-th">미리보기</th>
+											<th>등록날짜</th>
 										</tr>
 									</thead>
 									<!-- 하나의 행 시작  -->
@@ -84,11 +124,71 @@
 										<td>기본 배너</td>
 										<!-- 이미지 상태 ex) 사용 중 미사용 -->
 										<td>사용 중</td>
+										<td>2022.01.05</td>
+									</tr>
+									<!-- 하나의 행 끝  -->
+									<!-- 하나의 행 시작  -->
+									<tr>
 										<td>
-											<div class="banner-img-box">
-												<div class="banner-img"></div>
-											</div>
+											<input type="checkbox" name="check">
 										</td>
+										<!-- 배너 번호 -->
+										<td>1</td>
+										<!-- 배너 이미지 코드 -->
+										<td>{코드}</td>
+										<!-- 이미지 이름 -->
+										<td>기본 배너</td>
+										<!-- 이미지 상태 ex) 사용 중 미사용 -->
+										<td>사용 중</td>
+										<td>2022.01.05</td>
+									</tr>
+									<!-- 하나의 행 끝  -->
+									<!-- 하나의 행 시작  -->
+									<tr>
+										<td>
+											<input type="checkbox" name="check">
+										</td>
+										<!-- 배너 번호 -->
+										<td>1</td>
+										<!-- 배너 이미지 코드 -->
+										<td>{코드}</td>
+										<!-- 이미지 이름 -->
+										<td>기본 배너</td>
+										<!-- 이미지 상태 ex) 사용 중 미사용 -->
+										<td>사용 중</td>
+										<td>2022.01.05</td>
+									</tr>
+									<!-- 하나의 행 끝  -->
+									<!-- 하나의 행 시작  -->
+									<tr>
+										<td>
+											<input type="checkbox" name="check">
+										</td>
+										<!-- 배너 번호 -->
+										<td>1</td>
+										<!-- 배너 이미지 코드 -->
+										<td>{코드}</td>
+										<!-- 이미지 이름 -->
+										<td>기본 배너</td>
+										<!-- 이미지 상태 ex) 사용 중 미사용 -->
+										<td>사용 중</td>
+										<td>2022.01.05</td>
+									</tr>
+									<!-- 하나의 행 끝  -->
+									<!-- 하나의 행 시작  -->
+									<tr>
+										<td>
+											<input type="checkbox" name="check">
+										</td>
+										<!-- 배너 번호 -->
+										<td>1</td>
+										<!-- 배너 이미지 코드 -->
+										<td>{코드}</td>
+										<!-- 이미지 이름 -->
+										<td>기본 배너</td>
+										<!-- 이미지 상태 ex) 사용 중 미사용 -->
+										<td>사용 중</td>
+										<td>2022.01.05</td>
 									</tr>
 									<!-- 하나의 행 끝  -->
 								</table>
@@ -147,4 +247,81 @@
 <script src="../assets/js/admin/menuLoad.js"></script>
 <script src="../assets/js/admin/checkbox.js"></script>
 <script src="../assets/js/admin/page.js"></script>
+<script type="text/javascript">
+	const $reviewButton = $("#review-button");
+	let bannercount;
+	
+	/* $("#modal").click(function(){
+		$("#modal").fadeOut(300);
+	});  */
+	
+	$reviewButton.click(function(){
+		bannerCount =  $("input[name=check]:checked").length;
+		let data1 = $($reviewImage[0]).attr("src");
+		let data2 = $($reviewImage[bannerCount-1]).attr("src");
+		
+		$(".preview-image-box").append(lastImageImg);
+		$(lastImageImg).attr("src", `${data1}`);
+		$(lastImageImg).addClass("review-image");
+		
+		
+		$(".preview-image-box").prepend(firstImageImg);
+		$(firstImageImg).attr("src", `${data2}`);
+		$(firstImageImg).addClass("review-image");
+		$(".preview-image-box").css("width",`${700 * (bannerCount + 2)}`);
+		
+		$reviewImage.css("transform","translate(-700px)");
+		$("#modal").fadeIn(300);
+	});
+	
+	
+	const lastImageImg = document.createElement("img");
+	const firstImageImg = document.createElement("img");
+	const $left = $(".preview-left");
+	const $right = $(".preview-right");
+	const $reviewImage = $(".review-image");
+	let checkArrow = false;
+	let count = 1;
+	
+	
+	$left.click(function(){
+		if(checkArrow){return;}
+	    checkArrow = true;
+
+	    $reviewImage.css("transition" , "transform 0.3s");
+		$reviewImage.css("transform" , `translate(${-700 * --count}px)`);
+		
+		
+		if(count == 0){
+			count = bannerCount;
+			setTimeout(function(){
+				$reviewImage.css("transition" , "transform 0s");
+				$reviewImage.css("transform" , `translate(${-700 * $reviewImage.length}px)`);
+			},300);
+		
+		}
+		
+		setTimeout(()=>{checkArrow = false}, 300);
+	});
+	
+	$right.click(function(){
+		if(checkArrow){return;}
+	    checkArrow = true;
+	    $reviewImage.css("transition" , "transform 0.3s");
+		$reviewImage.css("transform" , `translate(${-700 * ++count}px)`);
+	    
+		console.log(count);
+	    if(count == (bannerCount+1)){
+			count = 1;
+
+			setTimeout(function(){
+				$reviewImage.css("transition" , "transform 0s");
+				$reviewImage.css("transform" , `translate(${-700 * count}px)`);
+			}, 5000);
+			
+		}
+
+	    setTimeout(()=>{checkArrow = false}, 5000);
+	});
+</script>
 </html>
