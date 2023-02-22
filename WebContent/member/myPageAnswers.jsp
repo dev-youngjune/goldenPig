@@ -11,6 +11,7 @@
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
+			<jsp:include page="/header/header.jsp" flush="false" />
 				<div class="layout">
 					<div class="profile_page">
 

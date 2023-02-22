@@ -11,6 +11,7 @@
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
+					<jsp:include page="/header/header.jsp" flush="false" />
 				<div class="layout">
 					<div class="profile_page">
 					
@@ -62,7 +63,16 @@
 												</div>
 												<div class="user_info_box">
 													<div class="gray_box">
-														
+														<div class="gray_box_title">닉네임</div>
+														<div class="gray_box_description">
+															<div>
+																<div class="div_relative">
+																	<input>
+																	<span></span>
+																	
+																</div>
+															</div>
+														</div>
 													</div>
 												</div>
 												<div class="tw-flex tw-justify-center tw-mt-6"></div>
@@ -217,5 +227,6 @@
 			</div>
 		</div>
 	</div>
+<%-- <jsp:include page="/header/footer.jsp" flush="false" /> --%>
 </body>
 </html>
