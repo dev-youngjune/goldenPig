@@ -5,8 +5,12 @@
 <head>
 <meta charset="EUC-KR">
 <!-- <link rel="stylesheet" href="../assets/css/main/bulma.css"> -->
-<link rel="stylesheet" href="../assets/css/header.css">
+<link rel="stylesheet" href="../assets/css/main/bulma.css">
+<link rel="stylesheet" href="../assets/css/header/header.css">
 <title>Insert title here</title>
+<style type="text/css">
+
+</style>
 </head>
 <body>
 	<nav class="navigation">
@@ -29,9 +33,17 @@
 							</button>
 						</form>
 					</div>
-					<div class="nav-right-item nav-register is-inline-block">
+					<div class="is-hidden nav-right-item nav-register is-inline-block">
 						<a href="#" class="nav-right-button">로그인</a>
 						<a href="#" class="nav-right-button">회원가입</a>
+					</div>
+					<div class="<!-- is-hidden -->">
+						<div class="nav-right-item nav-notification">
+							<img class="show-img" src="../assets/img/main/bell.png" alt="">
+						</div>
+						<div class="nav-right-item nav-profile">
+							
+						</div>
 					</div>
 				</div>
 			</div>
