@@ -791,11 +791,23 @@ audio, canvas, embed, iframe, img, object, svg, video {
     font-size: .875rem;
     color: #292a2b;
 }
+
+.gray_box_title {
+	font-weight: 500;
+    font-size: .875rem;
+    color: #292a2b;
 }
 
+.gray_box_description {
+	font-weight: 500;
+    font-size: 1.125rem;
+    margin-top: 0.25rem;
+    color: #1c1a18;
+}
 
-
-
+.div_relative {
+	position: relative;
+}
 
 
 
