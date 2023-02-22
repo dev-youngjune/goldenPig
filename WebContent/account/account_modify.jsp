@@ -23,6 +23,7 @@ input, button, span{
 </style>
 </head>
 <body>
+<!-- 헤더 -->
 	<div>
 		<header id="header">
 			<div id="header_div">
@@ -31,17 +32,41 @@ input, button, span{
 		</header>
 	</div>
 	<div id="wrap">
+	<!-- 휴대폰 번호 변경을 누르면 나오는 모달창 -->
 		<div id="modal">
+			<h3>휴대폰 번호 인증</h3>
+			<div>
+				<div style="margin-top: 2.5rem; width: 74%;">
+					이름
+				</div>
+				<input type="text"; placeholder="성명 입력" style="height: 30px; outline: none; border-top: none; border-right: none; border-left: none;">
+			</div>
+			<div>
+				<div style="margin-top: 2.5rem; width: 81%;">
+					휴대폰 번호
+				</div>
+				<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none; border-right: none; border-left: none;">
+			</div>
+			<div style="display: flex; margin: auto;">
+				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
+					<button id="modal_btn_cancel">취소</button>
+				</footer>
+				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
+					<button id="modal_btn">확인</button>
+				</footer>
+			</div>
+		</div>
+		<!-- 휴대폰 번호 변경을 완료한후 나오는 모달창 -->
+		<div id="modal_phone">
 			<div>
 				<h4 style="font-size: 18px">휴대폰 번호를 변경하였어요.</h4>
 				<div style="margin-top: 0.5rem;text-align: center; color: #484c53; word-break: keep-all;">이제 변경한 번호로 골든피그를 이용할 수 있어요.</div>
 			</div>
 			<footer style="margin-top: 2.5rem; display: flex; justify-content: flex-end;">
-				<button id="modal_btn">확인</button>
+				<button id="modal_phone_btn">확인</button>
 			</footer>
 		</div>
-		<div>
-		</div>
+		<div></div>
 		<h1>인증센터</h1>
 		<section>
 			<h2 class ="board_name">이메일</h2>
@@ -73,11 +98,6 @@ input, button, span{
 			<hr style="border: solid 0.1px #e6e6e6">
 			<div class="footer-container container-base">
 				<div class="footer-container-left">
-					<div class="logo-wrapper">
-						<a href="#">
-							<img class="logo-img" src="../assets/img/account/logo.png" alt="">
-						</a>
-					</div>
 					<article class="footer-contents">
 						<ul class="footer-menu">
 							<li class="mr-3"><a href="#">서비스 이용약관</a></li>
@@ -88,6 +108,11 @@ input, button, span{
            				 	© 2023 Aha. All rights reserved.
 						</div>
 					</article>
+					<div class="logo-wrapper">
+						<a href="#">
+							<img class="logo-img" src="../assets/img/account/logo.png" alt="">
+						</a>
+					</div>
 				</div>
 				<div class="footer-container-right"></div>
 			</div>
@@ -99,12 +124,26 @@ input, button, span{
 	const btn = document.querySelector("#change_modal");
 	const modal = document.querySelector("#modal");
 	const modal_btn = document.querySelector("#modal_btn");
+	const modal_btn_cancel = document.querySelector("#modal_btn_cancel");
+	const modal_phone = document.querySelector("#modal_phone");
+	const modal_phone_btn = document.querySelector("#modal_phone_btn");
+	
 	btn.addEventListener("click",() => {
 		modal.style.display = "flex";
 	});
 	
+	modal_btn_cancel.addEventListener("click",() =>{
+		modal.style.display = "none";
+	});
+	
 	modal_btn.addEventListener("click",() =>{
 		modal.style.display = "none";
-	})	
+		modal_phone.style.display = "flex";
+	});
+	
+	modal_phone_btn.addEventListener("click",() =>{
+		modal_phone.style.display = "none";
+	});
+	
 </script>
 </html>

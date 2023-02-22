@@ -40,13 +40,13 @@ div.hide {
 						<img alt="" src="../assets/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
 					</header>
 					<div id="withdrawal_select">
-							<h1 style="position: relative">
-								<span id="element">비밀번호 재설정</span>
-							</h1>
-							<div style="margin-bottom: 3rem; margin-top: 0.75rem">
-								<span style="font-weight: 600;--tw-text-opacity: 1; 
-								color: rgba(156, 165, 179, var(--tw-text-opacity));">새로운 비밀번호를 입력해 주세요.</span>
-							</div>
+						<h1 style="position: relative">
+							<span id="element">비밀번호 재설정</span>
+						</h1>
+						<div style="margin-bottom: 3rem; margin-top: 0.75rem">
+							<span style="font-weight: 600;--tw-text-opacity: 1; 
+							color: rgba(156, 165, 179, var(--tw-text-opacity));">새로운 비밀번호를 입력해 주세요.</span>
+						</div>
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">비밀번호</span>
 							<div id="input_email">
@@ -86,6 +86,12 @@ $("div.eye").click(function(){
         thisDiv.attr("class","hide eye");
     }
 });
+
+const password = document.querySelector("new_password");
+	password.addEventListener("focus",() => {
+		
+	})
+
 /* $("div.show").click(function(){
 	console.log("input.show 나옴");
 	var thisDiv = $(this);

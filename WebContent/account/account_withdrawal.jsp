@@ -86,4 +86,20 @@ input, button, span{
 		</main>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	const labels = document.querySelectorAll("label");
+	const temp = "#C7C7C7";
+	console.log(temp);
+	labels.forEach( label => {
+		label.addEventListener("click",e => {
+			var tar = e.target 
+			tar.style.color = tar.style.color == "black" ? temp : "black"; 
+			console.log("들어옴");
+			/* tar.style.color = "black"; */
+		})
+		}
+	)
+
+</script>
 </html>

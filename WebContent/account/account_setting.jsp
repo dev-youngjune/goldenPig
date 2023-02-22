@@ -6,6 +6,8 @@
 <meta charset="UTF-8">
 <title>계정 관리</title>
 <link rel="stylesheet" href="../assets/css/account/account_setting.css">
+<link rel="stylesheet" href="../assets/css/header/header.css">
+<link rel="stylesheet" href="../assets/css/header/footer.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -19,6 +21,7 @@ input, button, span{
 </style>
 </head>
 <body>
+<jsp:include page="../header/header-after.jsp" flush="true" />
 	<section style="padding-top: 1.25rem">
 		<div id="title_container">
 			<div>
@@ -75,5 +78,6 @@ input, button, span{
 			</div>
 		</div>
 	</section>
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>

@@ -3,6 +3,7 @@
 .container {
 	width: 100%;
 	margin-left: 250px;
+	margin-top: 55px;
 }
 
 tr {
@@ -24,10 +25,6 @@ table {
 	border-collapse: collapse
 }
 
-.img-th {
-	width: 15%;
-}
-
 .board-info-box {
 	border: 0.0625rem solid #f2f2f2;
     box-shadow: 11px 13px 11px -14px grey;
@@ -36,6 +33,7 @@ table {
 
 .info-title-box-flex {
 	display: flex;
+    position: fixed;
 	justify-content: flex-start;
 }
 
@@ -186,19 +184,6 @@ table {
 	font-weight: 500;
 }
 
-.banner-img-box {
-	width: 165px;
-}
-
-.banner-img {
-	width: 149px;
-    height: 26px;
-	background-image: url('../../img/admin/default_banner.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	margin: 0 auto;
-}
-
 .right-button {
 	margin-left: 10px;
 	cursor : pointer;
@@ -209,4 +194,83 @@ table {
 	margin-right: 10px;
 	width: 15px;	
 	cursor: pointer;
+}
+
+#modal {
+	position: fixed;
+	width: 100%;
+	display: none;
+	background:rgba(0, 0, 0, 0.2);
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+}
+
+.modal-wrap {
+	overflow: hidden;
+	position: fixed;
+	top: 25%;
+    left: 31%;
+    z-index: 9999;
+}
+
+.modal-content-box {
+	width: 700px;
+    height: 400px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.banner-preview {
+	display: table-cell;
+    vertical-align: middle;
+	height: 300px;
+}
+
+.banner-preview img {
+   	max-width: 700px;
+    max-height: 300px;
+    float: left;
+}
+
+.preview-image-box {
+	position: relative;
+	width: 3500px;
+}
+
+.banner-name {
+	text-align: center;	
+}
+
+.modal-flex {
+	margin: 20px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+    position: relative;
+}
+
+.preview-left, .preview-right{
+	position: absolute;
+	width: 40px;
+	cursor: pointer;
+}
+
+.preview-left {
+	left: 0;
+}
+
+.preview-right {
+	right: 0;
+}
+
+.banner-preview-box {
+	width: 700px;
+}
+
+.preview-image-box {
+	float: left;
 }
