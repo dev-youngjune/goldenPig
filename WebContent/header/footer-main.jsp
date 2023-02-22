@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="../assets/css/main/bulma.css">
-<link rel="stylesheet" href="../assets/css/footer.css">
+<link rel="stylesheet" href="../assets/css/header/footer.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -38,9 +38,7 @@
 							<li class="mr-3"><a href="#"><span>개인정보보호책임 : 이희승</span></a></li>
 							
 						</ul>
-						<div class="all-rights">
-           				 	© 2023 Aha. All rights reserved.
-						</div>
+						<div class="all-rights">© 2023 Aha. All rights reserved.</div>
 					</article>
 				</div>
 				<div class="footer-container-right"></div>
