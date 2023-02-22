@@ -98,8 +98,8 @@
 								<div class="">
 									<div class="categoryCard-wrapper">
 										<a href="#" class="categoryCard is-align-content-center">
-										<img alt="" src="../assets/img/main/coin_icon.svg">
-										</a> <span class="is-align-content-center">연말정산</span>
+										<img alt="" src="../assets/img/main/bank-64.png">
+										</a> <span class="is-align-content-center">통장</span>
 									</div>
 								</div>
 							</article>
@@ -107,8 +107,8 @@
 								<div class="">
 									<div class="categoryCard-wrapper">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/loan_interest-64.png">
-										</a> <span>이자</span>
+											<img alt="" src="../assets/img/main/bank-saving-64.png">
+										</a> <span>적금</span>
 									</div>
 								</div>
 							</article>
@@ -125,8 +125,8 @@
 								<div class="">
 									<div class="">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/medical_icon-64.png">
-										</a> <span>의료</span>
+											<img alt="" src="../assets/img/main/loan-64.png">
+										</a> <span>대출</span>
 									</div>
 								</div>
 							</article>
@@ -134,8 +134,8 @@
 								<div class="">
 									<div class="">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/life_insurance-64.png">
-										</a> <span>보험</span>
+											<img alt="" src="../assets/img/main/exchange_rate_won_to_dollar-64.png">
+										</a> <span>환율</span>
 									</div>
 								</div>
 							</article>
