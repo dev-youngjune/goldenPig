@@ -200,7 +200,10 @@
 				</section>
 				<!-- 아래쪽 내용들은 다 home-section으로 묶임 -->
 				<section class="home-section">
-					<div></div>
+					<header class="home-section-title home-section-hotQuestion title is-5 ">
+						<h4 class="home-section-title-content">모두가 궁금해하는 질문</h4>
+						<span class="home-section-hotQuestion-time"> 2023.02.22 18:00 기준</span>
+					</header>
 					<div></div>
 				</section>
 			</article>

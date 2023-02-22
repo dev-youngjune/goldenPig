@@ -184,3 +184,15 @@ button, input, select, textarea {
 .home-button-wrapper a button img {
 	max-width: 32px;
 }
+
+.home-section-hotQuestion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-section-hotQuestion-time {
+	font-weight: 500;
+    font-size: .875rem;
+    color: #a9afb3;
+    display: inline-block;
+}
