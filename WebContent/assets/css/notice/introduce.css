@@ -56,6 +56,7 @@ body img {
 
 img {
     vertical-align: middle;
+    width: 850px;
 }
 
 img {
@@ -84,16 +85,18 @@ img {
 }
 
 .section2{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+   /*  justify-content: center; */
     align-items: center;
     padding-top: 280px;
     padding-bottom: 280px;
     background: #fff;
- /*    background-image: url('../../img/notice/intro01.png'); */
     width: 100%;
-    
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f1f1f1;
 }
+
 
 section {
     padding-left: 1.25rem;
@@ -123,6 +126,7 @@ section {
     color: #1c1a18;
     font-size: 40px;
     line-height: 130%;
+    margin: 48px;
 }
 
 .description{
@@ -130,7 +134,7 @@ section {
     color: #858d9a;
     font-size: 16px;
     word-break: keep-all;
-    max-width: 450px;
+    max-width: 913px;
     line-height: 150%;
 }
 
