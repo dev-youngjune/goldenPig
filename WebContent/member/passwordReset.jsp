@@ -33,17 +33,19 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input type="password" placeholder="새로운 비밀번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
-														<img class="eye" src="../assets/img/member/passwordEye.png">
+													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
+														<img class="eye1" src="../assets/img/member/passwordEyeSlash.png">
 												</div>
+                                                <p class="error-message-password" style="margin: 0;"></p>
 											</div>
 											<div class="TextField">	
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
-													<input type="password" placeholder="비밀번호를 다시 입력해주세요" class="TextField_bodyInput" autocomplete value>
-													<!-- <button type="button" tabindex="-1" class="TextField_bodyButton -off"> -->
-														<img class="eye" src="../assets/img/member/passwordEye.png">
-													<!-- </button> -->
+													<input name ="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
+														<img class="eye2" src="../assets/img/member/passwordEyeSlash.png">
+												</div>
+                                                <p class="error-message-password-check" style="margin: 0;"></p>
+                                                
 												</div>
 											</div>
 										</div>
@@ -60,4 +62,6 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="../assets/js/member/passwordReset.js"></script>
 </html>

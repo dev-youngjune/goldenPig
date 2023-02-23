@@ -30,7 +30,7 @@
 									휴대폰 인증이 필요해요
 									</span>
 								</h1>
-								<p class="theFindAccount_message">반드시 본인의 휴대폰 번호로 인증해 주세요.</p>
+								<p class="theFindAccount_message"><span>반드시 본인의 휴대폰 번호로 인증해 주세요.</span></p>
 							</div>
 							<footer class="theScreen_footer">
 								<button class="Button -large w-full -primary -filled">인증하고 계정찾기</button>
