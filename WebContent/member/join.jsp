@@ -43,9 +43,9 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
 													<!-- <button type="button" tabindex="-1" class="TextField_bodyButton -off"> -->
-														<img class="eye" src="../assets/img/member/passwordEye.png">
+														<img class="eye1" src="../assets/img/member/passwordEye.png">
 													<!-- </button> -->
 												</div>
 											</div>
@@ -54,10 +54,8 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
-													<!-- <button type="button" tabindex="-1" class="TextField_bodyButton -off"> -->
-														<img class="eye" src="../assets/img/member/passwordEye.png">
-													<!-- </button> -->
+														<input type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
+                                                        <img class="eye2" src="../assets/img/member/passwordEye.png">
 												</div>
 											</div>
 										</div>
@@ -123,7 +121,7 @@
 								</div>
 								<!-- footer -->
 								<footer class="theScreen_footer">
-									<button type="submit" class="_join_Button_">회원가입</button>
+									<button type="submit" class="theScreen_Button_submit">회원가입</button>
 									<button class="Button mt-2 -large w-full -transparent">
 										<a href="">
 										아이디가 존재하나요?
@@ -138,4 +136,5 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </html>

@@ -1,4 +1,4 @@
-@charset "UTF-8";@charset "UTF-8";
+       @charset "UTF-8";@charset "UTF-8";
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -401,7 +401,7 @@ button, [type='button'], [type='submit'] {
 }
 
 /* .TextField_bodyButton의 속성을 그냥 넣어줬음 */
-.eye {
+.eye1 {
     width: 21px;
     height: 19px;
     filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
@@ -412,6 +412,20 @@ button, [type='button'], [type='submit'] {
     align-items: center;
     justify-content: center;
     height: 20px;
+    cursor: pointer;
+}
+.eye2 {
+    width: 21px;
+    height: 19px;
+    filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
+     position: absolute;
+    top: 0.25rem;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    cursor: pointer;
 }
 
 .sprite-icons {
@@ -532,6 +546,54 @@ button, [type='button'], [type='submit'] {
     line-height: 40px;
 }
 
-.input {
-autocomplete:"off";
+.theScreen_Button_submit {
+   border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    --tw-border-opacity: 1;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    width: 100%;
+    -webkit-appearance: button;
+}
+
+.theScreen_button_a  {
+     border-color: transparent;
+    background-color: transparent;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.close-eye {
+    background-image: url('../assets/img/member/passwordEyeSlash.png');
+    width: 21px;
+    height: 19px;
+    filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
+    position: absolute;
+    top: 0.25rem;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    cursor: pointer;
 }
