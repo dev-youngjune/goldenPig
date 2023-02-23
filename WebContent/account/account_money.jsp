@@ -37,7 +37,7 @@ input, button, span{
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">목표금액</span>
 							<div id="input_email">
-								<input class="email_text" id="new_password" type="number" onkeyup="formatNumber()" placeholder="새로운 목표금액을 입력해 주세요.">
+								<input class="email_text goal-setting" id="new_password" type="number" onkeyup="formatNumber()" placeholder="새로운 목표금액을 입력해 주세요.">
 								 <p id="result"></p>
 								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
 							</div>
@@ -59,8 +59,9 @@ input, button, span{
 		</main>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	
+
 	function formatNumber() {
   let input = document.getElementById("new_password").value;
   let result = "";
@@ -93,6 +94,26 @@ if(result.charAt() == ","){
 
   document.getElementById("result").innerHTML = result;
 }
+const $goalSetting = $(".goal-setting");
+const $confirm = $("#confirm");
+
+
+$goalSetting.blur(function(){
+
+	if(!$(this).val() && !$("#currentDate").val()){
+
+		$confirm.css("background-color", "trgba(86, 130, 239, var(--tw-bg-opacity)");
+		$confirm.css("cursor", "not-allowed");
+		$confirm.css("color", "rgba(126, 165, 242, var(--tw-text-opacity))"	);
+		
+	}else {
+		$confirm.css("background-color", "rgb(2, 6, 175)");
+		$confirm.css("cursor", "pointer");
+		$confirm.css("color", "white");
+		
+	}
+});
+
 
 </script>
 </html>

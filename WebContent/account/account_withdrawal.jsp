@@ -78,7 +78,7 @@ input, button, span{
 					<footer>
 						<div style="display: flex; align-items: center; justify-content: space-between">
 							<a id="cancel"> 취소 </a>
-							<button id="confirm" style="cursor: pointer;"> 탈퇴하기 </button>
+							<button id="confirm" style="cursor: not-allowed;"> 탈퇴하기 </button>
 						</div>
 					</footer>
 				</div>
@@ -90,16 +90,46 @@ input, button, span{
 <script>
 	const labels = document.querySelectorAll("label");
 	const temp = "#C7C7C7";
+	const $goalSetting = $("input[type=checkbox]");
+	const $confirm = $("#confirm");
+
 	console.log(temp);
 	labels.forEach( label => {
 		label.addEventListener("click",e => {
 			var tar = e.target 
 			tar.style.color = tar.style.color == "black" ? temp : "black"; 
-			console.log("들어옴");
 			/* tar.style.color = "black"; */
 		})
 		}
 	)
+
+$goalSetting.click((e) => {
+	console.log("들어옴");
+	console.log(this);
+	const length = $goalSetting.filter(":checked").length;
+	console.log(length);
+if(length == 0){
+		$confirm.css("background-color", "rgb(249, 91, 76);");
+		$confirm.css("cursor", "not-allowed");
+		$confirm.css("color", "white");
+	}else {
+	$confirm.css("background-color", "rgb(252, 180, 174)");
+		$confirm.css("cursor", "pointer");
+		$confirm.css("color", "black");
+	}
+/* 	if(!$(this).val()){
+		$confirm.css("background-color", "rgb(252, 180, 174)");
+		$confirm.css("cursor", "not-allowed");
+		$confirm.css("color", "white");
+	}else {
+		$confirm.css("background-color", "rgb(249, 91, 76);");
+		$confirm.css("cursor", "pointer");
+		$confirm.css("color", "black");
+	} */
+});
+
+
+	
 
 </script>
 </html>
