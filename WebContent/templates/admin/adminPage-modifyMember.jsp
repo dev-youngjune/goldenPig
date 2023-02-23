@@ -8,14 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/admin/adminPage-modifyMember.css">
+<link rel="stylesheet" href="../../assets/css/admin/adminPage-modifyMember.css">
 </head>
 <body>
 	<div>
 		<div class="info-title-box info-title-box-flex">
 			<div class="logo-box-layout">
 				<div class="logo-box">
-					<img src="../assets/img/admin/logo_icon.png">
+					<img src="../../assets/img/admin/logo_icon.png">
 				</div>
 				<div class="logo-title">
 					<span>골든 피그</span>
@@ -30,7 +30,9 @@
 		<div class="wrap"> 
 		
 			<!-- 사이드 바 -->
-			<div id="side-bar"></div>
+			<div id="side-bar">
+				<jsp:include page="sidemenu.jsp" flush="false" />
+			</div>
 			<!-- 사이드 바 끝-->
 		
 			<div class="container">
@@ -40,7 +42,7 @@
 						<div class="prev-button-layout">
 							<div>
 								<a>
-									<img src="../assets/img/admin/prev_icon.png" class="prev-icon">
+									<img src="../../assets/img/admin/prev_icon.png" class="prev-icon">
 									<span class="prev-title">회원정보로 돌아가기</span>
 								</a>
 							</div>
@@ -105,7 +107,7 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menuLoad.js"></script>
-<script src="../assets/js/admin/modify-member.js"></script>
-<script src="../assets/js/admin/prev.js"></script>
+<script src="../../assets/js/admin/menuLoad.js"></script>
+<script src="../../assets/js/admin/modify-member.js"></script>
+<script src="../../assets/js/admin/prev.js"></script>
 </html>
