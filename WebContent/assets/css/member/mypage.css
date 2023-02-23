@@ -924,9 +924,6 @@ input, textarea {
 	margin-bottom: 3px;
 }
 
-.gray_box+.gray_box {
-    margin-top: 1.25rem;
-}
 
 .gray_box_Input {
 	border: 1px solid #5682ef;
