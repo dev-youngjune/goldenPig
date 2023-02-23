@@ -33,7 +33,7 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="새로운 비밀번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input type="password" placeholder="새로운 비밀번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
 														<img class="eye" src="../assets/img/member/passwordEye.png">
 												</div>
 											</div>
