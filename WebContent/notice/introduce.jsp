@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../assets/css/notice/introduce.css">
 </head>
 <body>
+<%-- 	<jsp:include page="/header/header.jsp" flush="false" /> --%>
 	<!-- 전체 div  -->
 	<div id="lay_out">
 		<!-- 소개 타이틀 (가장 상단), 첫번째 섹션 -->

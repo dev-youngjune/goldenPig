@@ -14,19 +14,6 @@ font-size: 1rem;
     position: relative;
 }
 
-html {
-    -webkit-text-size-adjust: 100%;
-}
-
-*, :after, :before {
-    box-sizing: border-box;
-}
-
-*, :after, :before {
-    box-sizing: border-box;
-    border: 0 solid #e3e3e3;
-}
-
 .section1{
     display: flex;
     flex-direction: column;
