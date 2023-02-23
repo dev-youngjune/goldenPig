@@ -54,7 +54,7 @@
 								<table>
 									<thead>
 										<tr>
-											<th>
+											<th class="checkbox-line">
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>No</th>
@@ -66,7 +66,7 @@
 										</tr>
 									</thead>
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<td>1</td>
