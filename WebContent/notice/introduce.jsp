@@ -13,19 +13,23 @@
 		<!-- 소개 타이틀 (가장 상단), 첫번째 섹션 -->
 		<section class="section1">
 			<div>
-				<img src="../assets/img/notice/blackpig.png" alt="인트로 이미지" class="introImg1" style="filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg) brightness(104%) contrast(110%);" >
+			<div>
+				<!-- <img src="../assets/img/notice/intro01.png" alt="인트로 이미지" class="introImg1" style="filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg) brightness(104%) contrast(110%);" > -->
 			</div>
 				<div class="introTitle">
 					우리의 새로운
 					<br class="desk:tw-hidden">
 					지식 커뮤니티, 아하
 				</div>
+			</div>
 		</section>
 <!-- 			두번째 섹션 -->
-			<section class="section2">
+			<section class="section2" style="display : flex, justify-content : space-around">
 				<!-- 섹션 2의 좌측 이미지 -->	
+				<div><!-- 이미지 --></div>
+				<div>
 				<div class="sec2_left"> 
-					<img alt="" src="">
+					<img alt="leftSide" src="../assets/img/notice/intro01.png">
 				</div>
 					<!-- 섹션 2의 우측 내용 -->
 					<div class="sec2_right">
@@ -42,6 +46,7 @@
 									검증된 전문가가 직접 답변해줘요.
 							</div>
 					</div>
+				</div>	
 			</section>
 		<!-- 세번째 섹션  -->	
 		<section class="section3">

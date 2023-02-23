@@ -37,8 +37,9 @@ html {
     padding-top: 50px;
     margin-top: 30vh;
     color: #fff;  
-    background-image: url('../../img/notice/moneyRain.png');
+ /*  	background-image: url('../../img/notice/intro01.png'); */
 	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .tw-text-center {
@@ -89,6 +90,9 @@ img {
     padding-top: 280px;
     padding-bottom: 280px;
     background: #fff;
+ /*    background-image: url('../../img/notice/intro01.png'); */
+    width: 100%;
+    
 }
 
 section {
