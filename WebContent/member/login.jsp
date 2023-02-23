@@ -32,17 +32,17 @@
 											<div class="TextField">
 												<label class="TextField_label">이메일</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput" autocomplete value>
 												</div>
+												<p class="error-message-email" style="margin: 0;"></p>
 											</div>
 											<div class="TextField">	
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
-													<!-- <button type="button" tabindex="-1" class="TextField_bodyButton -off"> -->
-														<img class="eye" src="../assets/img/member/passwordEye.png">
-													<!-- </button> -->
+												<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
+														<img class="eye1" src="../assets/img/member/passwordEyeSlash.png">
 												</div>
+												<p class="error-message-password" style="margin: 0;"></p>
 											</div>
 										</div>
 									</div>

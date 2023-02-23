@@ -25,7 +25,7 @@
 									</a>
 								</header>
 								
-								<!-- theScreen -->
+							<!-- theScreen -->
 								<div class="theScreen_body px-5">
 									<h1 class="textTitle">
 										<span>회원가입</span>
@@ -35,50 +35,61 @@
 											<div class="TextField">
 												<label class="TextField_label">이메일</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput" autocomplete value>
 												</div>
+                                                <p class="error-message-email" style="margin: 0;"></p>
 											</div>
 										</div>
 										<div class="theJoin_bodyInput">
 											<div class="TextField">
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
-														<img class="eye1" src="../assets/img/member/passwordEye.png">
+													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
+														<img class="eye1" src="../assets/img/member/passwordEyeSlash.png">
 												</div>
+                                                <p class="error-message-password" style="margin: 0;"></p>
+
 											</div>
 										</div>
 										<div class="theJoin_bodyInput">
 											<div class="TextField">
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
-														<input type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
-                                                        <img class="eye2" src="../assets/img/member/passwordEye.png">
+													<input name ="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
+														<img class="eye2" src="../assets/img/member/passwordEyeSlash.png">
 												</div>
+                                                <p class="error-message-password-check" style="margin: 0;"></p>
+                                                
 											</div>
 										</div>
 										<div class="theJoin_bodyInput">
 											<div class="TextField">
-												<label class="TextField_label">이름</label>
+                                                <label class="TextField_label">이름</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="이름을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+                                                    <input name="memberName" type="text" placeholder="이름을 입력해주세요" class="TextField_bodyInput" autocomplete value>
 												</div>
+                                                <p class="error-message-name" style="margin: 0;"></p>
+
 											</div>
 										</div>
 										<div class="theJoin_bodyInput">
 											<div class="TextField">
 												<label class="TextField_label">닉네임</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="닉네임을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberNickName" type="text" placeholder="닉네임을 입력해주세요" class="TextField_bodyInput" autocomplete value>
 												</div>
+                                                <p class="error-message-nickname" style="margin: 0;"></p>
+
 											</div>
 										</div>
 										<div class="theJoin_bodyInput">
 											<div class="TextField">
 												<label class="TextField_label">핸드폰</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberPhone" type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
 												</div>
+                                                <p class="error-message-phone" style="margin: 0;"></p>
+
 											</div>
 										</div>
 										<!-- <div class="theJoin_bodyInput">
@@ -96,31 +107,34 @@
 													<div class="birth_div">
 														<div class="birth_div_div">
 															<div class="birth_div_div_div">
-																<input class="birth_div_div_div_input" name="birthYear" placeholder="YYYY" type="text">
+																<input class="birth_div_div_div_input" name="memberBirthYear" placeholder="YYYY" type="text">
 															</div>
 														</div>
 														<span class="birth_span"></span>
 														<div class="birth_div_div">
 															<div class="birth_div_div_div">
-																<input class="birth_div_div_div_input" name="birthYear" placeholder="MM" type="text">
+																<input class="birth_div_div_div_input" name="memberBirthMonth" placeholder="MM" type="text">
 															</div>
 														</div>
 														<span class="birth_span"></span>
 														<div class="birth_div_div">
 															<div class="birth_div_div_div">
-																<input class="birth_div_div_div_input" name="birthYear" placeholder="DD" type="text">
+																<input class="birth_div_div_div_input" name="memberBirthDay" placeholder="DD" type="text">
 															</div>
+                                                            
 														</div>
 													</div>
 												</div>
 											</div>
+                                            <p class="error-message-birth" style="margin: 0;"></p>
 										</div>
 									</div>
 								</div>
 								<!-- footer -->
 								<footer class="theScreen_footer">
-									<button type="submit" class="theScreen_Button_submit">회원가입</button>
-									<button class="Button mt-2 -large w-full -transparent">
+									<!-- <button type="button" class="theScreen_Button_submit " onclik="return check()">회원가입</button> -->
+									<button type="button" class="theScreen_Button_submit " name="submit">회원가입</button>
+									<button class="theScreen_button_a">
 										<a href="">
 										아이디가 존재하나요?
 										</a>
@@ -143,7 +157,7 @@
 
 const $email = $("input[name=memberEmail]");
 const $errorMessageEmail = $(".error-message-email");
-
+const $submit = $("button[name=submit]")
 
 $email.on("blur", function(e){
     var emailValue = $email.val(); 
@@ -394,6 +408,44 @@ $day.on("blur", function(e){
             $second.attr("type", "text")
         }
     });
+    
+    let flag1 = false;
+	let flag2 = false;
+	let flag3 = false;
+	let flag4 = false;
+	let flag5 = false;
+	let flag6 = false;
+	let flag7 = false;
+	let flag8 = false;
+	let flag9 = false;
+	
+
+
+    $submit.on("click", function(){
+    if(flag1 == true && flag2 == true && flag3 == true && flag4 == true && flag5 == true && flag6 == true && flag7 == true && flag8 == true && flag9 == true){
+        alert("회원가입이 완료 되었습니다");
+        // window.location.href = 'https://www.naver.com';
+    }else if(flag1 == false){
+        alert("이메일를 확인해주세요")
+    }else if(flag2 == false){
+        alert("비밀번호를 확인해주세요")
+    }else if(flag3 == false){
+        alert("비밀번호 확인란을 확인해주세요")
+    }else if(flag4 == false){
+        alert("이름을 확인해주세요")
+    }else if(flag5 == false){
+        alert("닉네임을 확인해주세요")
+    }else if(flag6 == false){
+        alert("핸드폰번호를 확인해주세요")
+    }else if(flag7 == false){
+        alert("생년월일을 확인해주세요")
+    }else if(flag8 == false){
+        alert("생년월일을 확인해주세요")
+    }else if(flag9 == false){
+        alert("생년월일을 확인해주세요")
+    }
+    });
+
 
 
 </script>

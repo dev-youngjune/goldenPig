@@ -259,3 +259,41 @@ $day.on("blur", function(e){
         }
     });
 
+
+	let flag1 = false;
+	let flag2 = false;
+	let flag3 = false;
+	let flag4 = false;
+	let flag5 = false;
+	let flag6 = false;
+	let flag7 = false;
+	let flag8 = false;
+	let flag9 = false;
+	
+
+
+    $submit.on("click", function(){
+    if(flag1 == true && flag2 == true && flag3 == true && flag4 == true && flag5 == true && flag6 == true && flag7 == true && flag8 == true && flag9 == true){
+        alert("회원가입이 완료 되었습니다");
+        // window.location.href = 'https://www.naver.com';
+    }else if(flag1 == false){
+        alert("이메일를 확인해주세요")
+    }else if(flag2 == false){
+        alert("비밀번호를 확인해주세요")
+    }else if(flag3 == false){
+        alert("비밀번호 확인란을 확인해주세요")
+    }else if(flag4 == false){
+        alert("이름을 확인해주세요")
+    }else if(flag5 == false){
+        alert("닉네임을 확인해주세요")
+    }else if(flag6 == false){
+        alert("핸드폰번호를 확인해주세요")
+    }else if(flag7 == false){
+        alert("생년월일을 확인해주세요")
+    }else if(flag8 == false){
+        alert("생년월일을 확인해주세요")
+    }else if(flag9 == false){
+        alert("생년월일을 확인해주세요")
+    }
+});
+
