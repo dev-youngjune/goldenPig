@@ -78,7 +78,7 @@ img.logo-img {
     margin-top: 1.25rem;
 }
 
-a {
+.mr-3 a {
 	color: black !important;
 	text-decoration: none;
 	background-color: transparent;

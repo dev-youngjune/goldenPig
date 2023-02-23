@@ -208,13 +208,12 @@
 	<nav class="navigation">
 		<div class="nav-wrapper">
 			<div class="nav-container">
-				<button class="nav-hamburger">
-					<img style="width: 24px" alt=""
-						src="../assets/img/header/hamburger-icon.png">
-				</button>
 				<div class="nav-left">
-					<a class="nav-brand"> <img alt=""
-						src="../assets/img/admin/logo_icon.png" style="width: 55px">
+					<a class="nav-brand">
+					<img alt="" src="../assets/img/admin/logo_icon.png" style="width: 56px;">
+					</a>
+					<a>
+						<img alt="" src="../assets/img/header/logo_text.png" style="width: 135px;">
 					</a>
 				</div>
 				<div class="nav-right">
