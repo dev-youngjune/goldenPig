@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>저축게시판 목록</title>
-<link rel="stylesheet" href="../assets/css/board/board_list.css">
+<title>자유게시판 목록</title>
+<link rel="stylesheet" href="../assets/css/board/free_board_list.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -22,10 +22,11 @@
 						<div class="tabs">
 							<button class="active">
 								<span class="bullet">저축 게시판</span>
-								<div class="blue-line"></div>
+								<!-- <div class="blue-line"></div> -->
 							</button>
 							<button class="active">
 								<span class="bullet color-#989898">자유 게시판</span>
+								<div class="blue-line"></div>
 							</button>
 							<!-- <hr class="tabs-line"> -->
 						</div>
