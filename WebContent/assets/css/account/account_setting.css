@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body{
 	font-family: 'Pretendard-Regular';
+	letter-spacing: -.05rem!important;
 }
 
 #title_container{

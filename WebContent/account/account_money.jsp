@@ -27,17 +27,17 @@ input, button, span{
 						<img alt="" src="../assets/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
 					</header>
 					<div id="withdrawal_select">
-							<h1 style="position: relative">
-								<span id="element">목표금액 재설정</span>
-							</h1>
-							<div style="margin-bottom: 3rem; margin-top: 0.75rem">
-								<span style="font-weight: 600;--tw-text-opacity: 1; 
-								color: rgba(156, 165, 179, var(--tw-text-opacity));">새로운 목표금액과 목표기간을 입력해주세요.</span>
-							</div>
+						<h1 style="position: relative">
+							<span id="element">목표금액 재설정</span>
+						</h1>
+						<div style="margin-bottom: 3rem; margin-top: 0.75rem">
+							<span style="font-weight: 600;--tw-text-opacity: 1; 
+							color: rgba(156, 165, 179, var(--tw-text-opacity));">새로운 목표금액과 목표기간을 입력해주세요.</span>
+						</div>
 						<div style="display: block; padding-top: 0.5rem">
 							<span style="font-size: 13px">목표금액</span>
 							<div id="input_email">
-								<input class="email_text" id="new_password" type="number" onkeyup="formatNumber()" placeholder="새로운 목표금액을 입력해 주세요.">
+								<input class="email_text goal-setting" id="new_password" type="number" onkeyup="formatNumber()" placeholder="새로운 목표금액을 입력해 주세요.">
 								 <p id="result"></p>
 								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
 							</div>
@@ -59,23 +59,61 @@ input, button, span{
 		</main>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	
+
 	function formatNumber() {
-		let input = document.getElementById("new_password").value;  
-		let result = ""; 
+  let input = document.getElementById("new_password").value;
+  let result = "";
 
-		while (input.length > 0) {  
-			if (input.length >= 3) {  
-				result += input.slice(0, 3) + ",";  
-				input = input.slice(3);  
-			} else {  
-			result += input + "원";
-			input = "" 
-			}
-		}
+  // 입력된 숫자가 음수인 경우 앞에 '-'를 추가합니다.
+  if (input.charAt(0) === "-") {
+    result += "-";
+    input = input.slice(1);
+  }
 
-		document.getElementById("result").innerHTML = result;  
-		}
+  // 입력된 숫자를 3자리씩 쉼표로 구분하여 결과 문자열에 추가합니다.
+  let i = input.length - 3;
+  while (i >= 0) {
+    result = "," + input.slice(i, i+3) + result;
+    i -= 3;
+  }
+  if (i > -3) {
+    result = input.slice(0, i+3) + result;
+  }
+  var temp;
+if(result.charAt() == ","){
+	temp = result.split("");
+	result = "";
+	for (let i = 1; i < temp.length; i++) {
+		result += temp[i];
+	}
+}	
+  // 결과 문자열에 '원'을 추가합니다.
+  result += "원";
+
+  document.getElementById("result").innerHTML = result;
+}
+const $goalSetting = $(".goal-setting");
+const $confirm = $("#confirm");
+
+
+$goalSetting.blur(function(){
+
+	if(!$(this).val() && !$("#currentDate").val()){
+
+		$confirm.css("background-color", "rgb(86, 130, 239)");
+		$confirm.css("cursor", "not-allowed");
+		$confirm.css("color", "rgb(126, 165, 242)");
+		
+	}else {
+		$confirm.css("background-color", "rgb(2, 6, 175)");
+		$confirm.css("cursor", "pointer");
+		$confirm.css("color", "white");
+		
+	}
+});
+
+
 </script>
 </html>
