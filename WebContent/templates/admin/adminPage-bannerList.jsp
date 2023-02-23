@@ -7,14 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/admin/adminPage-bannerList.css">
+<link rel="stylesheet" href="../../assets/css/admin/adminPage-bannerList.css">
 </head>
 <body>
 	<div>
 		<div class="info-title-box info-title-box-flex">
 			<div class="logo-box-layout">
 				<div class="logo-box">
-					<img src="../assets/img/admin/logo_icon.png">
+					<img src="../../assets/img/admin/logo_icon.png">
 				</div>
 				<div class="logo-title">
 					<span>골든 피그</span>
@@ -28,9 +28,9 @@
 		</div>
 		
 		<div class="wrap"> 
-			<!-- 사이드 바 -->
-			<div id="side-bar"></div>
-			<!-- 사이드 바 끝-->
+			<div id="side-bar">
+				<jsp:include page="sidemenu.jsp" flush="false" />
+			</div>
 			
 			<!-- 모달 창 -->
 			<div id="modal">
@@ -48,9 +48,9 @@
 										<div class="banner-preview">
 											<div class="preview-image-box">
 												<!-- 배너 이미지 추가하면 img 태그 추가해서 넣기  -->
-												<img src="../assets/img/admin/001.png" class="review-image review-active">
-												<img src="../assets/img/admin/002.png" class="review-image review-active">
-												<img src="../assets/img/admin/005.png" class="review-image review-active">
+												<img src="../../assets/img/admin/001.png" class="review-image review-active">
+												<img src="../../assets/img/admin/002.png" class="review-image review-active">
+												<img src="../../assets/img/admin/005.png" class="review-image review-active">
 											</div>
 										</div>						
 									</div>
@@ -63,8 +63,8 @@
 										<div class="number-box">4</div> -->
 									</div>
 								</div>		
-								<img src="../assets/img/admin/left_icon.png" class="preview-left">
-								<img src="../assets/img/admin/right_icon.png" class="preview-right">
+								<img src="../../assets/img/admin/left_icon.png" class="preview-left">
+								<img src="../../assets/img/admin/right_icon.png" class="preview-right">
 							</div>
 							<div class="banner-name">
 										<!-- 배너 이름  -->
@@ -178,7 +178,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/left_icon.png" class="left-button">
+										<img src="../../assets/img/admin/left_icon.png" class="left-button">
 									</div>
 								</div>
 							</div>
@@ -206,7 +206,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/right_icon.png" class="right-button">
+										<img src="../../assets/img/admin/right_icon.png" class="right-button">
 									</div>
 								</div>
 							</div>
@@ -219,8 +219,8 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menuLoad.js"></script>
-<script src="../assets/js/admin/checkbox.js"></script>
-<script src="../assets/js/admin/page.js"></script>
-<script src="../assets/js/admin/slide.js"></script>
+<script src="../../assets/js/admin/menuLoad.js"></script>
+<script src="../../assets/js/admin/checkbox.js"></script>
+<script src="../../assets/js/admin/page.js"></script>
+<script src="../../assets/js/admin/slide.js"></script>
 </html>
