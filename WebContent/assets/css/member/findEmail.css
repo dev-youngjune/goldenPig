@@ -393,3 +393,10 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
     width: 100%;
 }
 
+.theFindAccount_message span{
+    --tw-text-opacity: 1;
+    color: rgba(156, 165, 179, var(--tw-text-opacity));
+    font-family: 'Pretendard-Regular';
+    font-weight: 600;
+    
+}
