@@ -32,6 +32,10 @@
 	width: 550px;
 }
 
+.footer-contents ul {
+	padding: 0;
+}
+
 .footer-menu, .footer-container-left {
     display: flex;
     flex-wrap: wrap;
@@ -92,4 +96,8 @@ a:hover {
 
 .footer-menu li a {
 	font-size: 0.8rem;
+}
+
+.mr-3 {
+    margin-right: 0.75rem !important;
 }
