@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Pdroject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
     --swiper-navigation-size: 44px;
 }
@@ -28,6 +35,7 @@ main {
 /* 343 */
 .icon-check:before {
 	content: "\e5ca";
+	display: none;
 }
 
 *, :after, :before {
@@ -278,6 +286,7 @@ button {
 /* 4927 */
 .pull-left {
 	float: left !important;
+	
 }
 /* 4967 */
 .word-spacing {
