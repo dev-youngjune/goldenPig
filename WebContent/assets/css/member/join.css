@@ -412,6 +412,7 @@ button, [type='button'], [type='submit'] {
     align-items: center;
     justify-content: center;
     height: 20px;
+    cursor: pointer;
 }
 
 .sprite-icons {
@@ -532,6 +533,41 @@ button, [type='button'], [type='submit'] {
     line-height: 40px;
 }
 
-.input {
-autocomplete:"off";
+.theScreen_Button_submit {
+   border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));
+    --tw-border-opacity: 1;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    width: 100%;
+    -webkit-appearance: button;
 }
+
+.theScreen_button_a  {
+     border-color: transparent;
+    background-color: transparent;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border-width: 1px;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+

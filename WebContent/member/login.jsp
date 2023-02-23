@@ -49,7 +49,7 @@
 								</div>
 								<footer class="theScreen_footer">
 									<button type="submit" class="Button -large w-full -primary -filled">로그인</button>
-									<a href="https://auth.a-ha.io/password">
+									<a href="">
 										<button class="Button mt-2 -large w-full -transparent">비밀번호를 재설정 하시겠어요?</button>
 									</a>
 								</footer>
