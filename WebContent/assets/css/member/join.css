@@ -420,6 +420,7 @@ button, [type='button'], [type='submit'] {
 }
 
 /*  */
+
 .theScreen_footer {
     position: relative;
     --tw-bg-opacity: 1;
@@ -431,25 +432,27 @@ button, [type='button'], [type='submit'] {
     border-radius: 0 0 8px 8px;
 }
 
-.Button.-primary.-filled {
-    border-color: transparent;
-    --tw-bg-opacity: 1;
-    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(255, 255, 255, var(--tw-text-opacity));
-}		
-.Button.-primary {
-    --tw-border-opacity: 1;
-    border-color: rgba(86, 130, 239, var(--tw-border-opacity));
-    --tw-text-opacity: 1;
-    color: rgba(2, 6, 175, var(--tw-text-opacity));
-}
-.Button.-large {
+._join_Button_ {
     font-size: 1rem;
     line-height: 1.5rem;
     height: 56px;
     font-weight: bold;
     
+}
+
+._join_Button_ {
+    --tw-border-opacity: 1;
+    border-color: rgba(86, 130, 239, var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(2, 6, 175, var(--tw-text-opacity));
+	}
+
+._join_Button_ {
+   border-color: transparent;
+    --tw-bg-opacity: 1;
+    background-color: rgba(2, 6, 175, var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgba(255, 255, 255, var(--tw-text-opacity));	
 }
 
 .Button {

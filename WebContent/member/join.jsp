@@ -7,7 +7,7 @@
 <title>아하(Aha) 인증센터</title>
 <link rel="stylesheet" href="../assets/css/member/join.css">
 </head>
-<body style="margin:0px!important;">
+<body style="margin:0px!important">
 	<div id="wrap">
 		<div id="layout">
 			<div class="layoutDefault">
@@ -123,7 +123,7 @@
 								</div>
 								<!-- footer -->
 								<footer class="theScreen_footer">
-									<button type="submit" class="Button -large w-full -primary -filled">회원가입</button>
+									<button type="submit" class="_join_Button_">회원가입</button>
 									<button class="Button mt-2 -large w-full -transparent">
 										<a href="">
 										아이디가 존재하나요?
