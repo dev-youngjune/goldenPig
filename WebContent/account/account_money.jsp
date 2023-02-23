@@ -102,9 +102,9 @@ $goalSetting.blur(function(){
 
 	if(!$(this).val() && !$("#currentDate").val()){
 
-		$confirm.css("background-color", "trgba(86, 130, 239, var(--tw-bg-opacity)");
+		$confirm.css("background-color", "rgb(86, 130, 239)");
 		$confirm.css("cursor", "not-allowed");
-		$confirm.css("color", "rgba(126, 165, 242, var(--tw-text-opacity))"	);
+		$confirm.css("color", "rgb(126, 165, 242)");
 		
 	}else {
 		$confirm.css("background-color", "rgb(2, 6, 175)");

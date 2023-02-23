@@ -64,14 +64,14 @@ input, button, span{
 										</div>
 									</label>
 								</li>
-								<li>
+<!-- 								<li>
 									<label>
 										<div>
 											<input type="checkbox">
 											<span>기타</span>
 										</div>
 									</label>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 					</div>
@@ -109,13 +109,13 @@ $goalSetting.click((e) => {
 	const length = $goalSetting.filter(":checked").length;
 	console.log(length);
 if(length == 0){
-		$confirm.css("background-color", "rgb(249, 91, 76);");
+		$confirm.css("background-color", "#FCB4AE");
 		$confirm.css("cursor", "not-allowed");
 		$confirm.css("color", "white");
 	}else {
-	$confirm.css("background-color", "rgb(252, 180, 174)");
+		$confirm.css("background-color", "#F95B4C");
 		$confirm.css("cursor", "pointer");
-		$confirm.css("color", "black");
+		$confirm.css("color", "white");
 	}
 /* 	if(!$(this).val()){
 		$confirm.css("background-color", "rgb(252, 180, 174)");
