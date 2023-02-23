@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>자유게시판 목록</title>
-<link rel="stylesheet" href="../assets/css/board/free_board.css">
+<link rel="stylesheet" href="../assets/css/board/free_board_list.css">
 </head>
 <body>
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div class="wrap">
 		<div class="body-flex">
 
@@ -251,5 +252,6 @@
 			</div>
 		</div>
 	</div>
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>

@@ -14,7 +14,9 @@
 }
 
 .wrap {
-	background: #fafafa;
+    background: #fafafa;
+    padding-top: 80px;
+    padding-bottom: 6px;
 }
 
 section.container {

@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지-공지 사항 목록</title>
+<title>관리자 페이지- 회원 정보 목록</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/admin/adminPage-boardList.css">
+<link rel="stylesheet" href="../../assets/css/admin/adminPage-boardList.css">
 </head>
 <body>
 	<div>
 		<div class="info-title-box info-title-box-flex">
 			<div class="logo-box-layout">
 				<div class="logo-box">
-					<img src="../assets/img/admin/logo_icon.png">
+					<img src="../../assets/img/admin/logo_icon.png">
 				</div>
 				<div class="logo-title">
 					<span>골든 피그</span>
@@ -23,37 +23,33 @@
 			</div>
 			<div>
 				<div class="select-name">
-					<span>공지사항 관리</span>	
+					<span>회원정보 관리</span>	
 				</div>
 			</div>
 		</div>
 		<div class="wrap"> 
 		
 			<!-- 사이드 바 -->
-			<div id="side-bar"></div>
+			<div id="side-bar">
+				<jsp:include page="sidemenu.jsp" flush="false" />
+			</div>
 			<!-- 사이드 바 끝-->
 		
 			<div class="container">
 				<div class="container-margin">
 					<!-- 헤더 -->
-					<div class="update-button-flex">
-						<div class="delete-box-layout ">
-								<div class="delete-box">
-									<button class="register-button">공지사항 등록</button>
-								</div>
-						</div>
-						<div class="delete-box-layout">
-								<div class="delete-box">
-									<button class="delete-button">선택 게시물 삭제</button>
-								</div>
-						</div>
-					</div>					
+					<div class="delete-box-layout">
+							<div class="delete-box">
+								<button class="delete-button">선택 게시물 삭제</button>
+							</div>
+					</div>
+					
 					<!-- 내용 섹션 -->
 					<section class="board-info-box-layout">
 						
 						<div class="board-info-box">
 							<div class="board-info-title-box">
-								<span>공지사항 목록</span>
+								<span>회원정보 목록</span>
 							</div>
 							
 							<div class="info-table">
@@ -64,12 +60,11 @@
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>No</th>
-											<th>제목</th>
-											<th>작성 날짜</th>
-											<th>수정 날짜</th>
-											<th>
-												<!-- 버튼 넣을 칸 이라서 빈공간으로 -->
-											</th>
+											<th>이메일</th>
+											<th>닉네임</th>
+											<th>핸드폰 번호</th>
+											<th>가입 날짜</th>
+											<th></th>
 										</tr>
 									</thead>
 									<tr>
@@ -78,12 +73,13 @@
 										</td>
 										<td>1</td>
 										<td>
-											<a>[공지] 서비스 시작</a>
+											<a href="adminPage-member.jsp">ljw120@naver.com</a>
 										</td>
-										<td>2023.01.11</td>
+										<td>멍충코딩</td>
+										<td>010-1234-1234</td>
 										<td>2023.01.11</td>
 										<td class="modify-button">
-											<a href="adminPage-modifyNotice.jsp">수정</a>
+											<a href="<!-- 수정 페이지 -->">수정</a>
 										</td>
 									</tr>
 								</table>
@@ -98,7 +94,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/left_icon.png" class="left-button">
+										<img src="../../assets/img/admin/left_icon.png" class="left-button">
 									</div>
 								</div>
 							</div>
@@ -126,7 +122,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/right_icon.png" class="right-button">
+										<img src="../../assets/img/admin/right_icon.png" class="right-button">
 									</div>
 								</div>
 							</div>
@@ -139,7 +135,7 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menuLoad.js"></script>
-<script src="../assets/js/admin/checkbox.js"></script>
-<script src="../assets/js/admin/page.js"></script>
+<script src="../../assets/js/admin/menuLoad.js"></script>
+<script src="../../assets/js/admin/checkbox.js"></script>
+<script src="../../assets/js/admin/page.js"></script>
 </html>
