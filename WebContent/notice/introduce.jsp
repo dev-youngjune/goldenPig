@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>서비스 소개</title>
 <link rel="stylesheet" href="../assets/css/notice/introduce.css">
 </head>
 <body>

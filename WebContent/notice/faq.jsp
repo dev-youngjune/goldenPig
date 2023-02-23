@@ -9,8 +9,6 @@
          font-weight: 400;
          font-style: normal;
 }
-
-
 </style>
 <head>
 <meta charset="UTF-8">
