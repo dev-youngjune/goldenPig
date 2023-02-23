@@ -41,31 +41,39 @@
 							<h3 class="exit-button">X</h3>
 						</div>
 						<div class="modal-preview-layout">
-						<div class="modal-flex">
-							<div>
-							<div class="banner-preview-box">
-								<!-- 이미지 뿌려주는 곳 -->
-								<div class="banner-preview">
-									<div class="preview-image-box">
-										<!-- 배너 이미지 추가하면 img 태그 추가해서 넣기  -->
-										<img src="../assets/img/admin/001.png" class="review-image review-active">
-										<img src="../assets/img/admin/002.png" class="review-image review-active">
-										<img src="../assets/img/admin/005.png" class="review-image review-active">
+							<div class="modal-flex">
+								<div>
+									<div class="banner-preview-box">
+										<!-- 이미지 뿌려주는 곳 -->
+										<div class="banner-preview">
+											<div class="preview-image-box">
+												<!-- 배너 이미지 추가하면 img 태그 추가해서 넣기  -->
+												<img src="../assets/img/admin/001.png" class="review-image review-active">
+												<img src="../assets/img/admin/002.png" class="review-image review-active">
+												<img src="../assets/img/admin/005.png" class="review-image review-active">
+											</div>
+										</div>						
 									</div>
-								</div>						
+								</div>
+								<div class="modal-number-button-box">
+									<div class="modal-number-button">
+										<!-- <div class="number-box number-box-active">1</div>
+										<div class="number-box">2</div>
+										<div class="number-box">3</div>
+										<div class="number-box">4</div> -->
+									</div>
+								</div>		
+								<img src="../assets/img/admin/left_icon.png" class="preview-left">
+								<img src="../assets/img/admin/right_icon.png" class="preview-right">
 							</div>
-							</div>
-							<img src="../assets/img/admin/left_icon.png" class="preview-left">
-							<img src="../assets/img/admin/right_icon.png" class="preview-right">
+							<div class="banner-name">
+										<!-- 배너 이름  -->
+										<span>기본 배너</span>
+									</div>	
+							</div>	
 						</div>
-						<div class="banner-name">
-									<!-- 배너 이름  -->
-									<span>기본 배너</span>
-								</div>	
-						</div>	
 					</div>
-				</div>
-			</div><!-- 모달창 끝  -->
+				</div><!-- 모달창 끝  -->
 			
 			<div class="container">
 				<div class="container-margin">
@@ -100,7 +108,7 @@
 								<table>
 									<thead>
 										<tr>
-											<th>
+											<th class="checkbox-line">
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>번호</th>
@@ -112,7 +120,7 @@
 									</thead>
 									<!-- 하나의 행 시작  -->
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
@@ -128,7 +136,7 @@
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
@@ -144,7 +152,7 @@
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
