@@ -25,6 +25,7 @@ main {
 	width: 925px;
 	margin: 0 auto;
 	color: #333;
+	/* margin-top: 175px; */
 	/* background-color: #e8f0f9; */
 }
 
@@ -51,6 +52,7 @@ div.home-button-wrapper {
 
 div.home-button-wrapper a button {
 	position: relative;
+	cursor: pointer;
 }
 
 .home-buttons div a button {

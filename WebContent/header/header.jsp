@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<link rel="stylesheet" href="../assets/css/main/bulma.css">
+<!-- <link rel="stylesheet" href="../assets/css/main/bulma.css"> -->
 <link rel="stylesheet" href="../assets/css/header/header.css">
 <title>Insert title here</title>
 <style type="text/css">
@@ -13,7 +13,7 @@
 <body>
 	<!-- is-hidden -->
 	<!-- sidebar -->
-	<div class="is-hidden" style="width: 100%; height: 100%;">
+<%-- 	<div class="is-hidden" style="width: 100%; height: 100%;">
 		<div class="sidebar">
 			<div class="sidebar-inner">
 				<div class="is-relative">
@@ -41,7 +41,7 @@
 									src="../assets/img/member/user_icon.png">
 								</a> <a href="#" class="sidebar-nickname">
 									<div class="sidebar-nickname">
-										<%-- ${userName} --%>
+										${userName}
 										강력한테리어7
 									</div>
 									<div>
@@ -202,7 +202,7 @@
 			</div>
 		</div>
 		<div class="sidebar-backdrop modal-active modal"></div>
-	</div>
+	</div> --%>
 
 	<!-- upper navigation -->
 	<nav class="navigation">
@@ -225,13 +225,13 @@
 								style="appearance: none; border: 0 solid; text-align: left; display: none;">
 							</button>
 							<a href="#" class=""
-								style="cursor: pointer; right: 0; z-index: 110; position: absolute;">
+								style="cursor: pointer; right: 0; position: absolute;">
 								<img style="height: 36px; cursor: pointer;" alt=""
 								src="../assets/img/header/search_icon.png">
 							</a>
 						</form>
 					</div>
-					<div class="is-hidden nav-right-item nav-register is-inline-block">
+					<div class="nav-right-item nav-register is-hidden is-inline-block">
 						<a href="#" class="nav-right-button">로그인</a> <a href="#"
 							class="nav-right-button">회원가입</a>
 					</div>
