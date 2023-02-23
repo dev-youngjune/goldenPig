@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../assets/css/board/board_answer.css">
 </head>
 <body>
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div class="wrap">
 		<section class="container">
 			<div class="row-colum">
@@ -53,6 +54,7 @@
 			</div>	
 		</section>
 	</div>
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/board/board_answer.js"></script>

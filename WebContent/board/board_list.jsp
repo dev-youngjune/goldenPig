@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>질문과 답변(Q&A)</title>
+<title>저축게시판 목록</title>
 <link rel="stylesheet" href="../assets/css/board/board_list.css">
 </head>
 <body>
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div class="wrap">
 		<div class="body-flex">
 
@@ -250,5 +251,6 @@
 			</div>
 		</div>
 	</div>
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>

@@ -13,18 +13,25 @@
 	padding: 0;
 }
 
+.wrap {
+    padding-top: 110px;
+    padding-bottom: 50px;
+    background: #fafafa;
+}
+
 .qeustion-detail {
 	width: 888px;
 	margin: 0 auto;
 }
 
-article {
+.article {
 	padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     border: 1px solid #e3e3e3;
     border-radius: 12px;
+    background: #ffffff;
 }
 
 .card-main {
