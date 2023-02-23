@@ -47,7 +47,7 @@
 						<a>
 							<button>
 								<img alt="" src="../assets/img/main/search-64.png">
-								<span>전문가 신청</span>
+								<span>저축 게시판</span>
 							</button>
 						</a>
 					</div>
@@ -55,7 +55,7 @@
 						<a>
 							<button>
 								<img alt="" src="../assets/img/main/membership_card-64.png">
-								<span>멤버십</span>
+								<span>꿀팁 게시판</span>
 							</button>
 						</a>
 					</div>
