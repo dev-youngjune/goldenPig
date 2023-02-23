@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../assets/css/board/board_write.css">
 </head>
 <body>
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div class="wrap">
 		<div class="page-container">
 			<div class="container">
@@ -93,6 +94,7 @@
 			</div>
 		</div>
 	</div>
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="../assets/js/board/board_write.js"></script>
