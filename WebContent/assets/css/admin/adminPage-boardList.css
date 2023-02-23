@@ -16,6 +16,10 @@ table th, table td {
 	padding-left: 10px;
 }
 
+.checkbox-line {
+	line-height: 1px;
+}
+
 table td {
 	font-weight: 300;
 }
