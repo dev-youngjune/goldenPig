@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 
 // 이메일 정규식
 
@@ -154,7 +158,7 @@ $name.on("blur", function(e){
             $errorMessagePhone.text("ex) 010-0000-0000");
     })
 
-    // 생년
+    // 연도
     const $year = $("input[name=memberBirthYear]");
     const $errorBirth = $(".error-message-birth");
 
@@ -226,4 +230,32 @@ $day.on("blur", function(e){
     }
 });
 
+
+
+	// 비밀번호 확인
+  	const $eye1 = $(".eye1");
+    const $eye2 = $(".eye2");
+    const $first = $(".first");
+    const $second = $(".second");
+
+
+    $eye1.on("click", function(e) {
+        if($eye1.hasClass("close-eye")) {
+            $eye1.removeClass("close-eye");
+            $first.attr("type", "password")
+        } else {
+            $eye1.addClass("close-eye");
+            $first.attr("type", "text")
+        }
+    });
+
+    $eye2.on("click", function(e) {
+        if($eye2.hasClass("close-eye")) {
+            $eye2.removeClass("close-eye");
+            $second.attr("type", "password")
+        } else {
+            $eye2.addClass("close-eye");
+            $second.attr("type", "text")
+        }
+    });
 

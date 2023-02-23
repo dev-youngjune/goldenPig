@@ -1,4 +1,4 @@
-@charset "UTF-8";@charset "UTF-8";
+       @charset "UTF-8";@charset "UTF-8";
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -401,7 +401,21 @@ button, [type='button'], [type='submit'] {
 }
 
 /* .TextField_bodyButton의 속성을 그냥 넣어줬음 */
-.eye {
+.eye1 {
+    width: 21px;
+    height: 19px;
+    filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
+     position: absolute;
+    top: 0.25rem;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    cursor: pointer;
+}
+
+.eye2 {
     width: 21px;
     height: 19px;
     filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
@@ -570,4 +584,17 @@ button, [type='button'], [type='submit'] {
     font-weight: bold;
 }
 
-
+.close-eye {
+    background-image: url('../assets/img/member/passwordEyeSlash.png');
+    width: 21px;
+    height: 19px;
+    filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
+    position: absolute;
+    top: 0.25rem;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    cursor: pointer;
+}

@@ -61,4 +61,6 @@
 		</div>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="../assets/js/member/login.js"></script>
 </html>
