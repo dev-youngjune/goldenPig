@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="../assets/css/notice/faq.css">
 </head>
 <body>
+	<jsp:include page="/header/header.jsp" flush="false" />
 	<!-- FAQ 전체  -->
 	<div class="container page">
 		<!-- ::before -->

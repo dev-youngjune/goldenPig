@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../assets/css/notice/notice.css">
 </head>
 <body>
-<%-- <jsp:include page="/header/header.jsp" flush="false" />  --%>
+<jsp:include page="/header/header.jsp" flush="false" />
 <div class="size-controll" style="background-color: rgb(250,250,250);">
    <div class="container no-padding-xs"> <!-- style="height: auto !important;" -->
       <!-- ::before  -->
