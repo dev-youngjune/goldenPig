@@ -4,18 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자 페이지- 회원 정보 목록</title>
+<title>관리자 페이지- 자유 게시판 목록</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/admin/adminPage-boardList.css">
+<link rel="stylesheet" href="../../assets/css/admin/adminPage-boardList.css">
 </head>
 <body>
 	<div>
 		<div class="info-title-box info-title-box-flex">
 			<div class="logo-box-layout">
 				<div class="logo-box">
-					<img src="../assets/img/admin/logo_icon.png">
+					<img src="../../assets/img/admin/logo_icon.png">
 				</div>
 				<div class="logo-title">
 					<span>골든 피그</span>
@@ -23,14 +23,16 @@
 			</div>
 			<div>
 				<div class="select-name">
-					<span>회원정보 관리</span>	
+					<span>자유 게시판 관리</span>	
 				</div>
 			</div>
 		</div>
 		<div class="wrap"> 
 		
 			<!-- 사이드 바 -->
-			<div id="side-bar"></div>
+			<div id="side-bar">
+				<jsp:include page="sidemenu.jsp" flush="false" />
+			</div>
 			<!-- 사이드 바 끝-->
 		
 			<div class="container">
@@ -47,38 +49,32 @@
 						
 						<div class="board-info-box">
 							<div class="board-info-title-box">
-								<span>회원정보 목록</span>
+								<span>자유 게시판 목록</span>
 							</div>
 							
 							<div class="info-table">
 								<table>
 									<thead>
 										<tr>
-											<th>
+											<th class="checkbox-line">
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>No</th>
-											<th>이메일</th>
-											<th>닉네임</th>
-											<th>핸드폰 번호</th>
-											<th>가입 날짜</th>
-											<th></th>
+											<th>카테고리</th>
+											<th>게시판 제목</th>
+											<th>작성자 명</th>
+											<th>작성 날짜</th>
 										</tr>
 									</thead>
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<td>1</td>
-										<td>
-											<a href="adminPage-member.jsp">ljw120@naver.com</a>
-										</td>
-										<td>멍충코딩</td>
-										<td>010-1234-1234</td>
-										<td>2023.01.11</td>
-										<td class="modify-button">
-											<a href="<!-- 수정 페이지 -->">수정</a>
-										</td>
+										<td>자유 게시판</td>
+										<td>언제 돈 모아요..?</td>
+										<td>이**</td>
+										<td>2023.02.11</td>
 									</tr>
 								</table>
 							</div>
@@ -92,7 +88,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/left_icon.png" class="left-button">
+										<img src="../../assets/img/admin/left_icon.png" class="left-button">
 									</div>
 								</div>
 							</div>
@@ -120,7 +116,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/right_icon.png" class="right-button">
+										<img src="../../assets/img/admin/right_icon.png" class="right-button">
 									</div>
 								</div>
 							</div>
@@ -133,7 +129,7 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menuLoad.js"></script>
-<script src="../assets/js/admin/checkbox.js"></script>
-<script src="../assets/js/admin/page.js"></script>
+<script src="../../assets/js/admin/menuLoad.js"></script>
+<script src="../../assets/js/admin/checkbox.js"></script>
+<script src="../../assets/js/admin/page.js"></script>
 </html>

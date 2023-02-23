@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../assets/css/admin/sidemenu.css">
+<link rel="stylesheet" href="../../assets/css/admin/sidemenu.css">
 </head>
 <body>
 <div class="side-menu">
@@ -13,7 +13,7 @@
 					<div class="menu-title-layout">
 						<div class="menu-title">
 							<%-- <div>
-								<a href="<!-- 메인 페이지 경로 -->"> <img src="../assets/img/admin/home__icon.png" class="icon">
+								<a href="<!-- 메인 페이지 경로 -->"> <img src="../../assets/img/admin/home__icon.png" class="icon">
 								</a>
 							</div> --%>
 							<div class="menu-name">
@@ -25,13 +25,13 @@
 						<li class="menu">
 							<div class="menu-flex">
 								<div>
-									<img src="../assets/img/admin/board_icon.png" class="icon">
+									<img src="../../assets/img/admin/board_icon.png" class="icon">
 								</div> 
 								<a href=""> 
 									<span>게시판 관리</span>
 								</a>
 								<div class="triangle-button">
-									<img src="../assets/img/admin/arrow_icon.png" class="icon triangle-icon triangle">
+									<img src="../../assets/img/admin/arrow_icon.png" class="icon triangle-icon triangle">
 								</div>
 							</div>
 							<ul class="menus1 menus" style="display: none;">
@@ -56,13 +56,13 @@
 						<li class="menu">
 							<div class="menu-flex">
 								<div>
-									<img src="../assets/img/admin/notice_icon.png" class="icon">
+									<img src="../../assets/img/admin/notice_icon.png" class="icon">
 								</div>
 								<a> 
 									<span>공지사항 관리</span>
 								</a>
 								<div class="triangle-button">
-									<img src="../assets/img/admin/arrow_icon.png" class="icon triangle-icon triangle">
+									<img src="../../assets/img/admin/arrow_icon.png" class="icon triangle-icon triangle">
 								</div>
 							</div>
 							<ul class="menus2 menus" style="display:none;">
@@ -81,7 +81,7 @@
 						<li class="menu">
 							<div class="menu-flex">
 								<div>
-									<img src="../assets/img/admin/user_icon.png" class="icon">
+									<img src="../../assets/img/admin/user_icon.png" class="icon">
 								</div> 
 								<a href="adminPage-memberList.jsp">
 									<span>회원정보 관리</span>
@@ -92,7 +92,7 @@
 						<li class="menu">
 							<div class="menu-flex">
 								<div>
-									<img src="../assets/img/admin/banner_icon.png" class="icon">
+									<img src="../../assets/img/admin/banner_icon.png" class="icon">
 								</div> 
 								<a href="adminPage-bannerList.jsp"> 
 									<span>배너 관리</span>
@@ -104,5 +104,5 @@
 			</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menu.js"></script>
+<script src="../../assets/js/admin/sideBar-menu.js"></script>
 </html>

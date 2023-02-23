@@ -30,7 +30,9 @@
 		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>
-		<jsp:include page="/banner/banner.jsp" flush="false" />
+		<header class="main-banner" style="padding-top: 75px">
+			<jsp:include page="/banner/banner.jsp" flush="false" />
+		</header>
 			<article class="home-container">
 				<section class="home-buttons columns is-relative">
 					<div class="home-button-wrapper column is-one-quarter">
@@ -269,9 +271,9 @@
 						</div>
 					</div>
 				</section>
-								<section class="home-section">
+				<section class="home-section" style="margin-bottom: 40px;">
 					<header class="home-section-title home-section-hotQuestion title is-5 ">
-						<h4 class="home-section-title-content">모두가 궁금해하는 질문</h4>
+						<h4 class="home-section-title-content">인기 많은 질문</h4>
 						<span class="home-section-hotQuestion-time"> 2023.02.22 18:00 기준</span>
 					</header>
 					

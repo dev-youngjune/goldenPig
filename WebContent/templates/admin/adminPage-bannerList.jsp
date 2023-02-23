@@ -7,14 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/admin/adminPage-bannerList.css">
+<link rel="stylesheet" href="../../assets/css/admin/adminPage-bannerList.css">
 </head>
 <body>
 	<div>
 		<div class="info-title-box info-title-box-flex">
 			<div class="logo-box-layout">
 				<div class="logo-box">
-					<img src="../assets/img/admin/logo_icon.png">
+					<img src="../../assets/img/admin/logo_icon.png">
 				</div>
 				<div class="logo-title">
 					<span>골든 피그</span>
@@ -28,9 +28,9 @@
 		</div>
 		
 		<div class="wrap"> 
-			<!-- 사이드 바 -->
-			<div id="side-bar"></div>
-			<!-- 사이드 바 끝-->
+			<div id="side-bar">
+				<jsp:include page="sidemenu.jsp" flush="false" />
+			</div>
 			
 			<!-- 모달 창 -->
 			<div id="modal">
@@ -41,31 +41,39 @@
 							<h3 class="exit-button">X</h3>
 						</div>
 						<div class="modal-preview-layout">
-						<div class="modal-flex">
-							<div>
-							<div class="banner-preview-box">
-								<!-- 이미지 뿌려주는 곳 -->
-								<div class="banner-preview">
-									<div class="preview-image-box">
-										<!-- 배너 이미지 추가하면 img 태그 추가해서 넣기  -->
-										<img src="../assets/img/admin/001.png" class="review-image review-active">
-										<img src="../assets/img/admin/002.png" class="review-image review-active">
-										<img src="../assets/img/admin/005.png" class="review-image review-active">
+							<div class="modal-flex">
+								<div>
+									<div class="banner-preview-box">
+										<!-- 이미지 뿌려주는 곳 -->
+										<div class="banner-preview">
+											<div class="preview-image-box">
+												<!-- 배너 이미지 추가하면 img 태그 추가해서 넣기  -->
+												<img src="../../assets/img/admin/001.png" class="review-image review-active">
+												<img src="../../assets/img/admin/002.png" class="review-image review-active">
+												<img src="../../assets/img/admin/005.png" class="review-image review-active">
+											</div>
+										</div>						
 									</div>
-								</div>						
+								</div>
+								<div class="modal-number-button-box">
+									<div class="modal-number-button">
+										<!-- <div class="number-box number-box-active">1</div>
+										<div class="number-box">2</div>
+										<div class="number-box">3</div>
+										<div class="number-box">4</div> -->
+									</div>
+								</div>		
+								<img src="../../assets/img/admin/left_icon.png" class="preview-left">
+								<img src="../../assets/img/admin/right_icon.png" class="preview-right">
 							</div>
-							</div>
-							<img src="../assets/img/admin/left_icon.png" class="preview-left">
-							<img src="../assets/img/admin/right_icon.png" class="preview-right">
+							<div class="banner-name">
+										<!-- 배너 이름  -->
+										<span>기본 배너</span>
+									</div>	
+							</div>	
 						</div>
-						<div class="banner-name">
-									<!-- 배너 이름  -->
-									<span>기본 배너</span>
-								</div>	
-						</div>	
 					</div>
-				</div>
-			</div><!-- 모달창 끝  -->
+				</div><!-- 모달창 끝  -->
 			
 			<div class="container">
 				<div class="container-margin">
@@ -100,7 +108,7 @@
 								<table>
 									<thead>
 										<tr>
-											<th>
+											<th class="checkbox-line">
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>번호</th>
@@ -112,7 +120,7 @@
 									</thead>
 									<!-- 하나의 행 시작  -->
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
@@ -128,7 +136,7 @@
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
@@ -144,7 +152,7 @@
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
 									<tr>
-										<td>
+										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
@@ -170,7 +178,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/left_icon.png" class="left-button">
+										<img src="../../assets/img/admin/left_icon.png" class="left-button">
 									</div>
 								</div>
 							</div>
@@ -198,7 +206,7 @@
 							<div class="">
 								<div class="page-button-margin">
 									<div>
-										<img src="../assets/img/admin/right_icon.png" class="right-button">
+										<img src="../../assets/img/admin/right_icon.png" class="right-button">
 									</div>
 								</div>
 							</div>
@@ -211,8 +219,8 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/admin/menuLoad.js"></script>
-<script src="../assets/js/admin/checkbox.js"></script>
-<script src="../assets/js/admin/page.js"></script>
-<script src="../assets/js/admin/slide.js"></script>
+<script src="../../assets/js/admin/menuLoad.js"></script>
+<script src="../../assets/js/admin/checkbox.js"></script>
+<script src="../../assets/js/admin/page.js"></script>
+<script src="../../assets/js/admin/slide.js"></script>
 </html>
