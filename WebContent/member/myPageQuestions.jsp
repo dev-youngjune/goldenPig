@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="../assets/css/member/myPageQuestions.css">
 </head>
 <body>
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
@@ -155,7 +156,7 @@
 							<main class="profile_main">
 								<div class="profile_mian_div">
 									<div class="">
-										<article>
+										<article class="article_">
 											<div class="card-main">
 												<header class="card-header">
 													<h1 class="card-header-title">
@@ -213,5 +214,6 @@
 		</div>
 	</div>
 	</div>
+	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>
