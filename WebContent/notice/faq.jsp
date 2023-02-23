@@ -3,19 +3,12 @@
 <!DOCTYPE html>
 <html>
 <style>
-
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+         font-family: 'Pretendard-Regular';
+         src: url('https://cdn.jsdelivr.net/gh/Pdroject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+         font-weight: 400;
+         font-style: normal;
 }
-
-	h1{
-	font-family: 'Pretendard-Regular';
-	
-	}
-
 </style>
 <head>
 <meta charset="UTF-8">
@@ -23,12 +16,14 @@
 <link rel="stylesheet" href="../assets/css/notice/faq.css">
 </head>
 <body>
+	<jsp:include page="/header/header.jsp" flush="false" />
 	<!-- FAQ 전체  -->
 	<div class="container page">
 		<!-- ::before -->
 			<!--FAQ 타이틀  -->
 			<h1 class="title text-center jalnan-font title-font">
-				FAQ
+				<img alt="" src="../assets/img/notice/faq.png">
+				<!-- FAQ -->
 			</h1>
 				<!-- FAQ 아래 내용 전체 div-->
 				<div>
@@ -296,6 +291,7 @@
 				</div>
 					<!-- ::after  -->
 	</div>
+	<jsp:include page="/header/footer-main.jsp" flush="false"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>

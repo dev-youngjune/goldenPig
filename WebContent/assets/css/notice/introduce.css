@@ -1,1 +1,137 @@
 @charset "UTF-8";
+
+@media (min-width: 768px){
+body {
+    font-family: "Pretendard",Helvetica,Arial,sans-serif;
+	}
+}
+
+body{
+font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    min-height: 100%;
+    position: relative;
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    color: #fff;  
+ /*  	background-image: url('../../img/notice/intro01.png'); */
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.tw-text-center {
+    text-align: center;
+}
+
+.section1 .introImg1 {
+    width: 265px;
+}
+
+body img {
+    max-width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    width: 850px;
+}
+
+img {
+    display: inline-block;
+}
+
+img {
+    height: auto;
+}
+
+img {
+    border-style: solid;
+}
+
+.introTitle {
+    font-weight: 700;
+    color: #1c1a18;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+@media (min-width: 1030px){
+.desktop\:tw-hidden {
+    display: none;
+	}	
+}
+
+.section2{
+    /* display: flex; */
+   /*  justify-content: center; */
+    align-items: center;
+    padding-top: 280px;
+    padding-bottom: 280px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f1f1f1;
+}
+
+
+section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.sec2_left {
+    max-width: 440px;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+@media (min-width: 1030px){
+.sec2__right {
+    margin-left: 55px;
+	}
+}
+
+@media (min-width: 1030px){
+.sec2__right .introTitle {
+    text-align: left;
+	}
+}
+
+.introTitle {
+    font-weight: 700;
+    color: #1c1a18;
+    font-size: 40px;
+    line-height: 130%;
+    margin: 48px;
+}
+
+.description{
+    margin-top: 1.5rem;
+    color: #858d9a;
+    font-size: 16px;
+    word-break: keep-all;
+    max-width: 913px;
+    line-height: 150%;
+}
+
+.section3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background: #fafbfe;
+}
