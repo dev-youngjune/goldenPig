@@ -37,6 +37,7 @@ input, button, span{
 							<span style="font-size: 12px">이메일</span>
 							<div id="input_email">
 								<input id="email_text" type="text" placeholder="이메일을 입력해 주세요.">
+								<p class="error-message-email" style="margin: 0;"></p>
 							</div>
 						</div>
 					</div>
@@ -48,4 +49,66 @@ input, button, span{
 		</main>
 	</div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	const $email_text = $("input#email_text");
+	const confirm = document.querySelector("#confirm");
+	const tempBackgroundColor = confirm.style.backgroundColor;
+	const tempCursor = confirm.style.cursor;
+	const tempColor = confirm.style.color;
+
+	$email_text.blur(() => {
+		var emailVal = $email_text.val();
+
+		if (emailVal) {
+			confirm.style.backgroundColor = "rgb(2, 6, 175)";
+			confirm.style.cursor= "pointer";
+			confirm.style.color= "white";
+		}else {
+			confirm.style.backgroundColor = tempBackgroundColor;
+			confirm.style.cursor= tempCursor;
+			confirm.style.color= tempColor;
+		}
+	});
+
+	$email_text.blur(function(){
+		var emailVal = $email_text.val();
+
+		if (emailVal) {
+			confirm.style.backgroundColor = "rgb(2, 6, 175)";
+			confirm.style.cursor= "pointer";
+			confirm.style.color= "white";
+		}else {
+			confirm.style.backgroundColor = tempBackgroundColor;
+			confirm.style.cursor= tempCursor;
+			confirm.style.color= tempColor;
+		}
+	});
+
+	// 이메일 정규식
+
+const $email = $("input[id=email_text]");
+const $errorMessageEmail = $(".error-message-email");
+
+
+$email.on("blur", function(e){
+    var emailValue = $email.val(); 
+    var rgbEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+    if(emailValue.length == 0){    // 빈문자열이 들어왔을 때
+        $errorMessageEmail.css("display", "block");
+        $errorMessageEmail.css("color", "red");
+        $errorMessageEmail.text("이메일을 입력해주세요.");
+        
+    } else if(rgbEmail.test(emailValue)){  
+        $errorMessageEmail.css("display", "none");
+
+    } else {
+        $errorMessageEmail.css("display", "block");
+        $errorMessageEmail.css("color", "red"); // 올바른 이메일 형식이 아닐 때
+        $errorMessageEmail.text("잘못된 이메일 형식입니다.");
+    }
+});
+
+</script>
 </html>

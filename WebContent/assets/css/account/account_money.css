@@ -110,7 +110,7 @@ footer{
     font-size: 1rem;
     line-height: 1.5rem;
     height: 56px;
-    cursor: pointer;
+    cursor: not-allowed;
     display: flex;
     align-items: center;
     justify-content: center;
