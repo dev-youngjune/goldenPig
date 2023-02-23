@@ -78,7 +78,7 @@ input, button, span{
 					<footer>
 						<div style="display: flex; align-items: center; justify-content: space-between">
 							<a id="cancel"> 취소 </a>
-							<button id="confirm"> 탈퇴하기 </button>
+							<button id="confirm" style="cursor: pointer;"> 탈퇴하기 </button>
 						</div>
 					</footer>
 				</div>
