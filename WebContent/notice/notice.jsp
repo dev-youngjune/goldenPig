@@ -410,6 +410,7 @@
    </div>   
    <!-- ::after  -->
    </div>
-</div>   
+</div>  
+<jsp:include page="/header/footer-main.jsp" flush="false"/> 
 </body>
 </html>

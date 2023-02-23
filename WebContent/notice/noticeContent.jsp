@@ -88,5 +88,6 @@
          </div>
       </main>
    </div>
+   <jsp:include page="/header/footer-main.jsp" flush="false"/>
 </body>
 </html>

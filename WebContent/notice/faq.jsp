@@ -291,6 +291,7 @@
 				</div>
 					<!-- ::after  -->
 	</div>
+	<jsp:include page="/header/footer-main.jsp" flush="false"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
