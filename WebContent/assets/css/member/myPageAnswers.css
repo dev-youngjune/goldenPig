@@ -764,7 +764,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     padding-bottom: 2rem;
 }	
 
-article {
+.article_ {
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
@@ -773,7 +773,7 @@ article {
     border-width: 1px;
 }
 
-article {
+.article_ {
 	padding: 2rem;
 }
 
