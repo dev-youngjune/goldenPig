@@ -21,20 +21,19 @@ input, button, span{
 </style>
 </head>
 <body>
-<jsp:include page="../header/header-after.jsp" flush="true" />
+<jsp:include page="../header/header.jsp" flush="true" />
 	<section style="padding-top: 1.25rem">
 		<div id="title_container">
 			<div>
-				<h3 style="text-align: center; margin-top: 62px; font-weight: 600">계정 설정</h3>
+				<!-- <h3 style="text-align: center; margin-top: 80px; font-weight: 600; font-size: 22px;">계정 설정</h3> -->
 			</div>
 		</div>
 		<div id="management-color">
 			<div style="padding: 0">
 				<div id="management-margin">
 					<ul class="management-ul" id="management-setting">
-						<li class="link-li" style="background: #0206af !important; color: #fff!important;">계정관리</li>
-						<li class="link-li" style="margin-left: 2.5rem">토큰관리</li>
-						<li class="link-li" style="margin-left: 2.5rem">미션관리</li>
+						<!-- <li class="link-li" style="margin-left: 2.5rem">토큰관리</li>
+							<li class="link-li" style="margin-left: 2.5rem">미션관리</li> -->
 					</ul>
 				</div>
 			</div>
@@ -44,21 +43,22 @@ input, button, span{
 				<div>
 					<div>
 						<div>
-							<ul class="management-ul" id="management-basic" style="display: flex; height:50px; padding-top:10px; justify-content: center">
-								<li style="	display: inline-block; height: 100%; vertical-align: top; white-space: normal; 
+							<ul class="management-ul" id="management-basic" style="display: flex; height:55px; padding-top:18px; justify-content: center">
+								<li class="link-li" style="background: #0206af !important; color: #fff!important; height: 19px;">계정관리</li>
+<!-- 								<li style="	display: inline-block; height: 100%; vertical-align: top; white-space: normal; 
 								font-size: 1rem; list-style:none; padding: 8px 20px!important; color: #0206af; cursor: pointer">기본설정</li>
 								<li style="	display: inline-block; height: 100%; vertical-align: top; white-space: normal; 
-								font-size: 1rem; list-style:none; padding: 8px 20px!important;  cursor: pointer">알림설정</li>
+								font-size: 1rem; list-style:none; padding: 8px 20px!important;  cursor: pointer">알림설정</li> -->
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div style="padding:1rem 0 133px">
-				<div style="margin-left:230px; margin-right:230px; padding-right: 120px; padding-left:120px">
+				<div style="margin-left:300px; margin-right:300px; padding-right: 120px; padding-left:120px">
 					<div>
 						<div>
-							<h3 style="font-size: 24px; margin-top: 25px; margin-bottom: 12.5px">기본정보</h3>
+							<h3 style="font-size: 24px; margin-top: 25px; margin-bottom: 12.5px; font-weight: 600;">기본정보</h3>
 						</div>
 						<div>
 							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem !important">휴대폰 번호</h3>
