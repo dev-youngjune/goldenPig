@@ -145,10 +145,16 @@ $confirmPassword.blur( function(){
 	if (!($password.val() == passwordValue)) {
 		$errorConfirmPassword.text("비밀번호가 일치하지 않습니다.");
 		$errorConfirmPassword.css("color", "red");
+		confirm.style.backgroundColor= "#5682EF";
+		confirm.style.color= "#7EA5F2";
+		confirm.style.cursor= "not-allowed";
 		
 	}
-   else {
+	else {
 		$errorConfirmPassword.css("display", "none");
+		confirm.style.backgroundColor= "#0206AF";
+		confirm.style.color= "#FFF";
+		confirm.style.cursor= "pointer";
   }
 });
 
