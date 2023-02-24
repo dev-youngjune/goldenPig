@@ -5,9 +5,9 @@
 <head>
 <meta charset="EUC-KR">
 <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
-<link rel="stylesheet" href="../assets/css/main/bulma.css">
-<link rel="stylesheet" href="../assets/css/common/common.css">
-<link rel="stylesheet" href="../assets/css/main/main.css">
+<link rel="stylesheet" href="../../assets/css/main/bulma.css">
+<link rel="stylesheet" href="../../assets/css/common/common.css">
+<link rel="stylesheet" href="../../assets/css/main/main.css">
 
 <title>메인 페이지</title>
 
@@ -22,19 +22,19 @@
 <body>
 	<div class="wrapper">
 		<!-- 헤더 넣는 jsp 코드() -->
-		<jsp:include page="/header/header.jsp" flush="false" />
+		<jsp:include page="../header/header.jsp" flush="false" />
 		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>
 		<header class="main-banner" style="padding-top: 75px">
-			<jsp:include page="/banner/banner.jsp" flush="false" />
+			<jsp:include page="../banner/banner.jsp" flush="false" />
 		</header>
 			<article class="home-container">
 				<section class="home-buttons columns is-relative">
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/banking-64.png">
+								<img alt="" src="../../assets/img/main/banking-64.png">
 								<span>보유 저축</span>
 							</button>
 						</a>
@@ -42,7 +42,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/community-64.png">
+								<img alt="" src="../../assets/img/main/community-64.png">
 								<span>저축 게시판</span>
 							</button>
 						</a>
@@ -50,7 +50,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/learn_owl-64.png">
+								<img alt="" src="../../assets/img/main/learn_owl-64.png">
 								<span>꿀팁 게시판</span>
 							</button>
 						</a>
@@ -58,7 +58,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/profile_man-64.png">
+								<img alt="" src="../../assets/img/main/profile_man-64.png">
 								<span>계정 설정</span>
 							</button>
 						</a>
@@ -94,7 +94,7 @@
 								<div class="">
 									<div class="categoryCard-wrapper">
 										<a href="#" class="categoryCard is-align-content-center">
-										<img alt="" src="../assets/img/main/bank-64.png">
+										<img alt="" src="../../assets/img/main/bank-64.png">
 										</a> <span class="is-align-content-center">통장</span>
 									</div>
 								</div>
@@ -103,7 +103,7 @@
 								<div class="">
 									<div class="categoryCard-wrapper">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/bank-saving-64.png">
+											<img alt="" src="../../assets/img/main/bank-saving-64.png">
 										</a> <span>적금</span>
 									</div>
 								</div>
@@ -112,7 +112,7 @@
 								<div class="">
 									<div class="">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/interest_rate-64.png">
+											<img alt="" src="../../assets/img/main/interest_rate-64.png">
 										</a> <span>금리</span>
 									</div>
 								</div>
@@ -121,7 +121,7 @@
 								<div class="">
 									<div class="">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/loan-64.png">
+											<img alt="" src="../../assets/img/main/loan-64.png">
 										</a> <span>대출</span>
 									</div>
 								</div>
@@ -130,7 +130,7 @@
 								<div class="">
 									<div class="">
 										<a href="#" class="categoryCard">
-											<img alt="" src="../assets/img/main/exchange_rate_won_to_dollar-64.png">
+											<img alt="" src="../../assets/img/main/exchange_rate_won_to_dollar-64.png">
 										</a> <span>환율</span>
 									</div>
 								</div>
@@ -150,7 +150,7 @@
 								<div class="">
 									<div class="">
 										<a class="categoryCard">
-											<img alt="" src="../assets/img/main/vision_eye_idea-64.png">
+											<img alt="" src="../../assets/img/main/vision_eye_idea-64.png">
 										</a> <span>생활꿀팁</span>
 									</div>
 								</div>
@@ -159,7 +159,7 @@
 								<div class="">
 									<div class="">
 										<a class="categoryCard">
-											<img alt="" src="../assets/img/main/home_cleaning-64.png">
+											<img alt="" src="../../assets/img/main/home_cleaning-64.png">
 										</a> <span>청소</span>
 									</div>
 								</div>
@@ -168,7 +168,7 @@
 								<div class="">
 									<div class="">
 										<a class="categoryCard">
-											<img alt="" src="../assets/img/main/laundry_icon-64.png">
+											<img alt="" src="../../assets/img/main/laundry_icon-64.png">
 										</a> <span>세탁</span>
 									</div>
 								</div>
@@ -177,7 +177,7 @@
 								<div class="">
 									<div class="">
 										<a class="categoryCard">
-											<img alt="" src="../assets/img/main/car1-64.png">
+											<img alt="" src="../../assets/img/main/car1-64.png">
 										</a> <span>자동차</span>
 									</div>
 								</div>
@@ -186,7 +186,7 @@
 								<div class="">
 									<div class="">
 										<a class="categoryCard">
-											<img alt="" src="../assets/img/main/mountain_adventure-64.png">
+											<img alt="" src="../../assets/img/main/mountain_adventure-64.png">
 										</a> <span>등산</span>
 									</div>
 								</div>
@@ -341,9 +341,9 @@
 				</section>
 			</article>
 		</main>
-		<jsp:include page="/header/footer-main.jsp" flush="false"/>
+		<jsp:include page="../header/footer-main.jsp" flush="false"/>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/main/main.js"></script>
+<script src="../../assets/js/main/main.js"></script>
 </html>
