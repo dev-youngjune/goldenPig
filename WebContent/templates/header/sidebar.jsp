@@ -1,19 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<!-- <link rel="stylesheet" href="../assets/css/main/bulma.css"> -->
-<link rel="stylesheet" href="../assets/css/header/header.css">
+<meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-</style>
 </head>
 <body>
 	<!-- is-hidden -->
 	<!-- sidebar -->
-<%-- 	<div class="is-hidden" style="width: 100%; height: 100%;">
+	<div class="is-hidden" style="width: 100%; height: 100%;">
 		<div class="sidebar">
 			<div class="sidebar-inner">
 				<div class="is-relative">
@@ -32,7 +28,7 @@
 						</button>
 					</header>
 
-					<!-- ·Î±×ÀÎÇÏ¼¼¿ä or ÇÁ·ÎÇÊ ÆíÁýÇÏ±â -->
+					<!-- ë¡œê·¸ì¸í•˜ì„¸ìš” or í”„ë¡œí•„ íŽ¸ì§‘í•˜ê¸° -->
 					<main class="sidebar-main">
 						<div class="is-hidden needLogin"></div>
 						<div class="logedin sidebar-profileWrapper">
@@ -40,52 +36,56 @@
 								<a href="#" class="sidebar-profile-link"> <img alt=""
 									src="../assets/img/member/user_icon.png">
 								</a> <a href="#" class="sidebar-nickname">
-									<div class="sidebar-nickname">
-										${userName}
-										°­·ÂÇÑÅ×¸®¾î7
-									</div>
+									<div class="sidebar-nickname">${userName} ê°•ë ¥í•œí…Œë¦¬ì–´7</div>
 									<div>
-										<span> ÇÁ·ÎÇÊ ÆíÁýÇÏ±â <img alt=""
+										<span> í”„ë¡œí•„ íŽ¸ì§‘í•˜ê¸° <img alt=""
 											src="../assets/img/admin/right_icon.png">
 										</span>
 									</div>
 								</a>
 							</div>
 							<div class="sidebar-mainLinkWrapper">
-								<ul class="columns">
-									<li class="column is-one-quarter"><img
-										src="../assets/img/main/5310117_coin_dollar_money_icon.svg">
-										<div>º¸À¯ÀúÃà</div></li>
-									<li class="column is-one-quarter"><img src="">
-										<div style="min-width: 60px">Àü¹®°¡½ÅÃ»</div></li>
-									<li class="column is-one-quarter"><img src="">
-										<div>¸â¹ö½Ê</div></li>
-									<li class="column is-one-quarter"><img src="">
-										<div>°èÁ¤¼³Á¤</div></li>
-								</ul>
+							<ul class="columns">
+								<li class="column is-one-quarter">
+									<img src="../assets/img/main/5310117_coin_dollar_money_icon.svg">
+									<div>ë³´ìœ ì €ì¶•</div>
+								</li>
+								<li class="column is-one-quarter">
+									<img src="">
+									<div style="min-width: 60px">ì „ë¬¸ê°€ì‹ ì²­</div>
+								</li>
+								<li class="column is-one-quarter">
+									<img src="">
+									<div>ë©¤ë²„ì‹­</div>
+								</li>
+								<li class="column is-one-quarter">
+									<img src="">
+									<div>ê³„ì •ì„¤ì •</div>
+								</li>
+							</ul>
 							</div>
 						</div>
 					</main>
-					<!-- »çÀÌµå¹Ù ¸Þ´º¸®½ºÆ® -->
+					<!-- ì‚¬ì´ë“œë°” ë©”ë‰´ë¦¬ìŠ¤íŠ¸ -->
 					<nav class="sidebar-menuList">
 						<section class="accordion-wrapper">
 							<div class="accordion-item">
 								<div class="accordion-title">
 									<button class="accordion-item-trigger">
-										<h4 class="accordion-item-title-text">Æ¯º°°ü</h4>
+										<h4 class="accordion-item-title-text">íŠ¹ë³„ê´€</h4>
 										<span class="accordion-item-trigger-icon"></span>
 									</button>
 								</div>
 								<div class="acoordion-item-details">
 									<div class="accordion-item-details-inner">
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">[ChatGPT]ÀÇ·á</a>
+											<a href="#" class="sidebar-menuListSubItem-link">[ChatGPT]ì˜ë£Œ</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">[ChatGPT]¾à·á</a>
+											<a href="#" class="sidebar-menuListSubItem-link">[ChatGPT]ì•½ë£Œ</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¿¬¸»Á¤»ê</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì—°ë§ì •ì‚°</a>
 										</div>
 									</div>
 								</div>
@@ -95,38 +95,38 @@
 							<div class="accordion-item">
 								<div class="accordion-title">
 									<button class="accordion-item-trigger">
-										<h4 class="accordion-item-title-text">Àü¹® ºÐ¾ß</h4>
+										<h4 class="accordion-item-title-text">ì „ë¬¸ ë¶„ì•¼</h4>
 										<span class="accordion-item-trigger-icon"></span>
 									</button>
 								</div>
 								<div class="acoordion-item-details">
 									<div class="accordion-item-details-inner">
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¹ý·ü</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ë²•ë¥ </a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¼¼±Ý¡¤¼¼¹«</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì„¸ê¸ˆÂ·ì„¸ë¬´</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">ÀÎ»ç¡¤³ë¹«</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì¸ì‚¬Â·ë…¸ë¬´</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¹ý·ü</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ë²•ë¥ </a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¼¼±Ý¡¤¼¼¹«</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì„¸ê¸ˆÂ·ì„¸ë¬´</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">ÀÎ»ç¡¤³ë¹«</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì¸ì‚¬Â·ë…¸ë¬´</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¹ý·ü</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ë²•ë¥ </a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¼¼±Ý¡¤¼¼¹«</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì„¸ê¸ˆÂ·ì„¸ë¬´</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">ÀÎ»ç¡¤³ë¹«</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì¸ì‚¬Â·ë…¸ë¬´</a>
 										</div>
 									</div>
 								</div>
@@ -136,29 +136,30 @@
 							<div class="accordion-item">
 								<div class="accordion-title">
 									<button class="accordion-item-trigger">
-										<h4 class="accordion-item-title-text">¿ÀÇÂ ºÐ¾ß</h4>
+										<h4 class="accordion-item-title-text">ì˜¤í”ˆ ë¶„ì•¼</h4>
 										<span class="accordion-item-trigger-icon"></span>
 									</button>
 								</div>
 								<div class="acoordion-item-details">
 									<div class="accordion-item-details-inner">
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">»ýÈ°²ÜÆÁ</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ìƒí™œê¿€íŒ</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">Ã»¼Ò</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì²­ì†Œ</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">¼¼Å¹</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ì„¸íƒ</a>
 										</div>
 										<div class="sidebar-menuListSubItem">
-											<a href="#" class="sidebar-menuListSubItem-link">ÀÚµ¿Â÷</a>
+											<a href="#" class="sidebar-menuListSubItem-link">ìžë™ì°¨</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</section>
-						<!-- <section class="accordion-wrapper">
+						<!--
+						<section class="accordion-wrapper">
 							<div class="accordion-item">
 								<div class="accordion-title"></div>
 								<div class="acoordion-item-details"></div>
@@ -169,31 +170,32 @@
 								<div class="accordion-title"></div>
 								<div class="acoordion-item-details"></div>
 							</div>
-						</section> -->
+						</section>
+						-->
 						<a href="#">
-							<span>°øÁö»çÇ×</span>
+							<span>ê³µì§€ì‚¬í•­</span>
 						</a>
 						<a href="#">
-							<span>¾ÆÇÏ ¼Ò½Ä</span>
+							<span>ì•„í•˜ ì†Œì‹</span>
 						</a>
 						<a href="#">
-							<span>¾ÆÇÏÅäÅ« ¼Ò½Ä</span>
+							<span>ì•„í•˜í† í° ì†Œì‹</span>
 						</a>
 						<a href="#">
-							<span>ÀÌº¥Æ®</span>
+							<span>ì´ë²¤íŠ¸</span>
 						</a>
 						<a href="#">
-							<span>¼­ºñ½º ¼Ò°³</span>
+							<span>ì„œë¹„ìŠ¤ ì†Œê°œ</span>
 						</a>
 						<a href="#">
-							<span>¸â¹ö½Ê ¼Ò°³</span>
+							<span>ë©¤ë²„ì‹­ ì†Œê°œ</span>
 						</a>
 						<a href="#">
 							<span>FAQ</span>
 						</a>
 					</nav>
 
-					<!-- ·Î±×ÀÎ/È¸¿ø°¡ÀÔ or ·Î±×¾Æ¿ô -->
+					<!-- ë¡œê·¸ì¸/íšŒì›ê°€ìž… or ë¡œê·¸ì•„ì›ƒ -->
 					<div class="login-wrapper">
 						<div class="needLogin"></div>
 						<div class="is-hidden logedin"></div>
@@ -202,56 +204,6 @@
 			</div>
 		</div>
 		<div class="sidebar-backdrop modal-active modal"></div>
-	</div> --%>
-
-	<!-- upper navigation -->
-	<nav class="navigation">
-		<div class="nav-wrapper">
-			<div class="nav-container">
-				<div class="nav-left">
-					<a class="nav-brand">
-					<img alt="" src="../assets/img/admin/logo_icon.png" style="width: 56px;">
-					</a>
-					<a>
-						<img alt="" src="../assets/img/header/logo_text.png" style="width: 135px;">
-					</a>
-				</div>
-				<div class="nav-right">
-					<div class="nav-right-item nav-search">
-						<form action="#" class="form-search is-relative">
-							<input placeholder="±Ã±ÝÇÑ °ÍÀ» °Ë»öÇØº¸¼¼¿ä.">
-							<button
-								style="appearance: none; border: 0 solid; text-align: left; display: none;">
-							</button>
-							<a href="#" class=""
-								style="cursor: pointer; right: 0; position: absolute;">
-								<img style="height: 36px; cursor: pointer;" alt=""
-								src="../assets/img/header/search_icon.png">
-							</a>
-						</form>
-					</div>
-					<div class="nav-right-item nav-register is-hidden is-inline-block">
-						<a href="#" class="nav-right-button">·Î±×ÀÎ</a> <a href="#"
-							class="nav-right-button">È¸¿ø°¡ÀÔ</a>
-					</div>
-					<div class="nav-right-item profile-wrapper">
-						<!-- is-hidden -->
-						<div class="nav-notification">
-							<a href="#"> <img class="show-img"
-								src="../assets/img/header/bell.png" alt="">
-							</a>
-						</div>
-						<div class="nav-profile">
-							<a href="#"> <img class="show-img"
-								src="../assets/img/member/user_icon.png" alt="">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
+	</div>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../assets/js/header/header.js"></script>
 </html>
