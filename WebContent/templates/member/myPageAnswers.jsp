@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>질문 페이지</title>
-<link rel="stylesheet" href="../assets/css/member/myPageQuestions.css">
+<title>답변 페이지</title>
+<link rel="stylesheet" href="../assets/css/member/myPageAnswers.css">
 </head>
 <body>
-<jsp:include page="../header/header.jsp" flush="false" />
+<jsp:include page="../../header/header.jsp" flush="false" />
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
+			<jsp:include page="/header/header.jsp" flush="false" />
 				<div class="layout">
 					<div class="profile_page">
 
@@ -27,9 +28,9 @@
 								</button>
 								<button class="header_container_button -primary">지식프로필
 									편집</button>
-								<button class="header_container_button buttonShare">
+							<!-- 	<button class="header_container_button buttonShare">
 									<i class="icon icon=share-fill"></i>
-								</button>
+								</button> -->
 							</div>
 							<div></div>
 						</header>
@@ -78,6 +79,7 @@
 														<use
 															href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"
 															xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"></use></svg>
+													>
 													<use></use>
 													</svg>
 												</button>
@@ -159,31 +161,23 @@
 										<article class="article_">
 											<div class="card-main">
 												<header class="card-header">
-													<h1 class="card-header-title">
-														<span class="text-primary">Q.</span> 직장인 투잡 연말정산 어떻게 하나요?
-													</h1>
-													<div class="flex-justify-between">
-														<div class="flex-items-center">
-															<div class="user-frofile">
-																<a class="user-img"> <!-- <span class=img></span> -->
-																	<img
-																	src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
-																</a>
-																<div class="user-name">
-																	<span class="name">세심한곽두철</span>
-																</div>
-															</div>
-															<span class="card-header-register-date">2023. 02.
-																18. 09:53</span>
+													<div>
+														<div class="header_div_div">
+															<h1 class="card-header-title">
+																<span class="text-primary">Q.</span> 직장인 투잡 연말정산 어떻게 하나요?
+															</h1>
 														</div>
 													</div>
 												</header>
 												<div class="card-content">
 													<div class="editor-content">
-														<p>지금 현재 직장인이고 연말정산 회사에 서류제출 하였습니다.... 작년에 투잡으로
-															500만원정도 소득이 발생했습니다.. 그러면 제가 따로 5월에 신고 해야하나요?</p>
+														<p>저도 궁금합니다!
+														답변달리는거 보고 같이 알아보도록하죠?
+														~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
 													</div>
 												</div>
+												<span class="card-header-register-date">2023. 02.
+																18. 09:53</span>
 												<!--<footer class="card-footer">
                									<div class="flex">
                   									<div class="buttons">
@@ -214,6 +208,6 @@
 		</div>
 	</div>
 	</div>
-	<jsp:include page="../header/footer-main.jsp" flush="false" />
+	<jsp:include page="../../header/footer-main.jsp" flush="false" />
 </body>
 </html>

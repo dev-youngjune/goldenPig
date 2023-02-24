@@ -9,4 +9,128 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
+   <!-- banner -->
+  
+  <servlet>
+  	<servlet-name>banner</servlet-name>
+  	<servlet-class>com.goldenPig.banner.BannerFrontController</servlet-class>
+  </servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>banner</servlet-name>
+	 <url-pattern>*.banner</url-pattern>
+	</servlet-mapping> 	 
+  
+	<!-- board -->
+	
+	 <servlet>
+	  	<servlet-name>board</servlet-name>
+	  	<servlet-class>com.goldenPig.board.BoardFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>board</servlet-name>
+	 <url-pattern>*.board</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- boardImg -->
+	
+	 <servlet>
+	  	<servlet-name>boardImg</servlet-name>
+	  	<servlet-class>com.goldenPig.boardImg.BoardImgFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>boardImg</servlet-name>
+	 <url-pattern>*.boardImg</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- like -->
+	
+	 <servlet>
+	  	<servlet-name>like</servlet-name>
+	  	<servlet-class>com.goldenPig.like.LikeFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>like</servlet-name>
+	 <url-pattern>*.like</url-pattern>
+	</servlet-mapping> 	 
+	
+	 <!-- member -->
+  
+  <servlet>
+  	<servlet-name>member</servlet-name>
+  	<servlet-class>com.goldenPig.member.MemberFrontController</servlet-class>
+  </servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>member</servlet-name>
+	 <url-pattern>*.member</url-pattern>
+	</servlet-mapping> 	 
+	
+	 <!-- memberImg -->
+  
+  <servlet>
+  	<servlet-name>memberImg</servlet-name>
+  	<servlet-class>com.goldenPig.memberImg.MemberImgFrontController</servlet-class>
+  </servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>memberImg</servlet-name>
+	 <url-pattern>*.memberImg</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- notice -->
+	
+	 <servlet>
+	  	<servlet-name>notice</servlet-name>
+	  	<servlet-class>com.goldenPig.notice.NoticeFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>notice</servlet-name>
+	 <url-pattern>*.notice</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- reply -->
+	
+	 <servlet>
+	  	<servlet-name>reply</servlet-name>
+	  	<servlet-class>com.goldenPig.reply.ReplyFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>reply</servlet-name>
+	 <url-pattern>*.reply</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- saving -->
+	
+	 <servlet>
+	  	<servlet-name>saving</servlet-name>
+	  	<servlet-class>com.goldenPig.saving.SavingFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>saving</servlet-name>
+	 <url-pattern>*.saving</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- tag -->
+	
+	 <servlet>
+	  	<servlet-name>tag</servlet-name>
+	  	<servlet-class>com.goldenPig.tag.TagFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>tag</servlet-name>
+	 <url-pattern>*.tag</url-pattern>
+	</servlet-mapping> 	 
+	
+	
+	
 </web-app>
