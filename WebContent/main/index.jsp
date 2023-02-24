@@ -4,17 +4,13 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
 <link rel="stylesheet" href="../assets/css/main/bulma.css">
-<link rel="stylesheet" href="../assets/css/main/mainBanner.css">
-<link rel="stylesheet" href="../assets/css/main/mainContainer.css">
-<link rel="stylesheet" href="../assets/css/font/fontFamily.css">
+<link rel="stylesheet" href="../assets/css/common/common.css">
+<link rel="stylesheet" href="../assets/css/main/main.css">
 
 <title>메인 페이지</title>
-<style type="text/css">
-	body {
-		margin: 0;
-	}
-</style>
+
 </head>
 <!-- 헤더 넣는 js코드 -->
 <!-- <script type="text/javascript">
@@ -38,7 +34,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/coin_icon.svg">
+								<img alt="" src="../assets/img/main/banking-64.png">
 								<span>보유 저축</span>
 							</button>
 						</a>
@@ -46,7 +42,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/search-64.png">
+								<img alt="" src="../assets/img/main/community-64.png">
 								<span>저축 게시판</span>
 							</button>
 						</a>
@@ -54,7 +50,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/membership_card-64.png">
+								<img alt="" src="../assets/img/main/learn_owl-64.png">
 								<span>꿀팁 게시판</span>
 							</button>
 						</a>
@@ -62,7 +58,7 @@
 					<div class="home-button-wrapper column is-one-quarter">
 						<a>
 							<button>
-								<img alt="" src="../assets/img/main/user_avatar-64.png">
+								<img alt="" src="../assets/img/main/profile_man-64.png">
 								<span>계정 설정</span>
 							</button>
 						</a>
