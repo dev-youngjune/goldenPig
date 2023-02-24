@@ -316,3 +316,57 @@ table {
 	position: absolute;
 	bottom: 50px;
 }
+
+.toggle-button {
+	height: 20px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 20px;
+}
+
+.toggle {
+	position: relative;
+	display: inline-block;
+	padding-top: 10px;
+}
+
+label.toggle-item {
+	width: 40px;
+	background: #2e394d;
+	height: 17px;
+	display: inline-block;
+	border-radius: 50px;
+	position: relative;
+	transition: all 0.3s ease;
+	transform-origin: 20% center;
+	cursor: pointer;
+}
+
+.toggle-content {
+	content: "";
+	display: block;
+	transition: all 0.2s ease;
+	width: 14px;
+	height: 14px;
+	top: 0.25em;
+	left: 0.25em;
+	border-radius: 2em;
+	transition: 0.3s ease;
+	background: #2e394d;
+}
+
+.transparent label {
+	background: red;
+	height: 1.35em;
+}
+
+.toggle-content {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top: 0.9px;
+	left: 2px;
+	background: #FFF;
+}
