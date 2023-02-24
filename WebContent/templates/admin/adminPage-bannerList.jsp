@@ -112,58 +112,70 @@
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>번호</th>
-											<th>코드</th>
 											<th>배너명</th>
 											<th>상태</th>
 											<th>등록날짜</th>
+											<th>관리</th>
 										</tr>
 									</thead>
 									<!-- 하나의 행 시작  -->
-									<tr>
+									<tr class="load-data">
 										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
 										<td>1</td>
-										<!-- 배너 이미지 코드 -->
-										<td>{코드}</td>
 										<!-- 이미지 이름 -->
 										<td>기본 배너</td>
 										<!-- 이미지 상태 ex) 사용 중 미사용 -->
-										<td>사용 중</td>
+										<td class="use">사용 중지</td>
 										<td>2022.01.05</td>
+										<td class="toggle transparent">
+											<input id="toggle" class="toggle-button" type="checkbox">
+											<label class="toggle-item" for="toggle">
+												<span class="toggle-content"></span>
+											</label>
+										</td>
 									</tr>
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
-									<tr>
+									<tr class="load-data">
 										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
-										<td>2</td>
-										<!-- 배너 이미지 코드 -->
-										<td>{코드}</td>
+										<td>1</td>
 										<!-- 이미지 이름 -->
 										<td>기본 배너</td>
 										<!-- 이미지 상태 ex) 사용 중 미사용 -->
-										<td>사용 중</td>
+										<td class="use">사용 중지</td>
 										<td>2022.01.05</td>
+										<td class="toggle transparent">
+											<input class="toggle-button" type="checkbox">
+											<label class="toggle-item" for="toggle">
+												<span class="toggle-content"></span>
+											</label>
+										</td>
 									</tr>
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
-									<tr>
+									<tr class="load-data">
 										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
 										<!-- 배너 번호 -->
-										<td>3</td>
-										<!-- 배너 이미지 코드 -->
-										<td>{코드}</td>
+										<td>1</td>
 										<!-- 이미지 이름 -->
 										<td>기본 배너</td>
 										<!-- 이미지 상태 ex) 사용 중 미사용 -->
-										<td>사용 중</td>
+										<td class="use">사용 중지</td>
 										<td>2022.01.05</td>
+										<td class="toggle transparent">
+											<input class="toggle-button" type="checkbox">
+											<label class="toggle-item" for="toggle">
+												<span class="toggle-content"></span>
+											</label>
+										</td>
 									</tr>
 									<!-- 하나의 행 끝  -->
 								</table>
@@ -219,8 +231,8 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../../assets/js/admin/menuLoad.js"></script>
 <script src="../../assets/js/admin/checkbox.js"></script>
 <script src="../../assets/js/admin/page.js"></script>
 <script src="../../assets/js/admin/slide.js"></script>
+<script src="../../assets/js/admin/toggle.js"></script>
 </html>
