@@ -7,85 +7,10 @@
     font-style: normal;
 }
 
-input {
-	outline: none;
-}
-
-* {
-	margin: 0px;
-	padding: 0px;
-}
-
-body {
-    --tw-text-opacity: 1;
-    color: rgba(28, 26, 24, var(--tw-text-opacity));
-}
-
-body {
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
-}
-
-
-*, label {
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
-}
-
 .TextField_bodyInput::placeholder{
     font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
 }
 
-
-body {
-    --tw-text-opacity: 1;
-    color: rgba(28, 26, 24, var(--tw-text-opacity));
-}
-
-body, body input {
-    letter-spacing: -.038rem!important;
-}
-
-body {
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
-}
-
-body {
-    font-family: inherit;
-    line-height: inherit;
-	background: #f3f5f9;
-}
-
-body {
-    margin: 0;
-}
-
-*, ::before, ::after {
-    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-    --tw-ring-offset-width: 0px;
-    --tw-ring-offset-color: #fff;
-    --tw-ring-color: rgba(59, 130, 246, 0.5);
-    --tw-ring-offset-shadow: 0 0 #0000;
-    --tw-ring-shadow: 0 0 #0000;
-}
-
-*, ::before, ::after {
-    --tw-shadow: 0 0 #0000;
-}
-
-*, ::before, ::after {
-    --tw-border-opacity: 1;
-    border-color: rgba(230, 230, 230, var(--tw-border-opacity));
-}
-
-*, ::before, ::after {
-    box-sizing: border-box;
-    border-width: 0;
-    border-style: solid;
-/*     border-color: currentColor; */
-}
-
-*, ::before, ::after {
-    box-sizing: border-box;
-}
 
 button, [type='button'], [type='submit'] {
     -webkit-appearance: button;
@@ -156,40 +81,8 @@ button {
     border-image: initial;
 }
 
-body {
-    display: block;
-    /* margin: 8px; */
-}
-
 div {
     display: block;
-}
-
-.layoutDefault {
-    display: flex;
-    height: 100%;
-    width: 100%;border-color: currentColor;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-/* @media (min-width: 768px) */
-.layoutDefault {
-    padding: 152px 0 80px;
-    background: #f3f5f9;
-}
-
-.layoutDefault_view {
-    height: 100%;
-    width: 100%;
-}
-
-/* @media (min-width: 768px) */
-.layoutDefault_view {
-    margin: auto;
-    border-radius: 0.25rem;
-    max-width: 464px;
-    max-height: 650px;
 }
 
 .loginEmail {
@@ -264,11 +157,6 @@ div {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.a_headerLogo {
-	width: 93px;
-    height: 51px;
 }
 
 a {
