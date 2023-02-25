@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
-<link rel="stylesheet" href="../assets/css/member/findPassword.css">
+<link rel="stylesheet" href="../../assets/css/member/find.css">
+<link rel="stylesheet" href="../../assets/css/member/findPassword.css">
 </head>
 <body style="margin:0px!important;">
 	<div id="wrap">
@@ -19,7 +20,7 @@
 									<img>
 								</button>
 								<a href="" class="theScreen_headerLogo">
-									<img class="a_headerLogo" src="../assets/img/account/logo.png">
+									<img class="a_headerLogo" src="../../assets/img/account/logo.png">
 								</a>
 							</header>
 							<div class="theScreen_body px-5">

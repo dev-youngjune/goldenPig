@@ -83,34 +83,6 @@ body {
     letter-spacing: -3px;
 }
 
-
-.layoutDefault {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-/* @media (min-width: 768px) */
-.layoutDefault {
-    padding: 152px 0 80px;
-    background: #f3f5f9;
-}
-
-.layoutDefault_view {
-    height: 100%;
-    width: 100%;
-}
-
-/* @media (min-width: 768px) */
-.layoutDefault_view {
-    margin: auto;
-    border-radius: 0.25rem;
-    max-width: 464px;
-    max-height: 650px;
-}
-
 .a_headerLogo {
 	width: 95px;
     height: 55px;

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
-<link rel="stylesheet" href="../assets/css/member/passwordReset.css">
+<link rel="stylesheet" href="../../assets/css/member/passwordReset.css">
 </head>
 <body>
 	<div id="wrap">
@@ -20,7 +20,7 @@
 										<img src="">
 									</button>
 									<a class="theScreen_headerLoga">
-										<img class="a_headerLogo" src="../assets/img/account/logo.png">
+										<img class="a_headerLogo" src="../../assets/img/account/logo.png">
 									</a>
 								</header>
 								<div class="theScreen_body px-5">
@@ -34,7 +34,7 @@
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
 													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
-														<img class="eye1" src="../assets/img/member/passwordEyeSlash.png">
+														<img class="eye1" src="../../assets/img/member/passwordEyeSlash.png">
 												</div>
                                                 <p class="error-message-password" style="margin: 0;"></p>
 											</div>
@@ -42,11 +42,9 @@
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
 													<input name ="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
-														<img class="eye2" src="../assets/img/member/passwordEyeSlash.png">
+														<img class="eye2" src="../../assets/img/member/passwordEyeSlash.png">
 												</div>
                                                 <p class="error-message-password-check" style="margin: 0;"></p>
-                                                
-												</div>
 											</div>
 										</div>
 									</div>
