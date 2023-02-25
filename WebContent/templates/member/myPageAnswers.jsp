@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="../assets/css/member/myPageAnswers.css">
 </head>
 <body>
-<jsp:include page="../../header/header.jsp" flush="false" />
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
-			<jsp:include page="/header/header.jsp" flush="false" />
+			<jsp:include page="../header/header.jsp" flush="false" />
 				<div class="layout">
 					<div class="profile_page">
 
@@ -208,6 +208,6 @@
 		</div>
 	</div>
 	</div>
-	<jsp:include page="../../header/footer-main.jsp" flush="false" />
+	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>

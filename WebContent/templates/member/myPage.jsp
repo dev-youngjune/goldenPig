@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../assets/css/member/mypage.css">
 </head>
 <body>
-<jsp:include page="../../header/header.jsp" flush="false"/>
+<jsp:include page="../header/header.jsp" flush="false"/>
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
@@ -276,7 +276,7 @@
 			</div>
 		</div>
 	</div>
-<jsp:include page="../../header/footer-main.jsp" flush="false" />
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>

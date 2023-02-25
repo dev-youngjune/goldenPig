@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>관심 질문 페이지</title>
-<link rel="stylesheet" href="../assets/css/member/myPageScraps.css">
+<link rel="stylesheet" href="../../assets/css/member/myPageScraps.css">
 </head>
 <body>
-<jsp:include page="../../header/header.jsp" flush="false" />
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
@@ -218,6 +218,6 @@
 		</div>
 	</div>
 	</div>
-	<jsp:include page="../../header/footer-main.jsp" flush="false" />
+	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>
