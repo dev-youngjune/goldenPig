@@ -75,12 +75,6 @@
 												<input type="text" class="banner-name" name="bannerName" placeholder="배너명을 입력해주세요.">
 											</div>
 										</div>	
-										<div class="member-info-tag-box">
-											<span class="info-tag">기간</span>
-											<div class="info">
-												<input type="text" class="banner-date" name="bannerDate" placeholder="등록기간을 입력해주세요.">
-											</div>
-										</div>
 										<div class="button-box">
 											<button id="regist-button">등록</button>
 										</div>
