@@ -81,6 +81,4 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../../assets/js/admin/menuLoad.js"></script>
-<script src="../../assets/js/admin/prev.js"></script>
 </html>
