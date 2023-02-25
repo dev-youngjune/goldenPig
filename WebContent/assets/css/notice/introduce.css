@@ -17,15 +17,13 @@ font-size: 1rem;
 .section1{
     display: flex;
     flex-direction: column;
-    padding-top: 5rem;
-    padding-bottom: 4rem;
     align-items: center;
     text-align: center;
-    padding-top: 50px;
-    color: #fff;  
- /*  	background-image: url('../../img/notice/intro01.png'); */
-	background-size: contain;
-	background-repeat: no-repeat;
+    color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    justify-content: center;
 }
 
 .tw-text-center {
@@ -71,22 +69,13 @@ img {
 }
 
 .section2{
-    /* display: flex; */
-   /*  justify-content: center; */
     align-items: center;
-    padding-top: 280px;
-    padding-bottom: 280px;
     background: #fff;
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: space-evenly;
     background-color: #f1f1f1;
-}
-
-
-section {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
 }
 
 .sec2_left {

@@ -26,7 +26,7 @@
 									<i class="icon icon=share-fill"></i>
 								</button>
 							</div>
-							<div class="profile_Editor a-modal">
+							<div class="profile_Editor a-modal" style="display: none;">
 								<div class="scroll -open">
 									<div class="a-modal_inner">
 										<div class="a-modal_innerBody">
