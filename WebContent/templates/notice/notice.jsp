@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="../assets/css/notice/notice.css">
 </head>
 <body>
-	<jsp:include page="/header/header.jsp" flush="false" />
+	<!-- 헤더 -->
+	<%-- <jsp:include page="/header/header.jsp" flush="false" /> --%>
 	<div class="size-controll"
 		style="background-color: rgb(250, 250, 250);">
 		<div class="container no-padding-xs">
@@ -320,6 +321,7 @@
 			<!-- ::after  -->
 		</div>
 	</div>
-	<jsp:include page="/header/footer-main.jsp" flush="false" />
+	<!-- 푸터 -->
+	<%-- <jsp:include page="/header/footer-main.jsp" flush="false" /> --%>
 </body>
 </html>

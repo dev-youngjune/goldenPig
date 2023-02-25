@@ -73,6 +73,7 @@
 		</div>
 		</section>	
 	</div>
-	<jsp:include page="/header/footer-main.jsp" flush="false"/>
+	<!-- 푸터 -->
+	<%-- <jsp:include page="/header/footer-main.jsp" flush="false"/> --%>
 </body>
 </html>
