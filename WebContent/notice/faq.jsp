@@ -22,7 +22,7 @@
 		<!-- ::before -->
 			<!--FAQ 타이틀  -->
 			<h1 class="title text-center jalnan-font title-font">
-				<img alt="" src="../assets/img/notice/faq.png">
+ 				<img alt="" src="../assets/img/notice/faq.png">
 				<!-- FAQ -->
 			</h1>
 				<!-- FAQ 아래 내용 전체 div-->
@@ -313,7 +313,7 @@
 	      e.preventDefault();
 	      
 	      if(checkSlide){
-	    	 $itemtrigger.css("background-color","#fff");
+	    	 $itemtrigger.css("background-color","filter: invert(72%) sepia(93%) saturate(471%) hue-rotate(358deg) brightness(101%) contrast(105%);");
 	    	 $itemtrigger.css("color","black");
 	         $dom.removeClass("triggerIcon");
 	         $faq.slideUp();
