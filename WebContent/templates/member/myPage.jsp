@@ -14,9 +14,6 @@
 			<div>
 				<div class="layout">
 					<div class="profile_page">
-						
-						
-						
 						<header class="profile_Header">
 							<div class="header_container">
 								<button class="header_container_button -dark">

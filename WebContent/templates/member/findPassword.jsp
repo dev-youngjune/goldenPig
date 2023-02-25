@@ -25,7 +25,6 @@
 							</header>
 							<div class="theScreen_body px-5">
 								<h1 class="textTitle">
-									
 									<span>
 									비밀번호 재설정
 									<br>
