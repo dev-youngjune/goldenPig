@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항</title>
-<link rel="stylesheet" href="../assets/css/notice/notice.css">
+<link rel="stylesheet" href="../../assets/css/notice/notice.css">
 </head>
 <body>
 	<!-- 헤더 -->
-	<%-- <jsp:include page="/header/header.jsp" flush="false" /> --%>
+	<jsp:include page="../header/header.jsp" flush="false" />
 	<div class="size-controll"
 		style="background-color: rgb(250, 250, 250);">
 		<div class="container no-padding-xs">
@@ -322,6 +322,6 @@
 		</div>
 	</div>
 	<!-- 푸터 -->
-	<%-- <jsp:include page="/header/footer-main.jsp" flush="false" /> --%>
+	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>
