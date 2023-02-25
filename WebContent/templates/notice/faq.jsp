@@ -13,17 +13,17 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ</title>
-<link rel="stylesheet" href="../assets/css/notice/faq.css">
+<link rel="stylesheet" href="../../assets/css/notice/faq.css">
 </head>
 <body>
 	<!-- 헤더 -->
-	<%-- <jsp:include page="/header/header.jsp" flush="false" /> --%>
+	<jsp:include page="../header/header.jsp" flush="false" />
 	<!-- FAQ 전체  -->
 	<div class="container page">
 		<!-- ::before -->
 			<!--FAQ 타이틀  -->
 			<h1 class="title text-center jalnan-font title-font">
- 				<img alt="" src="../assets/img/notice/faq.png">
+ 				<img alt="" src="../../assets/img/notice/faq.png">
 				<!-- FAQ -->
 			</h1>
 				<!-- FAQ 아래 내용 전체 div-->
@@ -293,7 +293,7 @@
 					<!-- ::after  -->
 	</div>
 	<!-- 푸터  -->
-	<%-- <jsp:include page="/header/footer-main.jsp" flush="false"/> --%>
+	<jsp:include page="../header/footer-main.jsp" flush="false"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>

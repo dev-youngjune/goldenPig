@@ -5,17 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>서비스 소개</title>
-<link rel="stylesheet" href="../assets/css/notice/introduce.css">
+<link rel="stylesheet" href="../../assets/css/notice/introduce.css">
 </head>
 <body>
-<%-- 	<jsp:include page="/header/header.jsp" flush="false" /> --%>
+	<jsp:include page="../header/header.jsp" flush="false" />
 	<!-- 전체 div  -->
 	<div id="lay_out">
 		<!-- 소개 타이틀 (가장 상단), 첫번째 섹션 -->
 		<section class="section1">
 			<div>
 			<div>
-				<img alt="intTT" src="../assets/img/notice/introTT.png" style=" width: -webkit-fill-available;">
+				<img alt="intTT" src="../../assets/img/notice/introTT.png" style=" width: -webkit-fill-available;">
 			</div>
 			<!--<div class="introTitle">
 					우리의 새로운
@@ -26,7 +26,7 @@
 		</section>
 <!-- 두번째 섹션 -->
 			<section class="section2" style='display : flex justify-content : space-around'>
-				<img alt="leftSide" src="../assets/img/notice/intro02.png"><!-- 섹션 2의 좌측 이미지 -->	
+				<img alt="leftSide" src="../../assets/img/notice/intro02.png"><!-- 섹션 2의 좌측 이미지 -->	
 				<div><!-- 이미지 --></div>
 				<div>
 				<div class="sec2_left"> 
@@ -54,7 +54,7 @@
 			<!-- 섹션 글 전체 div  -->
 		<div>
 			<div>
-				<img alt="rightSide" src="../assets/img/notice/intro01.png">
+				<img alt="rightSide" src="../../assets/img/notice/intro01.png">
 			</div>
 			<div>
 				<!-- 섹션 상단 큰 글씨 -->
@@ -74,6 +74,6 @@
 		</section>	
 	</div>
 	<!-- 푸터 -->
-	<%-- <jsp:include page="/header/footer-main.jsp" flush="false"/> --%>
+	<jsp:include page="../header/footer-main.jsp" flush="false"/>
 </body>
 </html>
