@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -24,37 +25,40 @@
 						<img alt="" src="../../assets/img/header/logo_text.png" style="width: 135px;">
 					</a>
 				</div>
-				<div class="nav-right">
-					<div class="nav-right-item nav-search">
-						<form action="#" class="form-search is-relative">
-							<input placeholder="궁금한 것을 검색해보세요.">
-							<button
-								style="appearance: none; border: 0 solid; text-align: left; display: none;">
-							</button>
-							<a href="#" class=""
-								style="cursor: pointer; right: 50%; position: absolute;">
-								<img style="height: 36px; cursor: pointer;" alt=""
-								src="../../assets/img/header/search_icon.png">
-							</a>
-						</form>
-					</div>
-					<div class="nav-right-item nav-register is-hidden is-inline-block">
-						<a href="#" class="nav-right-button">로그인</a> <a href="#"
-							class="nav-right-button">회원가입</a>
-					</div>
-					<div class="nav-right-item profile-wrapper">
-						<!-- is-hidden -->
-						<div class="nav-notification">
-							<a href="#"> <img class="show-img"
-								src="../../assets/img/header/bell.png" alt="">
-							</a>
-						</div>
-						<div class="nav-profile">
-							<a href="#"> <img class="show-img"
-								src="../../assets/img/member/user_icon.png" alt="">
-							</a>
-						</div>
-					</div>
+				<div class="nav-right"><!--  style="justify-content: flex-end;" -->
+							<div class="nav-right-item nav-search">
+								<form action="#" class="form-search is-relative">
+									<input placeholder="궁금한 것을 검색해보세요.">
+									<button style="appearance: none; border: 0 solid; text-align: left; display: none;">
+									</button>
+									<a href="#" class="" style="cursor: pointer; left: 50%; position: absolute;">
+										<img style="height: 36px; cursor: pointer;" alt="" src="../../assets/img/header/search_icon.png">
+									</a>
+								</form>
+							</div>
+					<c:choose>
+						<c:when test="${true}">
+							<div class="nav-right-item nav-register is-inline-block">
+								<a href="#" class="nav-right-button">로그인</a>
+								<a href="#" class="nav-right-button">회원가입</a>
+							</div>
+						</c:when>
+						<c:otherwise>
+							<div class="nav-right-item profile-wrapper">
+								<!-- is-hidden -->
+								<div class="nav-notification">
+									<a href="#"> 
+										<img class="show-img" src="../../assets/img/header/bell.png" alt="">
+									</a>
+								</div>
+								<div class="nav-profile">
+									<a href="#">
+										<img class="show-img" src="../../assets/img/member/user_icon.png" alt="">
+									</a>
+								</div>
+							</div>
+						</c:otherwise>
+					</c:choose>
 				</div>
 			</div>
 		</div>

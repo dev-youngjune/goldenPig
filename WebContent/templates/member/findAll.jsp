@@ -16,10 +16,10 @@
 					<c:choose>
 						<%-- model.addAttribute("path", "target"); --%>
 						<%-- target에 경로를 목적지를 설정하여 account, email, password 중 하나인 것에 따라 페이지를 다르게 보이게 함 --%>
-						<c:when test="${false}">		<%-- 계정 찾기 test="${path == `account`}" --%>
+						<c:when test="${true}">		<%-- 계정 찾기 test="${path == `account`}" --%>
 							<jsp:include page="../member/findAccount.jsp" flush="false" />
 						</c:when>
-						<c:when test="${true}">	<%-- 이메일 / 비밀번호 찾기 test="${path == `email` || path == `password`" --%>
+						<c:when test="${false}">	<%-- 이메일 / 비밀번호 찾기 test="${path == `email` || path == `password`" --%>
 							<jsp:include page="../member/findEmail.jsp" flush="false" />
 						</c:when>
 					</c:choose>
