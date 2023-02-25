@@ -8,7 +8,8 @@
 <link rel="stylesheet" href="../assets/css/notice/noticeContent.css">
 </head>
 <body>
-<jsp:include page="/header/header.jsp" flush="false" />
+<!-- 헤더 -->
+<%-- <jsp:include page="/header/header.jsp" flush="false" /> --%>
    <div class="container">
       <div><!-- 헤더 부분 --></div>
       
@@ -88,6 +89,7 @@
          </div>
       </main>
    </div>
-   <jsp:include page="/header/footer-main.jsp" flush="false"/>
+   <!--푸터  -->
+   <%-- <jsp:include page="/header/footer-main.jsp" flush="false"/> --%>
 </body>
 </html>

@@ -16,7 +16,8 @@
 <link rel="stylesheet" href="../assets/css/notice/faq.css">
 </head>
 <body>
-	<jsp:include page="/header/header.jsp" flush="false" />
+	<!-- 헤더 -->
+	<%-- <jsp:include page="/header/header.jsp" flush="false" /> --%>
 	<!-- FAQ 전체  -->
 	<div class="container page">
 		<!-- ::before -->
@@ -291,7 +292,8 @@
 				</div>
 					<!-- ::after  -->
 	</div>
-	<jsp:include page="/header/footer-main.jsp" flush="false"/>
+	<!-- 푸터  -->
+	<%-- <jsp:include page="/header/footer-main.jsp" flush="false"/> --%>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
