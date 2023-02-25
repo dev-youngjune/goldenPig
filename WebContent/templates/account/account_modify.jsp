@@ -34,26 +34,51 @@ input, button, span{
 	<div id="wrap">
 	<!-- 휴대폰 번호 변경을 누르면 나오는 모달창 -->
 		<div id="modal">
-			<h3>휴대폰 번호 인증</h3>
-			<div>
-				<div style="margin-top: 2.5rem; width: 74%;">
-					이름
+			<div style="margin: 0 auto; width: 207px; position: relative;">
+				<h3 style="font-size: 23px; display: inline-block;">휴대폰 번호 인증</h3>
+				<label style="cursor: pointer;">
+					<span style="position: absolute; right: -62px; top: 6px;">X</span>
+					<button id="modal_btn_cancel" style="display: none;"></button>
+				</label>
+				<div>
+					<div>
+						<div style="margin-top: 1.5rem; width: 74%;">
+							이름
+						</div>
+						<input type="text"; placeholder="성명 입력" style="height: 30px; outline: none; border-top: none;
+						 border-right: none; border-left: none; border-color: rgb(230,230,230);">
+					</div>
+					<div>
+						<div style="margin-top: 1.5rem; width: 81%;">
+							휴대폰 번호
+						</div>
+						<div style="position: relative;">
+							<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none;
+							 border-right: none; border-left: none; border-color: rgb(230,230,230);">
+							<input type="button"; placeholder="인증번호 발송" value="인증번호 발송" style="height: 30px; position: absolute; 
+							right: -66px; background-color: #0206AF; color: white; border-top: none; border-bottom: none; border-left: none; border-right: none; border-radius: 10px;">
+						</div>
+					</div>
+					<div>
+						<div style="margin-top: 1.5rem; width: 81%;">
+							인증 번호
+						</div>
+						<div style="position: relative;">
+							<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none;
+							 border-right: none; border-left: none; border-color: rgb(230,230,230);">
+							<input type="button"; placeholder="인증번호 확인" value="인증번호 확인" style="height: 30px; position: absolute; 
+							right: -66px; background-color: #0206AF; color: white; border-top: none; border-bottom: none; border-left: none; border-right: none; border-radius: 10px;">
+						</div>
+					</div>
+				</div>	
+				<div style="display: flex; margin: auto; justify-content: center;">
+<!-- 					<footer style="margin-top: 1.5rem; justify-content: flex-end;">
+						<button id="modal_btn_cancel">취소</button>
+					</footer> -->
+					<footer style="margin-top: 1.5rem; justify-content: flex-end;">
+						<button id="modal_btn">확인</button>
+					</footer>
 				</div>
-				<input type="text"; placeholder="성명 입력" style="height: 30px; outline: none; border-top: none; border-right: none; border-left: none;">
-			</div>
-			<div>
-				<div style="margin-top: 2.5rem; width: 81%;">
-					휴대폰 번호
-				</div>
-				<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none; border-right: none; border-left: none;">
-			</div>
-			<div style="display: flex; margin: auto;">
-				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
-					<button id="modal_btn_cancel">취소</button>
-				</footer>
-				<footer style="margin-top: 2.5rem; justify-content: flex-end;">
-					<button id="modal_btn">확인</button>
-				</footer>
 			</div>
 		</div>
 		<!-- 휴대폰 번호 변경을 완료한후 나오는 모달창 -->
