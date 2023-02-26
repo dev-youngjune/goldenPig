@@ -19,11 +19,17 @@ public class MyPageFrontController extends HttpServlet {
 		Result result = null;
 	
 		
-		if(target.equals("/mypageList")) {
+		
+		if(target.equals("/profile")) {
 			result = new Result();
 			
-		}else if(target.equals("/mypageListOk")) {
+		}else if(target.equals("/modifyOk")) {
 			
+		}else if(target.equals("/answer")) {
+			
+		}else if(target.equals("/question")) {
+			
+		}else if(target.equals("/scrap")) {
 			
 		}else {
 			System.out.println(target);
