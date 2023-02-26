@@ -13,7 +13,7 @@
 			<div class="layoutDefault">
 				<main class="layoutDefault_view">
 					<div class="join">
-						<form class="joinl_form w-full" action="${pageContext.request.contextPath}/JoinOk.member" name="join" method="post" >
+						<form class="joinl_form w-full" action="${pageContext.request.contextPath}/JoinOk.member" name="join">
 							<div class="theScreen">
 								<!-- header -->
 								<header class="theScreen_header">
@@ -35,7 +35,7 @@
 											<div class="TextField">
 												<label class="TextField_label">이메일</label>
 												<div class="TextField_body">
-													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput">
 												</div>
                                                 <p class="error-message-email" style="margin: 0;"></p>
 											</div>
@@ -44,7 +44,7 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
+													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first">
 														<img class="eye1" src="${pageContext.request.contextPath}/assets/img/member/passwordEyeSlash.png">
 												</div>
                                                 <p class="error-message-password" style="margin: 0;"></p>
@@ -55,7 +55,7 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
-													<input name ="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
+													<input name ="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second">
 														<img class="eye2" src="${pageContext.request.contextPath}/assets/img/member/passwordEyeSlash.png">
 												</div>
                                                 <p class="error-message-password-check" style="margin: 0;"></p>
@@ -66,7 +66,7 @@
 											<div class="TextField">
                                                 <label class="TextField_label">이름</label>
 												<div class="TextField_body">
-                                                    <input name="memberName" type="text" placeholder="이름을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+                                                    <input name="memberName" type="text" placeholder="이름을 입력해주세요" class="TextField_bodyInput">
 												</div>
                                                 <p class="error-message-name" style="margin: 0;"></p>
 
@@ -76,7 +76,7 @@
 											<div class="TextField">
 												<label class="TextField_label">닉네임</label>
 												<div class="TextField_body">
-													<input name="memberNickName" type="text" placeholder="닉네임을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberNickName" type="text" placeholder="닉네임을 입력해주세요" class="TextField_bodyInput">
 												</div>
                                                 <p class="error-message-nickname" style="margin: 0;"></p>
 
@@ -86,7 +86,7 @@
 											<div class="TextField">
 												<label class="TextField_label">핸드폰</label>
 												<div class="TextField_body">
-													<input name="memberPhoneNumber" type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberPhoneNumber" type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" >
 												</div>
                                                 <p class="error-message-phone" style="margin: 0;"></p>
 
@@ -96,7 +96,7 @@
 											<div class="TextField">
 												<label class="TextField_label">생년월일</label>
 												<div class="TextField_body">
-													<input type="text" placeholder="생년월일을 입력해주세요." class="TextField_bodyInput" autocomplete value>
+													<input type="text" placeholder="생년월일을 입력해주세요." class="TextField_bodyInput" >
 												</div>
 											</div>
 										</div> -->
@@ -133,7 +133,7 @@
 								<!-- footer -->
 								<footer class="theScreen_footer">
 									<!-- <button type="button" class="theScreen_Button_submit " onclik="return check()">회원가입</button> -->
-									<button type="button" class="theScreen_Button_submit " name="submit" id="join-button">회원가입</button>
+									<button class="theScreen_Button_submit " name="submit" id="join-button">회원가입</button>
 									<button class="theScreen_button_a">
 										<a href="">
 										아이디가 존재하나요?
@@ -447,9 +447,5 @@ $day.on("blur", function(e){
     }
     }); */
     
-    $submit.click(function(){
-    	$(".joinl_form").submit();
-    });
-
 </script>
 </html>
