@@ -1,4 +1,4 @@
-package com.goldenPig.tag;
+package com.goldenPig.account;
 
 import java.io.IOException;
 
@@ -9,26 +9,39 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Result;
 
-public class TagFrontController extends HttpServlet{
-	
+public class AccountFrontController extends HttpServlet{
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
 		String contextPath = req.getContextPath();
-		String target = uri.replace(contextPath + "/", "").split("\\.")[0];
+		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
+	
 		
-		if(target.equals("TagList")) {
+		if(target.equals("/accountList")) {
 			result = new Result();
 			
-		}else if(target.equals("TagListOk")) {
+		}else if(target.equals("/adminListOk")) {
+			
+		}else if(target.equals("/email")) {
+			
+		}else if(target.equals("/emailOk")) {
+			
+		}else if(target.equals("/modify")) {
+			
+		}else if(target.equals("/modifyOk")) {
+			
+		}else if(target.equals("/setting")) {
+			
+		}else if(target.equals("/settingOk")) {
+			
+		}else if(target.equals("/withdrawal")) {
 			
 			
 		}else {
 			System.out.println(target);
 		}
-		
-		
 		
 		if(result != null) {
 			if(result.isRedirect()) {
@@ -37,8 +50,6 @@ public class TagFrontController extends HttpServlet{
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}
-		
-		
 	
 	}
 	

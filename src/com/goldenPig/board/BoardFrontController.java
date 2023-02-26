@@ -15,24 +15,34 @@ public class BoardFrontController extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
 		String contextPath = req.getContextPath();
-		String target = uri.replace(contextPath + "/", "").split("\\.")[0];
+		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
 	
 		
-		if(target.equals("boardList")) {
+		if(target.equals("/boardList")) {
 			result = new Result();
 			
-		}else if(target.equals("boardListOk")) {
+		}else if(target.equals("/boardListOk")) {
 			
-		}else if(target.equals("boardWrite")) {
+		}else if(target.equals("/boardWrite")) {
 			
-		}else if(target.equals("boardWriteOk")) {
+		}else if(target.equals("/boardWriteOk")) {
 			
-		}else if(target.equals("boardAnswerOk")) {
+		}else if(target.equals("/boardAnswer")) {
 			
-		}else if(target.equals("boardDetailOk")) {
+		}else if(target.equals("/boardAnswerOk")) {
+			
+		}else if(target.equals("/boardDetail")) {
+			
+		}else if(target.equals("/boardDetailOk")) {
 		
-		}else if(target.equals("boardModifyOk")) {
+		}else if(target.equals("/boardModify")) {
+			
+		}else if(target.equals("/boardModifyOk")) {
+			
+		}else if(target.equals("/freeBoard")) {
+			
+		}else if(target.equals("/freeBoardOk")) {
 
 		}else {
 			System.out.println(target);
