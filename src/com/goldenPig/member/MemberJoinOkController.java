@@ -24,11 +24,11 @@ public class MemberJoinOkController implements Action {
 		memberVO.setMemberName(req.getParameter("memberName"));
 		memberVO.setMemberNickName(req.getParameter("memberNickName"));
 		memberVO.setMemberPhoneNumber(req.getParameter("memberPhoneNumber"));
-		memberVO.setMemberBirth(req.getParameter("memberBirthYear")+ req.getParameter("memberBirthMonth") + req.getParameter("memberBirthday"));
+		memberVO.setMemberBirth(req.getParameter("memberBirthYear")+ "-"+ req.getParameter("memberBirthMonth") +"-"+ req.getParameter("memberBirthDay"));
 		
 		memberDAO.join(memberVO);
 		
-		result.setPath(req.getContextPath() + "/login.member");
+		result.setPath(req.getContextPath() + "/login.membexr");
 		result.setRedirect(true);
 		
 		return result;
