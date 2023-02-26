@@ -8,7 +8,6 @@
 	
 	<typeAliases>
 		<typeAlias type="com.goldenPig.member.domain.MemberVO" alias="memberVO"/>
-		<typeAlias type="com.goldenPig.notice.domain.NoticeVO" alias="noticeVO"/>
 	</typeAliases>
 		
 	<environments default="mysql">
