@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
-<link rel="stylesheet" href="../../assets/css/member/join.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/member/join.css">
 </head>
 <body style="margin:0px!important">
 	<div id="wrap">
@@ -13,7 +13,7 @@
 			<div class="layoutDefault">
 				<main class="layoutDefault_view">
 					<div class="join">
-						<form class="joinl_form w-full">
+						<form class="joinl_form w-full" action="${pageContext.request.contextPath}/JoinOk.member" name="join" method="post" >
 							<div class="theScreen">
 								<!-- header -->
 								<header class="theScreen_header">
@@ -21,7 +21,7 @@
 										<img src="">
 									</button>
 									<a class="theScreen_headerLoga">
-										<img class="a_headerLogo" src="../../assets/img/account/logo.png">
+										<img class="a_headerLogo" src="${pageContext.request.contextPath}/assets/img/account/logo.png">
 									</a>
 								</header>
 								
@@ -45,7 +45,7 @@
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
 													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
-														<img class="eye1" src="../../assets/img/member/passwordEyeSlash.png">
+														<img class="eye1" src="${pageContext.request.contextPath}/assets/img/member/passwordEyeSlash.png">
 												</div>
                                                 <p class="error-message-password" style="margin: 0;"></p>
 
@@ -56,7 +56,7 @@
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
 													<input name ="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput second" autocomplete value>
-														<img class="eye2" src="../../assets/img/member/passwordEyeSlash.png">
+														<img class="eye2" src="${pageContext.request.contextPath}/assets/img/member/passwordEyeSlash.png">
 												</div>
                                                 <p class="error-message-password-check" style="margin: 0;"></p>
                                                 
@@ -133,7 +133,7 @@
 								<!-- footer -->
 								<footer class="theScreen_footer">
 									<!-- <button type="button" class="theScreen_Button_submit " onclik="return check()">회원가입</button> -->
-									<button type="button" class="theScreen_Button_submit " name="submit">회원가입</button>
+									<button type="button" class="theScreen_Button_submit " name="submit" id="join-button">회원가입</button>
 									<button class="theScreen_button_a">
 										<a href="">
 										아이디가 존재하나요?
@@ -149,7 +149,7 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<!-- <script src="../../assets/js/member/join.js"></script> -->
+<!-- <script src="${pageContext.request.contextPath}assets/js/member/join.js"></script> -->
 <script>
 
 
@@ -317,6 +317,7 @@ $name.on("blur", function(e){
         var rgbYear = /^\d{4}$/;
     
         if(yearValue.length == 0) {
+        	
         $errorBirth.css("display", "block");
         $errorBirth.css("color", "red");
         $errorBirth.text("생년 월일을 다시 입력해주세요");
@@ -409,7 +410,7 @@ $day.on("blur", function(e){
         }
     });
     
-    let flag1 = false;
+/*     let flag1 = false;
 	let flag2 = false;
 	let flag3 = false;
 	let flag4 = false;
@@ -444,9 +445,11 @@ $day.on("blur", function(e){
     }else if(flag9 == false){
         alert("생년월일을 확인해주세요")
     }
+    }); */
+    
+    $submit.click(function(){
+    	$(".joinl_form").submit();
     });
-
-
 
 </script>
 </html>

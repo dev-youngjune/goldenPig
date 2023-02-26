@@ -17,27 +17,28 @@ public class MemberFrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
 		String contextPath = req.getContextPath();
-		String target = uri.replace(contextPath + "/", "").split("\\.")[0];
+		System.out.println(contextPath);
+		String target = uri.replace(contextPath, "").split("\\.")[0];
 		Result result = null;
 		
-		if(target.equals("join")) {
+		if(target.equals("/join")) {
 			result = new Result();
-			
-		}else if(target.equals("checkIdOk")) {
+			result.setPath("/templates/member/join.jsp");
+		}else if(target.equals("/checkIdOk")) {
 
-		}else if(target.equals("JoinOk")) {
-			
-		}else if(target.equals("login")) {
+		}else if(target.equals("/JoinOk")) {
+			result = new MemberJoinOkController().execute(req, resp);
+		}else if(target.equals("/login")) {
 
-		}else if(target.equals("loginOk")) {
+		}else if(target.equals("/loginOk")) {
 			
-		}else if(target.equals("modify")) {
+		}else if(target.equals("/modify")) {
 			
-		}else if(target.equals("modifyOk")) {
+		}else if(target.equals("/modifyOk")) {
 
-		}else if(target.equals("logoutOk")) {
+		}else if(target.equals("/logoutOk")) {
 
-		}else if(target.equals("selectOk")) {
+		}else if(target.equals("/selectOk")) {
 
 		}else {
 			System.out.println(target);
