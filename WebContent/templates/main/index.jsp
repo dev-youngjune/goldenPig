@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -22,7 +23,9 @@
 <body>
 	<div class="wrapper">
 		<!-- 헤더 넣는 jsp 코드() -->
-		<jsp:include page="../header/header.jsp" flush="false" />
+		<jsp:include page="../header/header.jsp" flush="true">
+            <jsp:param name="path" value="${path}" />
+		</jsp:include>
 		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>

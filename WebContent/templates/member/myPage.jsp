@@ -5,22 +5,19 @@
 <head>
 <meta charset="UTF-8">
 <title>마이 페이지</title>
-<link rel="stylesheet" href="../assets/css/member/mypage.css">
+<link rel="stylesheet" href="../../assets/css/member/mypage.css">
 </head>
 <body>
-<jsp:include page="../../header/header.jsp" flush="false"/>
+<jsp:include page="../header/header.jsp" flush="false"/>
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
 				<div class="layout">
 					<div class="profile_page">
-						
-						
-						
 						<header class="profile_Header">
 							<div class="header_container">
 								<button class="header_container_button -dark">
-									<img src="../assets/img/member/camera_icon.png">
+									<img src="../../assets/img/member/camera_icon.png">
 									커버 사진 수정
 								</button>
 								<button class="header_container_button -primary modal-open">프로필 편집</button>
@@ -38,7 +35,7 @@
 											<div class="a-model_inner_header">
 												<span >프로필 편집</span>
 												<button class="a-model_inner_header_button">
-													<img src="../assets/img/member/X.png" class="icons">
+													<img src="../../assets/img/member/X.png" class="icons">
 												</button>
 											</div>
 											<div class="a-model_profile_box row">
@@ -60,11 +57,11 @@
 															<br>
 															<span class="a-model_profile_text_medium_span2">
 																<div class="a-modal_profile_icon_left">
-																	<img src="../assets/img/member/id_Card.png">
+																	<img src="../../assets/img/member/id_Card.png">
 																</div>
 																멋있는 프로필을 완성해주세요.
 																<div class="a-modal_profile_icon_right">
-																	<img src="../assets/img/member/id_File.png">
+																	<img src="../../assets/img/member/id_File.png">
 																</div>
 															</span>
 														</div>
@@ -79,7 +76,7 @@
 																	<input type="text" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
 																	<span class="available_length nickname_length"></span>
 																	<div class="description">
-																		<img src= "../assets/img/member/alert_.png" class="info_alet icons">
+																		<img src= "../../assets/img/member/alert_.png" class="info_alet icons">
 																		닉네임은 질문 작성시에 노출되며, 답변에는 실명으로 노출 됩니다.
 																	</div>
 																	<p class="error-message-nickname" style="margin: 0;"></p>
@@ -105,7 +102,7 @@
 																<span class="available_length hi_length">(0 / 60자)</span>
 															</div>
 															<div class="gray_color">
-																<img src= "../assets/img/member/alert_.png" class="info_alet icons">
+																<img src= "../../assets/img/member/alert_.png" class="info_alet icons">
 																더 좋은 프로필을 위해, 인사말을 입력해보세요.
 															</div>
 														</div>	
@@ -276,7 +273,7 @@
 			</div>
 		</div>
 	</div>
-<jsp:include page="../../header/footer-main.jsp" flush="false" />
+<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>

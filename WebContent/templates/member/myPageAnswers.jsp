@@ -5,17 +5,16 @@
 <head>
 <meta charset="UTF-8">
 <title>답변 페이지</title>
-<link rel="stylesheet" href="../assets/css/member/myPageAnswers.css">
+<link rel="stylesheet" href="../../assets/css/member/myPageAnswers.css">
 </head>
 <body>
-<jsp:include page="../../header/header.jsp" flush="false" />
+<jsp:include page="../header/header.jsp" flush="false" />
 	<div id="fullScreen">
 		<div id="wrap">
 			<div>
-			<jsp:include page="/header/header.jsp" flush="false" />
+			<jsp:include page="../header/header.jsp" flush="false" />
 				<div class="layout">
 					<div class="profile_page">
-
 						<header class="profile_Header">
 							<div class="header_container">
 								<button class="header_container_button -dark">
@@ -208,6 +207,6 @@
 		</div>
 	</div>
 	</div>
-	<jsp:include page="../../header/footer-main.jsp" flush="false" />
+	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 </html>
