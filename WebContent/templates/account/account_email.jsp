@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>이메일 변경하기</title>
-<link rel="stylesheet" href="../assets/css/account/account_email.css">
+<link rel="stylesheet" href="../../assets/css/account/account_email.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -24,7 +24,7 @@ input, button, span{
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="../assets/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
+						<img alt="" src="../../assets/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
 					</header>
 					<div id="withdrawal_select">
 							<h1 style="position: relative">
@@ -57,6 +57,7 @@ input, button, span{
 	const tempCursor = confirm.style.cursor;
 	const tempColor = confirm.style.color;
 
+	/* 확인 버튼 활성화 */
 	$email_text.blur(() => {
 		var emailVal = $email_text.val();
 
