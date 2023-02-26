@@ -132,5 +132,18 @@
 	</servlet-mapping> 	 
 	
 	
+	<!-- mypage -->
+	
+	 <servlet>
+	  	<servlet-name>mypage</servlet-name>
+	  	<servlet-class>com.goldenPig.mypage.MyPageFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 	<servlet-name>mypage</servlet-name>
+	 	<url-pattern>*.mypage</url-pattern>
+	</servlet-mapping> 	 
+	
+
 	
 </web-app>

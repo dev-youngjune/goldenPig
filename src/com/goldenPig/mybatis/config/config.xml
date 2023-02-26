@@ -33,6 +33,7 @@
       <mapper resource="com/goldenPig/mybatis/mapper/replyMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/savingMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/tagMapper.xml"/>
+      <mapper resource="com/goldenPig/mybatis/mapper/mypageMapper.xml"/>
    </mappers>
 	
 </configuration>
