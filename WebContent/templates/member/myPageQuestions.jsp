@@ -18,15 +18,11 @@
 						<header class="profile_Header">
 							<div class="header_container">
 								<button class="header_container_button -dark">
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-										<use href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"
-											 xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera">
-										</use>
-									</svg>
+									<img src="../../assets/img/member/camera_icon.png">
 									커버 사진 수정
 								</button>
-								<button class="header_container_button -primary">지식프로필 편집</button>
-							<!-- 	<button class="header_container_button buttonShare">
+								<!-- <button class="header_container_button -primary">지식프로필 편집</button> -->
+								<!-- <button class="header_container_button buttonShare">
 									<i class="icon icon=share-fill"></i>
 								</button> -->
 							</div>
@@ -57,7 +53,7 @@
 						<!-- section -->
 						<section class="ptofile_section">
 
-							<!-- aside -->
+								<!-- aside -->
 							<aside class="profile_aside">
 								<div class="aside_user">
 									<div>
@@ -65,18 +61,10 @@
 											<div class="aside_user_img_div">
 												<span class="aside_user_img_div_span"></span>
 												<div class="aside_user_img_div_div">
-													<svg data-v-1bfbf0fb="" xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-														<use href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"
-															 xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera">
-														</use>
-													</svg>
+													<img src="">
 												</div>
 												<button class="aside_user_img_div_button">
-													<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons">
-														<use href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"
-															 xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera">
-														</use>
-													</svg>
+													<img src=""> 
 												</button>
 											</div>
 										</div>
@@ -88,73 +76,42 @@
 												<h5>지식활동</h5>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2">
-															<use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-question"
-																 xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-question">
-															</use>
-														</svg>
+														<img src="">
 														질문
-													</span>
-													<span>0개</span>
+													</span> <span>0개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2">
-															<use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer"
-																 xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer">
-															</use>
-														</svg>
+														<img src="">
 														답변
-													</span>
-													<span>0개</span>
+													</span> <span>0개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
 												<h5>획득한 반응</h5>
 												<div class="profile_user_status_item">
-													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2">
-															<use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-thumb-question"
-																 xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-thumb-question">
-															</use>
-														</svg>
+													<span class="profile_user_status_item_span"> 
+														<img src="">
 														질문 좋아요
-													</span>
-													<span>0회</span>
+													</span> <span>0회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2">
-															<use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer-check"
-																xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-answer-check">
-															</use>
-														</svg>
+														<img src="">
 														답변 추천
-													</span>
-													<span>0회</span>
+													</span> <span>0회</span>
 												</div>
 												<div class="profile_user_status_item">
-													<span class="profile_user_status_item_span">
-														<svg
-															xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2">
-															<use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-thumb-answer"
-																 xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-thumb-answer">
-															</use>
-														</svg>
+													<span class="profile_user_status_item_span"> 
+														<img src="">
 														답변 좋아요
-													</span>
-													<span>0회</span>
+													</span> <span>0회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-v2">
-															<use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-share"
-																 xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-share">
-															</use>
-														</svg>
+														<img src="">
 														공유된 콘텐츠 (질문, 답변)
-													</span>
-													<span>0회</span>
+													</span> <span>0회</span>
 												</div>
 											</div>
 										</div>
