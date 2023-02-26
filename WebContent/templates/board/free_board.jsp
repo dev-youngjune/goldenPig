@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>저축게시판 목록</title>
-<link rel="stylesheet" href="../assets/css/board/board_list.css">
+<title>자유게시판 목록</title>
+<link rel="stylesheet" href="../../assets/css/board/free_board_list.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -22,10 +22,11 @@
 						<div class="tabs">
 							<button class="active">
 								<span class="bullet">저축 게시판</span>
-								<div class="blue-line"></div>
+								<!-- <div class="blue-line"></div> -->
 							</button>
 							<button class="active">
 								<span class="bullet color-#989898">자유 게시판</span>
+								<div class="blue-line"></div>
 							</button>
 							<!-- <hr class="tabs-line"> -->
 						</div>
@@ -44,20 +45,20 @@
 											<div class="flex-justify-between">
 												<div class="flex-items-center">
 													<div class="card-label-icon">
-														<img class="answer" src="../assets/img/board/answer.png">
+														<img class="answer" src="../../assets/img/board/answer.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star-icon.png">
+														<img class="star" src="../../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="heart" src="../assets/img/board/heart.png">
+														<img class="heart" src="../../assets/img/board/heart.png">
 														<span>1</span>
 													</div>
-													<!-- <span class="card-label-icon"><img class="answer" src="../assets/img/board/answer.png"> 1</span>
-											 		<span class="card-label-icon"><img class="star" src="../assets/img/board/star.png"> 0</span>
-													<span class="card-label-icon"><img class="heart" src="../assets/img/board/heart.png"> 0</span> -->
+													<!-- <span class="card-label-icon"><img class="answer" src="../../assets/img/board/answer.png"> 1</span>
+											 		<span class="card-label-icon"><img class="star" src="../../assets/img/board/star.png"> 0</span>
+													<span class="card-label-icon"><img class="heart" src="../../assets/img/board/heart.png"> 0</span> -->
 												</div>
 												<span class="card-header-infomation">2023. 02. 16.
 													23:06</span>
@@ -87,20 +88,20 @@
 											<div class="flex-justify-between">
 												<div class="flex-items-center">
 													<div class="card-label-icon">
-														<img class="answer" src="../assets/img/board/answer.png">
+														<img class="answer" src="../../assets/img/board/answer.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star-icon.png">
+														<img class="star" src="../../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="heart" src="../assets/img/board/heart.png">
+														<img class="heart" src="../../assets/img/board/heart.png">
 														<span>1</span>
 													</div>
-													<!-- <span class="card-label-icon"><img class="answer" src="../assets/img/board/answer.png"> 1</span>
-											 		<span class="card-label-icon"><img class="star" src="../assets/img/board/star.png"> 0</span>
-													<span class="card-label-icon"><img class="heart" src="../assets/img/board/heart.png"> 0</span> -->
+													<!-- <span class="card-label-icon"><img class="answer" src="../../assets/img/board/answer.png"> 1</span>
+											 		<span class="card-label-icon"><img class="star" src="../../assets/img/board/star.png"> 0</span>
+													<span class="card-label-icon"><img class="heart" src="../../assets/img/board/heart.png"> 0</span> -->
 												</div>
 												<span class="card-header-infomation">2023. 02. 16.
 													23:06</span>
@@ -130,20 +131,20 @@
 											<div class="flex-justify-between">
 												<div class="flex-items-center">
 													<div class="card-label-icon">
-														<img class="answer" src="../assets/img/board/answer.png">
+														<img class="answer" src="../../assets/img/board/answer.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star-icon.png">
+														<img class="star" src="../../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="heart" src="../assets/img/board/heart.png">
+														<img class="heart" src="../../assets/img/board/heart.png">
 														<span>1</span>
 													</div>
-													<!-- <span class="card-label-icon"><img class="answer" src="../assets/img/board/answer.png"> 1</span>
-											 		<span class="card-label-icon"><img class="star" src="../assets/img/board/star.png"> 0</span>
-													<span class="card-label-icon"><img class="heart" src="../assets/img/board/heart.png"> 0</span> -->
+													<!-- <span class="card-label-icon"><img class="answer" src="../../assets/img/board/answer.png"> 1</span>
+											 		<span class="card-label-icon"><img class="star" src="../../assets/img/board/star.png"> 0</span>
+													<span class="card-label-icon"><img class="heart" src="../../assets/img/board/heart.png"> 0</span> -->
 												</div>
 												<span class="card-header-infomation">2023. 02. 16.
 													23:06</span>
@@ -173,20 +174,20 @@
 											<div class="flex-justify-between">
 												<div class="flex-items-center">
 													<div class="card-label-icon">
-														<img class="answer" src="../assets/img/board/answer.png">
+														<img class="answer" src="../../assets/img/board/answer.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star-icon.png">
+														<img class="star" src="../../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="heart" src="../assets/img/board/heart.png">
+														<img class="heart" src="../../assets/img/board/heart.png">
 														<span>1</span>
 													</div>
-													<!-- <span class="card-label-icon"><img class="answer" src="../assets/img/board/answer.png"> 1</span>
-											 		<span class="card-label-icon"><img class="star" src="../assets/img/board/star.png"> 0</span>
-													<span class="card-label-icon"><img class="heart" src="../assets/img/board/heart.png"> 0</span> -->
+													<!-- <span class="card-label-icon"><img class="answer" src="../../assets/img/board/answer.png"> 1</span>
+											 		<span class="card-label-icon"><img class="star" src="../../assets/img/board/star.png"> 0</span>
+													<span class="card-label-icon"><img class="heart" src="../../assets/img/board/heart.png"> 0</span> -->
 												</div>
 												<span class="card-header-infomation">2023. 02. 16.
 													23:06</span>
@@ -215,20 +216,20 @@
 											<div class="flex-justify-between">
 												<div class="flex-items-center">
 													<div class="card-label-icon">
-														<img class="answer" src="../assets/img/board/answer.png">
+														<img class="answer" src="../../assets/img/board/answer.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="star" src="../assets/img/board/star-icon.png">
+														<img class="star" src="../../assets/img/board/star-icon.png">
 														<span>1</span>
 													</div>
 													<div class="card-label-icon">
-														<img class="heart" src="../assets/img/board/heart.png">
+														<img class="heart" src="../../assets/img/board/heart.png">
 														<span>1</span>
 													</div>
-													<!-- <span class="card-label-icon"><img class="answer" src="../assets/img/board/answer.png"> 1</span>
-											 		<span class="card-label-icon"><img class="star" src="../assets/img/board/star.png"> 0</span>
-													<span class="card-label-icon"><img class="heart" src="../assets/img/board/heart.png"> 0</span> -->
+													<!-- <span class="card-label-icon"><img class="answer" src="../../assets/img/board/answer.png"> 1</span>
+											 		<span class="card-label-icon"><img class="star" src="../../assets/img/board/star.png"> 0</span>
+													<span class="card-label-icon"><img class="heart" src="../../assets/img/board/heart.png"> 0</span> -->
 												</div>
 												<span class="card-header-infomation">2023. 02. 16.
 													23:06</span>
