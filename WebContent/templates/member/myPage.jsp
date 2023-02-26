@@ -39,78 +39,80 @@
 												</button>
 											</div>
 											<div class="a-model_profile_box row">
-												<div class="a-model_profile_image_box tw-mb-5">
-													<div class="profile-image">
-														<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
-													</div>
-													<div class="a-model_profile_image_cropper">
-														<label class="file-box">
-															<div class="file-box-span">
-																<span>프로필 추가</span>
-															</div>
-															<input type="file" class="profile-image-file a-model_profile_image_cropper_button" value="프로필 추가">
-														</label>
-													</div>
-													<div class="a-model_profile_text">
-														<div class="a-model_profile_text_medium">
-															<span class="a-model_profile_text_medium_span1">완성도 높은 프로필은 조회수를 높일 수 있어요.</span>
-															<br>
-															<span class="a-model_profile_text_medium_span2">
-																<div class="a-modal_profile_icon_left">
-																	<img src="../../assets/img/member/id_Card.png">
-																</div>
-																멋있는 프로필을 완성해주세요.
-																<div class="a-modal_profile_icon_right">
-																	<img src="../../assets/img/member/id_File.png">
-																</div>
-															</span>
+												<form>
+													<div class="a-model_profile_image_box tw-mb-5">
+														<div class="profile-image">
+															<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
 														</div>
-													</div>
-												</div>
-												<div class="user_info_box">
-													<div class="gray_box">
-														<div class="gray_box_title">닉네임</div>
-														<div class="gray_box_description">
-															<div>
-																<div class="div_relative">
-																	<input type="text" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
-																	<span class="available_length nickname_length"></span>
-																	<div class="description">
-																		<img src= "../../assets/img/member/alert_.png" class="info_alet icons">
-																		닉네임은 질문 작성시에 노출되며, 답변에는 실명으로 노출 됩니다.
+														<div class="a-model_profile_image_cropper">
+															<label class="file-box">
+																<div class="file-box-span">
+																	<span>프로필 추가</span>
+																</div>
+																<input type="file" class="profile-image-file a-model_profile_image_cropper_button" value="프로필 추가">
+															</label>
+														</div>
+														<div class="a-model_profile_text">
+															<div class="a-model_profile_text_medium">
+																<span class="a-model_profile_text_medium_span1">완성도 높은 프로필은 조회수를 높일 수 있어요.</span>
+																<br>
+																<span class="a-model_profile_text_medium_span2">
+																	<div class="a-modal_profile_icon_left">
+																		<img src="../../assets/img/member/id_Card.png">
 																	</div>
-																	<p class="error-message-nickname" style="margin: 0;"></p>
+																	멋있는 프로필을 완성해주세요.
+																	<div class="a-modal_profile_icon_right">
+																		<img src="../../assets/img/member/id_File.png">
+																	</div>
+																</span>
+															</div>
+														</div>
+													</div>
+													<div class="user_info_box">
+														<div class="gray_box">
+															<div class="gray_box_title">닉네임</div>
+															<div class="gray_box_description">
+																<div>
+																	<div class="div_relative">
+																		<input type="text" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
+																		<span class="available_length nickname_length"></span>
+																		<div class="description">
+																			<img src= "../../assets/img/member/alert_.png" class="info_alet icons">
+																			닉네임은 질문 작성시에 노출되며, 답변에는 실명으로 노출 됩니다.
+																		</div>
+																		<p class="error-message-nickname" style="margin: 0;"></p>
+																	</div>
 																</div>
 															</div>
-														</div>
-														<div class="gray_box">
-															<div class=gray_box_title>저금</div>
-															<input type="text" class="gray_box_Input" placeholder="저축을 입력해주세요.">
-														</div>
-														<div class="gray_box">
-															<div class=gray_box_title>목표</div>
-															<input type="text" class="gray_box_Input" placeholder="목표를 입력해주세요.">
-														</div>
-														<div class="gray_box">
-															<div class=gray_box_title>대출</div>
-															<input type="text" class="gray_box_Input" placeholder="대출을 입력해주세요.">
-														</div>		
-														<div class="gray_box">
-															<div class=gray_box_title>인사말</div>					
-															<div class="enroll_Textarea_Wrapper">
-																<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60"></textarea>
-																<span class="available_length hi_length">(0 / 60자)</span>
+															<div class="gray_box">
+																<div class=gray_box_title>저금</div>
+																<input type="text" class="gray_box_Input" placeholder="저축을 입력해주세요.">
 															</div>
-															<div class="gray_color">
-																<img src= "../../assets/img/member/alert_.png" class="info_alet icons">
-																더 좋은 프로필을 위해, 인사말을 입력해보세요.
+															<div class="gray_box">
+																<div class=gray_box_title>목표</div>
+																<input type="text" class="gray_box_Input" placeholder="목표를 입력해주세요.">
 															</div>
-														</div>	
+															<div class="gray_box">
+																<div class=gray_box_title>대출</div>
+																<input type="text" class="gray_box_Input" placeholder="대출을 입력해주세요.">
+															</div>		
+															<div class="gray_box">
+																<div class=gray_box_title>인사말</div>					
+																<div class="enroll_Textarea_Wrapper">
+																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60"></textarea>
+																	<span class="available_length hi_length">(0 / 60자)</span>
+																</div>
+																<div class="gray_color">
+																	<img src= "../../assets/img/member/alert_.png" class="info_alet icons">
+																	더 좋은 프로필을 위해, 인사말을 입력해보세요.
+																</div>
+															</div>	
+														</div>
 													</div>
-												</div>
-												<div class="save">
-													<button class="save_Button">저장</button>
-												</div>
+													<div class="save">
+														<button class="save_Button">저장</button>
+													</div>
+												</form>
 											</div>
 										</div>
 									</div>
@@ -224,7 +226,7 @@
 												<div class="profile_Card_Content">
 													<div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
-															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
+															<img src="">
 															<span class="profile_Card_Content_noItem_Inner_span">등록된 저금이 없어요</span>
 														</div>
 													</div>
@@ -235,7 +237,7 @@
 												<div class="profile_Card_Content">
 													<div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
-															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
+															<img src="">
 															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표가 없어요</span>
 														</div>
 													</div>
@@ -247,7 +249,7 @@
 												
 													<!-- <div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
-															<svg xmlns="http://www.w3.org/2000/svg" class="noItem__icon icon sprite-v2" style="width:32px;height:32px;" ><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-company" ></use></svg>
+															<img src="">
 															<span class="profile_Card_Content_noItem_Inner_span">등록된 현황이 없어요</span>
 														</div>
 													</div> -->
