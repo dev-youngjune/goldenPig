@@ -12,7 +12,7 @@ public class MyBatisConfig {
 
 //	static 블록
 	static {
-		String resource = "com/app/mybatis/config/config.xml";
+		String resource = "com/goldenPig/mybatis/config/config.xml";
 		try {
 			Reader reader = Resources.getResourceAsReader(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
