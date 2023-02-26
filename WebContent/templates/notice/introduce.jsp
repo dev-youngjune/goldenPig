@@ -13,7 +13,7 @@
 	<div id="lay_out">
 		<!-- 소개 타이틀 (가장 상단), 첫번째 섹션 -->
 		<section class="section1">
-			<div>
+			<div class="box">
 			<div>
 				<img alt="intTT" src="../../assets/img/notice/introTT.png" style=" width: -webkit-fill-available;">
 			</div>
@@ -28,7 +28,7 @@
 			<section class="section2" style='display : flex justify-content : space-around'>
 				<img alt="leftSide" src="../../assets/img/notice/intro02.png"><!-- 섹션 2의 좌측 이미지 -->	
 				<div><!-- 이미지 --></div>
-				<div>
+				<div class="box">
 				<div class="sec2_left"> 
 					
 				</div>
@@ -52,7 +52,7 @@
 		<!-- 세번째 섹션  -->	
 		<section class="section3" style='display : flex justify-content : space-around'>
 			<!-- 섹션 글 전체 div  -->
-		<div>
+		<div class="box">
 			<div>
 				<img alt="rightSide" src="../../assets/img/notice/intro01.png">
 			</div>
@@ -71,8 +71,23 @@
 					</div>	
 			</div>
 		</div>
-		</section>	
+		</section>
 	</div>
+<script>
+    var count = 2;
+    window.onscroll = function(e) {
+      console.log(window.innerHeight , window.scrollY,document.body.offsetHeight)
+      if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { 
+        setTimeout(function(){
+          var addContent = document.createElement("div");
+          addContent.classList.add("box")
+          /* addContent.innerHTML = `<p>${++count}번째 블록</p>` */
+          document.querySelector('section').appendChild(addContent);
+        }, 1000)  
+      }
+    }
+</script>
+		
 	<!-- 푸터 -->
 	<jsp:include page="../header/footer-main.jsp" flush="false"/>
 </body>
