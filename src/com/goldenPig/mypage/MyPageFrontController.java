@@ -22,14 +22,19 @@ public class MyPageFrontController extends HttpServlet {
 		
 		if(target.equals("/profile")) {
 			result = new Result();
+			new MyPageProfileController();
 			
 		}else if(target.equals("/modifyOk")) {
+			new MyPageModifyOkController();
 			
 		}else if(target.equals("/answer")) {
+			new MyPageAnswerController();
 			
 		}else if(target.equals("/question")) {
+			new MyPageQuestionController();
 			
 		}else if(target.equals("/scrap")) {
+			new MyPageScrapController();
 			
 		}else {
 			System.out.println(target);

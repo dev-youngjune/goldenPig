@@ -1,4 +1,4 @@
-package com.goldenPig.board;
+package com.goldenPig.admin;
 
 import java.io.IOException;
 
@@ -9,11 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardListOkController implements Action {
-	
+public class AdminNoticeModifyController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-
+		// TODO Auto-generated method stub
 		return null;
 	}
+
 }
