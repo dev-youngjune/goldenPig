@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Result;
 
+@SuppressWarnings("serial")
 public class MainFrontController extends HttpServlet{
 
 	@Override

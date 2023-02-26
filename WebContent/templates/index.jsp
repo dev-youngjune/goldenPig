@@ -6,9 +6,9 @@
 <head>
 <meta charset="EUC-KR">
 <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
-<link rel="stylesheet" href="/assets/css/main/bulma.css">
-<link rel="stylesheet" href="/assets/css/common/common.css">
-<link rel="stylesheet" href="/assets/css/main/main.css">
+<link rel="stylesheet" href="../assets/css/main/bulma.css">
+<link rel="stylesheet" href="../assets/css/common/common.css">
+<link rel="stylesheet" href="../assets/css/main/main.css">
 
 <title>메인 페이지</title>
 
@@ -25,14 +25,14 @@
 <body>
 	<div class="wrapper">
 		<!-- 헤더 넣는 jsp 코드() -->
-		<jsp:include page="templates/header/header.jsp" flush="true">
+		<jsp:include page="header/header.jsp" flush="false">
             <jsp:param name="path" value="${path}" />
 		</jsp:include>
 		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>
 		<header class="main-banner" style="padding-top: 75px">
-			<jsp:include page="templates/banner/banner.jsp" flush="false" />
+			<jsp:include page="banner/banner.jsp" flush="false" />
 		</header>
 			<article class="home-container">
 				<section class="home-buttons columns is-relative">
@@ -346,7 +346,7 @@
 				</section>
 			</article>
 		</main>
-		<jsp:include page="templates/header/footer-main.jsp" flush="false"/>
+		<jsp:include page="header/footer-main.jsp" flush="false"/>
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
