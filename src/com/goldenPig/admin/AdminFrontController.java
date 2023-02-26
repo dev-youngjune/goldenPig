@@ -15,15 +15,40 @@ public class AdminFrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
 		String contextPath = req.getContextPath();
-		String target = uri.replace(contextPath + "/", "").split("\\.")[0];
+		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
 	
 		
-		if(target.equals("adminList")) {
+		if(target.equals("/adminList")) {
 			result = new Result();
 			
-		}else if(target.equals("adminListOk")) {
+		}else if(target.equals("/adminListOk")) {
 			
+		}else if(target.equals("/bankList")) {
+			
+		}else if(target.equals("/bannerList")) {
+			
+		}else if(target.equals("/bannerRegister")) {
+			
+		}else if(target.equals("/board")) {
+			
+		}else if(target.equals("/boardList")) {
+			
+		}else if(target.equals("/freeBoardList")) {
+			
+		}else if(target.equals("/member")) {
+			
+		}else if(target.equals("/memberList")) {
+			
+		}else if(target.equals("/modifyMember")) {
+			
+		}else if(target.equals("/modifyNotice")) {
+			
+		}else if(target.equals("/notice")) {
+			
+		}else if(target.equals("/noticeList")) {
+			
+		}else if(target.equals("/noticeWrite")) {
 			
 		}else {
 			System.out.println(target);
