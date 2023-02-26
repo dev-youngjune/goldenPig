@@ -20,10 +20,10 @@ public class NoticeFrontController extends HttpServlet{
 		Result result = null;
 	
 		
-		if(target.equals("/noticeList")) {
+		if(target.equals("/noticeListOk")) {
 			result = new NoticeListOkController().execute(req, resp);
 			
-		}else if(target.equals("/noticeListOk")) {
+		}else if(target.equals("/noticeDetailOk")) {
 			result = new NoticeDetailOkController().execute(req, resp);
 			
 		}else {
