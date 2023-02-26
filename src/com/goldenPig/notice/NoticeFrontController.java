@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Result;
+import com.goldenPig.member.MemberJoinOkController;
 
 public class NoticeFrontController extends HttpServlet{
 	
@@ -20,10 +21,10 @@ public class NoticeFrontController extends HttpServlet{
 	
 		
 		if(target.equals("/noticeList")) {
-			result = new Result();
+			result = new NoticeListOkController().execute(req, resp);
 			
 		}else if(target.equals("/noticeListOk")) {
-			
+			result = new NoticeDetailOkController().execute(req, resp);
 			
 		}else {
 			System.out.println(target);
