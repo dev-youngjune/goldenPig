@@ -26,7 +26,7 @@
       <mapper resource="com/goldenPig/mybatis/mapper/bannerMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/boardImgMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/boardMapper.xml"/>
-      <mapper resource="com/goldenPig/mybatis/mapper/likerMapper.xml"/>
+      <mapper resource="com/goldenPig/mybatis/mapper/likeMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/memberImgMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/memberMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/noticeMapper.xml"/>
