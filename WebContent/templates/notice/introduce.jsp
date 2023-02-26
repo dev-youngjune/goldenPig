@@ -73,7 +73,7 @@
 		</div>
 		</section>
 	</div>
-<script>
+<!-- <script>
     var count = 2;
     window.onscroll = function(e) {
       console.log(window.innerHeight , window.scrollY,document.body.offsetHeight)
@@ -86,7 +86,7 @@
         }, 1000)  
       }
     }
-</script>
+</script> -->
 		
 	<!-- 푸터 -->
 	<jsp:include page="../header/footer-main.jsp" flush="false"/>
