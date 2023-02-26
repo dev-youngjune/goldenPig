@@ -78,7 +78,6 @@
 														<use
 															href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"
 															xlink:href="/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-camera"></use></svg>
-													>
 													<use></use>
 													</svg>
 												</button>
