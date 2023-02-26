@@ -1,4 +1,4 @@
-package com.goldenPig.mian;
+package com.goldenPig.main;
 
 import java.io.IOException;
 
@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Result;
 
+@SuppressWarnings("serial")
 public class MainFrontController extends HttpServlet{
 
 	@Override
@@ -19,8 +20,9 @@ public class MainFrontController extends HttpServlet{
 		Result result = null;
 	
 		
-		if(target.equals("/mainList")) {
+		if(target.equals("/main")) {
 			result = new Result();
+			result.setPath("/index.jsp");
 			
 		}else if(target.equals("/mainListOk")) {
 			
@@ -28,6 +30,10 @@ public class MainFrontController extends HttpServlet{
 		}else {
 			System.out.println(target);
 		}
+		
+		
+		
+		
 		
 		if(result != null) {
 			if(result.isRedirect()) {

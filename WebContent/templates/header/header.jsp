@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-	<jsp:include page="../header/sidebar.jsp" flush="false" />
+	<%-- <jsp:include page="../header/sidebar.jsp" flush="false" /> --%>
 	<!-- upper navigation -->
 	<nav class="navigation">
 		<div class="nav-wrapper">
