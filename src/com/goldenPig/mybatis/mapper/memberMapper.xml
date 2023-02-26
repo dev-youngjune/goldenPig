@@ -5,7 +5,7 @@
 	<insert id="join" parameterType="memberVO">
 		insert into tbl_member
 		(member_email, member_password, member_name, member_nickname, member_phonenumber, member_birth)
-		values(${memberEmail}, ${memberPassword}, ${memberName}, ${memberNickName}, ${memberPhoneNumber}, ${memberBirth});
+		values(#{memberEmail}, #{memberPassword}, #{memberName}, #{memberNickName}, #{memberPhoneNumber}, #{memberBirth});
 	</insert>
 </mapper>
 
