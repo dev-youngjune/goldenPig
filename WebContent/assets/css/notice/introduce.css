@@ -38,22 +38,6 @@ body img {
     max-width: 100%;
 }
 
-img {
-    vertical-align: middle;
-    width: 850px;
-}
-
-img {
-    display: inline-block;
-}
-
-img {
-    height: auto;
-}
-
-img {
-    border-style: solid;
-}
 
 .introTitle {
     font-weight: 700;

@@ -5,11 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항 상세보기</title>
-<link rel="stylesheet" href="../assets/css/notice/noticeContent.css">
+<link rel="stylesheet" href="../../assets/css/notice/noticeContent.css">
 </head>
 <body>
 <!-- 헤더 -->
-<%-- <jsp:include page="/header/header.jsp" flush="false" /> --%>
+<jsp:include page="../header/header.jsp" flush="false" />
    <div class="container">
       <div><!-- 헤더 부분 --></div>
       
@@ -90,6 +90,6 @@
       </main>
    </div>
    <!--푸터  -->
-   <%-- <jsp:include page="/header/footer-main.jsp" flush="false"/> --%>
+   <jsp:include page="../header/footer-main.jsp" flush="false"/>
 </body>
 </html>
