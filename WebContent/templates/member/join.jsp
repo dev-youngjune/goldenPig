@@ -86,7 +86,7 @@
 											<div class="TextField">
 												<label class="TextField_label">핸드폰</label>
 												<div class="TextField_body">
-													<input name="memberPhone" type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberPhoneNumber" type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" autocomplete value>
 												</div>
                                                 <p class="error-message-phone" style="margin: 0;"></p>
 
