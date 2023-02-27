@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>질문 작성</title>
-<link rel="stylesheet" href="../../assets/css/board/board_write.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/board_write.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -23,7 +23,7 @@
 										<option>자유게시판</option>
 									</select>
 									<div class="arrow-icon">
-										<img src="../../assets/img/board/arrow-icon.png">
+										<img src="${pageContext.request.contextPath}/static/img/board/arrow-icon.png">
 									</div>
 								</div>
 								<div class="card">
@@ -55,25 +55,25 @@
 														<div class="upload-image-wrap">
 															<div class="menubar-button bold-button">
 																<label for="bold">
-																	<img src="../../assets/img/board/bold-icon.png">
+																	<img src="${pageContext.request.contextPath}/static/img/board/bold-icon.png">
 																</label>
 																<input type="" id="bold" style="display: none;">
 															</div>
 															<div class="menubar-button">
 																<label for="unlist">
-																	<img src="../../assets/img/board/unlist-icon.png">
+																	<img src="${pageContext.request.contextPath}/static/img/board/unlist-icon.png">
 																</label>
 																<input type="" id="unlist" style="display: none;">
 															</div>
 															<div class="menubar-button">
 																<label for="orlist">
-																	<img src="../../assets/img/board/orlist-icon.png">
+																	<img src="${pageContext.request.contextPath}/static/img/board/orlist-icon.png">
 																</label>
 																<input type="" id="orlist" style="display: none;">
 															</div>
 															<div class="menubar-button">
 																<label for="file">
-																	<img src="../../assets/img/board/file-icon2.png">
+																	<img src="${pageContext.request.contextPath}/static/img/board/file-icon2.png">
 																</label>
 																<input type="file" id="file" style="display: none;">
 															</div>
@@ -97,7 +97,7 @@
 <jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../../assets/js/board/board_write.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_write.js"></script>
 </html>
 
 

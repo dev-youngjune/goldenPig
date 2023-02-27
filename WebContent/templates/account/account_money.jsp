@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>목표금액 재설정</title>
-<link rel="stylesheet" href="../../assets/css/account/account_money.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_money.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -24,7 +24,7 @@ input, button, span{
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="../../assets/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
+						<img alt="" src="${pageContext.request.contextPath}/static/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
 					</header>
 					<div id="withdrawal_select">
 						<h1 style="position: relative">

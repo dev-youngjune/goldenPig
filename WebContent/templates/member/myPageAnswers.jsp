@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>답변 페이지</title>
-<link rel="stylesheet" href="../../assets/css/member/myPageAnswers.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/myPageAnswers.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -18,7 +18,7 @@
 						<header class="profile_Header">
 							<div class="header_container">
 								<button class="header_container_button -dark">
-									<img src="../../assets/img/member/camera_icon.png">
+									<img src="${pageContext.request.contextPath}/static/img/member/camera_icon.png">
 									커버 사진 수정
 								</button>
 							<!-- 	<button class="header_container_button -primary">지식프로필

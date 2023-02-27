@@ -13,7 +13,7 @@
 <head>
 <meta charset="UTF-8">
 <title>FAQ</title>
-<link rel="stylesheet" href="../../assets/css/notice/faq.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/notice/faq.css">
 </head>
 <body>
 	<!-- 헤더 -->
@@ -23,7 +23,7 @@
 		<!-- ::before -->
 			<!--FAQ 타이틀  -->
 			<h1 class="title text-center jalnan-font title-font">
- 				<img alt="" src="../../assets/img/notice/faq.png">
+ 				<img alt="" src="${pageContext.request.contextPath}/static/img/notice/faq.png">
 				<!-- FAQ -->
 			</h1>
 				<!-- FAQ 아래 내용 전체 div-->

@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
-<link rel="stylesheet" href="../../assets/css/member/findAccount.css">
-<!-- <link rel="stylesheet" href="../../assets/css/member/findEmail.css"> -->
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/findAccount.css">
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/findEmail.css"> -->
 </head>
 <body>
 	<div class="loginEmail">
