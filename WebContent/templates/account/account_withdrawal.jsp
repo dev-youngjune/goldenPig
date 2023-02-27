@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원탈퇴</title>
-<link rel="stylesheet" href="../../assets/css/account/account_withdrawal.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_withdrawal.css">
 <style>
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -24,7 +24,7 @@ input, button, span{
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="../../assets/img/account/logo.png">
+						<img alt="" src="${pageContext.request.contextPath}/static/img/account/logo.png">
 					</header>
 					<div id="withdrawal_select">
 						<h1 style="position: relative">

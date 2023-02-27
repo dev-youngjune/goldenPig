@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>공지사항 상세보기</title>
-<link rel="stylesheet" href="../../assets/css/notice/noticeContent.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/notice/noticeContent.css">
 </head>
 <body>
 <!-- 헤더 -->
