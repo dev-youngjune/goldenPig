@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="banner">
-<<<<<<< HEAD
 	<select id="selectAllByStatus" parameterType="long" resultType="bannerVO">
 		select banner_id, banner_name, banner_path, banner_system_name 
 		from tbl_banner 
@@ -25,10 +24,6 @@
 		(banner_name, banner_path, banner_system_name, banner_status)
 		VALUES(#{bannerName}, #{bannerPath}, #{bannerSystemName}, 1);
 	</insert>
-	
-	
-=======
->>>>>>> 84d6badbae69177b717a28ce259b766d0d03b1d4
 </mapper>
 
 
