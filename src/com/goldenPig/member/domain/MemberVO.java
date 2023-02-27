@@ -2,7 +2,7 @@ package com.goldenPig.member.domain;
 
 public class MemberVO {
 	
-	private Long memberID;
+	private Long memberId;
 	private String memberEmail;
 	private String memberPassword;
 	private String memberName;
@@ -13,12 +13,12 @@ public class MemberVO {
 	
 	public MemberVO() {;}
 
-	public Long getMemberID() {
-		return memberID;
+	public Long getMemberId() {
+		return memberId;
 	}
 
-	public void setMemberID(Long memberID) {
-		this.memberID = memberID;
+	public void setMemberID(Long memberId) {
+		this.memberId = memberId;
 	}
 
 	public String getMemberEmail() {
@@ -79,7 +79,7 @@ public class MemberVO {
 
 	@Override
 	public String toString() {
-		return "MemberVO [memberBirth=" + memberBirth + ", memberEmail=" + memberEmail + ", memberID=" + memberID
+		return "MemberVO [memberBirth=" + memberBirth + ", memberEmail=" + memberEmail + ", memberId=" + memberId
 				+ ", memberName=" + memberName + ", memberNickName=" + memberNickName + ", memberPassword="
 				+ memberPassword + ", memberPhoneNumber=" + memberPhoneNumber + ", memberStatus=" + memberStatus + "]";
 	}
@@ -88,7 +88,7 @@ public class MemberVO {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((memberID == null) ? 0 : memberID.hashCode());
+		result = prime * result + ((memberId == null) ? 0 : memberId.hashCode());
 		return result;
 	}
 
@@ -101,10 +101,10 @@ public class MemberVO {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberVO other = (MemberVO) obj;
-		if (memberID == null) {
-			if (other.memberID != null)
+		if (memberId == null) {
+			if (other.memberId != null)
 				return false;
-		} else if (!memberID.equals(other.memberID))
+		} else if (!memberId.equals(other.memberId))
 			return false;
 		return true;
 	}

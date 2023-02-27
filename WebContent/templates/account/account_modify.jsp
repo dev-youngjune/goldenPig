@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,17 +46,17 @@ input, button, span{
 						<div style="margin-top: 1.5rem; width: 74%;">
 							이름
 						</div>
-						<input type="text"; placeholder="성명 입력" style="height: 30px; outline: none; border-top: none;
-						 border-right: none; border-left: none; border-color: rgb(230,230,230);">
+						<input type="text" placeholder="성명 입력" style="height: 30px; outline: none; border-top: none;
+						 border-right: none; border-left: none; border-color: rgb(230,230,230);" value="${member.memberName}">
 					</div>
 					<div>
 						<div style="margin-top: 1.5rem; width: 81%;">
 							휴대폰 번호
 						</div>
 						<div style="position: relative;">
-							<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none;
-							 border-right: none; border-left: none; border-color: rgb(230,230,230);">
-							<input type="button"; placeholder="인증번호 발송" value="인증번호 발송" style="height: 30px; position: absolute; 
+							<input type="text" placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none;
+							 border-right: none; border-left: none; border-color: rgb(230,230,230);" value="${member.memberPhoneNumber}">
+							<input type="button" placeholder="인증번호 발송" value="인증번호 발송" style="height: 30px; position: absolute; 
 							right: -66px; background-color: #0206AF; color: white; border-top: none; border-bottom: none; border-left: none; border-right: none; border-radius: 10px;">
 						</div>
 					</div>
@@ -64,9 +65,9 @@ input, button, span{
 							인증 번호
 						</div>
 						<div style="position: relative;">
-							<input type="text"; placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none;
+							<input type="text" placeholder="숫자만 입력" style="height: 30px; outline: none; border-top: none;
 							 border-right: none; border-left: none; border-color: rgb(230,230,230);">
-							<input type="button"; placeholder="인증번호 확인" value="인증번호 확인" style="height: 30px; position: absolute; 
+							<input type="button" placeholder="인증번호 확인" value="인증번호 확인" style="height: 30px; position: absolute; 
 							right: -66px; background-color: #0206AF; color: white; border-top: none; border-bottom: none; border-left: none; border-right: none; border-radius: 10px;">
 						</div>
 					</div>
@@ -76,7 +77,7 @@ input, button, span{
 						<button id="modal_btn_cancel">취소</button>
 					</footer> -->
 					<footer style="margin-top: 1.5rem; justify-content: flex-end;">
-						<button id="modal_btn">확인</button>
+						<button id="modal_btn" class="">확인</button>
 					</footer>
 				</div>
 			</div>
@@ -96,14 +97,16 @@ input, button, span{
 		<section>
 			<h2 class ="board_name">이메일</h2>
 			<div class="board" style="justify-content: space-between; display: flex">
-				<span style="padding-top: 12px; letter-spacing: 0">tjfdhs364@naver.com</span>
-				<button class="change_button all_button" style="border-color: rgba(230, 230, 230, var(--tw-border-opacity))">변경</button>
+				<span style="padding-top: 12px; letter-spacing: 0"><c:out value="${member.memberEmail}"/></span>
+				<button class="change_button all_button" style="border-color: rgba(230, 230, 230, var(--tw-border-opacity))" onclick="location.href='${pageContext.request.contextPath}/modifyEmail.member'">
+				변경
+				</button>
 			</div>
 		</section>
 		<section>
 			<h2 class ="board_name">휴대폰 번호</h2>
 			<div class="board" style="justify-content: space-between; display: flex">
-				<span style="padding-top: 12px; letter-spacing: 0">01057587653</span>
+				<span style="padding-top: 12px; letter-spacing: 0"><c:out value="${member.memberPhoneNumber}"/></span>
 				<button class="change_button all_button" id="change_modal" style="border-color: rgba(230, 230, 230, var(--tw-border-opacity))">변경</button>
 			</div>
 		</section>
@@ -169,6 +172,77 @@ input, button, span{
 	modal_phone_btn.addEventListener("click",() =>{
 		modal_phone.style.display = "none";
 	});
+	
+	
+	   // 인증번호
+	   const $certificationButton = $(".certification-number");
+	   const $certificationBox = $(".certification-number-box");
+	   let certificationNumber;
+	   
+	   $certificationButton.click(function(){
+			$.ajax({
+				url: contextPath + "/SMSOk.member",
+				data: {memberPhoneNumber: $phone.val()},
+				success : function(result){
+					certificationNumber= JSON.parse(result);
+					return certificationNumber;				
+				}
+			});
+		   
+		   $(".certificationNumber-checkbox").fadeIn();
+	   });
+	   
+	// 핸드폰
+	   const $certificationCheckButton = $(".certification-number-check");
+	   const $phone = $("input[name=memberPhoneNumber]");
+	   const $errorMessagePhone = $(".error-message-phone");
+	   let rgbPhone = /^(\d{0,3})(\d{0,4})(\d{0,4})$/;
+	   $phone.on("blur", function(e){
+
+		   $.ajax({
+				url: contextPath + "/checkPhoneOk.member",
+				data: {memberPhoneNumber: $phone.val()},
+				success : function(result){
+					console.log(result);
+					phoneCheck = JSON.parse(result);
+					
+					 if($phone.val().length == 0){
+				    	  $errorMessagePhone.text("핸드폰 번호를 입력해주세요.");
+				    	  $errorMessagePhone.css("display","block");
+				    	  $errorMessagePhone.css("color","red");
+				    	  $certificationBox.fadeOut();
+				    	  
+				       }else if(!rgbPhone.test($phone.val())){
+				    	  $errorMessagePhone.text("형식에 맞게 작성해주세요.");
+					   	  $errorMessagePhone.css("display","block");
+					   	  $errorMessagePhone.css("color","red");
+					   	$certificationBox.fadeOut();
+					   	
+				       }else if(!($phone.val().length == 11)){
+				    	   $errorMessagePhone.text("핸드폰 자리 11자리로 입력해주세요.");
+						   $errorMessagePhone.css("display","block");
+						   $errorMessagePhone.css("color","red");
+						   $certificationBox.fadeOut();
+						   
+				       }else if(!($phone.val().substring(0,3) == "010")){
+				    	   $errorMessagePhone.text("010으로 시작해주세요.");
+						   $errorMessagePhone.css("display","block");
+						   $errorMessagePhone.css("color","red");
+						   $certificationBox.fadeOut();
+				       }
+				       
+				       else if(phoneCheck.check){
+				    	   $errorMessagePhone.text("중복된 핸드폰 번호입니다.");
+				    	   $errorMessagePhone.css("display","block");
+				 	   	   $errorMessagePhone.css("color","red");
+				 	   		$certificationBox.fadeOut();
+				 	   		
+				       }else{
+				    	   $errorMessagePhone.css("display","none");
+				    	   $certificationBox.fadeIn();
+				       }
+				}
+			});
 	
 </script>
 </html>
