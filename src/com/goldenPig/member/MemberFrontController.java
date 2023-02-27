@@ -43,6 +43,8 @@ public class MemberFrontController extends HttpServlet {
 
 		}else if(target.equals("/SMSOk")) {
 			new MemberSMSController().execute(req, resp);
+		}else if(target.equals("/checkPhoneOk")) {
+			new MemberPhoneNumberCheckOkController().execute(req, resp);
 		}else {
 			System.out.println(target);
 		}

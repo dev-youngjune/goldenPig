@@ -11,6 +11,10 @@
 	<select id="checkId" parameterType="string" resultType="long">
 		select member_id from tbl_member where member_email = #{memberEmail}
 	</select>
+	
+	<select id="checkPhoneNumber" parameterType="string" resultType="long">
+		select member_id from tbl_member where member_phonenumber = #{memberPhoneNumber}
+	</select>
 </mapper>
 
 	
