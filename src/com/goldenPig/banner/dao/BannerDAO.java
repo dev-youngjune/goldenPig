@@ -18,4 +18,12 @@ public class BannerDAO {
 	public List<BannerVO> selectAllByStatus() {
 		return sqlSession.selectList("banner.selectAllByStatus");
 	}
+	
+	public List<BannerVO> selectAll(){
+		return sqlSession.selectList("banner,selectAll");
+	}
+	
+	public BannerVO selectById(Long bannerId) {
+		return sqlSession.selectOne("banner.select");
+	}
 }
