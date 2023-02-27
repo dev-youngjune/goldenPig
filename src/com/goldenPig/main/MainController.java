@@ -16,7 +16,7 @@ public class MainController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		BannerDAO bannerDao = new BannerDAO();
-		
+		bannerDao.selectAllByStatus(1L);
 		
 		return result;
 	}

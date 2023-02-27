@@ -15,8 +15,8 @@ public class BannerDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public List<BannerVO> selectAllByStatus() {
-		return sqlSession.selectList("banner.selectAllByStatus");
+	public List<BannerVO> selectAllByStatus(Long bannerStatus) {
+		return sqlSession.selectList("banner.selectAllByStatus", bannerStatus);
 	}
 	
 	public List<BannerVO> selectAll(){
@@ -25,5 +25,9 @@ public class BannerDAO {
 	
 	public BannerVO selectById(Long bannerId) {
 		return sqlSession.selectOne("banner.select");
+	}
+	
+	public void insert(BannerVO bannerVO) {
+		sqlSession.insert("banner.insert", bannerVO);
 	}
 }
