@@ -140,7 +140,7 @@ a.nav-right-button {
     font-size: 1rem;
     font-weight: bold;
     border-radius: 9999px;
-    background-color: #EC4352;
+    background-color: rgb(2, 6, 175);
     color: rgb(255, 255, 255);
     text-decoration: none;
 }

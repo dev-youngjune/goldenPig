@@ -25,9 +25,7 @@
 <body>
 	<div class="wrapper">
 		<!-- 헤더 넣는 jsp 코드() -->
-		<jsp:include page="header/header.jsp" flush="true">
-            <jsp:param name="login" value="true" />
-		</jsp:include>
+		<jsp:include page="header/header.jsp" flush="false"/>
 		<%-- <jsp:include page="/header/header-after.jsp" flush="false" /> --%>
 		
 		<main>

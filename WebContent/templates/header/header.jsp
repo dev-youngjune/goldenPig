@@ -37,7 +37,7 @@
 								</form>
 							</div>
 					<c:choose>
-						<c:when test="${login}"><!-- login -->
+						<c:when test="${empty sessionScope.userId}"><!-- login -->
 							<div class="nav-right-item nav-register is-inline-block">
 								<a href="#" class="nav-right-button">로그인</a>
 								<a href="#" class="nav-right-button">회원가입</a>

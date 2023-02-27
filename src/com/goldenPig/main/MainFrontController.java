@@ -14,7 +14,7 @@ import com.goldenPig.Result;
 public class MainFrontController extends HttpServlet{
 	
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String target = ExtractPath.extractWithoutDot(req);
+		String target = ExtractPath.extractWithDot(req);
 		Result result = null;
 		
 		if(target.equals("/index")) {
