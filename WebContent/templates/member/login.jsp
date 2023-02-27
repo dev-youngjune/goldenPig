@@ -13,7 +13,7 @@
 			<div class="layoutDefault">
 				<main class="layoutDefault_view">
 					<div class="loginEmail">
-						<form class="loginEmail_form w-full">
+						<form class="loginEmail_form w-full" action="${pageContext.request.contextPath}/loginOk.member" method="get">
 							<div class="theScreen">
 								<header class="theScreen_header">
 									<button type="button" class="theScreen_headerButton -left">
