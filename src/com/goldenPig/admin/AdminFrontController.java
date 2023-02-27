@@ -19,36 +19,61 @@ public class AdminFrontController extends HttpServlet {
 		Result result = null;
 	
 		
-		if(target.equals("/adminList")) {
+			
+//		저축 게시판 목록
+		if(target.equals("/bankList")) {
 			result = new Result();
 			
-		}else if(target.equals("/adminListOk")) {
-			
-		}else if(target.equals("/bankList")) {
-			
 		}else if(target.equals("/bannerList")) {
-			
+			new AdminBannerListController();
+		
 		}else if(target.equals("/bannerRegister")) {
+			new AdminBannerRegisterController();
 			
-		}else if(target.equals("/board")) {
+		}else if(target.equals("/bannerRegisterOk")) {
+			new AdminBannerRegisterOkController();
+
+//		게시판 상세보기
+		}else if(target.equals("/boardDetail")) {
+			new AdminBoardDetailController();
 			
 		}else if(target.equals("/boardList")) {
+			new AdminBoardListController();
 			
 		}else if(target.equals("/freeBoardList")) {
-			
-		}else if(target.equals("/member")) {
+			new AdminFreeBoardListController();
+		
+//		회원 상세보기	
+		}else if(target.equals("/memberDetail")) {
+			new AdminMemberDetailController();
 			
 		}else if(target.equals("/memberList")) {
+			new AdminMemberListController();
 			
-		}else if(target.equals("/modifyMember")) {
+//		회원정보 변경 페이지			
+		}else if(target.equals("/memberModify")) {
+			new AdminMemberModifyController();
 			
-		}else if(target.equals("/modifyNotice")) {
+		}else if(target.equals("/memberModifyOk")) {
+			new AdminMemberModifyOkController();
 			
-		}else if(target.equals("/notice")) {
+		}else if(target.equals("/noticeDetail")) {
+			new AdminNoticeDetailController();
+
+		}else if(target.equals("/noticeModify")) {
+			new AdminNoticeModifyController();
+
+		}else if(target.equals("/noticeModifyOk")) {
+			new AdminNoticeModifyOkController();
 			
 		}else if(target.equals("/noticeList")) {
-			
+			new AdminNoticeListController();
+		
 		}else if(target.equals("/noticeWrite")) {
+			new AdminNoticeWriteController();
+			
+		}else if(target.equals("/noticeWriteOk")) {
+			new AdminNoticeWriteOkController();
 			
 		}else {
 			System.out.println(target);

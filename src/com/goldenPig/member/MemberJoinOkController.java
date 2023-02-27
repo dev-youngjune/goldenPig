@@ -1,6 +1,7 @@
 package com.goldenPig.member;
 
 import java.io.IOException;
+import java.util.Base64;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ public class MemberJoinOkController implements Action {
 		Result result = new Result(); 
 		
 		memberVO.setMemberEmail(req.getParameter("memberEmail"));
-		memberVO.setMemberPassword(req.getParameter("memberPassword"));
+		memberVO.setMemberPassword(new String(Base64.getEncoder().encode((req.getParameter("memberPassword").getBytes()))));
 		memberVO.setMemberName(req.getParameter("memberName"));
 		memberVO.setMemberNickName(req.getParameter("memberNickName"));
 		memberVO.setMemberPhoneNumber(req.getParameter("memberPhoneNumber"));
@@ -28,7 +29,7 @@ public class MemberJoinOkController implements Action {
 		
 		memberDAO.join(memberVO);
 		
-		result.setPath(req.getContextPath() + "/login.membexr");
+		result.setPath(req.getContextPath() + "/login.member");
 		result.setRedirect(true);
 		
 		return result;
