@@ -9,6 +9,9 @@
 	<typeAliases>
 		<typeAlias type="com.goldenPig.member.domain.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.goldenPig.notice.domain.NoticeVO" alias="noticeVO"/>
+		<typeAlias type="com.goldenPig.banner.domain.BannerVO" alias="bannerVO"/>
+		<typeAlias type="com.goldenPig.board.domain.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 	</typeAliases>
 		
 	<environments default="mysql">
