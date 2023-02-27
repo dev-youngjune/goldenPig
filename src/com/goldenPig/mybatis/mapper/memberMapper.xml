@@ -15,6 +15,11 @@
 	<select id="checkPhoneNumber" parameterType="string" resultType="long">
 		select member_id from tbl_member where member_phonenumber = #{memberPhoneNumber}
 	</select>
+	
+	<select id="login" parameterType="map" resultType="long">
+		select member_id from tbl_member 
+		where member_email = #{memberEmail} and member_password = #{memberPassword}
+	</select>
 </mapper>
 
 	
