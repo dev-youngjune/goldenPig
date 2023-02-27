@@ -12,4 +12,10 @@
 	<select id="getTotal" resultType="long">
 		select count(notice_id) from tbl_notice
 	</select>
+	
+	<!-- 공지사항 상세보기 -->
+	<select id="select" parameterType="long" resultType="noticeVO">
+		select notice_id, notice_title, notice_content, notice_register_date, notice_update_date from tbl_notice
+		where notice_id = #{noticeId}
+	</select>
 </mapper>
