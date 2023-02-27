@@ -24,29 +24,45 @@ public class MemberFrontController extends HttpServlet {
 		if(target.equals("/join")) {
 			result = new Result();
 			result.setPath("/templates/member/join.jsp");
+			
 		}else if(target.equals("/checkIdOk")) {
 			new MemberCheckIdOkController().execute(req, resp);
+			
 		}else if(target.equals("/JoinOk")) {
 			result = new MemberJoinOkController().execute(req, resp);
+			
 		}else if(target.equals("/login")) {
 			result = new Result();
 			result.setPath("/templates/member/login.jsp");
+			
 		}else if(target.equals("/loginOk")) {
 			result = new MemberLoginOkController().execute(req, resp);
-		}else if(target.equals("/modify")) {
 			
 		}else if(target.equals("/modifyOk")) {
+			result = new MemberModifyOkController().execute(req, resp);
 			
 		}else if(target.equals("/logoutOk")) {
 			result = new MemberLogoutOkController().execute(req, resp);
-		}else if(target.equals("/selectOk")) {
-
+			
+		}else if(target.equals("/modifyEmail")) {
+			result = new Result();
+			result.setPath("/templates/account/account_email.jsp");
+			
+		}else if(target.equals("/modifyEmailOk")) {
+			result = new MemberModifyEmailOkController().execute(req, resp);
+			
 		}else if(target.equals("/SMSOk")) {
 			new MemberSMSController().execute(req, resp);
+			
 		}else if(target.equals("/checkPhoneOk")) {
 			new MemberPhoneNumberCheckOkController().execute(req, resp);
+			
+		}else if(target.equals("/accountSettingOk")) {
+			result = new MemberAccountSettingOkController().execute(req, resp);
+			
 		}else {
 			System.out.println(target);
+			
 		}
 		
 		if(result != null) {

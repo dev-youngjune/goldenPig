@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +18,11 @@
 }
 input, button, span{
 	font-family: 'Pretendard-Regular';
+}
+
+a {
+	text-decoration: none;
+	color: white;
 }
 </style>
 </head>
@@ -64,15 +70,15 @@ input, button, span{
 							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem !important">휴대폰 번호</h3>
 						</div>
 						<p>
-							<span style="letter-spacing: .025em; font-size: 1.125rem">01057587653</span>
+							<span style="letter-spacing: .025em; font-size: 1.125rem"><c:out value="${memberPhoneNumber}"/></span>
 						</p>
 						<div>
 							<h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1rem !important">이메일</h3>
 						</div>
 						<p>
-							<span style="letter-spacing: .025em; font-size: 1.125rem">tjfdhs364@naver.com</span>
+							<span style="letter-spacing: .025em; font-size: 1.125rem"><c:out value="${memberEmail}"/></span>
 						</p>
-						<div id="account-change" style="cursor: pointer">계정 정보 변경</div>
+						<div id="account-change" style="cursor: pointer"><a href="javascript:location.href='${pageContext.request.contextPath}/modifyOk.member'">계정 정보 변경</a></div>
 					</div>
 				</div>
 			</div>

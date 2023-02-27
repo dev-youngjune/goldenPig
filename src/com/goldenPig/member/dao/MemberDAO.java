@@ -31,12 +31,24 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.checkPhoneNumber", memberPhoneNumber) != null;
 	}
 	
-// 로그인
 //	로그인
 	public Long login(String memberEmail, String memberPassword) {
 		Map<String, String> loginMap = new HashMap<String, String>();
 		loginMap.put("memberEmail", memberEmail);
 		loginMap.put("memberPassword", memberPassword);
 		return sqlSession.selectOne("member.login", loginMap);
+	}
+	
+// 조회
+	public MemberVO select(Long memberId) {
+		return sqlSession.selectOne("member.select", memberId);
+	}
+	
+// 이메일 수정
+	public void updateEmail(Long memberId, String memberEmail) {
+		Map<String, Object> emailMap = new HashMap<String, Object>();
+		emailMap.put("memberId", memberId);
+		emailMap.put("memberEmail", memberEmail);
+		sqlSession.selectOne("member.updateEmail", emailMap);
 	}
 }
