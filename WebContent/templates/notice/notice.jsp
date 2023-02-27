@@ -75,7 +75,7 @@
 		                <ul></ul>
 		                <div id="paging-wrap">
 		                	<c:if test="${prev}">
-			                    <a href="javascript:location.href='/notice/noticeListOk.notice?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
+			                    <a href="javascript:location.href='/noticeListOk.notice?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
 		                	</c:if>
 		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
 		                    	<c:choose>
@@ -83,12 +83,12 @@
 					                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
 		                    		</c:when>
 		                    		<c:otherwise>
-					                    <a href="javascript:location.href='/notice/noticeListOk.notice?page=${i}'" class="paging"><c:out value="${i}"/></a>
+					                    <a href="javascript:location.href='/noticeListOk.notice?page=${i}'" class="paging"><c:out value="${i}"/></a>
 		                    		</c:otherwise>
 		                    	</c:choose>
-		                    </c:forEach>;
+		                    </c:forEach>
 		                    <c:if test="${next}">
-		                    	<a href="javascript:location.href='/notice/noticeListOk.notice?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
+		                    	<a href="javascript:location.href='/noticeListOk.notice?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
 		                    </c:if>
 		                    <div></div>
 		                </div>

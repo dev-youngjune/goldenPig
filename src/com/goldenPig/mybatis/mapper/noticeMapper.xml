@@ -12,4 +12,5 @@
 	<select id="getTotal" resultType="long">
 		select count(notice_id) from tbl_notice
 	</select>
+	
 </mapper>
