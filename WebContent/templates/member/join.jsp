@@ -21,7 +21,8 @@
 										<img src="">
 									</button>
 									<a class="theScreen_headerLoga">
-										<img class="a_headerLogo" src="${pageContext.request.contextPath}/assets/img/account/logo.png">
+										<img src="${pageContext.request.contextPath}/assets/img/admin/logo_icon.png" class="logo-img">
+										<img class="a_headerLogo" src="${pageContext.request.contextPath}/assets/img/header/logo_text.png">
 									</a>
 								</header>
 								
@@ -87,9 +88,18 @@
 												<label class="TextField_label">핸드폰</label>
 												<div class="TextField_body">
 													<input name="memberPhoneNumber" type="text" placeholder="핸드폰 번호를 입력해주세요" class="TextField_bodyInput" >
+													<div class="certification-number-box">
+														<button type="button" class="certification-number">인증번호 보내기</button>
+													</div>
 												</div>
                                                 <p class="error-message-phone" style="margin: 0;"></p>
-
+												<div class="TextField_body certificationNumber-checkbox">
+													<input name="certificationNumber" type="text" placeholder="인증번호 입력" class="TextField_bodyInput checkNumber" >
+													<div class="certification-number-box">
+														<button type="button" class="certification-number-check">인증번호 확인</button>
+													</div>
+												</div>
+												<p class="error-message-numberCheck" style="margin: 0;"></p>
 											</div>
 										</div>
 										<!-- <div class="theJoin_bodyInput">
@@ -121,7 +131,6 @@
 															<div class="birth_div_div_div">
 																<input class="birth_div_div_div_input" name="memberBirthDay" placeholder="DD" type="text">
 															</div>
-                                                            
 														</div>
 													</div>
 												</div>
@@ -171,27 +180,24 @@ $email.on("blur", function(e){
 		success: function(result){
 			let message;
 			result = JSON.parse(result);
-			if(!result.check){
-				console.log($errorMessageEmail.text());
-				$errorMessageEmail.css('display', 'none');
-			}else{
+			if(result.check){
 				$errorMessageEmail.css('display', 'block');
 				$errorMessageEmail.text("중복된 이메일입니다.");
 				$errorMessageEmail.css('color', 'red');
+			}else{
+				$errorMessageEmail.css('display', 'none');
 			}
 			
 			if(emailValue.length == 0){    // 빈문자열이 들어왔을 때
 		        $errorMessageEmail.css("display", "block");
 		        $errorMessageEmail.css("color", "red");
 		        $errorMessageEmail.text("이메일을 입력해주세요.");
-		        
-		    } else if(rgbEmail.test(emailValue)){  
-		        $errorMessageEmail.css("display", "none");
-
-		    } else {
-		        $errorMessageEmail.css("display", "block");
+		    }else if (!rgbEmail.test(emailValue)){  
+				$errorMessageEmail.css("display", "block");
 		        $errorMessageEmail.css("color", "red"); // 올바른 이메일 형식이 아닐 때
 		        $errorMessageEmail.text("잘못된 이메일 형식입니다.");
+		    } else {
+		        
 		    }
 		}
 	});
@@ -428,6 +434,37 @@ $day.on("blur", function(e){
             $second.attr("type", "text")
         }
     });
+    
+   // 인증번호
+   const $certificationButton = $(".certification-number");
+   let certificationNumber;
+   $certificationButton.click(function(){
+		$.ajax({
+			url: contextPath + "/SMSOk.member",
+			data: {memberPhoneNumber: $phone.val()},
+			success : function(result){
+				certificationNumber= JSON.parse(result);
+				return certificationNumber;				
+			}
+		});
+	   
+	   $(".certificationNumber-checkbox").fadeIn();
+   });
+   
+   
+   const $certificationCheckButton = $(".certification-number-check");
+   
+   $certificationCheckButton.click(function(){
+	   let code = certificationNumber.code;
+	
+	   if(code == $(".checkNumber").val()){
+		    $(".error-message-numberCheck").css("color","blue");
+			$(".error-message-numberCheck").text("인증번호가 일치합니다.");
+	   }else {
+		   	$(".error-message-numberCheck").css("color","red");
+			$(".error-message-numberCheck").text("인증번호가 불일치합니다.");
+	   }
+   });
     
 /*     let flag1 = false;
 	let flag2 = false;
