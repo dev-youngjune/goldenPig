@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>관심 질문 페이지</title>
-<link rel="stylesheet" href="../../assets/css/member/myPageScraps.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/myPageScraps.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -18,7 +18,7 @@
 						<header class="profile_Header">
 							<div class="header_container">
 								<button class="header_container_button -dark">
-									<img src="../../assets/img/member/camera_icon.png">
+									<img src="${pageContext.request.contextPath}/static/img/member/camera_icon.png">
 									커버 사진 수정
 								</button>
 								<!-- <button class="header_container_button -primary">지식프로필 편집</button> -->
@@ -160,7 +160,7 @@
 												</div>				 -->	
 												<div>
 													<button class="interest_Button">
-														<img src="../../assets/img/board/star-icon.png" class="scrpas-star-icon">
+														<img src="${pageContext.request.contextPath}/static/img/board/star-icon.png" class="scrpas-star-icon">
 														관심질문
 														<span class="count-wrapper">1</span>
 													</button>

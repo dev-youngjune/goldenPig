@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- <link rel="stylesheet" href="../assets/css/main/bulma.css"> -->
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/bulma.css"> -->
 <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header/footer.css">
-<!-- <link rel="stylesheet" href="../assets/css/font/fontFamily.css"> -->
+<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font/fontFamily.css"> -->
 
 <title>Insert title here</title>
 </head>

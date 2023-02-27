@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
-<link rel="stylesheet" href="../../assets/css/member/find.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/find.css">
 </head>
 <body class="find_body">
 	<div id="wrap">

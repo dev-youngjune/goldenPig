@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 수정</title>
-<link rel="stylesheet" href="../../assets/css/account/account_modify_footer.css">
-<link rel="stylesheet" href="../../assets/css/account/account_modify.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_modify_footer.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_modify.css">
 <style>
 
 @font-face {
@@ -27,7 +27,7 @@ input, button, span{
 	<div>
 		<header id="header">
 			<div id="header_div">
-				<img alt="" src="../../assets/img/account/logo.png" style="width: 60px">
+				<img alt="" src="${pageContext.request.contextPath}/static/img/account/logo.png" style="width: 60px">
 			</div>
 		</header>
 	</div>
@@ -113,7 +113,7 @@ input, button, span{
 		</section>
 		<section style="margin-top: 20px; text-align: right">
 			<a style="margin-right: 0.25rem; display: inline; vertical-align: middle; cursor: pointer">
-				<img alt="" src="../../assets/img/account/minus.png" style="position: absolute; width: 23px; left: -23px; top: -2px">
+				<img alt="" src="${pageContext.request.contextPath}/static/img/account/minus.png" style="position: absolute; width: 23px; left: -23px; top: -2px">
 				회원 탈퇴
 			</a>
 		</section>
@@ -135,7 +135,7 @@ input, button, span{
 					</article>
 					<div class="logo-wrapper">
 						<a href="#">
-							<img class="logo-img" src="../../assets/img/account/logo.png" alt="">
+							<img class="logo-img" src="${pageContext.request.contextPath}/static/img/account/logo.png" alt="">
 						</a>
 					</div>
 				</div>

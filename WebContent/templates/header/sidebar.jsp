@@ -17,14 +17,14 @@
 					<header class="sidebar-primary">
 						<button class="sidebar-btnX ">
 							<img alt="" class="sidebar-btnX-img" style="width: 24px;"
-								src="../assets/img/header/Close-64.png">
+								src="${pageContext.request.contextPath}/static/img/header/Close-64.png">
 						</button>
 						<a class="sidebar-logo"> <img alt="" class="sidebar-logo-img"
-							src="../assets/img/header/logo_green.png">
+							src="${pageContext.request.contextPath}/static/img/header/logo_green.png">
 						</a>
 						<button class="sidebar-alert">
 							<img alt="" class="sidebar-alert-img"
-								src="../assets/img/header/bell.png">
+								src="${pageContext.request.contextPath}/static/img/header/bell.png">
 						</button>
 					</header>
 
@@ -34,12 +34,12 @@
 						<div class="logedin sidebar-profileWrapper">
 							<div class="sidebar-profile">
 								<a href="#" class="sidebar-profile-link"> <img alt=""
-									src="../assets/img/member/user_icon.png">
+									src="${pageContext.request.contextPath}/static/img/member/user_icon.png">
 								</a> <a href="#" class="sidebar-nickname">
 									<div class="sidebar-nickname">${userName} 강력한테리어7</div>
 									<div>
 										<span> 프로필 편집하기 <img alt=""
-											src="../assets/img/admin/right_icon.png">
+											src="${pageContext.request.contextPath}/static/img/admin/right_icon.png">
 										</span>
 									</div>
 								</a>
@@ -47,7 +47,7 @@
 							<div class="sidebar-mainLinkWrapper">
 							<ul class="columns">
 								<li class="column is-one-quarter">
-									<img src="../assets/img/main/5310117_coin_dollar_money_icon.svg">
+									<img src="${pageContext.request.contextPath}/static/img/main/5310117_coin_dollar_money_icon.svg">
 									<div>보유저축</div>
 								</li>
 								<li class="column is-one-quarter">
