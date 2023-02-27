@@ -25,7 +25,7 @@ public class MemberFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("/templates/member/join.jsp");
 		}else if(target.equals("/checkIdOk")) {
-
+			new MemberCheckIdOkController().execute(req, resp);
 		}else if(target.equals("/JoinOk")) {
 			result = new MemberJoinOkController().execute(req, resp);
 		}else if(target.equals("/login")) {
