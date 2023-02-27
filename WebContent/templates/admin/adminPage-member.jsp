@@ -8,14 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../assets/css/admin/adminPage-member.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminPage-member.css">
 </head>
 <body>
 	<div>
 		<div class="info-title-box info-title-box-flex">
 			<div class="logo-box-layout">
 				<div class="logo-box">
-					<img src="../../assets/img/admin/logo_icon.png">
+					<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png">
 				</div>
 				<div class="logo-title">
 					<span>골든 피그</span>
@@ -41,7 +41,7 @@
 					<div class="prev-button-layout">
 						<div>
 							<a>
-								<img src="../../assets/img/admin/prev_icon.png" class="prev-icon">
+								<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
 								<span class="prev-title">리스트로 돌아가기</span>
 							</a>
 						</div>
@@ -55,7 +55,7 @@
 								</div>
 								<div class="modify-button-box">
 									<a href="adminPage-modifyMember.jsp">
-										<img src="../../assets/img/admin/gear_icon.png" class="gear-icon">
+										<img src="${pageContext.request.contextPath}/static/img/admin/gear_icon.png" class="gear-icon">
 										<span>수정</span>
 									</a>
 								</div>

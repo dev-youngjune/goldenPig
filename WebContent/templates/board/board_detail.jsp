@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>게시물 상세보기</title>
-<link rel="stylesheet" href="../../assets/css/board/board_detail.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/board_detail.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -45,15 +45,15 @@
 							<div class="flex">
 								<div class="buttons">
 									<div class="star-icon position">
-										<img src="../../assets/img/board/star-icon.png" class="absolute">
+										<img src="${pageContext.request.contextPath}/static/img/board/star-icon.png" class="absolute">
 										<span class="margin-left color-blue star-text">관심질문 <span class="star-count">0</span></span>
 									</div>
 									<div class="like-icon position">
-										<img src="../../assets/img/board/like.png" class="absolute">
+										<img src="${pageContext.request.contextPath}/static/img/board/like.png" class="absolute">
 										<span class="margin-left like-text">좋아요 <span class="like-count">0</span></span>
 									</div>
 									<div class="reply-icon position">
-										<img src="../../assets/img/board/comment-icon.png" class="absolute">
+										<img src="${pageContext.request.contextPath}/static/img/board/comment-icon.png" class="absolute">
 										<span class="margin-left comment-text">댓글 <span class="comment-count">0</span></span>
 									</div>	
 								</div>
@@ -157,11 +157,11 @@
 								<div class="flex">
 									<div class="buttons">
 										<div class="like-icon position">
-											<img src="../../assets/img/board/like.png" class="absolute">
+											<img src="${pageContext.request.contextPath}/static/img/board/like.png" class="absolute">
 											<span class="margin-left">좋아요 <span class="like-count">0</span></span>
 										</div>
 										<div class="reply-icon position">
-											<img src="../../assets/img/board/comment-icon.png" class="absolute">
+											<img src="${pageContext.request.contextPath}/static/img/board/comment-icon.png" class="absolute">
 											<span class="margin-left">댓글 <span>0</span></span>
 										</div>	
 									</div>
@@ -231,7 +231,7 @@
 <jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../../assets/js/board/board_detail.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_detail.js"></script>
 </html>
 
 

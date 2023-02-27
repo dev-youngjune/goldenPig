@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
-<link rel="stylesheet" href="../../assets/css/member/findEmail.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/findEmail.css">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 </head>
 <body>
