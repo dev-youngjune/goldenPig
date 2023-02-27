@@ -26,8 +26,6 @@ public class NoticeFrontController extends HttpServlet{
 		}else if(target.equals("/noticeDetailOk")) {
 			result = new NoticeDetailOkController().execute(req, resp);
 			
-		}else {
-			System.out.println(target);
 		}
 		
 		if(result != null) {
@@ -37,7 +35,6 @@ public class NoticeFrontController extends HttpServlet{
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}
-	
 	}
 	
 	@Override
