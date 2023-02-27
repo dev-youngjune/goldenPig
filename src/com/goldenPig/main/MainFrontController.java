@@ -17,10 +17,10 @@ public class MainFrontController extends HttpServlet{
 		String target = ExtractPath.extractWithDot(req);
 		Result result = null;
 		
-		if(target.equals("/index")) {
-			result = new Result();
-			result.setPath("templates/main.jsp");
-			result.setRedirect(true);
+		if(target.equals("/index.main")) {
+			result = new MainController().execute(req, resp);
+//			result.setPath("templates/main.jsp");
+//			result.setRedirect(true);
 //		}else if(target.equals("")) {
 			
 		}else {

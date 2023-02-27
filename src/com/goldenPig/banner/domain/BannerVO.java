@@ -6,7 +6,7 @@ public class BannerVO {
 	private String bannerName;
 	private String bannerPath;
 	private String bannerSystemName;
-	private String bannerStatus;
+	private Long bannerStatus;
 	
 	public BannerVO() {;}
 
@@ -42,11 +42,11 @@ public class BannerVO {
 		this.bannerSystemName = bannerSystemName;
 	}
 
-	public String getBannerStatus() {
+	public Long getBannerStatus() {
 		return bannerStatus;
 	}
 
-	public void setBannerStatus(String bannerStatus) {
+	public void setBannerStatus(Long bannerStatus) {
 		this.bannerStatus = bannerStatus;
 	}
 
