@@ -72,6 +72,8 @@
 										<div class="aside_user_nickname">
 											<span>세심한 곽두철씨</span>
 										</div>
+										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
+										여러분들 반가워요!</p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
 												<h5>지식활동</h5>

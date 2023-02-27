@@ -155,14 +155,16 @@
 													<div class="aside_user_img_div_div">
 														<img src="">
 													</div>
-													<button class="aside_user_img_div_button">
-														<img src=""> 
-													</button>
-												</div>
+												<button class="aside_user_img_div_button">
+													<img src=""> 
+												</button>
 											</div>
+										</div>
 										<div class="aside_user_nickname">
 											<span>세심한 곽두철</span>
 										</div>
+										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
+										여러분들 반가워요!</p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
 												<h5>지식활동</h5>
