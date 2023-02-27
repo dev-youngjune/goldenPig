@@ -47,11 +47,12 @@
 								</a>
 								<p class="cardFoot">
 									<!--공지사항 작성 날짜  -->
-									<span class="date text-mute word-spacing"><c:out value="${notice.noticeRegisterDate}"/></span>
+									<span class="date text-mute word-spacing">${notice.noticeRegisterDate}</span>
 								</p>
 							</div>
 						</article>
 					</c:forEach>
+					
 					
 					<!---------------------------- 필독 공지사항 끝 ----------------------------------->
 
@@ -70,30 +71,29 @@
 						</div>
 					</article> -->
 					
-					<table style="font-size:1.3rem">
-						<tr align="center" valign="middle">
-							<td class="web-view">
-								<c:if test="${prev}">
-									<a href="javascript:location.href='/notice/noticeListOk.notice?page=${startPage - 1}'">&lt;</a>
-								</c:if>
-								<c:forEach var="i" begin="${startPage}" end="${endPage}">
-									<c:choose>
-										<c:when test="${not (i eq page)}">
-											<a href="javascript:location.href='/notice/noticeListOk.notice?page=${i}'">
-												<c:out value="${i}"/>&nbsp;&nbsp;
-											</a>
-										</c:when>
-										<c:otherwise>
-												<c:out value="${i}"/>&nbsp;&nbsp;
-										</c:otherwise>
-									</c:choose>
-								</c:forEach>
-								<c:if test="${next}">
-									<a href="javascript:location.href='/notice/noticeListOk.notice?page=${endPage + 1}'">&gt;</a>
-								</c:if>
-							</td>
-						</tr>
-					</table>
+					<section id="content-wrap">
+		                <ul></ul>
+		                <div id="paging-wrap">
+		                	<c:if test="${prev}">
+			                    <a href="javascript:location.href='/notice/noticeListOk.notice?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
+		                	</c:if>
+		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
+		                    	<c:choose>
+		                    		<c:when test="${i eq page}">
+					                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+		                    		</c:when>
+		                    		<c:otherwise>
+					                    <a href="javascript:location.href='/notice/noticeListOk.notice?page=${i}'" class="paging"><c:out value="${i}"/></a>
+		                    		</c:otherwise>
+		                    	</c:choose>
+		                    </c:forEach>;
+		                    <c:if test="${next}">
+		                    	<a href="javascript:location.href='/notice/noticeListOk.notice?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
+		                    </c:if>
+		                    <div></div>
+		                </div>
+	            	</section>
+            
 				</main>
 				<!-- ::after  -->
 			</div>

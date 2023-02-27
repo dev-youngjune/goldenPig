@@ -25,4 +25,5 @@ public class NoticeDAO {
 	public Long getTotal() {
 		return sqlSession.selectOne("notice.getTotal");
 	}
+	
 }

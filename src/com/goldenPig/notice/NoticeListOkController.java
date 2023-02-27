@@ -18,8 +18,9 @@ public class NoticeListOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		NoticeDAO noticeDAO = new NoticeDAO(); 
-		String temp = req.getParameter("page"); 
 		Map<String, Object> pageMap = new HashMap<String, Object>();
+		
+		String temp = req.getParameter("page");
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
@@ -55,5 +56,4 @@ public class NoticeListOkController implements Action {
 		result.setPath("/templates/notice/notice.jsp");
 		return result;
 	}
-
 }
