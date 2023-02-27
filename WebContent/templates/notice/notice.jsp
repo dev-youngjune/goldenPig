@@ -26,6 +26,7 @@
 					<!-- 공지사항 쪽  -->
 					<div class="card card-header tw-bg-white">
 						<h4 class="title">공지사항</h4>
+						<span class="notice-total"><!-- 총 개수 --> 123개</span>
 					</div>
 					
 					
@@ -36,7 +37,7 @@
 							<!-- 이태원 -->
 							<div class="card-body">
 								<!--공지사항 들어가는 링크  -->
-								<a href="" class> <!--공지사항 제목  -->
+								<a href="javascript:location.href='/noticeDetailOk.notice?noticeId=${notice.noticeId}'"> <!--공지사항 제목  -->
 									<h3>
 										<!--필독 라벨  -->
 										<span class="label pull-left"> <i
