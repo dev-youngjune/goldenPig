@@ -26,4 +26,9 @@ public class NoticeDAO {
 		return sqlSession.selectOne("notice.getTotal");
 	}
 	
+//	공지사항 상세보기
+	public NoticeVO select(Long noticeId) {
+		return sqlSession.selectOne("notice.select", noticeId);
+	}
+	
 }

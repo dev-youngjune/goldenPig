@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +26,10 @@
                      </a>
                   </div>
                   <!-- 공지사항 제목 춢력 부분 -->
-                  <h2>[공지] 도배성 질문 어뷰징 제재 안내 </h2>
+                  <h2>[공지] <c:out value="${notice.noticeTitle}"/></h2>
                   <p class="notice-date">
                      <!-- 등록 날짜 출력 부분 -->
-                     <span>2023. 02. 21</span>
+                     <span><c:out value="${notice.noticeRegisterDate}"/></span>
                   </p>
                   <hr>
                </header>
