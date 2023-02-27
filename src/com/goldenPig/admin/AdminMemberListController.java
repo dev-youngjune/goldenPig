@@ -36,8 +36,10 @@ public class AdminMemberListController implements Action {
 		
 //		모든 멤버의 수
 		Long total = adminDAO.getTotalMember();
+		
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 5;
+		
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
 		int startRow = (page - 1) * rowCount;
