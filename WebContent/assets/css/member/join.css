@@ -13,16 +13,16 @@ body {
 }
 
 body {
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
+     font-family: 'Pretendard-Regular';
 }
 
 
 *, label, input {
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
+     font-family: 'Pretendard-Regular';
 }
 
 .TextField_bodyInput::placeholder{
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
+     font-family: 'Pretendard-Regular';
 }
 
 
@@ -36,11 +36,11 @@ body, body input {
 }
 
 body {
-    font-family: "Pretendard","Roboto",Helvetica,Arial,sans-serif;
+     font-family: 'Pretendard-Regular';
 }
 
 body {
-    font-family: inherit;
+    font-family: 'Pretendard-Regular';
     line-height: inherit;
     background: #f3f5f9;
 }
@@ -111,7 +111,7 @@ input {
 }
 
 button, input, optgroup, select, textarea {
-    font-family: inherit;
+    font-family: 'Pretendard-Regular';
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
@@ -257,7 +257,7 @@ body {
 }
 
 .a_headerLogo {
-	width: 93px;
+	width: 148px;
     height: 51px;
 }
 
@@ -339,7 +339,7 @@ h1 {
 }
 
 .theJoin_bodyInput {
-    margin-top: 44px;
+    margin-top: 20px;
     margin-bottom: 18px;
 }
 
@@ -597,4 +597,38 @@ button, [type='button'], [type='submit'] {
     justify-content: center;
     height: 20px;
     cursor: pointer;
+}
+
+p {
+	font-size: 12px;
+}
+
+.logo-img{
+	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg)
+		brightness(104%) contrast(110%);
+	width: 82px;
+}
+
+button {
+	cursor: pointer;
+}
+
+.certification-number-box {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: none;	
+}
+
+.certification-number-box button {
+	display: block;
+	border: none;
+	background: none;
+	font-size: 14px;
+	width: 140px;
+	height: 30px;
+	text-align: right;
+}
+.certificationNumber-checkbox {
+	display: none;
 }
