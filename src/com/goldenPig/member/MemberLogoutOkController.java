@@ -13,8 +13,13 @@ public class MemberLogoutOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		return null;
+		Result result = new Result();
+		req.getSession().invalidate();
+		
+		result.setPath(req.getContextPath() + "/login.member");
+		result.setRedirect(true);
+		
+		return result;
 	}
 
 }
