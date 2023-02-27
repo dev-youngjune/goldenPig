@@ -1,4 +1,4 @@
-package com.goldenPig.board;
+package com.goldenPig.reply;
 
 import java.io.IOException;
 
@@ -9,16 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardWriteController implements Action {
+public class ReplyRegisterOkController extends Result implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		Result result = new Result();
-		result.setPath(null);
-		result.setRedirect(REDIRECT);
-		result.setRedirect(FORWORD);
-		
-		return result;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

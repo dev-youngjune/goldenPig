@@ -13,6 +13,11 @@ public class BoardWriteOkController implements Action{
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		return null;
+		Result result = new Result();
+		result.setPath(null);
+		result.setRedirect(REDIRECT);
+		result.setRedirect(FORWORD);
+		
+		return result;
 	}
 }
