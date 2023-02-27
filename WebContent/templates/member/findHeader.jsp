@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../../assets/css/member/find.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/find.css">
 </head>
 <body>
 	<header class="theScreen_header" style="width: 424px;">
@@ -13,7 +13,7 @@
 			<img>
 		</button>
 		<a href="" class="theScreen_headerLogo">
-			<img class="a_headerLogo" src="../../assets/img/account/logo.png">
+			<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/account/logo.png">
 		</a>
 	</header>
 </body>
