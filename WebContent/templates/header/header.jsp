@@ -6,7 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/bulma.css"> -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/header.css">
 <title>Insert title here</title>
 <style type="text/css">
 </style>
@@ -19,10 +19,10 @@
 			<div class="nav-container">
 				<div class="nav-left">
 					<a class="nav-brand nav-brandLogo">
-						<img alt="" src="${pageContext.request.contextPath}/assets/img/admin/logo_icon.png" style="width: 56px;">
+						<img alt="" src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" style="width: 56px;">
 					</a>
 					<a class="nav-brand nav-brandText">
-						<img alt="" src="${pageContext.request.contextPath}/assets/img/header/logo_text.png" style="width: 135px;">
+						<img alt="" src="${pageContext.request.contextPath}/static/img/header/logo_text.png" style="width: 135px;">
 					</a>
 				</div>
 				<div class="nav-right"><!--  style="justify-content: flex-end;" -->
@@ -32,7 +32,7 @@
 									<button style="appearance: none; border: 0 solid; text-align: left; display: none;">
 									</button>
 									<a href="#" class="" style="cursor: pointer; left: 50%; position: absolute;">
-										<img style="height: 36px; cursor: pointer;" alt="" src="${pageContext.request.contextPath}/assets/img/header/search_icon.png">
+										<img style="height: 36px; cursor: pointer;" alt="" src="${pageContext.request.contextPath}/static/img/header/search_icon.png">
 									</a>
 								</form>
 							</div>
@@ -48,12 +48,12 @@
 								<!-- is-hidden -->
 								<div class="nav-notification">
 									<a href="#"> 
-										<img class="show-img" src="${pageContext.request.contextPath}/assets/img/header/bell.png" alt="">
+										<img class="show-img" src="${pageContext.request.contextPath}/static/img/header/bell.png" alt="">
 									</a>
 								</div>
 								<div class="nav-profile">
 									<a href="#">
-										<!-- <img class="show-img" src="${pageContext.request.contextPath}/assets/img/member/user_icon.png" alt=""> -->
+										<!-- <img class="show-img" src="${pageContext.request.contextPath}/static/img/member/user_icon.png" alt=""> -->
 										<img class="show-img" src="${user.profile_img_path}" alt="">
 									</a>
 								</div>
@@ -66,5 +66,5 @@
 	</nav>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/assets/js/header/header.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/header/header.js"></script>
 </html>
