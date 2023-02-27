@@ -1,8 +1,8 @@
-       @charset "UTF-8";@charset "UTF-8";
+@charset "UTF-8";
 
 @font-face {
     font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Pdroject-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -50,19 +50,6 @@ body {
 }
 
 *, ::before, ::after {
-    --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-    --tw-ring-offset-width: 0px;
-    --tw-ring-offset-color: #fff;
-    --tw-ring-color: rgba(59, 130, 246, 0.5);
-    --tw-ring-offset-shadow: 0 0 #0000;
-    --tw-ring-shadow: 0 0 #0000;
-}
-
-*, ::before, ::after {
-    --tw-shadow: 0 0 #0000;
-}
-
-*, ::before, ::after {
     --tw-border-opacity: 1;
     border-color: rgba(230, 230, 230, var(--tw-border-opacity));
 }
@@ -71,7 +58,6 @@ body {
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
-/*     border-color: currentColor; */
 }
 
 *, ::before, ::after {
@@ -179,7 +165,6 @@ body {
     margin: auto;
     border-radius: 0.25rem;
     max-width: 464px;
-    max-height: 650px;
 }
 
 .join {
@@ -285,6 +270,7 @@ a {
 .px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    padding : 40px 3.25rem 0px;
 }
 
 
@@ -376,8 +362,8 @@ label {
     font-size: 14px;
     line-height: 1.75rem;
     line-height: 1;
-    caret-color: #0206af;
     height: 28px;
+    padding-top: 14px;
 }
 
 .TextField_bodyButton {
@@ -401,26 +387,11 @@ button, [type='button'], [type='submit'] {
 }
 
 /* .TextField_bodyButton의 속성을 그냥 넣어줬음 */
-.eye1 {
+.eye {
     width: 21px;
-    height: 19px;
     filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
-     position: absolute;
-    top: 0.25rem;
-    right: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20px;
-    cursor: pointer;
-}
-
-.eye2 {
-    width: 21px;
-    height: 19px;
-    filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
-     position: absolute;
-    top: 0.25rem;
+    position: absolute;
+    top: 11px;
     right: 0px;
     display: flex;
     align-items: center;
@@ -440,10 +411,7 @@ button, [type='button'], [type='submit'] {
     position: relative;
     --tw-bg-opacity: 1;
     background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    padding : 1.25rem 3.25rem;
     border-radius: 0 0 8px 8px;
 }
 
@@ -494,7 +462,7 @@ button, [type='button'], [type='submit'] {
 }
 
 .birth_div {
-	height: 44px;
+	height: 37px;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -505,22 +473,22 @@ button, [type='button'], [type='submit'] {
 }
 
 .birth_div_div {
-	    padding-bottom: 0px;
+	padding-bottom: 12px;
 }
 
 .birth_div_div_div {
 	position: relative;
-    height: 40px;
+    height: 23px;
 }
 
 .birth_div_div_div_input {
 	width: 100%;
-    height: 40px;
+    height: 35px;
     padding: 0px 11px 1px 15px;
     border-radius: 4px;
     border: 1px solid rgb(221, 221, 221);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 38px;
     color: rgb(51, 51, 51);
     outline: none;
@@ -590,7 +558,7 @@ button, [type='button'], [type='submit'] {
     height: 19px;
     filter: invert(98%) sepia(3%) saturate(419%) hue-rotate(170deg) brightness(88%) contrast(89%);
     position: absolute;
-    top: 0.25rem;
+    top: 11px;
     right: 0px;
     display: flex;
     align-items: center;
@@ -614,6 +582,7 @@ button {
 }
 
 .certification-number-box {
+	display: none;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -628,7 +597,13 @@ button {
 	width: 140px;
 	height: 30px;
 	text-align: right;
+	margin-top: 5px;
 }
 .certificationNumber-checkbox {
 	display: none;
+}
+
+.TextField .birth-box {
+	margin-top: 10px;
+	border: none;
 }

@@ -25,4 +25,9 @@ public class MemberDAO {
 	public boolean checkId(String memberEmail) {
 		return sqlSession.selectOne("member.checkId", memberEmail) != null;
 	}
+	
+// 핸드폰 중복검사
+	public boolean checkPhoneNumber(String memberPhoneNumber) {
+		return sqlSession.selectOne("member.checkPhoneNumber", memberPhoneNumber) != null;
+	}
 }
