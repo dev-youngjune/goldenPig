@@ -36,9 +36,9 @@ public class MemberFrontController extends HttpServlet {
 		}else if(target.equals("/modify")) {
 			
 		}else if(target.equals("/modifyOk")) {
-
+			
 		}else if(target.equals("/logoutOk")) {
-
+			result = new MemberLogoutOkController().execute(req, resp);
 		}else if(target.equals("/selectOk")) {
 
 		}else if(target.equals("/SMSOk")) {
