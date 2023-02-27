@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../../assets/css/main/bulma.css">
-<link rel="stylesheet" href="../../assets/css/banner/banner.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/bulma.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/banner/banner.css">
 <!-- swiper 라이브러리 스타일시트 -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
@@ -38,5 +38,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="../../assets/js/banner/banner.js"></script>
+<script src="${pageContext.request.contextPath}/assets/js/banner/banner.js"></script>
 </html>

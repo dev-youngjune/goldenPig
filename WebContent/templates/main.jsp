@@ -6,9 +6,9 @@
 <head>
 <meta charset="EUC-KR">
 <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
-<link rel="stylesheet" href="../assets/css/main/bulma.css">
-<link rel="stylesheet" href="../assets/css/common/common.css">
-<link rel="stylesheet" href="../assets/css/main/main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/bulma.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/common/common.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main/main.css">
 
 <title>메인 페이지</title>
 
