@@ -20,4 +20,9 @@ public class MemberDAO {
 	public void join(MemberVO memberVO) {
 		sqlSession.insert("member.join", memberVO);
 	}
+	
+//	아이디 중복검사
+	public boolean checkId(String memberEmail) {
+		return sqlSession.selectOne("member.checkId", memberEmail) != null;
+	}
 }
