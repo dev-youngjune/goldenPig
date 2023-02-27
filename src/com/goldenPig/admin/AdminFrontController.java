@@ -25,55 +25,55 @@ public class AdminFrontController extends HttpServlet {
 			result = new Result();
 			
 		}else if(target.equals("/bannerList")) {
-			new AdminBannerListController();
+			new AdminBannerListController().execute(req, resp);
 		
 		}else if(target.equals("/bannerRegister")) {
-			new AdminBannerRegisterController();
+			new AdminBannerRegisterController().execute(req, resp);
 			
 		}else if(target.equals("/bannerRegisterOk")) {
-			new AdminBannerRegisterOkController();
+			new AdminBannerRegisterOkController().execute(req, resp);
 
 //		게시판 상세보기
 		}else if(target.equals("/boardDetail")) {
-			new AdminBoardDetailController();
+			new AdminBoardDetailController().execute(req, resp);
 			
 		}else if(target.equals("/boardList")) {
-			new AdminBoardListController();
+			new AdminBoardListController().execute(req, resp);
 			
 		}else if(target.equals("/freeBoardList")) {
-			new AdminFreeBoardListController();
+			new AdminFreeBoardListController().execute(req, resp);
 		
+		}else if(target.equals("/memberList")) {
+			result = new AdminMemberListController().execute(req, resp);
+
 //		회원 상세보기	
 		}else if(target.equals("/memberDetail")) {
-			new AdminMemberDetailController();
-			
-		}else if(target.equals("/memberList")) {
-			new AdminMemberListController();
+			new AdminMemberDetailController().execute(req, resp);
 			
 //		회원정보 변경 페이지			
 		}else if(target.equals("/memberModify")) {
-			new AdminMemberModifyController();
+			new AdminMemberModifyController().execute(req, resp);
 			
 		}else if(target.equals("/memberModifyOk")) {
-			new AdminMemberModifyOkController();
+			new AdminMemberModifyOkController().execute(req, resp);
 			
 		}else if(target.equals("/noticeDetail")) {
-			new AdminNoticeDetailController();
+			new AdminNoticeDetailController().execute(req, resp);
 
 		}else if(target.equals("/noticeModify")) {
-			new AdminNoticeModifyController();
+			new AdminNoticeModifyController().execute(req, resp);
 
 		}else if(target.equals("/noticeModifyOk")) {
-			new AdminNoticeModifyOkController();
+			new AdminNoticeModifyOkController().execute(req, resp);
 			
 		}else if(target.equals("/noticeList")) {
-			new AdminNoticeListController();
+			new AdminNoticeListController().execute(req, resp);
 		
 		}else if(target.equals("/noticeWrite")) {
-			new AdminNoticeWriteController();
+			new AdminNoticeWriteController().execute(req, resp);
 			
 		}else if(target.equals("/noticeWriteOk")) {
-			new AdminNoticeWriteOkController();
+			new AdminNoticeWriteOkController().execute(req, resp);
 			
 		}else {
 			System.out.println(target);
