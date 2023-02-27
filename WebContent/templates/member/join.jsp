@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/member/join.css">
+	href="${pageContext.request.contextPath}/static/css/member/join.css">
 </head>
 <body style="margin: 0px !important">
 	<div id="wrap">

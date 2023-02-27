@@ -32,7 +32,7 @@ public class MemberFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("/templates/member/login.jsp");
 		}else if(target.equals("/loginOk")) {
-			
+			result = new MemberLoginOkController().execute(req, resp);
 		}else if(target.equals("/modify")) {
 			
 		}else if(target.equals("/modifyOk")) {
