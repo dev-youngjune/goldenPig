@@ -11,20 +11,22 @@ import com.goldenPig.Result;
 import com.goldenPig.member.dao.MemberDAO;
 import com.goldenPig.member.domain.MemberVO;
 
-public class MemberModifyOkController implements Action{
+public class MemberModifyEmailOkController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		Long memberId = (Long)req.getSession().getAttribute("memberId");
-		Result result = new Result();
 		MemberDAO memberDAO = new MemberDAO();
-		MemberVO memberVO = memberDAO.select(memberId);		
+		Result result = new Result();
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		System.out.println(memberId);
+		System.out.println(req.getParameter("memberEmail"));
 		
-		req.setAttribute("member", memberVO);
+		memberDAO.updateEmail(memberId, req.getParameter("memberEmail"));
 		
-		result.setPath("/templates/account/account_modify.jsp");
-		result.setRedirect(false);
+		result.setPath(req.getContextPath() + "/modifyOk.member");
+		result.setRedirect(true);
 		
 		return result;
-		
 	}
+
 }

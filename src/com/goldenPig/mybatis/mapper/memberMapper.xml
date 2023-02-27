@@ -20,6 +20,14 @@
 		select member_id from tbl_member 
 		where member_email = #{memberEmail} and member_password = #{memberPassword}
 	</select>
+	
+	<select id="select" parameterType="long" resultType="memberVO">
+		select member_email, member_name, member_nickname, member_phonenumber, member_birth from tbl_member where member_id = #{memberId}
+	</select>
+	
+	<update id="updateEmail" parameterType="map">
+		update tbl_member set member_email = #{memberEmail} where member_id = #{memberId}
+	</update>
 </mapper>
 
 	

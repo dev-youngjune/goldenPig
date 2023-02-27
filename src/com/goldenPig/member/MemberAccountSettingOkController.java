@@ -11,7 +11,8 @@ import com.goldenPig.Result;
 import com.goldenPig.member.dao.MemberDAO;
 import com.goldenPig.member.domain.MemberVO;
 
-public class MemberModifyOkController implements Action{
+public class MemberAccountSettingOkController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
@@ -19,12 +20,16 @@ public class MemberModifyOkController implements Action{
 		MemberDAO memberDAO = new MemberDAO();
 		MemberVO memberVO = memberDAO.select(memberId);		
 		
-		req.setAttribute("member", memberVO);
+		req.setAttribute("memberName", memberVO.getMemberName());
+		req.setAttribute("memberNickName", memberVO.getMemberName());
+		req.setAttribute("memberEmail", memberVO.getMemberEmail());
+		req.setAttribute("memberPhoneNumber", memberVO.getMemberPhoneNumber());
+		req.setAttribute("memberBirth", memberVO.getMemberBirth());
 		
-		result.setPath("/templates/account/account_modify.jsp");
+		result.setPath("/templates/account/account_setting.jsp");
 		result.setRedirect(false);
 		
 		return result;
-		
 	}
+
 }

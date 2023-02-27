@@ -23,10 +23,9 @@
 									<button type="button" class="theScreen_headerButton -left">
 										<img src="">
 									</button>
-									<a class="theScreen_headerLoga"> <img
-										src="${pageContext.request.contextPath}/assets/img/admin/logo_icon.png"
-										class="logo-img"> <img class="a_headerLogo"
-										src="${pageContext.request.contextPath}/assets/img/header/logo_text.png">
+									<a class="theScreen_headerLoga"> 
+										<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+										<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_text.png">
 									</a>
 								</header>
 
@@ -40,8 +39,7 @@
 											<div class="TextField">
 												<label class="TextField_label">이메일</label>
 												<div class="TextField_body">
-													<input name="memberEmail" type="text"
-														placeholder="이메일을 입력해주세요" class="TextField_bodyInput">
+													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput">
 												</div>
 												<p class="error-message-email" style="margin: 0;"></p>
 											</div>
@@ -50,11 +48,8 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-													<input name="memberPassword" type="password"
-														placeholder="비밀번호를 입력해주세요"
-														class="TextField_bodyInput first"> <img
-														class="eye close-eye"
-														src="${pageContext.request.contextPath}/assets/img/member/passwordEyeSlash.png">
+													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first"> 
+													<img class="eye close-eye" src="${pageContext.request.contextPath}/static/img/member/passwordEyeSlash.png">
 												</div>
 												<p class="error-message-password" style="margin: 0;"></p>
 
@@ -64,11 +59,8 @@
 											<div class="TextField">
 												<label class="TextField_label">비밀번호 확인</label>
 												<div class="TextField_body">
-													<input name="memberPasswordCheck" type="password"
-														placeholder="비밀번호를 입력해주세요"
-														class="TextField_bodyInput first"> <img
-														class="eye close-eye"
-														src="${pageContext.request.contextPath}/assets/img/member/passwordEyeSlash.png">
+													<input name="memberPasswordCheck" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first"> 
+													<img class="eye close-eye" src="${pageContext.request.contextPath}/static/img/member/passwordEyeSlash.png">
 												</div>
 												<p class="error-message-password-check" style="margin: 0;"></p>
 
@@ -89,8 +81,7 @@
 											<div class="TextField">
 												<label class="TextField_label">닉네임</label>
 												<div class="TextField_body">
-													<input name="memberNickName" type="text"
-														placeholder="닉네임을 입력해주세요" class="TextField_bodyInput">
+													<input name="memberNickName" type="text" placeholder="닉네임을 입력해주세요" class="TextField_bodyInput">
 												</div>
 												<p class="error-message-nickname" style="margin: 0;"></p>
 
@@ -100,22 +91,16 @@
 											<div class="TextField">
 												<label class="TextField_label">핸드폰</label>
 												<div class="TextField_body">
-													<input name="memberPhoneNumber" type="text"
-														placeholder="('-')을 제외한 핸드폰 번호를 입력해주세요"
-														class="TextField_bodyInput" maxlength="11">
+													<input name="memberPhoneNumber" type="text" placeholder="('-')을 제외한 핸드폰 번호를 입력해주세요" class="TextField_bodyInput" maxlength="11">
 													<div class="certification-number-box">
-														<button type="button" class="certification-number">인증번호
-															보내기</button>
+														<button type="button" class="certification-number">인증번호 보내기</button>
 													</div>
 												</div>
 												<p class="error-message-phone" style="margin: 0;"></p>
 												<div class="TextField_body certificationNumber-checkbox">
-													<input name="certificationNumber" type="text"
-														placeholder="인증번호 입력"
-														class="TextField_bodyInput checkNumber">
+													<input name="certificationNumber" type="text" placeholder="인증번호 입력" class="TextField_bodyInput checkNumber">
 													<div class="certification-number-box">
-														<button type="button" class="certification-number-check">인증번호
-															확인</button>
+														<button type="button" class="certification-number-check">인증번호 확인</button>
 													</div>
 												</div>
 												<p class="error-message-numberCheck" style="margin: 0;"></p>
@@ -419,11 +404,11 @@ $day.on("blur", function(e){
 				console.log(${contextPath});
 				$(e).removeClass("close-eye");
 	            $($first[i]).attr("type", "password");
-	            $(e).attr("src", contextPath + '/assets/img/member/passwordEyeSlash.png');
+	            $(e).attr("src", contextPath + '/static/img/member/passwordEyeSlash.png');
 	        } else {
 				$(e).addClass("close-eye");
 				$($first[i]).attr("type", "text")
-	            $(e).attr("src", contextPath + '/assets/img/member/passwordEye.png');
+	            $(e).attr("src", contextPath + '/static/img/member/passwordEye.png');
 	        }
 		});
 	});
