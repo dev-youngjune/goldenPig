@@ -8,10 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.ExtractPath;
-import com.goldenPig.ExtractURI;
 import com.goldenPig.Result;
-
-import jdk.jfr.Name;
 
 @SuppressWarnings("serial")
 public class BoardFrontController extends HttpServlet{
@@ -99,17 +96,4 @@ public class BoardFrontController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
 	}
-	
-
-//	@Override
-//	public String extractWithExt(HttpServletRequest req) {
-//		String target = req.getRequestURI().substring(req.getContextPath().length());
-//		return target;
-//	}
-//
-//	@Override
-//	public String extractWithoutExt(HttpServletRequest req) {
-//		String target = req.getRequestURI().replace(req.getContextPath(), "").split("\\.")[0];
-//		return target;
-//	}
 }
