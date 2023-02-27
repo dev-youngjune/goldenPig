@@ -148,8 +148,9 @@
 		</div>
 	</div>
 </body>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<!-- <script src="${pageContext.request.contextPath}assets/js/member/join.js"></script> -->
+<!-- <script src="${pageContext.request.contextPath}/assets/js/member/join.js"></script> -->
 <script>
 
 
@@ -162,19 +163,38 @@ const $submit = $("button[name=submit]")
 $email.on("blur", function(e){
     var emailValue = $email.val(); 
     var rgbEmail = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-    if(emailValue.length == 0){    // 빈문자열이 들어왔을 때
-        $errorMessageEmail.css("display", "block");
-        $errorMessageEmail.css("color", "red");
-        $errorMessageEmail.text("이메일을 입력해주세요.");
-        
-    } else if(rgbEmail.test(emailValue)){  
-        $errorMessageEmail.css("display", "none");
+    
+    
+    $.ajax({
+		url: contextPath + "/checkIdOk.member",
+		data: {memberEmail: emailValue},
+		success: function(result){
+			let message;
+			result = JSON.parse(result);
+			if(!result.check){
+				console.log($errorMessageEmail.text());
+				$errorMessageEmail.css('display', 'none');
+			}else{
+				$errorMessageEmail.css('display', 'block');
+				$errorMessageEmail.text("중복된 이메일입니다.");
+				$errorMessageEmail.css('color', 'red');
+			}
+			
+			if(emailValue.length == 0){    // 빈문자열이 들어왔을 때
+		        $errorMessageEmail.css("display", "block");
+		        $errorMessageEmail.css("color", "red");
+		        $errorMessageEmail.text("이메일을 입력해주세요.");
+		        
+		    } else if(rgbEmail.test(emailValue)){  
+		        $errorMessageEmail.css("display", "none");
 
-    } else {
-        $errorMessageEmail.css("display", "block");
-        $errorMessageEmail.css("color", "red"); // 올바른 이메일 형식이 아닐 때
-        $errorMessageEmail.text("잘못된 이메일 형식입니다.");
-    }
+		    } else {
+		        $errorMessageEmail.css("display", "block");
+		        $errorMessageEmail.css("color", "red"); // 올바른 이메일 형식이 아닐 때
+		        $errorMessageEmail.text("잘못된 이메일 형식입니다.");
+		    }
+		}
+	});
 });
 
 
@@ -292,7 +312,7 @@ $name.on("blur", function(e){
     $phone.on("blur", function(e){
         var phoneValue = $phone.val();
         var rgbPhone = /^(\d{0,3})(\d{0,4})(\d{0,4})$/;
-
+        
         if(phoneValue.length == 0 ){
             $errorMessagePhone.css("display", "block");
             $errorMessagePhone.css("color", "red");
