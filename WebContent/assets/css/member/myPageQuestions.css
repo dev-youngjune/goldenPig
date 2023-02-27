@@ -864,3 +864,15 @@ textarea {
 .margin-left-32px {
 	margin-left: 32px;
 }
+
+#hihorse {
+    word-break: break-all;
+    white-space: pre-line;
+    vertical-align: middle;
+    --text-opacity: 1;
+    color: rgba(169,175,179,var(--text-opacity));
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: .875rem;
+	font-weight: 500;
+}
