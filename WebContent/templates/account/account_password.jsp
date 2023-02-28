@@ -8,26 +8,50 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_password.css">
 <style>
 @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Pretendard-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+		format('woff');
+	font-weight: 400;
+	font-style: normal;
 }
-input, button, span{
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+input, button, span {
 	font-family: 'Pretendard-Regular';
 }
+
 div.eye {
-    cursor: pointer;
-    width: 50px;
-    height: 25px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+	cursor: pointer;
+	width: 50px;
+	height: 25px;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
+
 div.show {
-    background-image: url("${pageContext.request.contextPath}/static/img/account/show.PNG");
+	background-image:
+		url("${pageContext.request.contextPath}/static/img/account/show.PNG");
 }
+
 div.hide {
-    background-image: url("${pageContext.request.contextPath}/static/img/account/hide.PNG");
+	background-image:
+		url("${pageContext.request.contextPath}/static/img/account/hide.PNG");
+}
+
+.logo-img {
+	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg) brightness(104%) contrast(110%);
+	width: 55px;
+	padding-top: 4px;
+}
+
+.a_headerLogo {
+	width: 100px;
+    margin-left: 5px;
 }
 </style>
 </head>
@@ -37,7 +61,8 @@ div.hide {
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="${pageContext.request.contextPath}/static/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
+						<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+						<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 					</header>
 					<div id="withdrawal_select">
 						<h1 style="position: relative">

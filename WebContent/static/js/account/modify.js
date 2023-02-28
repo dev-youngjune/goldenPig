@@ -2,7 +2,9 @@
 	// 모달창
 	const $modalOpenButton = $("#modal-open");
 	const $modalExitButton = $(".modal-exit-box");
+	const $passwordModalButton = $("#password-button");
 	const $modal = $("#modal");	
+	const $modal2 = $("#modal2");
 	
 	$modalOpenButton.click(function(){
 		$modal.fadeIn(200);
@@ -11,6 +13,15 @@
 	$modalExitButton.click(function(){
 		$modal.fadeOut(200);
 	});
+	
+	$passwordModalButton.click(function(){
+		$modal2.fadeIn(200);
+	});
+	
+	$modalExitButton.click(function(){
+		$modal2.fadeOut(200);
+	});
+	
 	
 
 	// 인증번호
@@ -133,4 +144,15 @@
 		alert("로그아웃이 되었습니다.");
 		location.href= contextPath + "/logoutOk.member";
 	}
+	
+	$passwordPhoneCheck = $(".modal-phoneCheck-button");
+	
+	$passwordPhoneCheck.click(function(){
+		if(check.filter(check => check == true).length != 2){
+			alert("인증번호를 먼저 인증해주세요.");
+			return false;
+		}
+		
+		location.href = contextPath + '/';
+	});
 	
