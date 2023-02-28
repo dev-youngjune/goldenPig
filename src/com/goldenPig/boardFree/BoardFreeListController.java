@@ -13,7 +13,7 @@ import org.json.JSONObject;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
-import com.goldenPig.board.dao.BoardFreeDAO;
+import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
 public class BoardFreeListController implements Action {
 	
@@ -29,10 +29,11 @@ public class BoardFreeListController implements Action {
 //		String sort = req.getParameter("sort");
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
-		
+		System.out.println("getTotal L32");
 		Long total = boardFreeDAO.getTotal();
+		System.out.println("getTotal L34");
 //		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 10;
+		int rowCount = 5;
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
 		int startRow = (page - 1) * rowCount;

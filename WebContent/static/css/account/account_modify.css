@@ -23,107 +23,7 @@ body{
     margin-right: auto;
     margin-left: auto;
 }
-#modal{
-	background-color: white;
-	font-family: 'Pretendard-Regular';
-	border: solid;
-	width: 350px;
-    height: 400px;
-    position: fixed;
-	display: flex;
-	margin-top: 87px;
-    border: 1px solid #e0e6f0;
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border-radius: 10px;        
-	flex-direction: column;
-    position: fixed;
-    letter-spacing: 0px;
-    display: none;
-    left: 37%;
-}
-#modal_phone{
-	letter-spacing: -1px;
-	font-family: 'Pretendard-Regular';
-	background-color: white;
-	text-align: center;
-	left: 30%;
-    top: 33%;
-    border: solid;
-    width: 600px;
-    height: 210px;
-    position: fixed;
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px;
-    --tw-bg-opacity: 1;
-    background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
-    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    width: 600px;
-    display: none;
-    padding: 60px 0 40px;
-    border: 1px solid #e0e6f0;
-}
-#modal_btn{
-	--tw-text-opacity: 1;
-    color: rgba(255, 255, 255, var(--tw-text-opacity));
-    background-color: #0206af;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    width: 200px;
-    height: 56px;
-    padding: 0;
-    line-height: inherit;
-    cursor: pointer;
-    background-image: none;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
-}
-#modal_btn_cancel{
-	--tw-text-opacity: 1;
-    color: rgba(255, 255, 255, var(--tw-text-opacity));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    width: 200px;
-    height: 56px;
-    padding: 0;
-    line-height: inherit;
-    cursor: pointer;
-    background-image: none;
-    color: black;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-}
-#modal_phone_btn{
-	--tw-text-opacity: 1;
-    color: rgba(255, 255, 255, var(--tw-text-opacity));
-    background-color: #0206af;
-    display: flex;
-    justify-content: center;
-    border-radius: 8px;
-    width: 200px;
-    height: 56px;
-    padding: 0;
-    line-height: inherit;
-    cursor: pointer;
-    background-image: none;
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
-	align-items: center;
-}
+
 #wrap{
 	max-width: 600px!important;
 	width: 100%;
@@ -241,6 +141,164 @@ a{
     display: inline-flex;
     text-decoration: inherit;
     position: relative;
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+input, button, span{
+	font-family: 'Pretendard-Regular';
+}
+
+.modal-input {
+	height: 30px; 
+	outline: none; 
+	border-top: none;
+	border-right: none;
+	border-left: none; 
+	border-color: rgb(230,230,230);
+}
+
+#modal {
+    position: fixed;
+	width: 100%;
+	display: none;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+}
+
+.modal-box {
+	width: 300px;
+	background: #fff;
+   	margin: 184px auto;
+    border-radius: 10px;
+}
+
+.modal-box-layout {
+	padding: 20px;
+}
+
+.modal-title {
+	font-size: 23px; 
+	display: inline-block;
+}
+
+.modal-exit-box {
+	cursor : pointer;
+    padding-top: 23px;
+}
+
+.modal-input-box {
+	position: relative;
+	width: 100%;
+}
+
+.modal-input-box span {
+    letter-spacing: 0px;
+    padding-left: 2px;
+	font-size: 14px;
+}
+
+.modal-input-box-layout {
+	margin-bottom: 20px;
+}
+
+.modal-input {
+	width: 100%;
+	font-size: 16px;
+}
+
+.certification-button {
+	position: absolute;
+    right: 0;
+    top: 7px;
+    border: none;
+    background: none;
+    color: #b1b1b1;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-title-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.modal-confirm-button-box {
+	width: 100%;
+}
+
+.modal-confirm-button-box-layout {
+	text-align: center;
+}
+
+.modal-confirm-button {
+	width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    background-color:#2010A7 ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.certificationNumber-checkbox {
+	display: none;
+}
+
+.certification-number {
+	display: none;
+}
+
+#modal-phone {
+    position: fixed;
+	width: 100%;
+	display: none;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.2);
+	z-index: 1000;	
+}
+
+.modal-phone-box {
+	position: fixed;
+    width: 600px;
+    border: none;
+    background-color: #fff;
+    top: 35%;
+    left: 30.5%;
+
+}
+
+.modal-phone-box-layout {
+	text-align: center;
+	padding: 20px;
+	letter-spacing: 1px;
+}
+
+.modal-phone-button-box {
+	margin-top: 20px;
+}
+
+.modal-phone-button {
+	width: 100px;
+	height: 35px;
+    border: none;
+    background-color:#2010A7 ;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 
