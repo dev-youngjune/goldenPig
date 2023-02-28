@@ -24,7 +24,6 @@ public class MemberLoginOkController implements Action {
 		Long memberId = memberDAO.login(memberEmail, memberPassword);
 		String path = null;
 		Result result = new Result();
-		System.out.println(memberId);
 		
 		if(memberId != null) {
 			session.setAttribute("memberId", memberId);

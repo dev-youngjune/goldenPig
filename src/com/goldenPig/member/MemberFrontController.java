@@ -60,6 +60,9 @@ public class MemberFrontController extends HttpServlet {
 		}else if(target.equals("/accountSettingOk")) {
 			result = new MemberAccountSettingOkController().execute(req, resp);
 			
+		}else if(target.equals("/phoneNumberUpdateOk")) {
+			new MemberPhoneNumberUpdateOkController().execute(req, resp);
+			
 		}else {
 			System.out.println(target);
 			
