@@ -9,10 +9,10 @@ import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
-public class BoardDAO {
+public class BoardFreeDAO {
 	public SqlSession sqlSession;
 	
-	public BoardDAO() {
+	public BoardFreeDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	

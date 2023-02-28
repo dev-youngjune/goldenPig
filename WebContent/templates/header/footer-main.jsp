@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/bulma.css"> -->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header/footer.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/footer.css">
 <!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/font/fontFamily.css"> -->
 
 <title>Insert title here</title>
@@ -17,7 +17,7 @@
 				<div class="footer-container-left">
 					<div class="logo-wrapper">
 						<a href="#">
-							<img class="logo-img" src="${pageContext.request.contextPath}/assets/img/account/logo.png" alt="">
+							<img class="logo-img" src="${pageContext.request.contextPath}/static/img/account/logo.png" alt="">
 						</a>
 					</div>
 					<article class="footer-contents">
