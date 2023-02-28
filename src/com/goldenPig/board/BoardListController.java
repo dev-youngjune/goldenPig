@@ -26,13 +26,13 @@ public class BoardListController implements Action {
 		Map<String, Object> pageMap = new HashMap<String, Object>();
 		Map<String, Object> searchMap = new HashMap<String, Object>();
 
-		String type = req.getParameter("type");
+//		String type = req.getParameter("type");
 		String keyword = req.getParameter("keyword");
 		String temp = req.getParameter("page"); 
 		String sort = req.getParameter("sort");
 		String[] types = null;
 		
-		types = type == null || type.equals("null") ? null : type.split("&");
+//		types = type == null || type.equals("null") ? null : type.split("&");
 		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
 		
 		searchMap.put("keyword", keyword);
@@ -73,7 +73,7 @@ public class BoardListController implements Action {
 		req.setAttribute("next", next);
 		req.setAttribute("sort", sort);
 		req.setAttribute("keyword", keyword);
-		req.setAttribute("type", type);
+//		req.setAttribute("type", type);
 		
 		result.setPath("/templates/board/list.jsp");
 		
