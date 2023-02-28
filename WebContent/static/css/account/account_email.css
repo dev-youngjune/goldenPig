@@ -190,7 +190,7 @@ input:focus {outline: none;}
 	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg)
 		brightness(104%) contrast(110%);
 	width: 55px;
-	padding-bottom: 4px;
+	padding-top: 4px;
 }
 
 .a_headerLogo {
