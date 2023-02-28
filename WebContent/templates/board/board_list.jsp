@@ -18,7 +18,7 @@
 					
 						<div class="tabs" style="display: flex;">
 							<label  class="blue-line">
-								<a class="active" href="${pageContext.request.contextPath}/boardList.board">
+								<a class="active" href="${pageContext.request.contextPath}/board_list.board">
 									<span class="bullet color-989898">저축 게시판</span>
 								</a>
 							</label>
@@ -32,7 +32,7 @@
 						
 					</div>
 					
-					<!-- ----------------------- 첫번째 게시물 -----------------------------  -->
+					<!-- ----------------------- 첫번째 게시물 ------------------------------->
 					<ul></ul>
 <%-- 					<div class="content-body">
 							<div class="question-card">
@@ -242,7 +242,7 @@
 					<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
 					<aside class="right-side-bar">
 						<label>
-							<button class="write-board" style="display: none;">나도 질문하기</button>
+							<a type="button" href="${pageContext.request.contextPath}/templates/board/boardWrite.board" class="write-board">나도 질문하기</a>
 							<span>나도 질문하기</span>
 						</label>
 					</aside>
