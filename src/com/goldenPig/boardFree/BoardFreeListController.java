@@ -13,13 +13,13 @@ import org.json.JSONObject;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
-import com.goldenPig.board.dao.BoardDAO;
+import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
 public class BoardFreeListController implements Action {
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		BoardDAO boardFreeDAO = new BoardDAO();
+		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		Result result = new Result();
 		JSONArray jsons = new JSONArray();
 		

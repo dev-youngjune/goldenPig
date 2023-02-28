@@ -69,7 +69,7 @@
 				</section>
 
 				<section class="expert-section-wrapper">
-					<a href="/extras/about-membership"
+					<a href="#"
 						class="is-flex is-justify-content-center"
 						style="background: #F3F5F9; border-radius: 8px;">
 						<img
@@ -77,7 +77,7 @@
 						class="membership-desktop-img is-hidden-touch">
 					</a>
 					<!--  -->
-					<a href="/extras/about-membership"
+					<a href="#"
 						class="is-flex is-justify-content-center"
 						style="background: #F3F5F9; border-radius: 8px;">
 						
@@ -88,7 +88,7 @@
 				</section>
 
 				<section class="home-section">
-					<h4 class="home-section-title title is-5">전문 Q&A</h4>
+					<h4 class="home-section-title title is-5">저축 Q&A</h4>
 					<h5 class="home-section-subtitle subtitle is-6">전문가가 직접 답변을
 						남겨줘요</h5>
 					<div class="home-section-categoryCards tile is-ancestor">
@@ -96,8 +96,8 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="categoryCard-wrapper">
-										<a href="#" class="categoryCard is-align-content-center">
-										<img alt="" src="${pageContext.request.contextPath}/static/img/main/bank-64.png">
+										<a href="${pageContext.request.contextPath}/boardList.board?keyword=통장" class="categoryCard is-align-content-center">
+											<img alt="" src="${pageContext.request.contextPath}/static/img/main/bank-64.png">
 										</a> <span class="is-align-content-center">통장</span>
 									</div>
 								</div>
@@ -105,7 +105,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="categoryCard-wrapper">
-										<a href="#" class="categoryCard">
+										<a href="${pageContext.request.contextPath}/boardList.board?keyword=적금" class="categoryCard">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/bank-saving-64.png">
 										</a> <span>적금</span>
 									</div>
@@ -114,7 +114,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a href="#" class="categoryCard">
+										<a href="${pageContext.request.contextPath}/boardList.board?keyword=금리" class="categoryCard">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/interest_rate-64.png">
 										</a> <span>금리</span>
 									</div>
@@ -123,7 +123,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a href="#" class="categoryCard">
+										<a href="${pageContext.request.contextPath}/boardList.board?keyword=대출" class="categoryCard">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/loan-64.png">
 										</a> <span>대출</span>
 									</div>
@@ -132,7 +132,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a href="#" class="categoryCard">
+										<a href="${pageContext.request.contextPath}/boardList.board?keyword=환율" class="categoryCard">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/exchange_rate_won_to_dollar-64.png">
 										</a> <span>환율</span>
 									</div>
@@ -144,7 +144,7 @@
 					</div>
 				</section>
 				<section class="home-section">
-					<h4 class="home-section-title title is-5">오픈 Q&A</h4>
+					<h4 class="home-section-title title is-5">자유 Q&A</h4>
 					<h5 class="home-section-subtitle subtitle is-6">우리들의 지식을 자유롭게
 						나눠요</h5>
 					<div class="home-section-categoryCards tile is-ancestor">
@@ -152,7 +152,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard">
+										<a class="categoryCard" href="${pageContext.request.contextPath}/boardList.boardFree?tag=생활꿀팁">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/vision_eye_idea-64.png">
 										</a> <span>생활꿀팁</span>
 									</div>

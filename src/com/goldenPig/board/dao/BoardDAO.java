@@ -18,22 +18,17 @@ public class BoardDAO {
 	
 //	게시글 목록
 	public List<BoardDTO> selectAll(Map<String, Object> pageMap){
-		return sqlSession.selectList("boardFree.selectAll", pageMap);
-	}
-	
-//	게시글 목록+
-	public List<BoardDTO> selectAllList(Map<String, Object> pageMap){
-		return sqlSession.selectList("boardFree.selectAllList", pageMap);
+		return sqlSession.selectList("board.selectAll", pageMap);
 	}
 	
 //	게시글 총 개수
 	public Long getTotal() {
-		return sqlSession.selectOne("boardFree.getTotal");
+		return sqlSession.selectOne("board.getTotal");
 	}
 	
 //	게시글 댓글 수
 	public Long getReplyCount(Long boardId) {
-		return sqlSession.selectOne("boardFree.getReplyCount", boardId);
+		return sqlSession.selectOne("board.getReplyCount", boardId);
 	}
 	
 }
