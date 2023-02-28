@@ -8,7 +8,7 @@
 		from view_boardfreelist 
 		limit #{startRow}, #{rowCount}
 	</select>
-	<select id="selectAllList">
+	<select id="selectAllList" resultType="boardFreeDTO">
 		select b.board_id, b.board_title, b.board_content, b.board_register_date,
 		b.board_update_date, b.member_nickname, b.board_like_count, b.board_read_count, reply_count
 		from view_boardfreelist

@@ -34,8 +34,8 @@
                   <hr>
                </header>
                <div class="content-box-layout">
-                  <div class="content-box">
-                     <p>안녕하세요. 아하팀입니다</p>
+                  <div class="content-box"><pre><c:out value="${notice.noticeContent}"/></pre></div>
+                     <!-- <p>안녕하세요. 아하팀입니다</p>
                      	<br>항상 아하 서비스를 아껴주시는 회원 여러분께 감사의 말씀드립니다.
                      	<p></p>
                      	<p>
@@ -84,8 +84,7 @@
 						보상 시스템 운영을 방해하는 행위로써, 위 행위가 적발되는 즉시 아래와
 						 같은 조치가 이루어질 예정입니다.</p>
 					<p></p>
-					<p></p>
-                  </div>
+					<p></p> -->
                </div>
             </div>
          </div>

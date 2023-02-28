@@ -26,7 +26,7 @@
 					<!-- 공지사항 쪽  -->
 					<div class="card card-header tw-bg-white">
 						<h4 class="title">공지사항</h4>
-						<span class="notice-total"><!-- 총 개수 --> 123개</span>
+						<span class="notice-total"><c:out value="${total}"/>개</span>
 					</div>
 					
 					
@@ -38,7 +38,7 @@
 							<div class="card-body">
 								<!--공지사항 들어가는 링크  -->
 								<a href="javascript:location.href='/noticeDetailOk.notice?noticeId=${notice.noticeId}'"> <!--공지사항 제목  -->
-									<h3>
+									<h3 class="line-height">
 										<!--필독 라벨  -->
 										<span class="label pull-left"> <i
 											class="icon icon-check tw-text-white"> <!-- before?????????? -->
@@ -104,4 +104,6 @@
 	<!-- 푸터 -->
 	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/notice/notice.js"></script>
 </html>

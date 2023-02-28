@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>아하(Aha) 인증센터</title>
+<title>골든피그-로그인</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/login.css">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 </head>
 <body>
 	<div id="wrap">
@@ -20,7 +21,8 @@
 										<img src="">
 									</button>
 									<a class="theScreen_headerLoga">
-										<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/account/logo.png">
+										<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+										<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 									</a>
 								</header>
 								<div class="theScreen_body px-5">
@@ -30,29 +32,32 @@
 									<div class="theLoginEamil_body">
 										<div class="theLoginEmail_bodyInput">
 											<div class="TextField">
+												<div class="TextField_body">
 												<label class="TextField_label">이메일</label>
-												<div class="TextField_body">
-													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput" autocomplete value>
+													<input name="memberEmail" type="text" placeholder="이메일을 입력해주세요" class="TextField_bodyInput">
 												</div>
-												<p class="error-message-email" style="margin: 0;"></p>
+												<p class="error-message-email"></p>
 											</div>
+											
 											<div class="TextField">	
-												<label class="TextField_label">비밀번호</label>
 												<div class="TextField_body">
-												<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first" autocomplete value>
-														<img class="eye1" src="${pageContext.request.contextPath}/static/img/member/passwordEyeSlash.png">
+													<label class="TextField_label">비밀번호</label>
+													<input name="memberPassword" type="password" placeholder="비밀번호를 입력해주세요" class="TextField_bodyInput first">
+													<img class="eye close-eye" src="${pageContext.request.contextPath}/static/img/member/passwordEyeSlash.png">
 												</div>
-												<p class="error-message-password" style="margin: 0;"></p>
+												<p class="error-message-password"></p>	
 											</div>
 										</div>
 									</div>
+									<footer class="theScreen_footer">
+										<button type="submit" class="Button -large w-full -primary -filled">로그인</button>
+										<div class="find-button-box">
+											<button class="find-button">이메일 계정 찾기</button>
+											<div class="">|</div>
+											<button class="find-button">비밀번호 재설정</button>
+										</div>
+									</footer>
 								</div>
-								<footer class="theScreen_footer">
-									<button type="submit" class="Button -large w-full -primary -filled">로그인</button>
-									<a href="">
-										<button class="Button mt-2 -large w-full -transparent">비밀번호를 재설정 하시겠어요?</button>
-									</a>
-								</footer>
 							</div>
 						</form>
 					</div>
@@ -62,5 +67,6 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/member/login.js"></script>
 </html>
