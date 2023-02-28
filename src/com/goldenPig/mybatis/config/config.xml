@@ -11,6 +11,7 @@
 		<typeAlias type="com.goldenPig.notice.domain.NoticeVO" alias="noticeVO"/>
 		<typeAlias type="com.goldenPig.banner.domain.BannerVO" alias="bannerVO"/>
 		<typeAlias type="com.goldenPig.board.domain.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.goldenPig.boardFree.domain.BoardDTO" alias="boardFreeDTO"/>
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 	</typeAliases>
 		
@@ -30,6 +31,8 @@
       <mapper resource="com/goldenPig/mybatis/mapper/bannerMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/boardImgMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/boardMapper.xml"/>
+      <mapper resource="com/goldenPig/mybatis/mapper/boardFreeImgMapper.xml"/>
+      <mapper resource="com/goldenPig/mybatis/mapper/boardFreeMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/likeMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/memberImgMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/memberMapper.xml"/>

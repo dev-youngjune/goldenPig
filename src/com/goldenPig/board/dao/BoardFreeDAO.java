@@ -1,4 +1,4 @@
-package com.goldenPig.boardFree.dao;
+package com.goldenPig.board.dao;
 
 import java.util.List;
 import java.util.Map;
@@ -21,9 +21,19 @@ public class BoardFreeDAO {
 		return sqlSession.selectList("boardFree.selectAll", pageMap);
 	}
 	
+//	게시글 목록+
+	public List<BoardFreeDTO> selectAllList(Map<String, Object> pageMap){
+		return sqlSession.selectList("boardFree.selectAllList", pageMap);
+	}
+	
 //	게시글 총 개수
 	public Long getTotal() {
 		return sqlSession.selectOne("boardFree.getTotal");
+	}
+	
+//	게시글 댓글 수
+	public Long getReplyCount(Long boardId) {
+		return sqlSession.selectOne("boardFree.getReplyCount", boardId);
 	}
 	
 }

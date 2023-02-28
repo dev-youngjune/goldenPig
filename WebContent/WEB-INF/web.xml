@@ -47,6 +47,30 @@
 	 <url-pattern>*.boardImg</url-pattern>
 	</servlet-mapping> 	 
 	
+	<!-- boardFree -->
+	
+	 <servlet>
+	  	<servlet-name>boardFree</servlet-name>
+	  	<servlet-class>com.goldenPig.boardFree.BoardFreeFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>boardFree</servlet-name>
+	 <url-pattern>*.boardFree</url-pattern>
+	</servlet-mapping> 	 
+	
+	<!-- boardImg -->
+	
+	 <servlet>
+	  	<servlet-name>boardFreeImg</servlet-name>
+	  	<servlet-class>com.goldenPig.boardFreeImg.BoardFreeImgFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>boardFreeImg</servlet-name>
+	 <url-pattern>*.boardFreeImg</url-pattern>
+	</servlet-mapping> 	 
+	
 	<!-- like -->
 	
 	 <servlet>
