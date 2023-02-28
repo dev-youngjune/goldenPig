@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 수정</title>
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_modify_footer.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_modify.css">
 </head>
@@ -56,6 +57,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- 휴대폰 번호 변경을 완료한후 나오는 모달창 -->
 		<div id="modal-phone">
 			<div class="modal-phone-box">
