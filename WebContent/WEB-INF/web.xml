@@ -51,7 +51,7 @@
 	
 	 <servlet>
 	  	<servlet-name>boardFree</servlet-name>
-	  	<servlet-class>com.goldenPig.board.BoardFreeFrontController</servlet-class>
+	  	<servlet-class>com.goldenPig.boardFree.BoardFreeFrontController</servlet-class>
   	</servlet>
   
 	<servlet-mapping>
@@ -63,7 +63,7 @@
 	
 	 <servlet>
 	  	<servlet-name>boardFreeImg</servlet-name>
-	  	<servlet-class>com.goldenPig.boardImg.BoardFreeImgFrontController</servlet-class>
+	  	<servlet-class>com.goldenPig.boardFreeImg.BoardFreeImgFrontController</servlet-class>
   	</servlet>
   
 	<servlet-mapping>

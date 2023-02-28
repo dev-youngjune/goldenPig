@@ -22,7 +22,7 @@
 								</a>
 							</label>
 							<label class="blue-line">
-								<a class="active">
+								<a class="active" href="${pageContext.request.contextPath}/boardList.boardFree">
 									<span class="bullet color-989898">자유 게시판</span>
 								</a>
 							</label>
