@@ -43,7 +43,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a href="${pageContext.request.contextPath}/boardList.boardFree">
+						<a href="${pageContext.request.contextPath}/boardList.board">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/community-64.png">
 								<span>저축 게시판</span>
@@ -51,7 +51,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a href="${pageContext.request.contextPath}/boardList.board">
+						<a href="${pageContext.request.contextPath}/boardList.boardFree">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/learn_owl-64.png">
 								<span>꿀팁 게시판</span>

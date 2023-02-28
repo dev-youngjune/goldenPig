@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.defaults.DefaultSqlSession;
 
 import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
