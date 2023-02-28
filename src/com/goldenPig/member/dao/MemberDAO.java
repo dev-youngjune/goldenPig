@@ -51,4 +51,12 @@ public class MemberDAO {
 		emailMap.put("memberEmail", memberEmail);
 		sqlSession.selectOne("member.updateEmail", emailMap);
 	}
+	
+// 핸드폰번호 수정
+	public void updatePhoneNumber(Long memberId, String memberPhoneNumber) {
+		Map<String, Object> phoneMap = new HashMap<String, Object>();
+		phoneMap.put("memberId", memberId);
+		phoneMap.put("memberPhoneNumber", memberPhoneNumber);
+		sqlSession.selectOne("member.updatePhoneNumber", phoneMap);
+	}
 }

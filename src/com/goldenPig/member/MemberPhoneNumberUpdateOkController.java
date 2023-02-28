@@ -1,30 +1,29 @@
 package com.goldenPig.member;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.member.dao.MemberDAO;
-import com.goldenPig.member.domain.MemberVO;
 
-public class MemberModifyEmailOkController implements Action {
+public class MemberPhoneNumberUpdateOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
-		Result result = new Result();
+		
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		memberDAO.updatePhoneNumber(memberId, req.getParameter("memberPhoneNumber"));
 		
-		memberDAO.updateEmail(memberId, req.getParameter("memberEmail"));
-		
-		result.setPath(req.getContextPath() + "/modifyOk.member");
-		result.setRedirect(true);
-		
-		return result;
+		return null;
 	}
 
 }
