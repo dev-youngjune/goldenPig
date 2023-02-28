@@ -5,26 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>이메일 변경하기</title>
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_email.css">
-<style>
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-input, button, span{
-	font-family: 'Pretendard-Regular';
-}
-</style>
 </head>
 <body>
 	<div id="wrap">
 		<main>
-			<div>
+			<div class="wrap-sub">
 				<div id="secession_board">
 					<header>
-						<img alt="" src="${pageContext.request.contextPath}/static/img/account/logo.png" style="width: 96px; height: 54px; cursor: pointer">
+						<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+						<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 					</header>
 					<form action="${pageContext.request.contextPath}/modifyEmailOk.member">
 						<div id="withdrawal_select">

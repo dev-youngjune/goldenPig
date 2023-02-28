@@ -214,7 +214,7 @@ body {
     position: absolute;
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    top: -68px;
+    top: -95px;
 }
 
 .theScreen_headerButton.-left {
@@ -242,8 +242,8 @@ body {
 }
 
 .a_headerLogo {
-	width: 148px;
-    height: 51px;
+	width: 100px;
+    margin-left: 5px;
 }
 
 a {
@@ -573,7 +573,8 @@ p {
 .logo-img{
 	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg)
 		brightness(104%) contrast(110%);
-	width: 82px;
+	width: 55px;
+	padding-bottom: 4px;
 }
 
 button {
