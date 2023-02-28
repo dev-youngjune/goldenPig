@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Result;
+import com.mysql.cj.x.protobuf.MysqlxPrepare.Execute;
 
 public class MyPageFrontController extends HttpServlet {
 
@@ -36,6 +37,9 @@ public class MyPageFrontController extends HttpServlet {
 		}else if(target.equals("/scrap")) {
 			new MyPageScrapController();
 			
+		}else if(target.equals("/scrap")) {
+			new MyPageDeleteOKController().execute(req, resp);
+			
 		}else {
 			System.out.println(target);
 		}
@@ -52,6 +56,6 @@ public class MyPageFrontController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		doGet(req, resp);
 	}
 }
