@@ -3,7 +3,7 @@
 
 				<!-- 클래스 이름  -->
 <mapper namespace="mypage">
-	
+
 	<!-- id => 메소드 이름이 -->
 	<!-- 회원 정보 조회 -->
 	<select id="select" parameterType="long" resultType="memberVO">

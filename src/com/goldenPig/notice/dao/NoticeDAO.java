@@ -30,5 +30,4 @@ public class NoticeDAO {
 	public NoticeVO select(Long noticeId) {
 		return sqlSession.selectOne("notice.select", noticeId);
 	}
-	
 }
