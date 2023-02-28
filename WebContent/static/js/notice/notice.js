@@ -1,0 +1,5 @@
+/**
+ * 
+ */
+
+const $paging = $("a.paging");

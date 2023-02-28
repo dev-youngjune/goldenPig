@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.notice.dao.NoticeDAO;
+import com.goldenPig.notice.domain.NoticeVO;
 
 public class NoticeListOkController implements Action {
 
@@ -18,6 +19,7 @@ public class NoticeListOkController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		NoticeDAO noticeDAO = new NoticeDAO(); 
+		
 		Map<String, Object> pageMap = new HashMap<String, Object>();
 		
 		String temp = req.getParameter("page");
@@ -34,7 +36,7 @@ public class NoticeListOkController implements Action {
 		
 		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
 		int startPage = endPage - (pageCount - 1);
-		int realEndPage = (int)Math.ceil(total / (double)pageCount);
+		int realEndPage = (int)Math.ceil(total / (double)rowCount);
 		
 		boolean prev = startPage > 1;
 		boolean next = false;
