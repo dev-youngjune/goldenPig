@@ -19,8 +19,17 @@ public class BoardFreeListController implements Action {
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		Result result = new Result();
+
+		
+		result.setPath("/templates/board/board_list_free.jsp");
+		result.setRedirect(FORWORD);
+		
+		return result;
+	}
+	
+	public void paging(HttpServletRequest req, HttpServletResponse resp) {
+		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		JSONArray jsons = new JSONArray();
 		
 		Map<String, Object> pageMap = new HashMap<String, Object>();
@@ -63,11 +72,6 @@ public class BoardFreeListController implements Action {
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
 //		req.setAttribute("sort", sort);
-		
-		result.setPath("/templates/board/board_list_free.jsp");
-		result.setRedirect(FORWORD);
-		
-		return result;
 	}
 
 }
