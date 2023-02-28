@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>아하(Aha) 인증센터</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/static/css/member/join.css">
+<title>골든피그-회원가입</title>
+<link rel="stylesheet"href="${pageContext.request.contextPath}/static/css/member/join.css">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 </head>
 <body style="margin: 0px !important">
 	<div id="wrap">
@@ -14,9 +14,6 @@
 			<div class="layoutDefault">
 				<main class="layoutDefault_view">
 					<div class="join">
-						<form class="joinl_form w-full"
-							action="${pageContext.request.contextPath}/JoinOk.member"
-							name="join">
 							<div class="theScreen">
 								<!-- header -->
 								<header class="theScreen_header">
@@ -25,11 +22,12 @@
 									</button>
 									<a class="theScreen_headerLoga"> 
 										<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
-										<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_text.png">
+										<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 									</a>
 								</header>
 
 								<!-- theScreen -->
+								<form class="joinl_form w-full" action="${pageContext.request.contextPath}/JoinOk.member" name="join">
 								<div class="theScreen_body px-5">
 									<h1 class="textTitle">
 										<span>회원가입</span>
@@ -149,17 +147,17 @@
 										</div>
 									</div>
 								</div>
+								</form>
 								<!-- footer -->
 								<footer class="theScreen_footer">
 									<!-- <button type="button" class="theScreen_Button_submit " onclik="return check()">회원가입</button> -->
-									<button class="theScreen_Button_submit " name="submit"
-										id="join-button">회원가입</button>
-									<button class="theScreen_button_a">
-										<a href=""> 아이디가 존재하나요? </a>
+									<button class="theScreen_Button_submit " name="submit"id="join-button">회원가입</button>
+									<button class="theScreen_button_a" onclick="location.href='${pageContext.request.contextPath}/login.member'">
+										아이디가 존재하나요?
 									</button>
 								</footer>
 							</div>
-						</form>
+						
 					</div>
 				</main>
 			</div>
