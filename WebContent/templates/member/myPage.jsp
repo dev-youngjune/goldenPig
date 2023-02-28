@@ -109,8 +109,13 @@
 															</div>	
 														</div>
 													</div>
-													<div class="save">
-														<button class="save_Button">저장</button>
+													<div>
+														<div class="save">
+															<button class="save_Button">수정</button>
+														</div>
+														<div class="save">
+															<button class="save_Button">저장</button>
+														</div>
 													</div>
 												</form>
 											</div>
@@ -226,27 +231,46 @@
 											<div class="profile_Card">
 												<h4 class="profile_Card_Title">목표 금액</h4>
 												<div class="profile_Card_Content">
-													<div class="profile_Card_Content_noItem">
+												
+													<!-- <div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
 															<img src="">
 															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 금액이 없어요</span>
 														</div>
-													</div>
+													</div> -->
+													
+													<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">목표 금액 1,000만원!!</div>
+															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
+														</li>
+													</ul>
+													
 												</div>
 											</div>
 											<div class="profile_Card">
 												<h4 class="profile_Card_Title">현재 금액</h4>
 												<div class="profile_Card_Content">
-													<div class="profile_Card_Content_noItem">
+												
+												<!-- 	<div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
 															<img src="">
 															<span class="profile_Card_Content_noItem_Inner_span">등록된 현재 금액이 없어요</span>
 														</div>
-													</div>
+													</div> -->
+														<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">현재 금액 150만원!!</div>
+															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
+														</li>
+													</ul>
+													
 												</div>
 											</div>
 											<div class="profile_Card">
-												<h4 class="profile_Card_Title">현황</h4>
+												<h4 class="profile_Card_Title">목표기간</h4>
 												<div class="profile_Card_Content">
 												
 													<!-- <div class="profile_Card_Content_noItem">
@@ -259,8 +283,8 @@
 													<ul class="stepperList">
 														<li>
 															<div class="ripple"></div>
-															<div class="text-font-base-medium">저금 목표 100만원!</div>
-															<div class="text-font-sub-medium">현재 금액 50만원!</div>
+															<div class="text-font-base-medium">2022.12.28 ~ 2023.06.01!!</div>
+															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
 														</li>
 													</ul>
 													

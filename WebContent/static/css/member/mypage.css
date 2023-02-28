@@ -200,12 +200,6 @@ svg:not(:root) {
     height: 32px;
 }
 
-
-.header_container_button svg{
-    margin-right: 0.25rem;
-    vertical-align: sub;
-}
-	
 .header_container_button svg{
 	margin-right: 0.25rem;
     vertical-align: sub;
@@ -217,11 +211,9 @@ svg:not(:root) {
     height: 1.25rem;
 }
 
-
 .-primary {
 	margin-left: 1rem;
 }
-
 
 .buttonShare {
     padding-left: 0.5rem;
@@ -483,7 +475,7 @@ ui {
 }
 
 .profile_user_status_item_span {
-	    --text-opacity: 1;
+    --text-opacity: 1;
     color: #989898;
     color: rgba(152,152,152,var(--text-opacity));
 	align-items: center;
@@ -592,10 +584,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
 .profile_Card_Content_noItem_Inner svg {
 	width: 32px;
     height: 32px;
-}
-
-.noItem__icon {
-	margin-right: 0.5rem;
 }
 
 .profile_Card_Content_noItem_Inner_span {
@@ -861,7 +849,7 @@ input, textarea {
 }
 
 .enroll_Input {
-	    width: 100%;
+    width: 100%;
     padding-bottom: 0.5rem;
     margin-bottom: 0.75rem;
     font-size: 1.125rem;
