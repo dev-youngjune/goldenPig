@@ -22,7 +22,7 @@ public class BoardDAO {
 	}
 	
 //	게시글 총 개수
-	public Long getTotal() {
+	public Long getTotal(Map<String, Object> searchMap) {
 		return sqlSession.selectOne("board.getTotal");
 	}
 	
