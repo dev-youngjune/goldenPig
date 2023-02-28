@@ -20,7 +20,6 @@ public class BoardFrontController extends HttpServlet {
 		Result result = null;
 
 		if (target.equals("/boardList")) {
-			System.out.println("들어옴");
 			result = new BoardListController().execute(req, resp);
 			
 		} else if (target.equals("/boardWrite")) {
