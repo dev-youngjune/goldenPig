@@ -52,7 +52,7 @@ public class BoardFreeListController implements Action {
 		pageMap.put("startRow", startRow);
 //		pageMap.put("sort", sort);
 		
-		boardFreeDAO.selectAll(pageMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		boardFreeDAO.selectAllList(pageMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
 		
 		req.setAttribute("boards", jsons.toString());
 		req.setAttribute("total", total);

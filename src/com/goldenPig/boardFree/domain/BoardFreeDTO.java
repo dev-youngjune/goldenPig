@@ -9,7 +9,10 @@ public class BoardFreeDTO {
 	private String boardRegisterDate;
 	private String boardUpdateDate;
 	private int boardStatus;
-	private Long likeCount;
+	private Long boardReadCount;
+	private Long boardLikeCount;
+	private Long replyCount;
+	private String memberNickname;
 	
 	public BoardFreeDTO() {;}
 
@@ -69,11 +72,36 @@ public class BoardFreeDTO {
 		this.boardStatus = boardStatus;
 	}
 
-	public Long getLikeCount() {
-		return likeCount;
+	public Long getBoardReadCount() {
+		return boardReadCount;
 	}
 
-	public void setLikeCount(Long likeCount) {
-		this.likeCount = likeCount;
+	public void setBoardReadCount(Long boardReadCount) {
+		this.boardReadCount = boardReadCount;
 	}
+
+	public Long getBoardLikeCount() {
+		return boardLikeCount;
+	}
+
+	public void setBoardLikeCount(Long boardLikeCount) {
+		this.boardLikeCount = boardLikeCount;
+	}
+
+	public Long getReplyCount() {
+		return replyCount;
+	}
+
+	public void setReplyCount(Long replyCount) {
+		this.replyCount = replyCount;
+	}
+
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+	
 }

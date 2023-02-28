@@ -4,11 +4,24 @@
 <mapper namespace="boardFree">
 	<select id="selectAll" parameterType="map" resultType="boardFreeDTO">
 		select board_id, board_title, board_content, board_register_date, 
-		board_update_date, board_read_count, member_name 
-		from view_board 
+		board_update_date, member_name, like_count, reply_count
+		from view_boardfreelist 
 		limit #{startRow}, #{rowCount}
 	</select>
+	<select id="selectAllList">
+		select b.board_id, b.board_title, b.board_content, b.board_register_date,
+		b.board_update_date, b.member_nickname, b.board_like_count, b.board_read_count, reply_count
+		from view_boardfreelist
+		limit #{startRow}, #{rowCount}
+	</select>
+	
 	<select id="getTotal" resultType="long">
 		select count(board_id) from tbl_board
+	</select>
+	
+	<select id="getReplyCount" parameterType="long" resultType="long">
+		select count(reply_id) 
+		from tbl_reply 
+		where board_id = #{boardId}
 	</select>
 </mapper>

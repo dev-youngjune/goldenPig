@@ -9,7 +9,8 @@ public class BoardFreeVO {
 	private String boardRegisterDate;
 	private String boardUpdateDate;
 	private int boardStatus;
-	private Long likeCount;
+	private Long boardReadCount;
+	private Long boardLikeCount;
 	
 	public BoardFreeVO() {;}
 
@@ -27,14 +28,17 @@ public class BoardFreeVO {
 	public void setBoardUpdateDate(String boardUpdateDate) {this.boardUpdateDate = boardUpdateDate;}
 	public int getBoardStatus() {return boardStatus;}
 	public void setBoardStatus(int boardStatus) {this.boardStatus = boardStatus;}
-	public Long getLikeCount() {return likeCount;}
-	public void setLikeCount(Long likeCount) {this.likeCount = likeCount;}
-
+	public Long getBoardReadCount() {return boardReadCount;}
+	public void setBoardReadCount(Long boardReadCount) {this.boardReadCount = boardReadCount;}
+	public Long getBoardLikeCount() {return boardLikeCount;}
+	public void setBoardLikeCount(Long boardLikeCount) {this.boardLikeCount = boardLikeCount;}
+	
 	@Override
 	public String toString() {
-		return "BoardVO [boardId=" + boardId + ", memberId=" + memberId + ", boardTitle=" + boardTitle
+		return "BoardFreeVO [boardId=" + boardId + ", memberId=" + memberId + ", boardTitle=" + boardTitle
 				+ ", boardContent=" + boardContent + ", boardRegisterDate=" + boardRegisterDate + ", boardUpdateDate="
-				+ boardUpdateDate + ", boardStatus=" + boardStatus + ", likeCount=" + likeCount + "]";
+				+ boardUpdateDate + ", boardStatus=" + boardStatus + ", boardReadCount=" + boardReadCount
+				+ ", boardLikeCount=" + boardLikeCount + "]";
 	}
 
 	@Override

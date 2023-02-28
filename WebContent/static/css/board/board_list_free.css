@@ -31,7 +31,7 @@ body {
 	display: flex;	
 }
 
-.content {
+#content {
 	position: relative;
 }
 
@@ -53,19 +53,10 @@ body {
 }
 
 .active {
-	font-weight : 700;
-	font-size: 1.125rem;
-	margin-right: 1rem;
-	padding-top: 0.5rem;
-	/* padding-bottom: 1.5rem; */
-	padding-left: 0;
-	padding-right: 0;
-	background: #fafafa;
-	/* border-bottom: 3px solid #2553e5; */
+	font-weight : 500;
 }
 
 .bullet {
-	margin-bottom: 17px;
     display: inline-block;
 }
 
@@ -75,7 +66,8 @@ body {
 
 .blue-line {
 	border-bottom: 3px solid #2553e5;
-	width: 96px;
+	width: auto;
+	margin-left: 12px;
 }
 
 .color-989898 {
