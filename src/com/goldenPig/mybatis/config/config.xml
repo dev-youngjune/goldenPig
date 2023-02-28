@@ -11,6 +11,7 @@
 		<typeAlias type="com.goldenPig.notice.domain.NoticeVO" alias="noticeVO"/>
 		<typeAlias type="com.goldenPig.banner.domain.BannerVO" alias="bannerVO"/>
 		<typeAlias type="com.goldenPig.board.domain.BoardVO" alias="boardVO"/>
+		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeVO" alias="boardFreeVO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardDTO" alias="boardFreeDTO"/>
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 	</typeAliases>

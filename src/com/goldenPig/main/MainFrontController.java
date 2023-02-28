@@ -11,7 +11,7 @@ import com.goldenPig.ExtractPath;
 import com.goldenPig.Result;
 
 @SuppressWarnings("serial")
-public class MainFrontController extends HttpServlet{
+public class MainFrontController extends HttpServlet {
 	
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String target = ExtractPath.extractWithDot(req);

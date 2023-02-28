@@ -16,12 +16,16 @@
 	</select>
 	
 	<select id="getTotal" resultType="long">
-		select count(board_id) from tbl_board
+		select count(board_id) board_count from tbl_boardfree
 	</select>
 	
 	<select id="getReplyCount" parameterType="long" resultType="long">
-		select count(reply_id) 
-		from tbl_reply 
+		select reply_count
+		from view_boardFreeList
 		where board_id = #{boardId}
+	
+<!-- 		select count(reply_id) 
+		from tbl_replyfree 
+		where board_id = #{boardId} -->
 	</select>
 </mapper>

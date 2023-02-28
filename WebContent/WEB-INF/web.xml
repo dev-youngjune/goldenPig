@@ -11,6 +11,18 @@
   </welcome-file-list>
   
   
+   <!-- main -->
+  
+  <servlet>
+  	<servlet-name>main</servlet-name>
+  	<servlet-class>com.goldenPig.main.MainFrontController</servlet-class>
+  </servlet>
+  
+	<servlet-mapping>
+	 <servlet-name>main</servlet-name>
+	 <url-pattern>*.main</url-pattern>
+	</servlet-mapping> 	 
+  
    <!-- banner -->
   
   <servlet>

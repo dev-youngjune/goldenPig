@@ -17,10 +17,10 @@ public class MainController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		BannerDAO bannerDao = new BannerDAO();
-		List<BannerVO> listBannerVO = bannerDao.selectAllByStatus(1L);
-		req.setAttribute("banners", bannerDao);
-		result.setPath("${pageContext.request.contextPath}/templates/main.jsp");
+//		BannerDAO bannerDao = new BannerDAO();
+//		List<BannerVO> listBannerVO = bannerDao.selectAllByStatus(1L);
+//		req.setAttribute("banners", listBannerVO);
+		result.setPath("/templates/main.jsp");
 		result.setRedirect(FORWORD);
 		return result;
 	}
