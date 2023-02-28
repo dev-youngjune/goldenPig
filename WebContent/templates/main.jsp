@@ -35,7 +35,7 @@
 			<article class="home-container">
 				<section class="home-buttons columns is-relative">
 					<div class="home-button-wrapper column is-one-quarter">
-						<a>
+						<a href="${pageContext.request.contextPath}/profile.mypage">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/banking-64.png">
 								<span>보유 저축</span>
@@ -43,7 +43,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a>
+						<a href="${pageContext.request.contextPath}/boardList.boardFree">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/community-64.png">
 								<span>저축 게시판</span>
@@ -51,7 +51,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a>
+						<a href="${pageContext.request.contextPath}/boardList.board">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/learn_owl-64.png">
 								<span>꿀팁 게시판</span>
@@ -59,7 +59,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a>
+						<a href="${pageContext.request.contextPath}/modifyOk.mypage">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/profile_man-64.png">
 								<span>계정 설정</span>

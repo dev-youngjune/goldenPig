@@ -9,7 +9,7 @@ function showList(){
 		text += `
 			<li>
 		        <div>
-		            <a href="javascript:location.href='${contextPath}/board/detailOk.board?boardId=${board.boardId}&page=${page}&sort=${sort}&type=${type}&keyword=${keyword}'">
+		            <a href="javascript:location.href='${contextPath}/board/detailOk.board?boardId=${board.boardId}&page=${page}&keyword=${keyword}'">
 		                <section class="content-container">
 		                    <div class="profile">
 		                        <div><img src="${contextPath}/static/images/profile.png" width="15px"></div>

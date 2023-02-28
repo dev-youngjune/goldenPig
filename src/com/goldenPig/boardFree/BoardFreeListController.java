@@ -13,13 +13,13 @@ import org.json.JSONObject;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
-import com.goldenPig.board.dao.BoardFreeDAO;
+import com.goldenPig.board.dao.BoardDAO;
 
 public class BoardFreeListController implements Action {
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
+		BoardDAO boardFreeDAO = new BoardDAO();
 		Result result = new Result();
 		JSONArray jsons = new JSONArray();
 		
@@ -32,7 +32,7 @@ public class BoardFreeListController implements Action {
 		
 		Long total = boardFreeDAO.getTotal();
 //		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 10;
+		int rowCount = 5;
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
 		int startRow = (page - 1) * rowCount;

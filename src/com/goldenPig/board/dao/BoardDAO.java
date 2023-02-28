@@ -5,24 +5,24 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.goldenPig.boardFree.domain.BoardFreeDTO;
+import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
-public class BoardFreeDAO {
+public class BoardDAO {
 	public SqlSession sqlSession;
 	
-	public BoardFreeDAO() {
+	public BoardDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
 //	게시글 목록
-	public List<BoardFreeDTO> selectAll(Map<String, Object> pageMap){
+	public List<BoardDTO> selectAll(Map<String, Object> pageMap){
 		return sqlSession.selectList("boardFree.selectAll", pageMap);
 	}
 	
 //	게시글 목록+
-	public List<BoardFreeDTO> selectAllList(Map<String, Object> pageMap){
+	public List<BoardDTO> selectAllList(Map<String, Object> pageMap){
 		return sqlSession.selectList("boardFree.selectAllList", pageMap);
 	}
 	
