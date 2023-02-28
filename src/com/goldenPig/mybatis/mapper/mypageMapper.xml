@@ -1,8 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+				<!-- 클래스 이름  -->
 <mapper namespace="mypage">
 	
+	<!-- id => 메소드 이름이 -->
+	<!-- 회원 정보 조회 -->
+	<select id="select" parameterType="long" resultType="memberVO">
+		select member_id, member_email, member_password, member_name, member_nickname, member_phonenumber, member_birth, member_status
+		from tbl_member where member_id = #{memberId}
+	</select>
 	
+	<!-- 회원 수정 -->
+	<update id="update" parameterType="memberVO">
+		UPDATE tbl_member
+		SET   member_nickname = #{memberNickname}, 
+		WHERE member_Id = #{memberId}
+	</update>	
+	
+	<!-- 회원 삭제  -->
+	<update id="delete" parameterType="long">
+		UPDATE tbl_member
+		SET member_status = #{memberStatus}
+		WHERE member_id= #{memberId}
+	</update>
+	
+	
+	<!-- 자유활동 질문 -->
+	<select id="questionSelect">
+		select count(board_id) from tbl_board where board_id = #{boardId}
+	</select>
+	
+		
 </mapper>
 
