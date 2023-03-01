@@ -58,4 +58,3 @@ $password.on("blur", function(e){
 	        }
 		});
 
-
