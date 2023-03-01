@@ -33,6 +33,10 @@
 		update tbl_member set member_phonenumber = #{memberPhoneNumber} where member_id = #{memberId}
 	</update>
 	
+	<update id="updatePassword" parameterType="map">
+		update tbl_member set member_password = #{memberPassword} where member_id = #{memberId}
+	</update>
+	
 </mapper>
 
 	

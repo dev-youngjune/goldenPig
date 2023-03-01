@@ -63,6 +63,17 @@ public class MemberFrontController extends HttpServlet {
 		}else if(target.equals("/phoneNumberUpdateOk")) {
 			new MemberPhoneNumberUpdateOkController().execute(req, resp);
 			
+		}else if(target.equals("/password")) {
+			result = new Result();
+			result.setPath("/templates/account/account_password.jsp");
+			
+		}else if(target.equals("/passwordOk")) {
+			result = new MemberPasswordOkController().execute(req, resp);
+			
+		}else if(target.equals("/findPassword")) {
+			result = new Result();
+			result.setPath("/templates/member/findPassword.jsp");
+		
 		}else {
 			System.out.println(target);
 			
