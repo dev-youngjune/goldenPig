@@ -13,32 +13,34 @@ import org.json.JSONObject;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
-import com.goldenPig.board.dao.BoardDAO;
+import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
 public class BoardListController implements Action {
-
+	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		BoardDAO boardDAO = new BoardDAO();
 		Result result = new Result();
+
+		
+		result.setPath("/templates/board/board_list.jsp");
+		result.setRedirect(FORWORD);
+		
+		return result;
+	}
+	
+	public void paging(HttpServletRequest req, HttpServletResponse resp) {
+		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		JSONArray jsons = new JSONArray();
 		
 		Map<String, Object> pageMap = new HashMap<String, Object>();
-		Map<String, Object> searchMap = new HashMap<String, Object>();
-
-//		String type = req.getParameter("type");
-		String keyword = req.getParameter("keyword");
+		
 		String temp = req.getParameter("page"); 
-		String sort = req.getParameter("sort");
-		String[] types = null;
+//		String sort = req.getParameter("sort");
 		
-//		types = type == null || type.equals("null") ? null : type.split("&");
-		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
-		
-		searchMap.put("keyword", keyword);
-		searchMap.put("types", types);
-		
-		Long total = boardDAO.getTotal(searchMap);
+		int page = temp == null ? 1 : Integer.parseInt(temp);
+		System.out.println("getTotal L32");
+		Long total = boardFreeDAO.getTotal();
+		System.out.println("getTotal L34");
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 5;
 //		한 페이지에서 나오는 페이지 버튼의 개수
@@ -47,22 +49,20 @@ public class BoardListController implements Action {
 		
 		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
 		int startPage = endPage - (pageCount - 1);
-		int realEndPage = (int)Math.ceil(total / (double)rowCount);
+		int realEndPage = (int)Math.ceil(total / (double)pageCount);
 		
 		boolean prev = startPage > 1;
 		boolean next = false;
 		endPage = endPage > realEndPage ? realEndPage : endPage;
 		next = endPage != realEndPage;
 		
-		sort = sort == null ? "recent" : sort;
+//		sort = sort == null ? "recent" : sort;
 		
 		pageMap.put("rowCount", rowCount);
 		pageMap.put("startRow", startRow);
-		pageMap.put("sort", sort);
-		pageMap.put("keyword", keyword);
-		pageMap.put("types", types);
+//		pageMap.put("sort", sort);
 		
-		boardDAO.selectAll(pageMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		boardFreeDAO.selectAllList(pageMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
 		
 		req.setAttribute("boards", jsons.toString());
 		req.setAttribute("total", total);
@@ -71,13 +71,7 @@ public class BoardListController implements Action {
 		req.setAttribute("page", page);
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
-		req.setAttribute("sort", sort);
-		req.setAttribute("keyword", keyword);
-//		req.setAttribute("type", type);
-		
-		result.setPath("/templates/board/list.jsp");
-		
-		return result;
+//		req.setAttribute("sort", sort);
 	}
 
 }

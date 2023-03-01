@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>저축게시판 목록</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/board_list_free.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/board_list.css">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />
@@ -19,12 +19,12 @@
 						<div class="tabs" style="display: flex;">
 							<label  class="blue-line">
 								<a class="active" href="${pageContext.request.contextPath}/board_list.board">
-									<span class="bullet color-989898">저축 게시판</span>
+									<span class="bullet">저축 게시판</span>
 								</a>
 							</label>
-							<label>
+							<label style="margin-left: 12px;">
 								<a class="" href="${pageContext.request.contextPath}/boardList.boardFree">
-									<span class="bullet">자유 게시판</span>
+									<span class="bullet color-989898">자유 게시판</span>
 								</a>
 							</label>
 							<!-- <hr class="tabs-line"> -->
@@ -243,7 +243,6 @@
 					<aside class="right-side-bar">
 						<label>
 							<a type="button" href="${pageContext.request.contextPath}/templates/board/boardWrite.board" class="write-board">나도 질문하기</a>
-							<span>나도 질문하기</span>
 						</label>
 					</aside>
 				</div>
