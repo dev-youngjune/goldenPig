@@ -14,10 +14,9 @@ public class BoardAnswerController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath(null);
-		result.setRedirect(REDIRECT);
+		String uri = req.getRequestURI();
+		result.setPath("/board_answer.jsp");
 		result.setRedirect(FORWORD);
-		
 		return result;
 	}
 

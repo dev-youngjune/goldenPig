@@ -124,7 +124,9 @@
 			
 			<div class="answer-wrap">
 				<div class="answer-button">
-					<input type="button" value="답변하기">
+					<form action="${pageContext.request.contextPath}/boardAnswer.board">
+						<input type="submit" value="답변하기">
+					</form>
 				</div>
 				<h4 class="answer-title">총 1개의 답변이 있어요.</h4>
 				<div class="asnwer-content-wrap">
