@@ -59,4 +59,12 @@ public class MemberDAO {
 		phoneMap.put("memberPhoneNumber", memberPhoneNumber);
 		sqlSession.selectOne("member.updatePhoneNumber", phoneMap);
 	}
+	
+// 비밀번호 수정
+	public void updatePassword(Long memberId, String memberPassword) {
+		Map<String, Object> passwordMap = new HashMap<String, Object>();
+		passwordMap.put("memberId", memberId);
+		passwordMap.put("memberPassword", memberPassword);
+		sqlSession.selectOne("member.updatePassword", passwordMap);
+	}
 }

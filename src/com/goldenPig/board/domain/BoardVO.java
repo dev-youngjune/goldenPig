@@ -1,7 +1,7 @@
 package com.goldenPig.board.domain;
 
 public class BoardVO {
-	
+	   
 	private Long boardId;
 	private Long memberId;
 	private String boardTitle;
@@ -10,6 +10,8 @@ public class BoardVO {
 	private String boardUpdateDate;
 	private int boardStatus;
 	private Long likeCount;
+	private Long readCount;
+	private Long replyCount;
 	
 	public BoardVO() {;}
 
@@ -29,6 +31,22 @@ public class BoardVO {
 	public void setBoardStatus(int boardStatus) {this.boardStatus = boardStatus;}
 	public Long getLikeCount() {return likeCount;}
 	public void setLikeCount(Long likeCount) {this.likeCount = likeCount;}
+
+	public Long getReadCount() {
+		return readCount;
+	}
+
+	public void setReadCount(Long readCount) {
+		this.readCount = readCount;
+	}
+
+	public Long getReplyCount() {
+		return replyCount;
+	}
+
+	public void setReplyCount(Long replyCount) {
+		this.replyCount = replyCount;
+	}
 
 	@Override
 	public String toString() {

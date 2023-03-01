@@ -58,6 +58,53 @@
 			</div>
 		</div>
 		
+		<!-- 비밀번호 재설정을 누르면 나오는 모달창 -->
+		<div id="modal2">
+			<div class="modal-box">
+				<div class="modal-box-layout">
+					<div class="modal-title-box">
+						<h3 class="modal-title">휴대폰 번호 인증</h3>
+						<div class="modal-exit-box">
+							<span class="modal-exit">X</span>
+						</div>
+					</div>	
+					<div class="modal-input-box">
+						<div class="modal-input-box-layout">
+							<div>
+								<span>이 름</span>
+							</div>
+							<input name="memberName" type="text" placeholder="성명 입력" class="modal-input" value="${member.memberName}">
+						</div>
+						<div class="modal-input-box-layout">
+							<div>
+								<span>휴대폰 번호</span>
+							</div>
+							<div class="modal-input-box">
+								<input name="memberPhoneNumberCheck" type="text" placeholder="숫자만 입력" class="modal-input" maxlength="11">
+								<button class="certification-button2 certification-number2">인증번호 발송</button>
+								<span class="phoneCheck-error-message"></span>
+							</div>
+						</div>
+						<div class="modal-input-box-layout certificationNumber-checkbox2">
+							<div>
+								<span>인증 번호</span>
+							</div>
+							<div class="modal-input-box">
+								<input type="text" placeholder="숫자만 입력"  class="modal-input checkNumber2">
+								<input type="button" placeholder="인증번호 확인" value="인증번호 확인" class="certification-button certification-number-check2">
+								<span class="error-message-numberCheck2"></span>
+							</div>
+						</div>
+					</div>	
+					<div class="modal-confirm-button-box">
+						<div class="modal-confirm-button-box-layout">
+							<button class="modal-phoneCheck-button">완료</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<!-- 휴대폰 번호 변경을 완료한후 나오는 모달창 -->
 		<div id="modal-phone">
 			<div class="modal-phone-box">
@@ -79,7 +126,7 @@
 	<div>
 		<header id="header">
 			<div id="header_div">
-				<img src="${pageContext.request.contextPath}/static/img/account/logo.png" style="width: 60px">
+				<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 			</div>
 		</header>
 	</div>
@@ -103,7 +150,7 @@
 			</div>
 		</section>
 		<section style="margin-top: 48px; display: flex">
-			<button class="all_button" id="password">비밀번호 재설정</button>
+			<button class="all_button" id="password-button">비밀번호 재설정</button>
 			<button class="all_button" id="log_out" onclick="logout()">로그아웃</button>
 		</section>
 		<section style="margin-top: 20px; text-align: right">
@@ -130,7 +177,7 @@
 					</article>
 					<div class="logo-wrapper">
 						<a href="#">
-							<img class="logo-img" src="${pageContext.request.contextPath}/static/img/account/logo.png" alt="">
+							<img class="logo-img" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 						</a>
 					</div>
 				</div>

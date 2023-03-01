@@ -7,18 +7,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.goldenPig.ExtractPath;
 import com.goldenPig.Result;
 
-@SuppressWarnings("serial")
 public class BoardFrontController extends HttpServlet {
+
+//	private HttpServletResponse response;
 
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
-		String contextPath = req.getContextPath();
+		String contextPath = "templates/board/";
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
-
+		System.out.println("target: " + target);
 		if (target.equals("/boardList")) {
 			result = new BoardListController().execute(req, resp);
 			
@@ -35,6 +35,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new BoardAnswerOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetail")) {
+			System.out.println("front들어옴");
 			result = new BoardDetailController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetailOk")) {
@@ -48,6 +49,16 @@ public class BoardFrontController extends HttpServlet {
 			
 		} else {
 			System.out.println(target);
+		}
+		
+		if(result != null) {
+			if(result.isRedirect()) {
+				resp.sendRedirect(result.getPath());
+			}else {
+				req.getRequestDispatcher(result.getPath()).forward(req, resp);
+			}
+		}else {
+			System.err.println("result == null");
 		}
 	}
 
