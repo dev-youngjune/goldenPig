@@ -21,24 +21,36 @@ public class MyPageFrontController extends HttpServlet {
 	
 		
 		
-		if(target.equals("/profile")) {
+		if(target.equals("/mypage")) {
 			result = new Result();
 			new MyPageProfileController();
 			
-		}else if(target.equals("/modifyOk")) {
-			new MyPageModifyOkController();
-			
-		}else if(target.equals("/answer")) {
-			new MyPageAnswerController();
-			
-		}else if(target.equals("/question")) {
-			new MyPageQuestionController();
-			
-		}else if(target.equals("/scrap")) {
+		}else if(target.equals("/myprofileOk")) {
 			new MyPageScrapController();
 			
-		}else if(target.equals("/scrap")) {
-			new MyPageDeleteOKController().execute(req, resp);
+		}else if(target.equals("/myqustionsOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/myanswersOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/mysavingOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/updateprofileOk")) {
+			new MyPageModifyOkController();
+			
+		}else if(target.equals("/editprofileOk")) {
+			new MyPageModifyOkController();
+			
+		}else if(target.equals("/answerOk")) {
+			new MyPageAnswerController();
+			
+		}else if(target.equals("/questionOk")) {
+			new MyPageQuestionController();
+			
+		}else if(target.equals("/scrapOk")) {
+			new MyPageScrapController();
 			
 		}else {
 			System.out.println(target);
