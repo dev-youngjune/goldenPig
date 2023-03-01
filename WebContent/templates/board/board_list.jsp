@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
@@ -34,45 +35,47 @@
 					
 					<!-- ----------------------- 첫번째 게시물 ------------------------------->
 					<ul></ul>
-<%-- 					<div class="content-body">
-							<div class="question-card">
-								<article class="card">
-									<div class="card-main">
-										<header class="card-header">
-											<a href="javascript:void(0)">
-												<h1 class="card-header-title">${boards.boardTitle}</h1>
-											</a>
-										</header>
-										<div class="card-content">
-											<div class="card-footer">
-												<div class="flex-justify-between">
-													<div class="flex-items-center">
-														<div class="card-label-icon">
-															<img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png">
-															<span>${boards.replyCount}</span>
+					<c:forEach var="board" items="${boards}">
+	 					<div class="content-body">
+								<div class="question-card">
+									<article class="card">
+										<div class="card-main">
+											<header class="card-header">
+												<a href="${pageContext.request.contextPath}/boardDetail.board">
+													<h1 class="card-header-title">${board.boardTitle}</h1>
+												</a>
+											</header>
+											<div class="card-content">
+												<div class="card-footer">
+													<div class="flex-justify-between">
+														<div class="flex-items-center">
+															<div class="card-label-icon">
+																<img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png">
+																<span></span>
+															</div>
+															<div class="card-label-icon">
+																<img class="star" src="${pageContext.request.contextPath}/static/img/board/star-icon.png">
+																<span></span>
+															</div>
+															<div class="card-label-icon">
+																<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
+																<span>${board.likeCount}</span>
+															</div>
+															<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
+													 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>
+															<span class="card-label-icon"><img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png"> 0</span> -->
 														</div>
-														<div class="card-label-icon">
-															<img class="star" src="${pageContext.request.contextPath}/static/img/board/star-icon.png">
-															<span>${boards.boardReadCount}</span>
-														</div>
-														<div class="card-label-icon">
-															<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
-															<span>${boards.boardLikeCount}</span>
-														</div>
-														<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
-												 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>
-														<span class="card-label-icon"><img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png"> 0</span> -->
+														<span class="card-header-infomation">${board.boardRegisterDate}</span>
 													</div>
-													<span class="card-header-infomation">${boards.boardRegisterDate}</span>
 												</div>
 											</div>
 										</div>
-									</div>
-								</article>
+									</article>
+								</div>
 							</div>
-						</div>
+						</c:forEach>
 
-					<!-- ----------------------- 두번째 게시물 -----------------------------  -->
+<%-- 					<!-- ----------------------- 두번째 게시물 -----------------------------  -->
 					<div class="content-body">
 						<div class="question-card">
 							<article class="card">
@@ -236,13 +239,13 @@
 								</div>
 							</article>
 						</div>
-					</div> --%>
+					</div>  --%>
 
 
 					<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
 					<aside class="right-side-bar">
 						<label>
-							<a type="button" href="${pageContext.request.contextPath}/templates/board/boardWrite.board" class="write-board">나도 질문하기</a>
+							<a type="button" href="${pageContext.request.contextPath}/boardWrite.board" class="write-board">나도 질문하기</a>
 						</label>
 					</aside>
 				</div>

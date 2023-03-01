@@ -24,6 +24,7 @@ public class BoardFrontController extends HttpServlet {
 			
 		} else if (target.equals("/boardWrite")) {
 			result = new BoardWriteController().execute(req, resp);
+			
 		} else if (target.equals("/boardWriteOk")) {
 			result = new BoardWriteOkController().execute(req, resp);
 			
@@ -34,6 +35,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new BoardAnswerOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetail")) {
+			System.out.println("front들어옴");
 			result = new BoardDetailController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetailOk")) {
