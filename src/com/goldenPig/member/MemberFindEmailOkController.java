@@ -18,11 +18,10 @@ public class MemberFindEmailOkController implements Action {
 		MemberDAO memberDAO = new MemberDAO();
 		String memberPhoneNumber = req.getParameter("memberPhoneNumber");
 		String memberName = req.getParameter("memberName");
-		long memberId = memberDAO.findMemberId(memberPhoneNumber, memberName);
-		System.out.println(memberId);
-		String memberEmail = memberDAO.findEmail(memberId);
+		Long memberId = memberDAO.findMemberId(memberPhoneNumber, memberName);
 		
-		if(memberEmail != null) {
+		if(memberId != null) {
+			String memberEmail = memberDAO.findEmail(memberId);
 			req.setAttribute("memberEmail", memberEmail);
 			result.setPath(req.getContextPath() + "/findEmailAccount.member");
 		}else {
