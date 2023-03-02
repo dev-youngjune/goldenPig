@@ -67,4 +67,24 @@ public class MemberDAO {
 		passwordMap.put("memberPassword", memberPassword);
 		sqlSession.selectOne("member.updatePassword", passwordMap);
 	}
+	
+//	핸드폰번호로 유저의 아이디 찾기
+	public Long findMemberId(String memberPhoneNumber, String memberName) {
+		Map<String, Object> idMap = new HashMap<String, Object>();
+		idMap.put("memberPhoneNumber", memberPhoneNumber);
+		idMap.put("memberName", memberName);
+		
+		return sqlSession.selectOne("member.findMemberId", idMap);
+	}
+	
+//	이메일 찾기
+	public String findEmail(long memberId) {
+		return sqlSession.selectOne("member.findEmail", memberId);
+	}
+	
+//	회원탈퇴
+	public void withdrawal(long memberId) {
+		sqlSession.selectOne("member.withdrawal", memberId);
+	}
+	
 }

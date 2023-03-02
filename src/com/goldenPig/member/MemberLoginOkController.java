@@ -27,7 +27,7 @@ public class MemberLoginOkController implements Action {
 		
 		if(memberId != null) {
 			session.setAttribute("memberId", memberId);
-			path = req.getContextPath() + "/index.jsp";
+			path = req.getContextPath() + "/index.main";
 		}else {
 			path = req.getContextPath() + "/login.member?login=false";
 		}
