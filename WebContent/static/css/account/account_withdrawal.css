@@ -3,15 +3,12 @@ body{
 	letter-spacing: -.038rem!important;
 	font-family: 'Pretendard-Regular';
 }
-
-#wrap{
-	position: absolute;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: center;
+* {
+	margin: 0px;
+	padding: 0px;
 }
+
+
 /* mediaquary 나중에 넣을꺼 */
 #wrap{
 	padding: 152px 0 80px;

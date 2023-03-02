@@ -1,4 +1,4 @@
-package com.goldenPig.admin;
+package com.goldenPig.mypage;
 
 import java.io.IOException;
 
@@ -9,15 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class AdminNoticeWriteController implements Action {
+public class ScrapOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		
-		req.setAttribute("page", req.getParameter("page"));
-		result.setPath("/templates/admin/adminPage-noticeWrite.jsp");
-		return result;
+		
+		result.setPath("/templates/member/myPageScraps.jsp");
+		return null;
 	}
 
 }

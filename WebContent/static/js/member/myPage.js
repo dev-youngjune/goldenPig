@@ -5,7 +5,6 @@
    const $modalButton = $(".modal-open");
 
 	$modalButton.click(function(){
-		console.log("들어옴");
 		$(".profile_Editor").fadeIn(300);
 	});
  

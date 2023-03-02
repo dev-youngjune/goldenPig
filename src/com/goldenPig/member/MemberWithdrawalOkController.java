@@ -1,4 +1,4 @@
-package com.goldenPig.admin;
+package com.goldenPig.member;
 
 import java.io.IOException;
 
@@ -8,15 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
+import com.goldenPig.member.dao.MemberDAO;
 
-public class AdminNoticeWriteController implements Action {
+public class MemberWithdrawalOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		MemberDAO memberDAO = new MemberDAO();
 		
-		req.setAttribute("page", req.getParameter("page"));
-		result.setPath("/templates/admin/adminPage-noticeWrite.jsp");
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		memberDAO.withdrawal(memberId);
+		
+		result.setPath(req.getContextPath() + "/index.main");
+		result.setRedirect(true);
+		
 		return result;
 	}
 

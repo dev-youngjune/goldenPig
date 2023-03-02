@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,10 +42,20 @@
 					<!-- 헤더 -->
 					<div class="prev-button-layout">
 						<div>
-							<a>
-								<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
-								<span class="prev-title">리스트로 돌아가기</span>
-							</a>
+							<c:choose>
+								<c:when test="${page >= 1}">
+									<a>
+										<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
+									</a>
+									<a class="back-page" href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeList.admin?page=${page}'">리스트로 돌아가기</a>
+								</c:when>
+								<c:otherwise>
+									<a>
+										<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
+									</a>
+									<a class="back-page" href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeList.admin?page=1'">리스트로 돌아가기</a>
+								</c:otherwise>
+							</c:choose>
 						</div>
 					</div>
 					
@@ -56,7 +68,7 @@
 							</div>
 							<hr>
 							<div class="info-table">
-							<form action="">
+							<form action="${pageContext.request.contextPath}/adminNoticeWriteOk.admin">
 								<div>
 									<input type="text" class="notice-title" name="noticeTitle" placeholder="제목을 입력해주세요.">
 								</div>

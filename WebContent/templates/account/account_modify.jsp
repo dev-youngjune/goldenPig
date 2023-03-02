@@ -154,7 +154,7 @@
 			<button class="all_button" id="log_out" onclick="logout()">로그아웃</button>
 		</section>
 		<section style="margin-top: 20px; text-align: right">
-			<a style="margin-right: 0.25rem; display: inline; vertical-align: middle; cursor: pointer">
+			<a style="margin-right: 0.25rem; display: inline; vertical-align: middle; cursor: pointer" href="JavaScript:location='${pageContext.request.contextPath}/withdrawal.member'">
 				<img alt="" src="${pageContext.request.contextPath}/static/img/account/minus.png" style="position: absolute; width: 23px; left: -23px; top: -2px">
 				회원 탈퇴
 			</a>

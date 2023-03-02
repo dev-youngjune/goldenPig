@@ -81,4 +81,10 @@ public class MemberDAO {
 	public String findEmail(long memberId) {
 		return sqlSession.selectOne("member.findEmail", memberId);
 	}
+	
+//	회원탈퇴
+	public void withdrawal(long memberId) {
+		sqlSession.selectOne("member.withdrawal", memberId);
+	}
+	
 }
