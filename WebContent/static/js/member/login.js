@@ -58,3 +58,22 @@ $password.on("blur", function(e){
 	        }
 		});
 
+
+
+const $loginButton = $(".login-button");
+const urlParams = new URL(location.href).searchParams;
+const login = urlParams.get('login');
+
+if(login == false){
+	login = true;
+}
+
+$(function() {
+	if(login){
+		alert("이메일 또는 비밀번호를 확인해주세요.");
+	}
+});
+
+$loginButton.click(function(){
+	$(".loginEmail_form").submit();
+});

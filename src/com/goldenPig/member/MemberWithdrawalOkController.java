@@ -1,4 +1,4 @@
-package com.goldenPig.board;
+package com.goldenPig.member;
 
 import java.io.IOException;
 
@@ -8,15 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
+import com.goldenPig.member.dao.MemberDAO;
 
-public class BoardAnswerController implements Action {
+public class MemberWithdrawalOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		String uri = req.getRequestURI();
-		result.setPath(req.getContextPath() + "/board_answer.jsp");
-		result.setRedirect(false);
+		MemberDAO memberDAO = new MemberDAO();
+		
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		memberDAO.withdrawal(memberId);
+		
+		result.setPath(req.getContextPath() + "/index.main");
+		result.setRedirect(true);
+		
 		return result;
 	}
 
