@@ -72,26 +72,13 @@
 <script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/member/login.js"></script>
 <script>
-const $loginButton = $(".login-button");
-const urlParams = new URL(location.href).searchParams;
-const login = urlParams.get('login');
-
-if(login == false){
-	login = true;
+let phoneCheck = "<c:out value='${phoneNumberCheck}'/>";
+if(phoneCheck && phoneCheck != null){
+	alert("없는 회원정보입니다.");
 }
 
-$(function() {
-	if(login){
-		alert("이메일 또는 비밀번호를 확인해주세요.");
-	}
-});
-
-$loginButton.click(function(){
-	$(".loginEmail_form").submit();
-});
-
-let phoneCheck = "<c:out value='${phoneNumberCheck}'/>";
-if(phoneCheck){
+let memberEmailCheck = "<c:out value='${memberEmailCheck}'/>";
+if(memberEmailCheck && memberEmailCheck != null){
 	alert("없는 회원정보입니다.");
 }
 </script>
