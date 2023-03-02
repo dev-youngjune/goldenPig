@@ -19,7 +19,7 @@
 					
 						<div class="tabs" style="display: flex;">
 							<label  class="blue-line">
-								<a class="active" href="${pageContext.request.contextPath}/board_list.board">
+								<a class="active" href="${pageContext.request.contextPath}/boardList.board">
 									<span class="bullet">저축 게시판</span>
 								</a>
 							</label>
