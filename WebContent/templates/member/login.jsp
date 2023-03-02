@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,7 +55,7 @@
 									<footer class="theScreen_footer">
 										<button class="Button -large w-full -primary -filled login-button">로그인</button>
 										<div class="find-button-box">
-											<button class="find-button">이메일 계정 찾기</button>
+											<button class="find-button" onclick="location.href='${pageContext.request.contextPath}/findEmail.member'">이메일 계정 찾기</button>
 											<div class="">|</div>
 											<button class="find-button" onclick="location.href='${pageContext.request.contextPath}/findPassword.member'">비밀번호 재설정</button>
 										</div>
@@ -78,6 +79,7 @@ const login = urlParams.get('login');
 if(login == false){
 	login = true;
 }
+
 $(function() {
 	if(login){
 		alert("이메일 또는 비밀번호를 확인해주세요.");
@@ -88,5 +90,9 @@ $loginButton.click(function(){
 	$(".loginEmail_form").submit();
 });
 
+let phoneCheck = "<c:out value='${phoneNumberCheck}'/>";
+if(phoneCheck){
+	alert("없는 회원정보입니다.");
+}
 </script>
 </html>
