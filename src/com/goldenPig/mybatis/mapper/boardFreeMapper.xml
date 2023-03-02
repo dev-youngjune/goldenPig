@@ -2,30 +2,52 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="boardFree">
-	<select id="selectAll" parameterType="map" resultType="boardFreeDTO">
+
+<!-- 	<sql id="search">
+		<if test="types != null">
+			where
+			<trim prefixOverrides="or">
+				<foreach item="type" collection="types">
+					<trim prefix="or">
+						<choose>
+							<when test="type == 'title'.toString()">
+								board_title like concat('%', #{keyword}, '%')
+							</when>
+							<when test="type == 'content'.toString()">
+								board_content like concat('%', #{keyword}, '%')
+							</when>
+							<when test="type == 'writer'.toString()">
+								member_name like concat('%', #{keyword}, '%')
+							</when>
+						</choose>
+					</trim>
+				</foreach>
+			</trim>
+		</if>
+	</sql> -->
+
+	<select id="selectAllSearch" parameterType="map" resultType="boardDTO">
 		select board_id, board_title, board_content, board_register_date, 
-		board_update_date, member_name, like_count, reply_count
-		from view_boardfreelist 
-		limit #{startRow}, #{rowCount}
-	</select>
-	<select id="selectAllList" resultType="boardFreeDTO">
-		select b.board_id, b.board_title, b.board_content, b.board_register_date,
-		b.board_update_date, b.member_nickname, b.board_like_count, b.board_read_count, reply_count
-		from view_boardfreelist
+		board_update_date, board_read_count
+		from tbl_board_free 
+		order by board_id desc 
 		limit #{startRow}, #{rowCount}
 	</select>
 	
-	<select id="getTotal" resultType="long">
-		select count(board_id) board_count from tbl_boardfree
+	<select id="selectAll" resultType="boardDTO">
+		select board_id, member_id, board_title, board_content, board_register_date, 
+		board_update_date, board_read_count
+		from tbl_board_free 
+		order by board_id desc 
+	</select>
+	
+	<select id="getTotal" parameterType="map" resultType="long">
+		select count(board_id) from tbl_board_free
 	</select>
 	
 	<select id="getReplyCount" parameterType="long" resultType="long">
 		select reply_count
 		from view_boardFreeList
 		where board_id = #{boardId}
-	
-<!-- 		select count(reply_id) 
-		from tbl_replyfree 
-		where board_id = #{boardId} -->
 	</select>
 </mapper>

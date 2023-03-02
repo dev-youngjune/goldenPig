@@ -20,39 +20,39 @@ public class BoardFreeFrontController extends HttpServlet{
 		
 		switch(target) {
 			case "/boardList.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeListController().execute(req, resp);
 				break;
 			case "/boardWrite.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeWriteController().execute(req, resp);
 				break;
 			case "/boardWriteOk.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeWriteOkController().execute(req, resp);
 				break;
 			case "/boardAnswer.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeAnswerController().execute(req, resp);
 				break;
 			case "/boardAnswerOk.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeAnswerOkController().execute(req, resp);
 				break;
 			case "/boardDetail.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeDetailController().execute(req, resp);
 				break;
 			case "/boardDetailOk.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeDetailOkController().execute(req, resp);
 				break;
 			case "/boardModify.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeModifyController().execute(req, resp);
 				break;
 			case "/boardModifyOk.boardFree":
-				System.out.println(target);
+				System.out.println("2. " + target);
 				result = new BoardFreeModifyOkController().execute(req, resp);
 				break;
 			default:
