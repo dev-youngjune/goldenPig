@@ -20,7 +20,13 @@ public class MemberPasswordOkController implements Action {
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
 		String memberPassword = new String (Base64.getEncoder().encode(req.getParameter("memberPassword").getBytes()));
 		
-		memberDAO.updatePassword(memberId, memberPassword);
+		if(memberId != null) {
+			memberDAO.updatePassword(memberId, memberPassword);
+		}else {
+			req.setAttribute("passwordChangeCheck", true);
+			memberId = Long.parseLong(req.getParameter("memberId"));
+			memberDAO.updatePassword(memberId, memberPassword);
+		}
 		
 		req.getSession().invalidate();
 		result.setPath(req.getContextPath() + "/login.member");
