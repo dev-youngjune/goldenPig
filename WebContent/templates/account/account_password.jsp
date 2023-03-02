@@ -6,92 +6,47 @@
 <meta charset="UTF-8">
 <title>비밀번호 재설정</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_password.css">
-<style>
-@font-face {
-	font-family: 'Pretendard-Regular';
-	src:
-		url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
-		format('woff');
-	font-weight: 400;
-	font-style: normal;
-}
-
-* {
-	margin: 0px;
-	padding: 0px;
-}
-
-input, button, span {
-	font-family: 'Pretendard-Regular';
-}
-
-div.eye {
-	cursor: pointer;
-	width: 50px;
-	height: 25px;
-	background-size: 100%;
-	background-repeat: no-repeat;
-}
-
-div.show {
-	background-image:
-		url("${pageContext.request.contextPath}/static/img/account/show.PNG");
-}
-
-div.hide {
-	background-image:
-		url("${pageContext.request.contextPath}/static/img/account/hide.PNG");
-}
-
-.logo-img {
-	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg) brightness(104%) contrast(110%);
-	width: 55px;
-	padding-top: 4px;
-}
-
-.a_headerLogo {
-	width: 100px;
-    margin-left: 5px;
-}
-</style>
 </head>
 <body>
 	<div id="wrap">
 		<main>
 			<div>
 				<div id="secession_board">
-					<header>
-						<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
-						<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
-					</header>
-					<div id="withdrawal_select">
-						<h1 style="position: relative">
-							<span id="element">비밀번호 재설정</span>
-						</h1>
-						<div style="margin-bottom: 3rem; margin-top: 0.75rem">
-							<span style="font-weight: 600;--tw-text-opacity: 1; 
-							color: rgba(156, 165, 179, var(--tw-text-opacity));">새로운 비밀번호를 입력해 주세요.</span>
-						</div>
-						<div style="display: block; padding-top: 0.5rem">
-							<span style="font-size: 13px">비밀번호</span>
-							<div id="input_email">
-								<input class="email_text new-password" id="new_password" type="password" placeholder="새로운 비밀번호를 입력해 주세요.">
-								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
+					
+						<header>
+							<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+							<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
+						</header>
+						<form action="${pageContext.request.contextPath}/passwordOk.member" class="password-change">
+						<div id="withdrawal_select">
+							<h1 style="position: relative">
+								<span id="element">비밀번호 재설정</span>
+							</h1>
+							<div style="margin-bottom: 3rem; margin-top: 0.75rem">
+								<span style="--tw-text-opacity: 1; color: rgba(156, 165, 179, var(--tw-text-opacity));">새로운 비밀번호를 입력해 주세요.</span>
 							</div>
-							<p class="error-new-password" style="margin: 0; font-size: 15px;"></p>
-						</div>
-						<div style="display: block; padding-top: 0.5rem">
-							<span style="font-size: 13px">비밀번호 확인</span>
-							<div id="input_email">
-								<input class="email_text confirm-password" id="repeat_password"type="password" placeholder="비밀번호를 다시 한번 입력해 주세요.">
-								<div class="hide eye" style=" display: block; width: 37px; height: 39px; position: absolute; top: -8px; right: -4px;"></div>
+							<div style="display: block; padding-top: 0.5rem">
+								<span style="font-size: 13px">비밀번호</span>
+								<div id="input_email">
+									<input class="email_text new-password" id="new_password" type="password" placeholder="새로운 비밀번호를 입력해 주세요." name="memberPassword">
+									<div class="hide eye"></div>
+									<p class="error-new-password error-message"></p>
+								</div>
 							</div>
-							<p class="error-confirm-password" style="margin: 0;"></p>
+							<div style="display: block; padding-top: 0.5rem">
+								<span style="font-size: 13px">비밀번호 확인</span>
+								<div id="input_email">
+									<input class="email_text confirm-password" id="repeat_password"type="password" placeholder="비밀번호를 다시 한번 입력해 주세요.">
+									<div class="hide eye"></div>
+									<p class="error-confirm-password error-message"></p>
+								</div>
+							</div>
 						</div>
-					</div>
-					<footer>
-						<button id="confirm"> 재설정 후 자동로그인 </button>
-					</footer>
+						</form>	
+						<footer>
+							<button id="confirm"> 재설정 후 자동로그인 </button>
+						</footer>
+					
 				</div>
 			</div>
 		</main>
@@ -100,6 +55,8 @@ div.hide {
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 let userInput = $(".email_text");
+let check = [false, false];
+const $confirm = $("#confirm");
 
 $("div.eye").click(function(){
 	console.log("input.hide 나옴");
@@ -114,23 +71,6 @@ $("div.eye").click(function(){
     }
 });
 
-const password = document.querySelector("#new_password");
-const repeat_password = document.querySelector("#repeat_password");
-const $passwords = $("input[type=text]");
-const confirm = document.querySelector("#confirm");
-
-
-$passwords.keyup(() => {
-	var $passwordVal = $(password).val();
-	var $repeatVal = $(repeat_password).val();
-	
-	if ($passwordVal == $repeatVal) {
-		confirm.style.backgroundColor = "rgb(2, 6, 175)";
-		confirm.style.cursor= "pointer";
-		confirm.style.color= "white";
-	}
-});
-
 // 비밀번호 
 
 const $password = $(".new-password");
@@ -142,22 +82,25 @@ var rgbPassword =/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$
 $password.blur( function(){
 	// password value 값
 	let passwordValue = $password.val();
-    // 정규식
-	console.log(rgbPassword.test(passwordValue));
 
     if(passwordValue.length == 0){    // 빈문자열이 들어왔을 때
         $errorNewPassword.css("display", "block");
         $errorNewPassword.css("color", "red");
         $errorNewPassword.text("비밀번호를 입력해주세요.");
+		check[0] = false;
 
-    }else if(passwordValue.length > 0 && !rgbPassword.test(passwordValue)){
-        $errorNewPassword.text("최소 8 자, 하나 이상의 문자, 하나의 숫자 및 하나의 특수 문자를 입력해주세요.");
+    }else if(!rgbPassword.test(passwordValue)){
+        $errorNewPassword.css("display", "block");
         $errorNewPassword.css("color", "red");
+        $errorNewPassword.text("최소 8 자, 하나 이상의 문자, 하나의 숫자 및 하나의 특수 문자를 입력해주세요.");
+		check[0] = false;
 		
 	}else {
 		$errorNewPassword.css("display", "none");
-  }
- 
+		check[0] = true;
+  	}
+    
+    buttonActive();
 });
 
 
@@ -165,26 +108,48 @@ $confirmPassword.blur( function(){
    // password value 값
    let passwordValue = $confirmPassword.val();
     // 정규식
-    var rgbPassword =/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
 	if (!($password.val() == passwordValue)) {
-		$errorConfirmPassword.text("비밀번호가 일치하지 않습니다.");
+		$errorConfirmPassword.css("display", "block");
 		$errorConfirmPassword.css("color", "red");
-		confirm.style.backgroundColor= "#5682EF";
-		confirm.style.color= "#7EA5F2";
-		confirm.style.cursor= "not-allowed";
+		$errorConfirmPassword.text("비밀번호가 일치하지 않습니다.");
+		check[1] = false;
 		
-	}
-	else {
+	} else if(passwordValue.length == 0){
+		$errorConfirmPassword.css("display", "block");
+		$errorConfirmPassword.css("color", "red");
+		$errorConfirmPassword.text("비밀번호를 입력해주세요.");
+		check[1] = false;
+		
+	} else {
 		$errorConfirmPassword.css("display", "none");
-		confirm.style.backgroundColor= "#0206AF";
-		confirm.style.color= "#FFF";
-		confirm.style.cursor= "pointer";
-  }
+		check[1] = true;
+  	}
+    
+	buttonActive();
 });
 
+function buttonActive(){
+	if(check.filter(check=> check == true).length == 2){
+		$confirm.css("background-color", "#0206AF");
+		$confirm.css("color", "#FFF");
+		$confirm.css("cursor", "pointer");
+		
+	}else {
+		$confirm.css("background-color", "#5682EF");
+		$confirm.css("color", "#7EA5F2");
+		$confirm.css("cursor", "not-allowed");
+		
+	}
+}
 
-
-
+$confirm.click(function(){
+	if(check.filter(check=> check == true).length != 2){
+		alert("비밀번호 확인 또는 비밀번호 입력 오류입니다.");
+		return false;
+	}
+	
+	$(".password-change").submit();
+});
 </script>
 </html>

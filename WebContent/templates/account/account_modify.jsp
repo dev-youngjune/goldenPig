@@ -80,19 +80,19 @@
 								<span>휴대폰 번호</span>
 							</div>
 							<div class="modal-input-box">
-								<input name="memberPhoneNumber" type="text" placeholder="숫자만 입력" class="modal-input" maxlength="11">
-								<button class="certification-button certification-number">인증번호 발송</button>
-								<span class="phone-error-message"></span>
+								<input name="memberPhoneNumberCheck" type="text" placeholder="숫자만 입력" class="modal-input" maxlength="11">
+								<button class="certification-button2 certification-number2">인증번호 발송</button>
+								<span class="phoneCheck-error-message"></span>
 							</div>
 						</div>
-						<div class="modal-input-box-layout certificationNumber-checkbox">
+						<div class="modal-input-box-layout certificationNumber-checkbox2">
 							<div>
 								<span>인증 번호</span>
 							</div>
 							<div class="modal-input-box">
-								<input type="text" placeholder="숫자만 입력"  class="modal-input checkNumber">
-								<input type="button" placeholder="인증번호 확인" value="인증번호 확인" class="certification-button certification-number-check">
-								<span class="error-message-numberCheck"></span>
+								<input type="text" placeholder="숫자만 입력"  class="modal-input checkNumber2">
+								<input type="button" placeholder="인증번호 확인" value="인증번호 확인" class="certification-button certification-number-check2">
+								<span class="error-message-numberCheck2"></span>
 							</div>
 						</div>
 					</div>	
