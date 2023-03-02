@@ -14,10 +14,9 @@ public class BoardDetailController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath(null);
-		result.setRedirect(REDIRECT);
+		String uri = req.getRequestURI();
+		result.setPath("/templates/board/board_detail.jsp");
 		result.setRedirect(FORWORD);
-		
 		return result;
 	}
 
