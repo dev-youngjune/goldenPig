@@ -35,7 +35,7 @@
 			<article class="home-container">
 				<section class="home-buttons columns is-relative">
 					<div class="home-button-wrapper column is-one-quarter">
-						<a href="${pageContext.request.contextPath}/profile.mypage">
+						<a href="${pageContext.request.contextPath} ${empty sessioScope.userId ? '/login.member' : '/profile.mypage'}">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/banking-64.png">
 								<span>보유 저축</span>
@@ -59,7 +59,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a href="${pageContext.request.contextPath}/modifyOk.mypage">
+						<a href="${pageContext.request.contextPath} ${empty sessioScope.userId ? '/login.member' : '/modifyOk.mypage'}">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/profile_man-64.png">
 								<span>계정 설정</span>
@@ -161,7 +161,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard">
+										<a class="categoryCard" href="${pageContext.request.contextPath}/boardList.boardFree?tag=청소">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/home_cleaning-64.png">
 										</a> <span>청소</span>
 									</div>
@@ -170,7 +170,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard">
+										<a class="categoryCard" href="${pageContext.request.contextPath}/boardList.boardFree?tag=세탁">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/laundry_icon-64.png">
 										</a> <span>세탁</span>
 									</div>
@@ -179,7 +179,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard">
+										<a class="categoryCard" href="${pageContext.request.contextPath}/boardList.boardFree?tag=자동차">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/car1-64.png">
 										</a> <span>자동차</span>
 									</div>
@@ -188,7 +188,7 @@
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="">
-										<a class="categoryCard">
+										<a class="categoryCard" href="${pageContext.request.contextPath}/boardList.boardFree?tag=등산">
 											<img alt="" src="${pageContext.request.contextPath}/static/img/main/mountain_adventure-64.png">
 										</a> <span>등산</span>
 									</div>
@@ -207,6 +207,7 @@
 					<!-- 첫번째 줄 -->
 					<div class="home-section-categoryCards tile is-ancestor">
 						<div class="home-section-categoryCards-wrapper tile is-parent">
+						
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="questionListCardSmall">
@@ -222,6 +223,7 @@
 									</div>
 								</div>
 							</article>
+							
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="questionListCardSmall">
@@ -270,6 +272,7 @@
 						</div>
 					</div>
 				</section>
+				
 				<section class="home-section" style="margin-bottom: 40px;">
 					<header class="home-section-title home-section-hotQuestion title is-5 ">
 						<h4 class="home-section-title-content">인기 많은 질문</h4>
@@ -279,6 +282,7 @@
 					<!-- 첫번째 줄 -->
 					<div class="home-section-categoryCards tile is-ancestor">
 						<div class="home-section-categoryCards-wrapper tile is-parent">
+						
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="questionListCardSmall">
@@ -294,6 +298,7 @@
 									</div>
 								</div>
 							</article>
+							
 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="questionListCardSmall">
