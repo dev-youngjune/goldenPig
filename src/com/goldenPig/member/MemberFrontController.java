@@ -74,6 +74,20 @@ public class MemberFrontController extends HttpServlet {
 			result = new Result();
 			result.setPath("/templates/member/findPassword.jsp");
 		
+		}else if(target.equals("/findIdOk")) {
+			result = new MemberFindIdOkController().execute(req, resp);
+			
+		}else if(target.equals("/findEmail")) {
+			result = new Result();
+			result.setPath("/templates/member/findEmail.jsp");
+			
+		}else if(target.equals("/findEmailOk")) {
+			result = new MemberFindEmailOkController().execute(req, resp);
+			
+		}else if(target.equals("/findEmailAccount")) {
+			result = new Result();
+			result.setPath("/templates/member/findAccount.jsp");
+			
 		}else {
 			System.out.println(target);
 			
