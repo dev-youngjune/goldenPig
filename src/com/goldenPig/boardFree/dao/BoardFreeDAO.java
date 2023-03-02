@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.defaults.DefaultSqlSession;
 
 import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
@@ -14,19 +13,37 @@ import com.goldenPig.mybatis.config.MyBatisConfig;
 public class BoardFreeDAO {
 	public SqlSession sqlSession;
 	
-//	게시글 목록
-	public List<BoardDTO> selectAll(Map<String, Object> pageMap){
-		return sqlSession.selectList("boardFree.selectAll", pageMap);
+	public BoardFreeDAO() {
+		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-//	게시글 목록+
-	public List<BoardDTO> selectAllList(Map<String, Object> pageMap){
-		return sqlSession.selectList("boardFree.selectAllList", pageMap);
+//	게시글 목록
+	public List<BoardDTO> selectAllSearch(Map<String, Object> pageMap){
+		List<BoardDTO> result = null;
+		try {
+			result = sqlSession.selectList("boardFree.selectAllSearch", pageMap);
+		} catch (Exception e) {
+			System.err.println("selectAllSearch error");
+			e.printStackTrace();
+		} 
+		return result;
+	}
+	
+//	게시글 목록
+	public List<BoardFreeDTO> selectAll(){
+		List<BoardFreeDTO> result = null;
+		try {
+			result = sqlSession.selectList("boardFree.selectAll");
+		} catch (Exception e) {
+			System.err.println("selectAll error");
+			e.printStackTrace();
+		} 
+		return result;
 	}
 	
 //	게시글 총 개수
-	public Long getTotal() {
-		return sqlSession.selectOne("boardFree.getTotal");
+	public Long getTotal(Map<String, Object> pageMap) {
+		return sqlSession.selectOne("boardFree.getTotal", pageMap);
 	}
 	
 //	게시글 댓글 수
