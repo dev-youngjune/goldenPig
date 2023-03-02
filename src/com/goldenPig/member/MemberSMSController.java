@@ -9,13 +9,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.simple.JSONObject;
+import org.json.JSONObject;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.member.dao.MemberDAO;
+import com.mysql.cj.protocol.Message;
 
-import net.nurigo.java_sdk.api.Message;
 import net.nurigo.java_sdk.exceptions.CoolsmsException;
 
 public class MemberSMSController implements Action {

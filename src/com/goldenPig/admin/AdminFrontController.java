@@ -57,23 +57,26 @@ public class AdminFrontController extends HttpServlet {
 		}else if(target.equals("/memberModifyOk")) {
 			new AdminMemberModifyOkController().execute(req, resp);
 			
-		}else if(target.equals("/noticeDetail")) {
+		}else if(target.equals("/adminNoticeDetail")) {
 			new AdminNoticeDetailController().execute(req, resp);
 
-		}else if(target.equals("/noticeModify")) {
-			new AdminNoticeModifyController().execute(req, resp);
-
-		}else if(target.equals("/noticeModifyOk")) {
-			new AdminNoticeModifyOkController().execute(req, resp);
+		}else if(target.equals("/adminNoticeModify")) {
+			result = new AdminNoticeModifyController().execute(req, resp);
 			
-		}else if(target.equals("/noticeList")) {
-			new AdminNoticeListController().execute(req, resp);
+		}else if(target.equals("/adminNoticeOkModify")) {
+			result = new AdminNoticeModifyOkController().execute(req, resp);
+			
+		}else if(target.equals("/adminNoticeList")) {
+			result = new AdminNoticeListController().execute(req, resp);
 		
-		}else if(target.equals("/noticeWrite")) {
-			new AdminNoticeWriteController().execute(req, resp);
+		}else if(target.equals("/adminNoticeWrite")) {
+			result = new AdminNoticeWriteController().execute(req, resp);
 			
-		}else if(target.equals("/noticeWriteOk")) {
-			new AdminNoticeWriteOkController().execute(req, resp);
+		}else if(target.equals("/adminNoticeWriteOk")) {
+			result = new AdminNoticeWriteOkController().execute(req, resp);
+			
+		}else if(target.equals("/adminNoticeDeleteOk")) {
+			new AdminNoticeDeleteOkController().execute(req, resp);
 			
 		}else {
 			System.out.println(target);

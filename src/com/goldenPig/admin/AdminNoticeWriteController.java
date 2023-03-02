@@ -13,8 +13,11 @@ public class AdminNoticeWriteController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		return null;
+		Result result = new Result();
+		
+		req.setAttribute("page", req.getParameter("page"));
+		result.setPath("/templates/admin/adminPage-noticeWrite.jsp");
+		return result;
 	}
 
 }
