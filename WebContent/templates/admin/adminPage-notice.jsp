@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,8 +43,9 @@
 						<div>
 							<a>
 								<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
-								<span class="prev-title">리스트로 돌아가기</span>
+								<!-- <span class="prev-title">리스트로 돌아가기</span> -->
 							</a>
+							<a class="back-page" href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeList.admin?page=${page}'">리스트로 돌아가기</a>
 						</div>
 					</div>
 					
@@ -58,19 +61,18 @@
 								<div class="info-member">
 										<span class="span-bold">제목 :</span> 
 										<!-- 제목  -->
-										<span>[공지] 오늘 피곤하네요..</span>
+										<span>[공지] <c:out value="${adminNotice.noticeTitle}"/></span>
 								</div>
 								<div class="info-member">
 									<span class="span-bold">작성 날짜 :</span>
 									<!-- 작성 날짜  -->
-									<span>2023.02.21 02:25:00</span>
+									<span><c:out value="${adminNotice.noticeRegisterDate}"/></span>
 								</div>
 							</div>
 							<hr>
 							<div class="info-table">
 								<div><!-- 게시판 내용 -->
-									오늘 전체적인 레이아웃을 바꾸다보니 시간이 이래 됫네요
-									여러분은 한번에 하도록 디자인을 잘 짜도록 하세욧
+									<c:out value="${adminNotice.noticeContent}"/>
 								</div>
 							</div>	
 						</div>
