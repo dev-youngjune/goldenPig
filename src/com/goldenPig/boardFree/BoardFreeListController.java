@@ -32,49 +32,13 @@ public class BoardFreeListController implements Action {
 	public void paging(HttpServletRequest req, HttpServletResponse resp) {
 		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		JSONArray jsons = new JSONArray();
-		
-		Map<String, Object> pageMap = new HashMap<String, Object>();
-		
-		String temp = req.getParameter("page"); 
-		String sort = req.getParameter("sort");
-		
-		int page = temp == null ? 1 : Integer.parseInt(temp);
-		System.out.println("getTotal L32");
-//		Long total = boardFreeDAO.getTotal();
-		Long total = 4L;
-		System.out.println("getTotal L34");
-//		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 5;
-//		한 페이지에서 나오는 페이지 버튼의 개수
-		int pageCount = 5;
-		int startRow = (page - 1) * rowCount;
-		
-		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
-		int startPage = endPage - (pageCount - 1);
-		int realEndPage = (int)Math.ceil(total / (double)pageCount);
-		
-		boolean prev = startPage > 1;
-		boolean next = false;
-		endPage = endPage > realEndPage ? realEndPage : endPage;
-		next = endPage != realEndPage;
-		
-		sort = sort == null ? "recent" : sort;
-		
-		pageMap.put("rowCount", rowCount);
-		pageMap.put("startRow", startRow);
-		pageMap.put("sort", sort);
-		System.out.println("L66");
-//		System.out.println(boardFreeDAO.selectAllList().get(0).toString());
-//		boardFreeDAO.selectAllList().stream().map(board -> new JSONObject(board)).forEach(jsons::put);
-		System.out.println("L68");
+		try {
+			boardFreeDAO.selectAll().stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		} catch (NullPointerException e) {
+			System.err.println("paging stream err");
+			e.printStackTrace();
+		}
 		req.setAttribute("boards", jsons.toString());
-		req.setAttribute("total", total);
-		req.setAttribute("startPage", startPage);
-		req.setAttribute("endPage", endPage);
-		req.setAttribute("page", page);
-		req.setAttribute("prev", prev);
-		req.setAttribute("next", next);
-		req.setAttribute("sort", sort);
 	}
 
 }

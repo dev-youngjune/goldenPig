@@ -34,7 +34,7 @@
 					
 					<!-- ----------------------- 첫번째 게시물 -----------------------------  -->
 					<ul></ul>
-					<c:forEach var="board" items="${boards}">
+<%-- 				<c:forEach var="board" items="${boards}">
 	 					<div class="content-body">
 								<div class="question-card">
 									<article class="card">
@@ -72,7 +72,7 @@
 									</article>
 								</div>
 							</div>
-						</c:forEach>
+						</c:forEach> --%>
 
 
 					<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
@@ -92,5 +92,5 @@
 	let page = `${page}` || null;
 	let boards = `${boards}`;
 </script>
-<script src="${pageContext.request.contextPath}/static/js/board/board_list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_list_free.js"></script>
 </html>
