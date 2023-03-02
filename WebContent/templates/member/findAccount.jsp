@@ -1,40 +1,67 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>       
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>아하(Aha) 인증센터</title>
+<title>골든피그-이메일 찾기</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/findAccount.css">
-<!-- <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/findEmail.css"> -->
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 </head>
 <body>
-	<div class="loginEmail">
-		<div class="theScreen">
-			<jsp:include page="../member/findHeader.jsp" flush="false" />
-			<!-- body -->
-			<div class="theScreen_body px-5">
-				<h1>
-					<span class="theScreen_body_h_span">회원님의 계정을 찾았어요</span>
-				</h1>
-				<div class="email_Box_Title mt-4">이메일 주소</div>
-				<div class="email_Box_div mt-2">
-					<div class="email_Box_div_div">
-						"codemater5252@gmail.com"
+<body class="find_body">
+	<div id="wrap">
+		<div id="layout">
+			<div class="layoutDefault">
+				<main class="layoutDefault_view">
+					<div class="loginEmail">
+						<div class="theScreen">
+							<header class="theScreen_header">
+								<button type="button" class="theScreen_headerButton -left">
+									<img>
+								</button>
+								<a href="" class="theScreen_headerLogo">
+									<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+									<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
+								</a>
+							</header>
+							<!-- body -->
+							<div class="theScreen_body px-5">
+								<h1>
+									<span class="theScreen_body_h_span">회원님의 계정을 찾았어요</span>
+								</h1>
+								<div class="email_Box_Title mt-4">이메일 주소</div>
+								<div class="email_Box_div mt-2">
+									<div class="email_Box_div_div">
+										<div class="mail-image-box">
+											<img src="${pageContext.request.contextPath}/static/img/member/mail_icon.png">
+										</div>
+										<div class="email-result-box">
+											<span><c:out value='${memberEmail}' /></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- footer -->
+							<footer class="theScreen_footer">
+								<div class="email-login-button">
+									<div class="mail-img-box-layout">
+										<a class="mail-img-box" href="JavaScript:location.href='${pageContext.request.contextPath}/login.member'">
+											<img src="${pageContext.request.contextPath}/static/img/member/mail_icon.png" class="mail-img">
+											이메일 로그인
+										</a>
+									</div>
+								</div>	
+							</footer>
+						</div>
 					</div>
-				</div>
+				</main>
 			</div>
-			
-			<!-- footer -->
-			<footer class="theScreen_footer">
-				<div class="theScreen_footer_div">
-					<a class="theScreen_footer_div_a w-full">
-						<svg xmlns="http://www.w3.org/2000/svg" class="email icon sprite-icons"><use href="/_nuxt/323e8e868a47805d86574cb70f2da2c4.svg#i-logo-mail" xlink:href="/_nuxt/323e8e868a47805d86574cb70f2da2c4.svg#i-logo-mail"></use></svg>
-						이메일 로그인
-					</a>
-				</div>	
-			</footer>
 		</div>
-	</div>
+	</div>				
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 </html>

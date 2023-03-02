@@ -19,7 +19,7 @@
 					
 						<div class="tabs" style="display: flex;">
 							<label  class="blue-line">
-								<a class="active" href="${pageContext.request.contextPath}/board_list.board">
+								<a class="active" href="${pageContext.request.contextPath}/boardList.board">
 									<span class="bullet">저축 게시판</span>
 								</a>
 							</label>
@@ -59,7 +59,7 @@
 															</div>
 															<div class="card-label-icon">
 																<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
-																<span>${board.likeCount}</span>
+																<span></span>
 															</div>
 															<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
 													 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>

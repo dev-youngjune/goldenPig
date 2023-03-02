@@ -45,11 +45,6 @@ main.layoutDefault_view {
     max-height: 650px;
 }
 
-.a_headerLogo {
-    width: 95px;
-    height: 55px;
-}
-
 .theScreen_header {
     z-index: 10;
     display: flex;
