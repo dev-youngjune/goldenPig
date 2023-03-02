@@ -31,5 +31,9 @@ public class BoardDAO {
 		return sqlSession.selectOne("board.getReplyCount", boardId);
 	}
 	
+//	관심글 갯수
+	public Integer favoriteCount(long boardId) {
+		return sqlSession.selectOne("board.favoriteCount", boardId);
+	}
 	
 }

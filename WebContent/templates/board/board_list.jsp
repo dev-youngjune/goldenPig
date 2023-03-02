@@ -59,7 +59,7 @@
 															</div>
 															<div class="card-label-icon">
 																<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
-																<span>${board.likeCount}</span>
+																<span></span>
 															</div>
 															<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
 													 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>
