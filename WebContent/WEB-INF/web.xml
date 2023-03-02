@@ -180,6 +180,18 @@
 	 	<url-pattern>*.mypage</url-pattern>
 	</servlet-mapping> 	 
 	
-
+	
+	<!-- admin -->
+	
+	
+	<servlet>
+	  	<servlet-name>admin</servlet-name>
+	  	<servlet-class>com.goldenPig.admin.AdminFrontController</servlet-class>
+  	</servlet>
+  
+	<servlet-mapping>
+	 	<servlet-name>admin</servlet-name>
+	 	<url-pattern>*.admin</url-pattern>
+	</servlet-mapping> 	 
 	
 </web-app>

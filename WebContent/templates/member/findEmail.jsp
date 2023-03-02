@@ -84,7 +84,7 @@
 								<p class="theFindAccount_message"><span>반드시 본인의 휴대폰 번호로 인증해 주세요.</span></p>
 							</div>
 							<footer class="theScreen_footer">
-								<button class="Button -large w-full -primary -filled phone-check-button">인증하고 비밀번호 변경</button>
+								<button class="Button -large w-full -primary -filled phone-check-button">인증하고 이메일 찾기</button>
 							</footer>
 						</div>
 					</div>
