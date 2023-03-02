@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,16 +86,16 @@
 																</div>
 															</div>
 															<div class="gray_box">
-																<div class=gray_box_title>저금</div>
-																<input type="text" class="gray_box_Input" placeholder="저축을 입력해주세요.">
+																<div class=gray_box_title>목표 금액</div>
+																<input type="text" class="gray_box_Input" placeholder="목표 금액을 입력해주세요.">
 															</div>
 															<div class="gray_box">
-																<div class=gray_box_title>목표</div>
-																<input type="text" class="gray_box_Input" placeholder="목표를 입력해주세요.">
+																<div class=gray_box_title>현재 금액</div>
+																<input type="text" class="gray_box_Input" placeholder="현재 금액을 입력해주세요.">
 															</div>
 															<div class="gray_box">
-																<div class=gray_box_title>대출</div>
-																<input type="text" class="gray_box_Input" placeholder="대출을 입력해주세요.">
+																<div class=gray_box_title>목표기간</div>
+																<input type="text" class="gray_box_Input" placeholder="목표기간을 입력해주세요.">
 															</div>		
 															<div class="gray_box">
 																<div class=gray_box_title>인사말</div>					
@@ -109,8 +110,13 @@
 															</div>	
 														</div>
 													</div>
-													<div class="save">
-														<button class="save_Button">저장</button>
+													<div>
+											<!-- 			<div class="save">
+															<button class="save_Button">수정</button>
+														</div> -->
+														<div class="save">
+															<button class="save_Button">저장</button>
+														</div>
 													</div>
 												</form>
 											</div>
@@ -126,16 +132,16 @@
 							<div class="profile_tabs_container">
 								<ui>
 									<li class="profile_tabsItem">
-										<a class="myProfile_Index test" href="">마이 프로필</a>
+										<a class="myProfile_Index test" href="javascript:location.href='${pageContext.request.contextPath}/mypage.mypage'">마이 프로필</a>
 									</li>
  									<li class="profile_tabsItem">
-										<a class="myProfile_Answers" href="">답변</a>
+										<a class="myProfile_Answers" href="javascript:location.href='${pageContext.request.contextPath}/answers.mypage'">답변</a>
 									</li>
 									<li class="profile_tabsItem">
-										<a class="myProfile_Questions" href="">질문</a>
+										<a class="myProfile_Questions" href="javascript:location.href='${pageContext.request.contextPath}/qustions.mypage'">질문</a>
 									</li>
 									<li class="profile_tabsItem">
-										<a class="myProfile_Scraps" href="">관심 질문</a>
+										<a class="myProfile_Scraps" href="javascript:location.href='${pageContext.request.contextPath}/scraps.mypage'">관심 질문</a>
 									</li>
 								</ui>
 							</div>
@@ -161,13 +167,14 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<span>세심한 곽두철</span>
+											<!-- <span>세심한 곽두철</span> -->
+											<span><c:out value='${name}'/></span>
 										</div>
 										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
 										여러분들 반가워요!</p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
-												<h5>지식활동</h5>
+												<h5>나의활동</h5>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
@@ -178,7 +185,7 @@
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
-														답변 
+															답변
 													</span>
 													<span>0개</span>
 												</div>
@@ -195,13 +202,6 @@
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
-														답변 추천
-													</span>
-													<span>0회</span>
-												</div>
-												<div class="profile_user_status_item">
-													<span class="profile_user_status_item_span">
-														<img src="">
 														답변 좋아요
 													</span>
 													<span>0회</span>
@@ -209,10 +209,17 @@
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
-														공유된 콘텐츠 (질문, 답변)
+														관심 질문
 													</span>
 													<span>0회</span>
 												</div>
+												<!-- <div class="profile_user_status_item">
+													<span class="profile_user_status_item_span">
+														<img src="">
+														공유된 콘텐츠 (질문, 답변)
+													</span>
+													<span>0회</span>
+												</div> -->
 											</div>
 										</div>
 									</div>
@@ -224,43 +231,62 @@
 									<div class="profile_Index">
 										<div class="profile_main_body">
 											<div class="profile_Card">
-												<h4 class="profile_Card_Title">저금</h4>
-												<div class="profile_Card_Content">
-													<div class="profile_Card_Content_noItem">
-														<div class="profile_Card_Content_noItem_Inner">
-															<img src="">
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 저금이 없어요</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="profile_Card">
-												<h4 class="profile_Card_Title">목표</h4>
-												<div class="profile_Card_Content">
-													<div class="profile_Card_Content_noItem">
-														<div class="profile_Card_Content_noItem_Inner">
-															<img src="">
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표가 없어요</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="profile_Card">
-												<h4 class="profile_Card_Title">현황</h4>
+												<h4 class="profile_Card_Title">목표 금액</h4>
 												<div class="profile_Card_Content">
 												
 													<!-- <div class="profile_Card_Content_noItem">
 														<div class="profile_Card_Content_noItem_Inner">
 															<img src="">
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 현황이 없어요</span>
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 금액이 없어요</span>
 														</div>
 													</div> -->
 													
 													<ul class="stepperList">
 														<li>
 															<div class="ripple"></div>
-															<div class="text-font-base-medium">저금 목표 100만원!</div>
-															<div class="text-font-sub-medium">현재 금액 50만원!</div>
+															<div class="text-font-base-medium">목표 금액 1,000만원!!</div>
+															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
+														</li>
+													</ul>
+													
+												</div>
+											</div>
+											<div class="profile_Card">
+												<h4 class="profile_Card_Title">현재 금액</h4>
+												<div class="profile_Card_Content">
+												
+												<!-- 	<div class="profile_Card_Content_noItem">
+														<div class="profile_Card_Content_noItem_Inner">
+															<img src="">
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 현재 금액이 없어요</span>
+														</div>
+													</div> -->
+														<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">현재 금액 150만원!!</div>
+															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
+														</li>
+													</ul>
+													
+												</div>
+											</div>
+											<div class="profile_Card">
+												<h4 class="profile_Card_Title">목표기간</h4>
+												<div class="profile_Card_Content">
+												
+													<!-- <div class="profile_Card_Content_noItem">
+														<div class="profile_Card_Content_noItem_Inner">
+															<img src="">
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 기간이 없어요</span>
+														</div>
+													</div> -->
+													
+													<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">2022.12.28 ~ 2023.06.01!!</div>
+															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
 														</li>
 													</ul>
 													
