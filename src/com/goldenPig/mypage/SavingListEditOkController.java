@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class MyPageProfileController implements Action {
-	
-	 @Override
+public class SavingListEditOkController implements Action {
+
+	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		 
+		// TODO Auto-generated method stub
 		return null;
 	}
 

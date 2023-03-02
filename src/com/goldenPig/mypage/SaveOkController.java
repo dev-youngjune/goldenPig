@@ -9,11 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class MyPageModifyOkController implements Action {
+public class SaveOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		// TODO Auto-generated method stub
+		
+//		list = dao.selectAll();
+//		int likesum = 0;
+//		list.stream().map(e -> e.getlikecount()).foreach(e -> likesum+= e);
+		
+//		req.setParameter("totalCount", a.count + b.count)
 		return null;
 	}
 

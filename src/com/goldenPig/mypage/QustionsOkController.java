@@ -9,11 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class MyPageAnswerController implements Action {
+public class QustionsOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
+		Result result = new Result();
+		
+		
+		result.setPath("/templates/member/myPageQusetions.jsp");
 		return null;
 	}
 
