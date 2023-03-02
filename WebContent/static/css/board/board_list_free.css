@@ -165,17 +165,22 @@ body {
 
 .right-side-bar {
 	float: right;
+	display: flex;
+    height: 3rem;
+    background: #22252b;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .write-board {
+	margin: auto 0;
+	display: inline-block;
 	width: 285px;
     font-size: 1rem;
     font-weight: 700;
-    height: 3rem;
-    border-radius: 8px;
-    background: #22252b;
     color: #ffffff;
     cursor: pointer;
+    text-decoration: none;
 }
 
 
