@@ -20,7 +20,8 @@ public class BoardFreeListController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-
+		
+		paging(req, resp);
 		
 		result.setPath("/templates/board/board_list_free.jsp");
 		result.setRedirect(FORWORD);
@@ -35,11 +36,12 @@ public class BoardFreeListController implements Action {
 		Map<String, Object> pageMap = new HashMap<String, Object>();
 		
 		String temp = req.getParameter("page"); 
-//		String sort = req.getParameter("sort");
+		String sort = req.getParameter("sort");
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		System.out.println("getTotal L32");
-		Long total = boardFreeDAO.getTotal();
+//		Long total = boardFreeDAO.getTotal();
+		Long total = 4L;
 		System.out.println("getTotal L34");
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 5;
@@ -56,14 +58,15 @@ public class BoardFreeListController implements Action {
 		endPage = endPage > realEndPage ? realEndPage : endPage;
 		next = endPage != realEndPage;
 		
-//		sort = sort == null ? "recent" : sort;
+		sort = sort == null ? "recent" : sort;
 		
 		pageMap.put("rowCount", rowCount);
 		pageMap.put("startRow", startRow);
-//		pageMap.put("sort", sort);
-		
-		boardFreeDAO.selectAllList(pageMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
-		
+		pageMap.put("sort", sort);
+		System.out.println("L66");
+//		System.out.println(boardFreeDAO.selectAllList().get(0).toString());
+//		boardFreeDAO.selectAllList().stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		System.out.println("L68");
 		req.setAttribute("boards", jsons.toString());
 		req.setAttribute("total", total);
 		req.setAttribute("startPage", startPage);
@@ -71,7 +74,7 @@ public class BoardFreeListController implements Action {
 		req.setAttribute("page", page);
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
-//		req.setAttribute("sort", sort);
+		req.setAttribute("sort", sort);
 	}
 
 }

@@ -20,8 +20,8 @@ public class BoardFreeDAO {
 	}
 	
 //	게시글 목록+
-	public List<BoardDTO> selectAllList(Map<String, Object> pageMap){
-		return sqlSession.selectList("boardFree.selectAllList", pageMap);
+	public List<BoardDTO> selectAllList(){
+		return sqlSession.selectList("boardFree.selectAllList");
 	}
 	
 //	게시글 총 개수

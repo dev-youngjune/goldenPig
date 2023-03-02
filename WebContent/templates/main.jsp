@@ -89,8 +89,7 @@
 
 				<section class="home-section">
 					<h4 class="home-section-title title is-5">저축 Q&A</h4>
-					<h5 class="home-section-subtitle subtitle is-6">전문가가 직접 답변을
-						남겨줘요</h5>
+					<h5 class="home-section-subtitle subtitle is-6">금융 관련 질문을 해봐요</h5>
 					<div class="home-section-categoryCards tile is-ancestor">
 						<div class="home-section-categoryCards-wrapper tile is-parent">
 							<article class="home-section-categoryCard tile is-child">
@@ -201,45 +200,30 @@
 				<section class="home-section">
 					<header class="home-section-title home-section-hotQuestion title is-5 ">
 						<h4 class="home-section-title-content">모두가 궁금해하는 질문</h4>
-						<span class="home-section-hotQuestion-time"> 2023.02.22 18:00 기준</span>
+						<span class="home-section-hotQuestion-time">${readRankingsTime += '기준'}</span>
 					</header>
 					
 					<!-- 첫번째 줄 -->
 					<div class="home-section-categoryCards tile is-ancestor">
 						<div class="home-section-categoryCards-wrapper tile is-parent">
-						
-							<article class="home-section-categoryCard tile is-child">
-								<div class="">
-									<div class="questionListCardSmall">
-										<a class="categoryCard">
+							<c:forEach var="board" items="${readRankings}">
+								<article class="home-section-categoryCard tile is-child">
+									<div class="">
+										<div class="questionListCardSmall">
+											<a class="categoryCard" href="${pageContext.request.contextPath += '/boardDetail.board?boardId='} ${board.boardId}">
+												<div>
+													<span class="questionListCardSmall-numbering">${i += '.'}</span>
+													<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+												</div>
+											</a>
 											<div>
-												<span class="questionListCardSmall-numbering">01.</span>
-												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+												<span>${board.tag}</span>
 											</div>
-										</a>
-										<div>
-											<span>자동차</span>
 										</div>
 									</div>
-								</div>
-							</article>
-							
-							<article class="home-section-categoryCard tile is-child">
-								<div class="">
-									<div class="questionListCardSmall">
-										<a class="categoryCard">
-											<div>
-												<span class="questionListCardSmall-numbering">01.</span>
-												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
-											</div>
-										</a>
-										<div>
-											<span>자동차</span>
-										</div>
-									</div>
-								</div>
-							</article>
-							<article class="home-section-categoryCard tile is-child">
+								</article>
+							</c:forEach>
+							<!-- <article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="questionListCardSmall">
 										<a class="categoryCard">
@@ -269,37 +253,53 @@
 									</div>
 								</div>
 							</article>
+							<article class="home-section-categoryCard tile is-child">
+								<div class="">
+									<div class="questionListCardSmall">
+										<a class="categoryCard">
+											<div>
+												<span class="questionListCardSmall-numbering">01.</span>
+												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+											</div>
+										</a>
+										<div>
+											<span>자동차</span>
+										</div>
+									</div>
+								</div>
+							</article> -->
 						</div>
 					</div>
 				</section>
 				
 				<section class="home-section" style="margin-bottom: 40px;">
 					<header class="home-section-title home-section-hotQuestion title is-5 ">
-						<h4 class="home-section-title-content">인기 많은 질문</h4>
-						<span class="home-section-hotQuestion-time"> 2023.02.22 18:00 기준</span>
+						<h4 class="home-section-title-content">인기 많은 게시글</h4>
+						<span class="home-section-hotQuestion-time">${likeRankingsTime += '기준'}</span>
 					</header>
 					
 					<!-- 첫번째 줄 -->
 					<div class="home-section-categoryCards tile is-ancestor">
 						<div class="home-section-categoryCards-wrapper tile is-parent">
-						
-							<article class="home-section-categoryCard tile is-child">
-								<div class="">
-									<div class="questionListCardSmall">
-										<a class="categoryCard">
+							<c:forEach var="board" items="${likeRankings}">
+								<article class="home-section-categoryCard tile is-child">
+									<div class="">
+										<div class="questionListCardSmall">
+											<a class="categoryCard" href="${pageContext.request.contextPath += '/boardDetail.boardFree?boardId='} ${board.boardId}">
+												<div>
+													<span class="questionListCardSmall-numbering">${i += '.'}</span>
+													<span class="questionListCardSmall-content">${board.title}</span>
+												</div>
+											</a>
 											<div>
-												<span class="questionListCardSmall-numbering">01.</span>
-												<span class="questionListCardSmall-content">자동차 배터리가 자주 방전되는데 이유가 뭔가요</span>
+												<span>${board.tag}</span>
 											</div>
-										</a>
-										<div>
-											<span>자동차</span>
 										</div>
 									</div>
-								</div>
-							</article>
+								</article>
+							</c:forEach>
 							
-							<article class="home-section-categoryCard tile is-child">
+<!-- 							<article class="home-section-categoryCard tile is-child">
 								<div class="">
 									<div class="questionListCardSmall">
 										<a class="categoryCard">
@@ -343,7 +343,7 @@
 										</div>
 									</div>
 								</div>
-							</article>
+							</article> -->
 						</div>
 					</div>
 				</section>
