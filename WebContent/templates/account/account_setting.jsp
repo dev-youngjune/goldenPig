@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>계정 관리</title>
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_setting.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/header.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/header/footer.css">

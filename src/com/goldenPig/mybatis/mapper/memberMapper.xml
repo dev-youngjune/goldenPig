@@ -2,41 +2,63 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="member">
+	<!-- 회원가입 -->
 	<insert id="join" parameterType="memberVO">
 		insert into tbl_member
 		(member_email, member_password, member_name, member_nickname, member_phonenumber, member_birth)
 		values(#{memberEmail}, #{memberPassword}, #{memberName}, #{memberNickName}, #{memberPhoneNumber}, #{memberBirth});
 	</insert>
 	
+	<!-- 아이디 검사-->
 	<select id="checkId" parameterType="string" resultType="long">
 		select member_id from tbl_member where member_email = #{memberEmail}
 	</select>
 	
+	<!-- 핸드폰 중복 검사-->
 	<select id="checkPhoneNumber" parameterType="string" resultType="long">
 		select member_id from tbl_member where member_phonenumber = #{memberPhoneNumber}
 	</select>
 	
+	<!-- 로그인-->
 	<select id="login" parameterType="map" resultType="long">
 		select member_id from tbl_member 
 		where member_email = #{memberEmail} and member_password = #{memberPassword}
 	</select>
 	
+	<!-- 유저 정보 -->
 	<select id="select" parameterType="long" resultType="memberVO">
 		select member_email, member_name, member_nickname, member_phonenumber, member_birth from tbl_member where member_id = #{memberId}
 	</select>
 	
+	<!-- 이메일 변경 -->
 	<update id="updateEmail" parameterType="map">
 		update tbl_member set member_email = #{memberEmail} where member_id = #{memberId}
 	</update>
 	
+	<!-- 핸드폰 번호 변경 -->
 	<update id="updatePhoneNumber" parameterType="map">
 		update tbl_member set member_phonenumber = #{memberPhoneNumber} where member_id = #{memberId}
 	</update>
 	
+	<!-- 비밀번호 변경 -->
 	<update id="updatePassword" parameterType="map">
 		update tbl_member set member_password = #{memberPassword} where member_id = #{memberId}
 	</update>
 	
+	<!-- 폰번호로 유저id 찾기 -->
+	<select id="findMemberId" parameterType="map" resultType="long">
+		select member_id from tbl_member where member_phonenumber = #{memberPhoneNumber} and member_name = #{memberName}
+	</select>
+	
+	<!-- 이메일 찾기  -->
+	<select id="findEmail" parameterType="long" resultType="string">
+		select member_email from tbl_member where member_id = #{memberId}
+	</select>
+	
+	<!-- 회원 탈퇴 -->
+	<delete id="withdrawal" parameterType="long">
+		delete from tbl_member where member_id = #{memberId}
+	</delete>	
 </mapper>
 
 	

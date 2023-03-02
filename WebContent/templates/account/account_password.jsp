@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>비밀번호 재설정</title>
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_password.css">
 </head>
 <body>
@@ -53,6 +55,7 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script>
 let userInput = $(".email_text");
 let check = [false, false];
@@ -143,13 +146,16 @@ function buttonActive(){
 	}
 }
 
+let memberId = "<c:out value='${memberId}'/>"
+
 $confirm.click(function(){
 	if(check.filter(check=> check == true).length != 2){
 		alert("비밀번호 확인 또는 비밀번호 입력 오류입니다.");
 		return false;
 	}
 	
-	$(".password-change").submit();
+	alert("비밀번호 변경 완료");
+	location.href= contextPath + "/passwordOk.member?memberId=" + memberId + "&memberPassword=" + $("#new_password").val();
 });
 </script>
 </html>
