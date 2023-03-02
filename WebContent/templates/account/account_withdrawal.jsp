@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원탈퇴</title>
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/account/account_withdrawal.css">
 <style>
 @font-face {
