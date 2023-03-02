@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Result;
+import com.mysql.cj.x.protobuf.MysqlxPrepare.Execute;
 
 public class MyPageFrontController extends HttpServlet {
 
@@ -20,20 +21,35 @@ public class MyPageFrontController extends HttpServlet {
 	
 		
 		
-		if(target.equals("/profile")) {
+		if(target.equals("/mypage")) {
 			result = new Result();
 			new MyPageProfileController();
 			
-		}else if(target.equals("/modifyOk")) {
+		}else if(target.equals("/myprofileOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/myqustionsOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/myanswersOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/mysavingOk")) {
+			new MyPageScrapController();
+			
+		}else if(target.equals("/updateprofileOk")) {
 			new MyPageModifyOkController();
 			
-		}else if(target.equals("/answer")) {
+		}else if(target.equals("/editprofileOk")) {
+			new MyPageModifyOkController();
+			
+		}else if(target.equals("/answerOk")) {
 			new MyPageAnswerController();
 			
-		}else if(target.equals("/question")) {
+		}else if(target.equals("/questionOk")) {
 			new MyPageQuestionController();
 			
-		}else if(target.equals("/scrap")) {
+		}else if(target.equals("/scrapOk")) {
 			new MyPageScrapController();
 			
 		}else {
@@ -52,6 +68,6 @@ public class MyPageFrontController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		doGet(req, resp);
 	}
 }
