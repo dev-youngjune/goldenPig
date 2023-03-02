@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메인페이지로 이동중입니다</title>
 </head>
 <body>
 </body>
 <script type="text/javascript">
-	location.replace("/index.main");
+	location.replace("index.main");
 </script>
 </html>

@@ -1,8 +1,6 @@
 package com.goldenPig.boardFree;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,12 +18,13 @@ public class BoardFreeListController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		
 		paging(req, resp);
+//		req.setAttribute("boards", boardFreeDAO.selectAll());
 		
 		result.setPath("/templates/board/board_list_free.jsp");
 		result.setRedirect(FORWORD);
-		
 		return result;
 	}
 	
@@ -38,6 +37,7 @@ public class BoardFreeListController implements Action {
 			System.err.println("paging stream err");
 			e.printStackTrace();
 		}
+//		System.out.println(jsons);
 		req.setAttribute("boards", jsons.toString());
 	}
 
