@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
@@ -18,8 +17,8 @@ public class BoardFreeDAO {
 	}
 	
 //	게시글 목록
-	public List<BoardDTO> selectAllSearch(Map<String, Object> pageMap){
-		List<BoardDTO> result = null;
+	public List<BoardFreeDTO> selectAllSearch(Map<String, Object> pageMap){
+		List<BoardFreeDTO> result = null;
 		try {
 			result = sqlSession.selectList("boardFree.selectAllSearch", pageMap);
 		} catch (Exception e) {
