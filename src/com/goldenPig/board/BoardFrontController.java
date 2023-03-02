@@ -35,7 +35,6 @@ public class BoardFrontController extends HttpServlet {
 			result = new BoardAnswerOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetail")) {
-			System.out.println("front들어옴");
 			result = new BoardDetailController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetailOk")) {
