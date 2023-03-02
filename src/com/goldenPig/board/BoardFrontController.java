@@ -15,10 +15,9 @@ public class BoardFrontController extends HttpServlet {
 
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String uri = req.getRequestURI();
-		String contextPath = "templates/board/";
+		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
-		System.out.println("target: " + target);
 		if (target.equals("/boardList")) {
 			result = new BoardListController().execute(req, resp);
 			
@@ -29,7 +28,8 @@ public class BoardFrontController extends HttpServlet {
 			result = new BoardWriteOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardAnswer")) {
-			result = new BoardAnswerController().execute(req, resp);
+			result = new Result();
+			result.setPath("/templates/board/board_answer.jsp");
 			
 		} else if (target.equals("/boardAnswerOk")) {
 			result = new BoardAnswerOkController().execute(req, resp);
