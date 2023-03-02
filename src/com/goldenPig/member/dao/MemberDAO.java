@@ -70,10 +70,9 @@ public class MemberDAO {
 	
 //	핸드폰번호로 유저의 아이디 찾기
 	public Long findMemberId(String memberPhoneNumber, String memberName) {
-		Map<String, Object> idMap = new HashMap<String, Object>();
+		Map<String, String> idMap = new HashMap<String, String>();
 		idMap.put("memberPhoneNumber", memberPhoneNumber);
 		idMap.put("memberName", memberName);
-		
 		return sqlSession.selectOne("member.findMemberId", idMap);
 	}
 	
