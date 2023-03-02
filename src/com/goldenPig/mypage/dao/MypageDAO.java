@@ -10,20 +10,47 @@ public class MypageDAO {
 	
 	public MypageDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
-		
-		
-	}	
+	}
 	
-//	회원 조회 
-	public MemberVO select(Long meberId) {
-		return sqlSession.selectOne("mypage.select", meberId);
+	public MemberVO select(Long memberId) {
+		return sqlSession.selectOne("mypage.select", memberId);
+		
 	}
 	
 	
-//	회원 삭제
-	public void delete(Long memberId) {
-		 sqlSession.update("mypage.delete", memberId);
+//	프로필 편집 눌렀을시 프로필 편집 모달창 활성화 
+	public void selectModal() {
+		
 	}
 	
-
+//	프로필 이미지 추가 (모달 내부)
+	public void insertImg() {
+		
+	}
+	
+//	프로필 편집 수정 (모달 내부)
+	public void updateProfileEdit() {
+		
+	}
+	
+//	프로필 편집 저장 (모달 내부)
+	public void insertProfileSave() {
+		
+	}
+	
+//	질문 목록으로 이동
+	public void selectQustions() {
+		
+	}
+	
+//	답변 목록으로 이동 
+	public void selectAnswers() {
+		
+	}
+	
+//	관심 질문목록으로 이동 
+	public void selectScraps() {
+		
+	}
+	
 }

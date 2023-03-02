@@ -76,45 +76,44 @@
 										여러분들 반가워요!</p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
-												<h5>지식활동</h5>
+												<h5>나의활동</h5>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
-														질문
-													</span> <span>0개</span>
+															질문
+													</span>
+													<span>0개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
-														답변
-													</span> <span>0개</span>
+															답변
+													</span>
+													<span>0개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
 												<h5>획득한 반응</h5>
 												<div class="profile_user_status_item">
-													<span class="profile_user_status_item_span"> 
+													<span class="profile_user_status_item_span">
 														<img src="">
 														질문 좋아요
-													</span> <span>0회</span>
+													</span>
+													<span>0회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
-														<img src="">
-														답변 추천
-													</span> <span>0회</span>
-												</div>
-												<div class="profile_user_status_item">
-													<span class="profile_user_status_item_span"> 
 														<img src="">
 														답변 좋아요
-													</span> <span>0회</span>
+													</span>
+													<span>0회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
-														공유된 콘텐츠 (질문, 답변)
-													</span> <span>0회</span>
+														관심 질문
+													</span>
+													<span>0회</span>
 												</div>
 											</div>
 										</div>
