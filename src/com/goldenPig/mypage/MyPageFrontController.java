@@ -25,7 +25,7 @@ public class MyPageFrontController extends HttpServlet {
 //			컨트롤러를 통해 마이 페이지로 데이터를 전송
 		if(target.equals("/mypageOk")) {
 			System.out.println("2." + target);
-			result = new MyPageOkController().execute(req, resp);
+			new MyPageOkController().execute(req, resp);
 			
 //			마이 페이지 
 		}else if(target.equals("/mypage")) {
