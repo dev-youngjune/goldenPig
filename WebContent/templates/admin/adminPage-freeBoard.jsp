@@ -41,7 +41,7 @@
 					<!-- 헤더 -->
 					<div class="prev-button-layout">
 						<div>
-							<a href="javascript:location.href='${pageContext.request.contextPath}/adminBoardList.admin?page=${page}'">
+							<a href="javascript:location.href='${pageContext.request.contextPath}/adminFreeBoardList.admin?page=${page}'">
 								<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
 								<span class="prev-title">리스트로 돌아가기</span>
 							</a>
@@ -67,11 +67,6 @@
 									<!-- 작성자 명  -->
 									<span><c:out value="${board.memberName}"/></span>
 								</div>
-								<%-- <div class="info-member">
-									<span class="span-bold">좋아요 :</span>
-									<!-- 좋아요 갯수  -->
-									<span><c:out value="${board.likeCount}"/></span>
-								</div> --%>
 								<div class="info-member">
 									<span class="span-bold">작성 날짜 :</span>
 									<!-- 작성 날짜  -->

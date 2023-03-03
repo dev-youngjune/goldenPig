@@ -15,6 +15,7 @@
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeVO" alias="boardFreeVO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeDTO" alias="boardFreeDTO"/>
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
+		<typeAlias type="com.goldenPig.board.domain.AdminBoardDTO" alias="adminBoardDTO"/>
 	</typeAliases>
 		
 	<environments default="mysql">
@@ -43,6 +44,7 @@
       <mapper resource="com/goldenPig/mybatis/mapper/savingMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/tagMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/mypageMapper.xml"/>
+      <mapper resource="com/goldenPig/mybatis/mapper/adminMapper.xml"/>
    </mappers>
 	
 </configuration>
