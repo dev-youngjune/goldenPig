@@ -4,6 +4,8 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
+import com.goldenPig.mypage.domain.MoneyDTO;
+import com.goldenPig.mypage.domain.MoneyVO;
 
 public class MypageDAO {
 	public SqlSession sqlSession;
@@ -18,37 +20,40 @@ public class MypageDAO {
 	}
 	
 	
-//	프로필 편집 눌렀을시 프로필 편집 모달창 활성화 
-	public void selectModal() {
-		
+	
+	
+	
+//	저축 목표 조회
+	public MoneyVO selectMoney(Long memberId) {
+		return sqlSession.selectOne("mypage.selectMoney", memberId);
 	}
 	
-//	프로필 이미지 추가 (모달 내부)
-	public void insertImg() {
-		
+//	모달 프로필 정보 조회
+	public void selectModalProfile(MoneyDTO moneyDTO) {
+		sqlSession.selectOne("mypage.selectProfile", moneyDTO);
 	}
 	
-//	프로필 편집 수정 (모달 내부)
-	public void updateProfileEdit() {
-		
+//	모달 프로필 멤버 정보 수정 
+	public void updateModalProfile(MemberVO memberVO) {
+		sqlSession.update("mypage.updateModalProfile", memberVO);
 	}
 	
-//	프로필 편집 저장 (모달 내부)
-	public void insertProfileSave() {
-		
+// 모달 프로필 저축 목표 수정 
+	public void updateModalMoney(MoneyVO moneyVO) {
+		sqlSession.update("mypage.updateModalMoney", moneyVO);
 	}
 	
-//	질문 목록으로 이동
+//	질문 목록 
 	public void selectQustions() {
 		
 	}
 	
-//	답변 목록으로 이동 
+//	답변 목록
 	public void selectAnswers() {
 		
 	}
 	
-//	관심 질문목록으로 이동 
+//	관심 질문 목록
 	public void selectScraps() {
 		
 	}

@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>질문 페이지</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/myPageQuestions.css">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false" />

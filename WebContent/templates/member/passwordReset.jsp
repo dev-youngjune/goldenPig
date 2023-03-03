@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>아하(Aha) 인증센터</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/passwordReset.css">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 </head>
 <body>
 	<div id="wrap">
