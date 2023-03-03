@@ -11,7 +11,7 @@ import com.goldenPig.Result;
 import com.goldenPig.admin.dao.AdminDAO;
 import com.goldenPig.board.domain.AdminBoardDTO;
 
-public class AdminBoardDetailController implements Action {
+public class AdminFreeBoardDetailController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -19,13 +19,13 @@ public class AdminBoardDetailController implements Action {
 		AdminDAO adminDAO = new AdminDAO();
 		AdminBoardDTO adminBoardDTO = new AdminBoardDTO();
 		Long boardId = Long.parseLong(req.getParameter("boardId"));
-		
-		adminBoardDTO = adminDAO.adminBoardSelect(boardId);
+
+		adminBoardDTO = adminDAO.adminFreeSelect(boardId);
 		
 		req.setAttribute("board", adminBoardDTO);
 		req.setAttribute("page", req.getParameter("page"));
 		
-		result.setPath("/templates/admin/adminPage-board.jsp");
+		result.setPath("/templates/admin/adminPage-freeBoard.jsp");
 		return result;
 	}
 

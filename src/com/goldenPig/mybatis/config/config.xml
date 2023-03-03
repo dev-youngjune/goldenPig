@@ -18,6 +18,7 @@
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyDTO" alias="moneyDTO"/>
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyVO" alias="moneyVO"/>
 		
+		<typeAlias type="com.goldenPig.board.domain.AdminBoardDTO" alias="adminBoardDTO"/>
 	</typeAliases>
 		
 	<environments default="mysql">
@@ -46,21 +47,6 @@
       <mapper resource="com/goldenPig/mybatis/mapper/savingMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/tagMapper.xml"/>
       <mapper resource="com/goldenPig/mybatis/mapper/mypageMapper.xml"/>
+      <mapper resource="com/goldenPig/mybatis/mapper/adminMapper.xml"/>
    </mappers>
-	
 </configuration>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

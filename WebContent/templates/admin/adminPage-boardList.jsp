@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@
 			</div>
 			<div>
 				<div class="select-name">
-					<span>게시판 관리</span>	
+					<span>저축게시판 관리</span>	
 				</div>
 			</div>
 		</div>
@@ -49,7 +50,7 @@
 						
 						<div class="board-info-box">
 							<div class="board-info-title-box">
-								<span>전체 게시판 목록</span>
+								<span>저축 게시판</span>
 							</div>
 							
 							<div class="info-table">
@@ -60,39 +61,65 @@
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>No</th>
-											<th>카테고리</th>
+											<!-- <th>카테고리</th> -->
 											<th>게시판 제목</th>
 											<th>작성자 명</th>
 											<th>작성 날짜</th>
 										</tr>
 									</thead>
-									<tr>
-										<td class="checkbox-line">
-											<input type="checkbox" name="check">
-										</td>
-										<td>1</td>
-										<td>저축 게시판</td>
-										<td><a href="<!-- 상세보기 페이지 -->">적금의 신의 팁을 알려드립니다.</a></td>
-										<td>임**</td>
-										<td>2023.01.11</td>
-									</tr>
-									<tr>
-										<td class="checkbox-line">
-											<input type="checkbox" name="check">
-										</td>
-										<td>2</td>
-										<td>자유 게시판</td>
-										<td>언제 돈 모아요..?</td>
-										<td>이**</td>
-										<td>2023.02.11</td>
-									</tr>
+									
+									<c:forEach var="board" items="${boards}">
+										<tr>
+											<td class="checkbox-line">
+												<input type="checkbox" name="check">
+											</td>
+											<td class="noticeId"><c:out value="${board.boardId}"/></td>
+											<%-- <c:if test="${board.category == 'saving'}">
+												<td>저축 게시판</td>
+											</c:if> --%>
+											<td>
+												<a href="javascript:location.href='${pageContext.request.contextPath}/adminBoardDetail.admin?page=${page}&boardId=${board.boardId}'">
+													<c:out value="${board.boardTitle}"/>
+												</a>
+											</td>
+											<td><c:out value="${board.memberName}"/></td>
+											<td><c:out value="${board.boardRegisterDate}"/></td>
+										</tr>
+									</c:forEach>
 								</table>
 							</div>
 						</div>
 					</section>
 					
+					
 					<!-- 페이지 버튼 -->
-					<div class="page-button-box-layout">
+					
+					
+	            	<section id="content-wrap">
+		                <ul></ul>
+		                <div id="paging-wrap">
+		                	<c:if test="${prev}">
+			                    <a href="javascript:location.href='${pageContext.request.contextPath}/adminBoardList.admin?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
+		                	</c:if>
+		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
+		                    	<c:choose>
+		                    		<c:when test="${i eq page}">
+					                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+		                    		</c:when>
+		                    		<c:otherwise>
+					                    <a href="javascript:location.href='${pageContext.request.contextPath}/adminBoardList.admin?page=${i}'" class="paging"><c:out value="${i}"/></a>
+		                    		</c:otherwise>
+		                    	</c:choose>
+		                    </c:forEach>
+		                    <c:if test="${next}">
+		                    	<a href="javascript:location.href='${pageContext.request.contextPath}/adminBoardList.admin?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
+		                    </c:if>
+		                    <div></div>
+		                </div>
+	            	</section>
+	            	
+	            	
+					<%-- <div class="page-button-box-layout">
 						<div class="page-button-box">
 							<!-- 페이지 번호 -->
 							<div class="">
@@ -131,7 +158,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --%>
 					<!-- 페이지 버튼 끝 -->
 				</div>
 			</div>
@@ -139,6 +166,7 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
 <script src="${pageContext.request.contextPath}/static/js/admin/checkbox.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/admin/page.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/admin/board.js"></script>
 </html>
