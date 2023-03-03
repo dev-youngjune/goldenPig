@@ -1,14 +1,18 @@
 package com.goldenPig.mypage.domain;
 
-public class MoneyVO {
-	
+public class MoneyDTO {
+
 	Long memberId;
+	String memberNickname;
+	String memberImgName;
+	String memberImgPath;
+	String memberGreeting;
 	int moneyAmount;
 	int moneyTarget;
 	String moneyRegisterDate;
 	String moneyExpiryDate;
 	
-	public MoneyVO() {;}
+	public MoneyDTO() {;}
 
 	public Long getMemberId() {
 		return memberId;
@@ -16,6 +20,38 @@ public class MoneyVO {
 
 	public void setMemberId(Long memberId) {
 		this.memberId = memberId;
+	}
+
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+
+	public String getMemberImgName() {
+		return memberImgName;
+	}
+
+	public void setMemberImgName(String memberImgName) {
+		this.memberImgName = memberImgName;
+	}
+
+	public String getMemberImgPath() {
+		return memberImgPath;
+	}
+
+	public void setMemberImgPath(String memberImgPath) {
+		this.memberImgPath = memberImgPath;
+	}
+
+	public String getMemberGreeting() {
+		return memberGreeting;
+	}
+
+	public void setMemberGreeting(String memberGreeting) {
+		this.memberGreeting = memberGreeting;
 	}
 
 	public int getMoneyAmount() {
@@ -52,8 +88,10 @@ public class MoneyVO {
 
 	@Override
 	public String toString() {
-		return "MoneyVO [memberId=" + memberId + ", moneyAmount=" + moneyAmount + ", moneyTarget=" + moneyTarget
-				+ ", moneyRegisterDate=" + moneyRegisterDate + ", moneyExpiryDate=" + moneyExpiryDate + "]";
+		return "MoneyDTO [memberId=" + memberId + ", memberNickname=" + memberNickname + ", memberImgName="
+				+ memberImgName + ", memberImgPath=" + memberImgPath + ", memberGreeting=" + memberGreeting
+				+ ", moneyAmount=" + moneyAmount + ", moneyTarget=" + moneyTarget + ", moneyRegisterDate="
+				+ moneyRegisterDate + ", moneyExpiryDate=" + moneyExpiryDate + "]";
 	}
 
 	@Override
@@ -72,7 +110,7 @@ public class MoneyVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		MoneyVO other = (MoneyVO) obj;
+		MoneyDTO other = (MoneyDTO) obj;
 		if (memberId == null) {
 			if (other.memberId != null)
 				return false;
@@ -80,5 +118,6 @@ public class MoneyVO {
 			return false;
 		return true;
 	}
+	
 	
 }

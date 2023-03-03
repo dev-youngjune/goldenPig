@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>마이 페이지</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/member/mypage.css">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/static/img/favicon/fevicon.png">
 </head>
 <body>
 <jsp:include page="../header/header.jsp" flush="false"/>
@@ -22,9 +23,6 @@
 									커버 사진 수정
 								</button>
 								<button class="header_container_button -primary modal-open">프로필 편집</button>
-							<!-- 	<button class="header_container_button buttonShare">
-									<i class="icon icon=share-fill"></i>
-								</button> -->
 							</div>
 							<div class="profile_Editor a-modal">
 								<div class="scroll -open">
@@ -75,7 +73,7 @@
 															<div class="gray_box_description">
 																<div>
 																	<div class="div_relative">
-																		<input type="text" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
+																		<input type="text" name="newNickname" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
 																		<span class="available_length nickname_length"></span>
 																		<div class="description">
 																			<img src= "${pageContext.request.contextPath}/static/img/member/alert_.png" class="info_alet icons">
@@ -94,8 +92,12 @@
 																<input type="text" class="gray_box_Input" placeholder="현재 금액을 입력해주세요.">
 															</div>
 															<div class="gray_box">
-																<div class=gray_box_title>목표기간</div>
-																<input type="text" class="gray_box_Input" placeholder="목표기간을 입력해주세요.">
+																<div class=gray_box_title>목표 시작날짜</div>
+																<input type="text" class="gray_box_Input" placeholder="목표 시작일을 입력해주세요.">
+															</div>		
+															<div class="gray_box">
+																<div class=gray_box_title>목표 마감날짜</div>
+																<input type="text" class="gray_box_Input" placeholder="목표 마감일을 입력해주세요.">
 															</div>		
 															<div class="gray_box">
 																<div class=gray_box_title>인사말</div>					
@@ -111,9 +113,6 @@
 														</div>
 													</div>
 													<div>
-											<!-- 			<div class="save">
-															<button class="save_Button">수정</button>
-														</div> -->
 														<div class="save">
 															<button class="save_Button">저장</button>
 														</div>
@@ -167,8 +166,7 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<!-- <span>세심한 곽두철</span> -->
-											<span><c:out value='${name}'/></span>
+											<span>세심한 곽두철</span>
 										</div>
 										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
 										여러분들 반가워요!</p>
@@ -213,13 +211,6 @@
 													</span>
 													<span>0회</span>
 												</div>
-												<!-- <div class="profile_user_status_item">
-													<span class="profile_user_status_item_span">
-														<img src="">
-														공유된 콘텐츠 (질문, 답변)
-													</span>
-													<span>0회</span>
-												</div> -->
 											</div>
 										</div>
 									</div>
@@ -232,67 +223,76 @@
 										<div class="profile_main_body">
 											<div class="profile_Card">
 												<h4 class="profile_Card_Title">목표 금액</h4>
-												<div class="profile_Card_Content">
 												
-													<!-- <div class="profile_Card_Content_noItem">
-														<div class="profile_Card_Content_noItem_Inner">
-															<img src="">
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 금액이 없어요</span>
-														</div>
-													</div> -->
-													
-													<ul class="stepperList">
-														<li>
-															<div class="ripple"></div>
-															<div class="text-font-base-medium">목표 금액 1,000만원!!</div>
-															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
-														</li>
-													</ul>
-													
-												</div>
-											</div>
-											<div class="profile_Card">
-												<h4 class="profile_Card_Title">현재 금액</h4>
 												<div class="profile_Card_Content">
-												
-												<!-- 	<div class="profile_Card_Content_noItem">
-														<div class="profile_Card_Content_noItem_Inner">
-															<img src="">
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 현재 금액이 없어요</span>
-														</div>
-													</div> -->
+												<c:choose>
+													<c:when test='${memberMoney.moneyAmount == 0}'>
+														<div class="profile_Card_Content_noItem">
+															<div class="profile_Card_Content_noItem_Inner">
+																<img src="">
+																<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 금액이 없어요</span>
+															</div>
+														</div> 
+													</c:when>
+													<c:otherwise>	
 														<ul class="stepperList">
-														<li>
-															<div class="ripple"></div>
-															<div class="text-font-base-medium">현재 금액 150만원!!</div>
-															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
-														</li>
-													</ul>
-													
+															<li>
+																<div class="ripple"></div>
+																<div class="text-font-base-medium">목표 금액 <c:out value='${memberMoney.moneyAmount}'/>만원!!</div>
+															</li>
+														</ul>
+													</c:otherwise>	
+													</c:choose>
+													</div>
 												</div>
-											</div>
-											<div class="profile_Card">
-												<h4 class="profile_Card_Title">목표기간</h4>
-												<div class="profile_Card_Content">
 												
-													<!-- <div class="profile_Card_Content_noItem">
-														<div class="profile_Card_Content_noItem_Inner">
-															<img src="">
-															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 기간이 없어요</span>
+												<div class="profile_Card">
+													<h4 class="profile_Card_Title">현재 금액</h4>
+													<div class="profile_Card_Content">
+													<c:choose>
+														<c:when test='${memberMoney.moneyTarget  == 0}'>
+														<div class="profile_Card_Content_noItem">
+															<div class="profile_Card_Content_noItem_Inner">
+																<img src="">
+																<span class="profile_Card_Content_noItem_Inner_span">등록된 현재 금액이 없어요</span>
+															</div>
 														</div>
-													</div> -->
-													
-													<ul class="stepperList">
-														<li>
-															<div class="ripple"></div>
-															<div class="text-font-base-medium">2022.12.28 ~ 2023.06.01!!</div>
-															<!-- <div class="text-font-sub-medium">현재 금액 50만원!</div> -->
-														</li>
-													</ul>
-													
-																										
+														</c:when>
+														<c:otherwise>
+														<ul class="stepperList">
+															<li>
+																<div class="ripple"></div>
+																<div class="text-font-base-medium">현재 금액 <c:out value='${memberMoney.moneyTarget}'/>만원!!</div>
+															</li>
+														</ul>
+														</c:otherwise>
+													</c:choose>
+													</div>
 												</div>
-											</div>
+												
+												<div class="profile_Card">
+													<h4 class="profile_Card_Title">목표기간</h4>
+													<div class="profile_Card_Content">
+													<c:choose>
+													<c:when test='${empty memberMoney.moneyExpiryDate}'>
+														<div class="profile_Card_Content_noItem">
+															<div class="profile_Card_Content_noItem_Inner">
+																<img src="">
+																<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 기간이 없어요</span>
+															</div>
+														</div>
+													</c:when>
+													<c:otherwise>
+														<ul class="stepperList">
+															<li>
+																<div class="ripple"></div>
+																<div class="text-font-base-medium">	<c:out value='${memberMoney.moneyRegisterDate}'/> ~ <c:out value='${memberMoney.moneyExpiryDate}'/>	 </div>
+															</li>
+														</ul>
+													</c:otherwise>	
+													</c:choose>									
+													</div>
+												</div>
 										</div>
 									</div> 
 								</main>					
