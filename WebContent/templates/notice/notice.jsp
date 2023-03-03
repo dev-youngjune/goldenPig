@@ -37,7 +37,7 @@
 							<!-- 이태원 -->
 							<div class="card-body">
 								<!--공지사항 들어가는 링크  -->
-								<a href="javascript:location.href='/noticeDetailOk.notice?noticeId=${notice.noticeId}'"> <!--공지사항 제목  -->
+								<a href="javascript:location.href='${pageContext.request.contextPath}/noticeDetailOk.notice?noticeId=${notice.noticeId}'"> <!--공지사항 제목  -->
 									<h3 class="line-height">
 										<!--필독 라벨  -->
 										<span class="label pull-left"> <i
@@ -76,7 +76,7 @@
 		                <ul></ul>
 		                <div id="paging-wrap">
 		                	<c:if test="${prev}">
-			                    <a href="javascript:location.href='/noticeListOk.notice?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
+			                    <a href="javascript:location.href='${pageContext.request.contextPath}/noticeListOk.notice?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
 		                	</c:if>
 		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
 		                    	<c:choose>
@@ -84,12 +84,12 @@
 					                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
 		                    		</c:when>
 		                    		<c:otherwise>
-					                    <a href="javascript:location.href='/noticeListOk.notice?page=${i}'" class="paging"><c:out value="${i}"/></a>
+					                    <a href="javascript:location.href='${pageContext.request.contextPath}/noticeListOk.notice?page=${i}'" class="paging"><c:out value="${i}"/></a>
 		                    		</c:otherwise>
 		                    	</c:choose>
 		                    </c:forEach>
 		                    <c:if test="${next}">
-		                    	<a href="javascript:location.href='/noticeListOk.notice?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
+		                    	<a href="javascript:location.href='${pageContext.request.contextPath}/noticeListOk.notice?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
 		                    </c:if>
 		                    <div></div>
 		                </div>

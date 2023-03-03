@@ -8,13 +8,25 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
+import com.goldenPig.admin.dao.AdminDAO;
+import com.goldenPig.notice.domain.NoticeVO;
 
 public class AdminNoticeWriteOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		return null;
+		Result result = new Result();
+		AdminDAO adminDAO = new AdminDAO();
+		NoticeVO noticeVO = new NoticeVO();
+		String noticeTitle = req.getParameter("noticeTitle");
+		String noticeContent = req.getParameter("noticeContent");
+		
+		noticeVO.setNoticeTitle(noticeTitle);
+		noticeVO.setNoticeContent(noticeContent);
+		adminDAO.adminNoticeInsert(noticeVO);
+		
+		result.setPath(req.getContextPath() + "/adminNoticeList.admin");
+		return result;
 	}
 
 }

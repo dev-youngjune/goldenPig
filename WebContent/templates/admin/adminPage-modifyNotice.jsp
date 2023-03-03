@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +42,7 @@
 					<!-- 헤더 -->
 					<div class="prev-button-layout">
 						<div>
-							<a>
+							<a href="${pageContext.request.contextPath}/adminNoticeList.admin?page=${page}">
 								<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
 								<span class="prev-title">리스트로 돌아가기</span>
 							</a>
@@ -56,13 +58,15 @@
 							</div>
 							<hr>
 							<div class="info-table">
-							<form action="">
+							<form action="${pageContext.request.contextPath}/adminNoticeOkModify.admin">
+								<input type="hidden" name="noticeId" value="${adminNotice.noticeId}">
+								<input type="hidden" name="page" value="${page}">
 								<div>
-									<input type="text" class="notice-title" name="noticeTitle" placeholder="제목을 입력해주세요." autocomplete="off">
+									<input type="text" class="notice-title" name="noticeTitle" placeholder="제목을 입력해주세요." autocomplete="off" value="${adminNotice.noticeTitle}">
 								</div>
 								<hr>
 								<div>
-									<textarea class="notice-content" name="noticeContent" placeholder="내용을 입력해주세요."></textarea>
+									<textarea class="notice-content" name="noticeContent" placeholder="내용을 입력해주세요.">${adminNotice.noticeContent}</textarea>
 								</div>
 								<hr>
 								<div>

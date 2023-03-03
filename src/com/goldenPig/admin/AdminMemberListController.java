@@ -34,14 +34,14 @@ public class AdminMemberListController implements Action {
 		
 		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
 		
-//		모든 멤버의 수
+//		모든 회원의 수
 		Long total = adminDAO.getTotalMember();
 		
 //		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 5;
+		int rowCount = 10;
 		
 //		한 페이지에서 나오는 페이지 버튼의 개수
-		int pageCount = 5;
+		int pageCount = 10;
 		int startRow = (page - 1) * rowCount;
 		
 		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
