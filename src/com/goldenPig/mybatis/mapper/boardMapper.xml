@@ -33,6 +33,11 @@
 	<select id="favoriteCount" parameterType="long" resultType="int">
 		select count(board_id) from tbl_favorite where board_id = #{boardId}; 
 	</select>
-	
+	<select id="answerCount" parameterType="long" resultType="int">
+		select count(board_id) from tbl_saving_answer where board_id = #{boardId}; 
+	</select>
+	<select id="likeCount" parameterType="long" resultType="int">
+		select count(board_id) from tbl_board_saving_like where board_id = #{boardId}; 
+	</select>
 </mapper>
 

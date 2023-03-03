@@ -19,7 +19,9 @@ public class BoardListController implements Action {
 		Result result = new Result();
 		ArrayList<BoardDTO> boardDTO = new ArrayList<BoardDTO>();
 		ArrayList<Long> boardId = new ArrayList<Long>();
-		ArrayList<Integer> count = new ArrayList<Integer>();
+		ArrayList<Integer> favoriteCount = new ArrayList<Integer>();
+		ArrayList<Integer> answerCount = new ArrayList<Integer>();
+		ArrayList<Integer> likeCount = new ArrayList<Integer>();
 		BoardDAO boardDAO = new BoardDAO();
 		
 		for (int i = 0; i < boardDAO.selectAll().size(); i++) {
@@ -28,11 +30,19 @@ public class BoardListController implements Action {
 		}
 		
 		for (int i = 0; i < boardId.size(); i++) {
-			count.add(boardDAO.favoriteCount(boardId.get(i)));
+			favoriteCount.add(boardDAO.favoriteCount(boardId.get(i)));
+		}
+		for (int i = 0; i < boardId.size(); i++) {
+			answerCount.add(boardDAO.answerCount(boardId.get(i)));
+		}
+		for (int i = 0; i < boardId.size(); i++) {
+			likeCount.add(boardDAO.answerCount(boardId.get(i)));
 		}
 		
 		req.setAttribute("boards", boardDTO);
-		req.setAttribute("favoriteCount", count);
+		req.setAttribute("favoriteCount", favoriteCount);
+		req.setAttribute("answerCount", answerCount);
+		req.setAttribute("likeCount", likeCount);
 		
 		result.setPath("/templates/board/board_list.jsp");
 		
