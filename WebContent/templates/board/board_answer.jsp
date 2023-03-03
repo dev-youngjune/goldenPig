@@ -19,7 +19,7 @@
 				</header>
 				<div class="box">
 					<div class="box-row">
-						<form>
+						<form action="${pageContext.request.contextPath}/boardDetail.board">
 							<div class="profile-image-box">
 								<div class="profile-image">
 									<div class="file-image-path"></div>

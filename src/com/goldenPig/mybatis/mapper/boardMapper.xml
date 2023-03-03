@@ -11,6 +11,11 @@
 		from view_boardfreelist
 		limit #{startRow}, #{rowCount}
 	</select>
+	<select id="detail">
+		select board_title, member_nickname, board_register_date, board_content,
+		board_like_id, favorite_id, reply_id, reply_content, member_id, answer_id,
+		answer_title, answer_content, answer_register_date, answer_update_date, answer_like_id
+	</select>
 	
 	<select id="getTotal" resultType="long">
 		select count(board_id) board_count from tbl_boardfree
@@ -28,6 +33,11 @@
 	<select id="favoriteCount" parameterType="long" resultType="int">
 		select count(board_id) from tbl_favorite where board_id = #{boardId}; 
 	</select>
-	
+	<select id="answerCount" parameterType="long" resultType="int">
+		select count(board_id) from tbl_saving_answer where board_id = #{boardId}; 
+	</select>
+	<select id="likeCount" parameterType="long" resultType="int">
+		select count(board_id) from tbl_board_saving_like where board_id = #{boardId}; 
+	</select>
 </mapper>
 
