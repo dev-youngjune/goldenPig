@@ -19,7 +19,6 @@ public class AdminNoticeListController implements Action {
 		Result result = new Result();
 		AdminDAO adminDAO = new AdminDAO();
 		
-		
 		Map<String, Object> pageMap = new HashMap<String, Object>();
 		
 		String temp = req.getParameter("page");
