@@ -25,6 +25,7 @@ public class BoardDTO {
 	private String answerRegisterDate;
 	private String answerUpdateDate;
 	private Long answerLikeId;
+	private Long favoriteCount;
 
 	public BoardDTO() {
 		;
