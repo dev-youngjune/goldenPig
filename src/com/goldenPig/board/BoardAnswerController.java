@@ -15,9 +15,10 @@ public class BoardAnswerController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		String uri = req.getRequestURI();
-		result.setPath(req.getContextPath() + "/board_answer.jsp");
+		result.setPath(req.getContextPath() + "/board_detail.jsp");
 		result.setRedirect(false);
 		return result;
+		
 	}
 
 }

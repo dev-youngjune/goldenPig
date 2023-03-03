@@ -15,6 +15,9 @@
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeVO" alias="boardFreeVO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeDTO" alias="boardFreeDTO"/>
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.MoneyDTO" alias="moneyDTO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.MoneyVO" alias="moneyVO"/>
+		
 	</typeAliases>
 		
 	<environments default="mysql">
