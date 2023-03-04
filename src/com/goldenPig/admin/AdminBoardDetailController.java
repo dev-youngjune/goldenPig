@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.admin.dao.AdminDAO;
-import com.goldenPig.board.domain.AdminBoardDTO;
+import com.goldenPig.admin.domain.AdminBoardDTO;
 
 public class AdminBoardDetailController implements Action {
 
