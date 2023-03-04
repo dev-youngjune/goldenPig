@@ -24,7 +24,7 @@
 								</a>
 							</label>
 							<label style="margin-left: 12px;">
-								<a class="" href="${pageContext.request.contextPath}/boardList.boardFree">
+								<a class="" href="${pageContext.request.contextPath}/boardListOk.boardFree">
 									<span class="bullet color-989898">자유 게시판</span>
 								</a>
 							</label>
@@ -35,7 +35,7 @@
 					
 					<!-- ----------------------- 첫번째 게시물 ------------------------------->
 					<ul></ul>
-					<c:forEach var="board" items="${boards}">
+					<%-- <c:forEach var="board" items="${boards}">
 	 					<div class="content-body">
 								<div class="question-card">
 									<article class="card">
@@ -51,15 +51,15 @@
 														<div class="flex-items-center">
 															<div class="card-label-icon">
 																<img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png">
-																<span>${answerCount}</span>
+																<span>${board.answerCount}</span>
 															</div>
 															<div class="card-label-icon">
 																<img class="star" src="${pageContext.request.contextPath}/static/img/board/star-icon.png" style="margin-left: 10px;">
-																<span style="margin-left: 10px;">${favoriteCount}</span>
+																<span style="margin-left: 10px;">${board.favoriteCount}</span>
 															</div>
 															<div class="card-label-icon">
 																<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png" style="margin-left: 10px;">
-																<span style="margin-left: 10px;">${likeCount}</span>
+																<span style="margin-left: 10px;">${board.likeCount}</span>
 															</div>
 															<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
 													 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>
@@ -73,7 +73,7 @@
 									</article>
 								</div>
 							</div>
-						</c:forEach>
+						</c:forEach> --%>
 
 <%-- 					<!-- ----------------------- 두번째 게시물 -----------------------------  -->
 					<div class="content-body">
@@ -260,5 +260,5 @@
 	let page = `${page}` || null;
 	let boards = `${boards}`;
 </script>
-<script src="${pageContext.request.contextPath}/static/js/board/board_list.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_list_free.js"></script>
 </html>

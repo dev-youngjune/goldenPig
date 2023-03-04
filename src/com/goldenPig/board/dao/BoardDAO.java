@@ -16,32 +16,36 @@ public class BoardDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-//	게시글 목록
-	public List<BoardDTO> selectAll(){
-		return sqlSession.selectList("board.selectAll");
-	}
-	
+////	게시글 목록
+//	public List<BoardDTO> selectAll(){
+//		return sqlSession.selectList("board.selectAll");
+//	}
+//	
 //	게시글 총 개수
 	public Long getTotal(Map<String, Object> searchMap) {
 		return sqlSession.selectOne("board.getTotal");
 	}
-	
-//	게시글 댓글 수
-	public Long getReplyCount(Long boardId) {
-		return sqlSession.selectOne("board.getReplyCount", boardId);
-	}
+//	
+////	게시글 댓글 수
+//	public Long getReplyCount(Long boardId) {
+//		return sqlSession.selectOne("board.getReplyCount", boardId);
+//	}
 	
 //	관심글 갯수
-	public Integer favoriteCount(long boardId) {
-		return sqlSession.selectOne("board.favoriteCount", boardId);
-	}
+//	public Integer favoriteCount(long boardId) {
+//		return sqlSession.selectOne("board.favoriteCount", boardId);
+//	}
 //	답글 갯수
-	public Integer answerCount(long boardId) {
-		return sqlSession.selectOne("board.answerCount", boardId);
-	}
+//	public Integer answerCount(long boardId) {
+//		return sqlSession.selectOne("board.answerCount", boardId);
+//	}
 //	좋아요 갯수
-	public Integer likeCount(long boardId) {
-		return sqlSession.selectOne("board.likeCount", boardId);
+//	public Integer likeCount(long boardId) {
+//		return sqlSession.selectOne("board.likeCount", boardId);
+//	}
+	
+	public List<BoardDTO> allCounts() {
+		return sqlSession.selectList("board.listCounts");
 	}
 	
 }

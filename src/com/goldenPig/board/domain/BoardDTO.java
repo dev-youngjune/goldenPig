@@ -25,10 +25,11 @@ public class BoardDTO {
 	private String answerRegisterDate;
 	private String answerUpdateDate;
 	private Long answerLikeId;
+	private Long favoriteCount;
+	private Long replyCount;
+	private Long likeCount;
 
-	public BoardDTO() {
-		;
-	}
+	public BoardDTO() {;}
 
 	public Long getBoardId() {
 		return boardId;
@@ -222,6 +223,30 @@ public class BoardDTO {
 		this.answerLikeId = answerLikeId;
 	}
 
+	public Long getFavoriteCount() {
+		return favoriteCount;
+	}
+
+	public void setFavoriteCount(Long favoriteCount) {
+		this.favoriteCount = favoriteCount;
+	}
+
+	public Long getReplyCount() {
+		return replyCount;
+	}
+
+	public void setReplyCount(Long replyCount) {
+		this.replyCount = replyCount;
+	}
+
+	public Long getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(Long likeCount) {
+		this.likeCount = likeCount;
+	}
+
 	@Override
 	public String toString() {
 		return "BoardDTO [boardId=" + boardId + ", memberId=" + memberId + ", boardTitle=" + boardTitle
@@ -232,7 +257,10 @@ public class BoardDTO {
 				+ ", replyUpdateDate=" + replyUpdateDate + ", tagId=" + tagId + ", tagName=" + tagName + ", favoriteId="
 				+ favoriteId + ", answerId=" + answerId + ", answerTitle=" + answerTitle + ", answerContent="
 				+ answerContent + ", answerRegisterDate=" + answerRegisterDate + ", answerUpdateDate="
-				+ answerUpdateDate + ", answerLikeId=" + answerLikeId + "]";
+				+ answerUpdateDate + ", answerLikeId=" + answerLikeId + ", favoriteCount=" + favoriteCount
+				+ ", replyCount=" + replyCount + ", likeCount=" + likeCount + "]";
 	}
 
+	
+	
 }
