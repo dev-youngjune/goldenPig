@@ -21,6 +21,12 @@ public class MyPageFrontController extends HttpServlet {
 		
 		
 //			컨트롤러를 통해 마이 페이지로 데이터를 전송
+//		if(target.equals("/mypage")) {
+//			System.out.println("22." + target);
+//			result = new Result();
+//			result.setPath("/templates/member/myPage.jsp");
+			
+//			컨트롤러를 통해 마이 페이지로 데이터를 전송
 		if(target.equals("/mypageOk")) {
 			System.out.println("2." + target);
 			result = new MyPageOkController().execute(req, resp);
@@ -32,12 +38,12 @@ public class MyPageFrontController extends HttpServlet {
 //
 			
 //			질문 목록의 데이터를 전송
-		}else if(target.equals("/qustionsOk")) {
+		}else if(target.equals("/questionOk")) {
 			System.out.println("4." + target);
-			result = new QustionsOkController().execute(req, resp);
+			result = new QusetionsOkController().execute(req, resp);
 			
 //			질문 목록으로 이동 
-		}else if(target.equals("/qustions")) {
+		}else if(target.equals("/questions")) {
 			System.out.println("5." + target);
 			result = new Result();	
 			result.setPath("/templates/member/myPageQuestions.jsp");
