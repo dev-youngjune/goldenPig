@@ -31,22 +31,35 @@
 	</select>	
 		
 	<!-- 모달 프로필 멤버 정보 수정  -->
-	<update id="updateModalProfile" parameterType="MemberVO">
+	<update id="updateModalProfile" parameterType="memberVO">
 		UPDATE tbl_member
 		SET member_email=#{memberEmail}, member_password=#{memberPassword}, member_name=#{memberName}, member_nickname=#{memberNickName}, member_birth=#{memberBirth}, member_img_name=#{memberImgName}, member_img_path=#{memberImgPath}, member_greeting=#{memberGreeting}
 		WHERE member_id=#{memberId}
 	</update>
 	
 	<!-- 모달 프로필 저축 목표 수정 -->	
-	<update id="updateModalMoney" parameterType="MoneyVO">
+	<update id="updateModalMoney" parameterType="moneyVO">
 		UPDATE tbl_money
 		SET money_amount=#{moneyAmount}, money_target=#{moneyTarget}, money_register_date=#{moneyRegisterDate}, money_expiry_date=#{moneyExpiryDate}
 		WHERE member_id=#{memberId};
 	</update>
+
+	<!-- 질문 리스트 조회 -->
+	<select id="selectQuestions" parameterType="long" resultType="boardVO">
+		SELECT board_id, member_id, board_title, board_content, board_register_date, board_update_date, board_read_count
+		FROM tbl_board_saving where member_id = #{memberId}
+	</select>
 	
+	<!-- 답변 리스트 조회 -->
+	<select id="selectAnswers" parameterType="Long" resultType="answerVO">
+		SELECT answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
+		FROM tbl_saving_answer where member_id = #{memberId};
+	</select>
 	
-	
-	
+	<!-- 관심 질문 리스트 조회  -->
+	<select id="" parameterType="" resultType="">
+		
+	</select>
 	
 </mapper>
 

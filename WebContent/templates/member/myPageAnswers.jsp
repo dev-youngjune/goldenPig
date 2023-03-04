@@ -38,11 +38,11 @@
 									<li class="profile_tabsItem">
 										<a class="myProfile_Index test" href="">마이 프로필</a>
 									</li>
- 									<li class="profile_tabsItem">
-										<a class="myProfile_Answers" href="">답변</a>
-									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Questions" href="">질문</a>
+									</li>
+ 									<li class="profile_tabsItem">
+										<a class="myProfile_Answers" href="">답변</a>
 									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Scraps" href="">관심 질문</a>
