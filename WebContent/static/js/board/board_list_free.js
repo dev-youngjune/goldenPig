@@ -13,7 +13,7 @@ function showList(){
 						<article class="card">
 							<div class="card-main">
 								<header class="card-header">
-									<a href="${pageContext.request.contextPath}/boardDetail.board?boardId=${board.boardId}">
+									<a href="${pageContext.request.contextPath}/boardDetail.boardFree?boardId=${board.boardId}">
 					                    <div class="profile">
 					                        <div><img src="${board.profileImgPath}" width="15px"></div>
 					                        <h6 class="writer">${board.memberName}</h6>

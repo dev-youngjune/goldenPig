@@ -37,7 +37,6 @@ public class BoardFreeListController implements Action {
 			System.err.println("paging stream err");
 			e.printStackTrace();
 		}
-//		System.out.println(jsons);
 		req.setAttribute("boards", jsons.toString());
 	}
 
