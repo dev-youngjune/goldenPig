@@ -17,6 +17,7 @@
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyDTO" alias="moneyDTO"/>
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyVO" alias="moneyVO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.MyapgeDTO" alias="mypageDTO"/>
 		<typeAlias type="com.goldenPig.admin.domain.AdminBoardDTO" alias="adminBoardDTO"/>
 	</typeAliases>
 		

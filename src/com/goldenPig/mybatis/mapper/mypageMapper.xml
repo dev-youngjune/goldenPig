@@ -11,6 +11,12 @@
 		from tbl_member where member_id = #{memberId}
 	</select>
 	
+	<!--  마이페이지 사이드 조회  -->
+	<select id="selectSide" parameterType="Long" resultType="mypageDTO">
+		SELECT member_id, member_nickname, member_img_name, member_img_path, member_greeting, saving_write_count, answer_write_count, board_id, saving_like_count, answer_like_count, favorite_total
+		FROM view_mypage_asdie_total where member_id = #{memberId};
+	</select> 
+	
 	
 	<!-- 저축 조회  -->
 	<select id="selectMoney" parameterType="Long" resultType="moneyVO">
@@ -37,6 +43,10 @@
 		SET money_amount=#{moneyAmount}, money_target=#{moneyTarget}, money_register_date=#{moneyRegisterDate}, money_expiry_date=#{moneyExpiryDate}
 		WHERE member_id=#{memberId};
 	</update>
+	
+	
+	
+	
 	
 </mapper>
 
