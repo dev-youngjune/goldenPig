@@ -55,4 +55,13 @@ public class AdminDAO {
 		sqlSession.delete("notice.adminNoticeDelete", noticeId);
 	}
 	
+// 관리자용 회원정보 이메일 변경
+	public void changeEmail(Long emailId) {
+		sqlSession.update("email.update", emailId);
+	}
+// 관리자용 회원정보 생년월일 변경
+	
+// 관리자용 회원정보 전화번호 변경
+	
+// 관리자용 회원 정보 수정
 }

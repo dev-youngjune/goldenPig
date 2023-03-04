@@ -15,6 +15,9 @@ public class AdminMemberModifyController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		
+		
+		
 		String uri = req.getRequestURI();
 		result.setPath("/templates/admin/adminPage-modifyMember.jsp");
 		result.setRedirect(FORWORD);
