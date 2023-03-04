@@ -8,11 +8,11 @@ public class BoardFreeDTO {
 	private String boardContent;
 	private String boardRegisterDate;
 	private String boardUpdateDate;
-	private Long readCount;
-	private Long answerCount;
-	private Long likeCount;
-	private String profileImgPath;
-	private String memberName;
+	private Long boardReadCount;
+	private Long boardAnswerCount;
+	private Long boardLikeCount;
+	private String memberImgPath;
+	private String memberNickname;
 	
 	public BoardFreeDTO() {;}
 
@@ -28,47 +28,47 @@ public class BoardFreeDTO {
 	public void setBoardRegisterDate(String boardRegisterDate) {this.boardRegisterDate = boardRegisterDate;}
 	public String getBoardUpdateDate() {return boardUpdateDate;}
 	public void setBoardUpdateDate(String boardUpdateDate) {this.boardUpdateDate = boardUpdateDate;}
-	public Long getBoardReadCount() {return readCount;}
-	public void setBoardReadCount(Long boardReadCount) {this.readCount = boardReadCount;}
+	public Long getBoardReadCount() {return boardReadCount;}
+	public void setBoardReadCount(Long boardReadCount) {this.boardReadCount = boardReadCount;}
 
 	public Long getReadCount() {
-		return readCount;
+		return boardReadCount;
 	}
 
 	public void setReadCount(Long readCount) {
-		this.readCount = readCount;
+		this.boardReadCount = readCount;
 	}
 
 	public Long getAnswerCount() {
-		return answerCount;
+		return boardAnswerCount;
 	}
 
 	public void setAnswerCount(Long answerCount) {
-		this.answerCount = answerCount;
+		this.boardAnswerCount = answerCount;
 	}
 
 	public Long getLikeCount() {
-		return likeCount;
+		return boardLikeCount;
 	}
 
 	public void setLikeCount(Long likeCount) {
-		this.likeCount = likeCount;
+		this.boardLikeCount = likeCount;
 	}
 
 	public String getProfileImgPath() {
-		return profileImgPath;
+		return memberImgPath;
 	}
 
 	public void setProfileImgPath(String profileImgPath) {
-		this.profileImgPath = profileImgPath;
+		this.memberImgPath = profileImgPath;
 	}
 
 	public String getMemberName() {
-		return memberName;
+		return memberNickname;
 	}
 
 	public void setMemberName(String memberName) {
-		this.memberName = memberName;
+		this.memberNickname = memberName;
 	}
 	
 	
