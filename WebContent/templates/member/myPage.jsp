@@ -133,11 +133,11 @@
 									<li class="profile_tabsItem">
 										<a class="myProfile_Index test" href="javascript:location.href='${pageContext.request.contextPath}/mypage.mypage'">마이 프로필</a>
 									</li>
- 									<li class="profile_tabsItem">
-										<a class="myProfile_Answers" href="javascript:location.href='${pageContext.request.contextPath}/answers.mypage'">답변</a>
-									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Questions" href="javascript:location.href='${pageContext.request.contextPath}/qustions.mypage'">질문</a>
+									</li>
+ 									<li class="profile_tabsItem">
+										<a class="myProfile_Answers" href="javascript:location.href='${pageContext.request.contextPath}/answers.mypage'">답변</a>
 									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Scraps" href="javascript:location.href='${pageContext.request.contextPath}/scraps.mypage'">관심 질문</a>

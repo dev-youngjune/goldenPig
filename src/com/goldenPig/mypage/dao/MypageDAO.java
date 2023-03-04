@@ -1,7 +1,10 @@
 package com.goldenPig.mypage.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
+import com.goldenPig.board.domain.BoardVO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 import com.goldenPig.mypage.domain.MoneyDTO;
@@ -26,7 +29,6 @@ public class MypageDAO {
 		return sqlSession.selectOne("selectSide", memberId);
 	}
 	
-	
 //	저축 목표 조회
 	public MoneyVO selectMoney(Long memberId) {
 		return sqlSession.selectOne("mypage.selectMoney", memberId);
@@ -48,13 +50,13 @@ public class MypageDAO {
 	}
 	
 //	질문 목록 
-	public void selectQustions() {
-		
+	public List<BoardVO> selectQuestions(Long memberId) {
+		return sqlSession.selectList("mypage.selectQuestions", memberId);
 	}
 	
 //	답변 목록
-	public void selectAnswers() {
-		
+	public List<AnswerVO> selectAnswers(Long memberId) {
+		return sqlSession.selectList("mypage.selectAnswers", memberId);
 	}
 	
 //	관심 질문 목록

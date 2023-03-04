@@ -11,6 +11,7 @@ import com.goldenPig.Result;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mypage.dao.MypageDAO;
 import com.goldenPig.mypage.domain.MoneyVO;
+import com.goldenPig.mypage.domain.MypageDTO;
 
 public class MyPageOkController implements Action {
 
@@ -20,6 +21,7 @@ public class MyPageOkController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		MemberVO memberVO = new MemberVO();
 		MoneyVO moneyVO = new MoneyVO();
+		MypageDTO mypageDTO = new MypageDTO();
 		final Long USER = 1L;
 		
 //		mypageDAO.select(memberId); 
