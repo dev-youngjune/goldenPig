@@ -11,6 +11,7 @@ import com.goldenPig.Result;
 import com.goldenPig.admin.dao.AdminDAO;
 import com.goldenPig.board.dao.BoardDAO;
 import com.goldenPig.member.dao.MemberDAO;
+import com.goldenPig.member.domain.MemberVO;
 
 public class AdminMemberModifyController implements Action{
 
@@ -18,6 +19,12 @@ public class AdminMemberModifyController implements Action{
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		AdminDAO adminDAO = new AdminDAO();
+		MemberVO memberVo = new MemberVO();
+		
+//		
+		String memberEmail = req.getParameter("memberEmail");
+		String memberBirth = req.getParameter("memberBirth");
+		String memberPhoneNumber = req.getParameter("memberPhoneNumber");
 	    
 		
 		
