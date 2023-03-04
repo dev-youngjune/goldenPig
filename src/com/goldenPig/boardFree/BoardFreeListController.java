@@ -21,7 +21,7 @@ public class BoardFreeListController implements Action {
 		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		
 		paging(req, resp);
-//		req.setAttribute("boards", boardFreeDAO.selectAll());
+		req.setAttribute("boards", boardFreeDAO.selectAll());
 		
 		result.setPath("/templates/board/board_list_free.jsp");
 		result.setRedirect(FORWORD);
@@ -38,6 +38,7 @@ public class BoardFreeListController implements Action {
 			e.printStackTrace();
 		}
 		req.setAttribute("boards", jsons.toString());
+		System.out.println(jsons.toString());
 	}
 
 }
