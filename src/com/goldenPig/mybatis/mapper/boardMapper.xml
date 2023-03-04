@@ -31,9 +31,9 @@
 		where board_id = #{boardId} 
 	</select>-->
 	
-	<select id="listCounts" resultType="boardDTO">
-		select board_id, favorite_count, reply_count, like_count
-		from view_board_counts
+	<select id="boardList" resultType="boardDTO">
+		SELECT board_id, board_title, board_update_date, board_read_count, favorite_count, reply_count, like_count
+		FROM goldenpig.view_board_list;
 	</select>
 </mapper>
 
