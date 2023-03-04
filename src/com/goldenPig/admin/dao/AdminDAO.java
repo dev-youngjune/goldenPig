@@ -56,7 +56,6 @@ public class AdminDAO {
 		sqlSession.delete("notice.adminNoticeDelete", noticeId);
 	}
 	
-<<<<<<< HEAD
 //	관리자 저축게시판 전체 목록
 	public List<AdminBoardDTO> adminBoardSelectAll(Map<String, Object> pageMap) {
 		return sqlSession.selectList("admin.adminBoardSelectAll", pageMap);
@@ -86,10 +85,8 @@ public class AdminDAO {
 	public void adminFreeBoardDelete(Long boardId) {
 		sqlSession.delete("admin.adminFreeBoardDelete", boardId);
 	}
-=======
 //  관리자용 회원정보 수정
 
->>>>>>> project/admin
 // 관리자용 회원정보 이메일 변경
 //	public void changeEmail(Long emailId) {
 //		sqlSession.update("email.update", emailId);
