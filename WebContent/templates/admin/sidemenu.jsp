@@ -35,18 +35,18 @@
 								</div>
 							</div>
 							<ul class="menus1 menus" style="display: none;">
-								<li class="select-menu">
+								<!-- <li class="select-menu">
 									<a href="adminPage-boardList.jsp"> 
 										<span>전체 게시판</span>
 									</a>
-								</li>
+								</li> -->
 								<li class="select-menu">
-									<a href="adminPage-freeBoardList.jsp"> 
+									<a href="javascript:location.href='${pageContext.request.contextPath}/adminFreeBoardList.admin'"> 
 										<span>자유 게시판</span>
 									</a>
 								</li>
 								<li class="select-menu">
-									<a href="adminPage-bankList.jsp"> 
+									<a href="javascript:location.href='${pageContext.request.contextPath}/adminBoardList.admin'"> 
 										<span>저축 게시판</span>
 									</a>
 								</li>
@@ -67,12 +67,12 @@
 							</div>
 							<ul class="menus2 menus" style="display:none;">
 								<li class="select-menu">
-									<a href="adminPage-noticeList.jsp">
+									<a href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeList.admin'">
 										<span>공지사항 목록</span>
 									</a>
 								</li>
 								<li class="select-menu">
-									<a href="adminPage-noticeWrite.jsp">
+									<a href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeWrite.admin'">
 										<span>공지사항 작성</span>
 									</a>
 								</li>

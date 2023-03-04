@@ -17,8 +17,6 @@ public class AdminFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
-	
-		
 			
 //		저축 게시판 목록
 		if(target.equals("/bankList")) {
@@ -34,15 +32,24 @@ public class AdminFrontController extends HttpServlet {
 			new AdminBannerRegisterOkController().execute(req, resp);
 
 //		게시판 상세보기
-		}else if(target.equals("/boardDetail")) {
-			new AdminBoardDetailController().execute(req, resp);
+		}else if(target.equals("/adminBoardDetail")) {	// 저축 게시판 상세보기
+			result = new AdminBoardDetailController().execute(req, resp);
 			
-		}else if(target.equals("/boardList")) {
-			new AdminBoardListController().execute(req, resp);
+		}else if(target.equals("/adminFreeBoardDetail")) {	// 자유 게시판 상세보기
+			result = new AdminFreeBoardDetailController().execute(req, resp);
 			
-		}else if(target.equals("/freeBoardList")) {
-			new AdminFreeBoardListController().execute(req, resp);
+		}else if(target.equals("/adminBoardList")) {	// 저축 게시판
+			result = new AdminBoardListController().execute(req, resp);
+			
+		}else if(target.equals("/adminFreeBoardList")) {	// 자유 게시판
+			result = new AdminFreeBoardListController().execute(req, resp);
 		
+		}else if(target.equals("/adminBoardDelete")) {	// 게시판 삭제
+			new AdminBoardDeleteController().execute(req, resp);
+			
+		}else if(target.equals("/adminFreeBoardDelete")) {	// 게시판 삭제
+			new AdminFreeBoardDeleteController().execute(req, resp);
+			
 		}else if(target.equals("/memberList")) {
 			result = new AdminMemberListController().execute(req, resp);
 
@@ -58,7 +65,7 @@ public class AdminFrontController extends HttpServlet {
 			new AdminMemberModifyOkController().execute(req, resp);
 			
 		}else if(target.equals("/adminNoticeDetail")) {
-			new AdminNoticeDetailController().execute(req, resp);
+			result = new AdminNoticeDetailController().execute(req, resp);
 
 		}else if(target.equals("/adminNoticeModify")) {
 			result = new AdminNoticeModifyController().execute(req, resp);
@@ -89,7 +96,6 @@ public class AdminFrontController extends HttpServlet {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}
-	
 	}
 	
 	@Override
@@ -97,4 +103,3 @@ public class AdminFrontController extends HttpServlet {
 		super.doPost(req, resp);
 	}
 }
-
