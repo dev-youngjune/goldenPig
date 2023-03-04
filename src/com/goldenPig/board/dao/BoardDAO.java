@@ -45,7 +45,7 @@ public class BoardDAO {
 //	}
 	
 	public List<BoardDTO> allCounts() {
-		return sqlSession.selectList("board.listCounts");
+		return sqlSession.selectList("board.boardList");
 	}
 	
 }
