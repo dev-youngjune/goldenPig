@@ -167,12 +167,12 @@
 				<div class="footer-container-left">
 					<article class="footer-contents">
 						<ul class="footer-menu">
-							<li class="mr-3"><a href="#">서비스 이용약관</a></li>
-							<li class="mr-3"><a href="#">유료 서비스 이용약관</a></li>
+							<li class="mr-3"><a href="#">서비스 소개</a></li>
+							<li class="mr-3"><a href="javascript:location.href='${pageContext.request.contextPath}/noticeListOk.notice'">공지사항</a></li>
 							<li class="mr-3"><a href="#">개인정보취급방침</a></li>
 						</ul>
 						<div class="all-rights">
-           				 	© 2023 Aha. All rights reserved.
+           				 	© 2023 GoldenPig. All rights reserved.
 						</div>
 					</article>
 					<div class="logo-wrapper">
