@@ -1,4 +1,4 @@
-package com.goldenPig.mypage;
+ package com.goldenPig.mypage;
 
 import java.io.IOException;
 
