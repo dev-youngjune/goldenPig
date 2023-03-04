@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminPage-bannerList.css">
+<link rel="stylesheet" href="../../static/css/admin/adminPage-bannerList.css">
 </head>
 <body>
 	<div>
@@ -231,8 +231,8 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/admin/checkbox.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/admin/page.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/admin/slide.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/admin/toggle.js"></script>
+<script src="../../static/js/admin/checkbox.js"></script>
+<script src="../../static/js/admin/page.js"></script>
+<script src="../../static/js/admin/slide.js"></script>
+<script src="../../static/js/admin/toggle.js"></script>
 </html>

@@ -1,4 +1,4 @@
-package com.goldenPig.board.domain;
+package com.goldenPig.admin.domain;
 
 public class AdminBoardDTO {
 	Long boardId;

@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.goldenPig.board.domain.AdminBoardDTO;
+import com.goldenPig.admin.domain.AdminBoardDTO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 import com.goldenPig.notice.domain.NoticeVO;
@@ -85,4 +85,13 @@ public class AdminDAO {
 	public void adminFreeBoardDelete(Long boardId) {
 		sqlSession.delete("admin.adminFreeBoardDelete", boardId);
 	}
+// 관리자용 회원정보 이메일 변경
+	public void changeEmail(Long emailId) {
+		sqlSession.update("email.update", emailId);
+	}
+// 관리자용 회원정보 생년월일 변경
+	
+// 관리자용 회원정보 전화번호 변경
+	
+// 관리자용 회원 정보 수정
 }
