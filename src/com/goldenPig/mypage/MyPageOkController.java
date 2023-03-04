@@ -31,16 +31,13 @@ public class MyPageOkController implements Action {
 		moneyVO = mypageDAO.selectMoney(USER);
 		
 		memberVO = mypageDAO.select(USER);
-		System.out.println("222222222222222222");
-		
-		System.out.println("들옴");
 		System.out.println(moneyVO);
 		System.out.println(moneyVO.getMoneyAmount());
 		
 		req.setAttribute("meberInfo", memberVO);
 		req.setAttribute("memberMoney", mypageDAO.selectMoney(USER));
 		
-		result.setPath(req.getContextPath() + "/mypage.mypage");
+		result.setPath("/templates/member/myPage.jsp");
 		result.setRedirect(false);
 		return result;
 	}
