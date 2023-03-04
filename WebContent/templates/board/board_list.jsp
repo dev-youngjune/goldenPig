@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -32,9 +31,9 @@
 						</div>
 						
 					</div>
+					<ul></ul>
 					
 					<!-- ----------------------- 첫번째 게시물 ------------------------------->
-					<ul></ul>
 					<%-- <c:forEach var="board" items="${boards}">
 	 					<div class="content-body">
 								<div class="question-card">
@@ -260,5 +259,5 @@
 	let page = `${page}` || null;
 	let boards = `${boards}`;
 </script>
-<script src="${pageContext.request.contextPath}/static/js/board/board_list_free.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_list.js"></script>
 </html>
