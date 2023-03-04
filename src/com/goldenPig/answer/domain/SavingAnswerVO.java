@@ -1,4 +1,4 @@
-package com.goldenPig.board.domain;
+package com.goldenPig.answer.domain;
 
 public class SavingAnswerVO {
 	private Long answerId;
