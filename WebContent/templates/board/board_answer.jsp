@@ -45,7 +45,9 @@
 								</div>
 							</div>
 							<div class="box-flex-justify-center">
-								<input type="button" value="이전">
+								<a type="button" href="${pageContext.request.contextPath}/boardDetail.board">
+									<span style="display: inline-block; margin-top: 19px; width: 100%; text-align: center;">이전</span>
+								</a>
 								<input type="submit" value="제출하기">
 							</div>
 						</form>
