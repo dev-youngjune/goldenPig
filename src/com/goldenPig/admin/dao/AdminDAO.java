@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.goldenPig.board.domain.AdminBoardDTO;
+import com.goldenPig.admin.domain.AdminBoardDTO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 import com.goldenPig.notice.domain.NoticeVO;
