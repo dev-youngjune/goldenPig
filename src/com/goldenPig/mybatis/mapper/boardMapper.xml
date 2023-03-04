@@ -5,39 +5,35 @@
 		select board_id, member_id, board_title, board_content, board_register_date, board_update_date
 		from tbl_board_saving
 	</select>
-	<select id="selectAllList">
+	<!-- <select id="selectAllList">
 		select b.board_id, b.board_title, b.board_content, b.board_register_date,
 		b.board_update_date, b.member_nickname, b.board_like_count, b.board_read_count, reply_count
 		from view_boardfreelist
 		limit #{startRow}, #{rowCount}
-	</select>
-	<select id="detail">
+	</select> -->
+<!-- 	<select id="detail">
 		select board_title, member_nickname, board_register_date, board_content,
 		board_like_id, favorite_id, reply_id, reply_content, member_id, answer_id,
 		answer_title, answer_content, answer_register_date, answer_update_date, answer_like_id
-	</select>
+	</select> -->
 	
-	<select id="getTotal" resultType="long">
+<!-- 	<select id="getTotal" resultType="long">
 		select count(board_id) board_count from tbl_boardfree
-	</select>
+	</select> -->
 	
-	<select id="getReplyCount" parameterType="long" resultType="long">
+<!--<select id="getReplyCount" parameterType="long" resultType="long">
 		select reply_count
 		from view_boardFreeList
 		where board_id = #{boardId}
 	
-<!-- 		select count(reply_id) 
+ 		select count(reply_id) 
 		from tbl_replyfree 
-		where board_id = #{boardId} -->
-	</select>
-	<select id="favoriteCount" parameterType="long" resultType="int">
-		select count(board_id) from tbl_favorite where board_id = #{boardId}; 
-	</select>
-	<select id="answerCount" parameterType="long" resultType="int">
-		select count(board_id) from tbl_saving_answer where board_id = #{boardId}; 
-	</select>
-	<select id="likeCount" parameterType="long" resultType="int">
-		select count(board_id) from tbl_board_saving_like where board_id = #{boardId}; 
+		where board_id = #{boardId} 
+	</select>-->
+	
+	<select id="listCounts" resultType="boardDTO">
+		select board_id, favorite_count, reply_count, like_count
+		from view_board_counts
 	</select>
 </mapper>
 
