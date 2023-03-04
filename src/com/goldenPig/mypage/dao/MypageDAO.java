@@ -6,6 +6,7 @@ import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 import com.goldenPig.mypage.domain.MoneyDTO;
 import com.goldenPig.mypage.domain.MoneyVO;
+import com.goldenPig.mypage.domain.MypageDTO;
 
 public class MypageDAO {
 	public SqlSession sqlSession;
@@ -20,7 +21,10 @@ public class MypageDAO {
 	}
 	
 	
-	
+//	마이 페이지 왼쪽 사이드 조회 
+	public MypageDTO selectSide(Long memberId) {
+		return sqlSession.selectOne("selectSide", memberId);
+	}
 	
 	
 //	저축 목표 조회
