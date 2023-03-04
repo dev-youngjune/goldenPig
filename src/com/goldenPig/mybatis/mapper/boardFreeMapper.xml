@@ -26,7 +26,7 @@
 		</if>
 	</sql> -->
 
-	<select id="selectAllSearch" parameterType="map" resultType="boardDTO">
+	<select id="selectAllSearch" parameterType="map" resultType="boardFreeDTO">
 		select board_id, board_title, board_content, board_register_date, 
 		board_update_date, board_read_count
 		from tbl_board_free 
@@ -34,7 +34,7 @@
 		limit #{startRow}, #{rowCount}
 	</select>
 	
-	<select id="selectAll" resultType="boardDTO">
+	<select id="selectAll" resultType="boardFreeDTO">
 		select board_id, member_id, board_title, board_content, board_register_date, 
 		board_update_date, board_read_count
 		from tbl_board_free 

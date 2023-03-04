@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인페이지로 이동중입니다</title>
+<title>페이지 이동 중</title>
 </head>
 <body>
 </body>

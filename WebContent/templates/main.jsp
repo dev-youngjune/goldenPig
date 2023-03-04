@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/common/common.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main/main.css">
 
-<title>메인 페이지</title>
+<title>${pageContext.request.contextPath}</title>
 
 </head>
 <!-- 헤더 넣는 js코드 -->
