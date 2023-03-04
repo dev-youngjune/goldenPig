@@ -5,6 +5,7 @@ function showList(){
 	boards = JSON.parse(boards);
 	const $ul = $("#content ul");
 	let text = "";
+	console.log("JS들어옴");
 	boards.forEach(board => {
 		text += `
 			<li>
@@ -13,7 +14,7 @@ function showList(){
 						<article class="card">
 							<div class="card-main">
 								<header class="card-header">
-									<a href="${pageContext.request.contextPath}/boardDetail.boardFree?boardId=${board.boardId}">
+									<a href="${contextPath}/boardDetail.boardFree?boardId=${board.boardId}">
 					                    <div class="profile">
 					                        <div><img src="${board.profileImgPath}" width="15px"></div>
 					                        <h6 class="writer">${board.memberName}</h6>
@@ -26,15 +27,15 @@ function showList(){
 										<div class="flex-justify-between">
 											<div class="flex-items-center">
 												<div class="card-label-icon">
-													<img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png">
+													<img class="answer" src="${contextPath}/static/img/board/answer.png">
 													<span>${board.answerCount}</span>
 												</div>
 												<div class="card-label-icon">
-													<img class="star" src="${pageContext.request.contextPath}/static/img/board/star-icon.png">
+													<img class="star" src="${contextPath}/static/img/board/star-icon.png">
 													<span>${board.readCount}</span>
 												</div>
 												<div class="card-label-icon">
-													<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
+													<img class="heart" src="${contextPath}/static/img/board/heart.png">
 													<span>${board.likeCount}</span>
 												</div>
 											</div>
