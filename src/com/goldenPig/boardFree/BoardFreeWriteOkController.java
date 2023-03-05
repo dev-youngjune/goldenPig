@@ -14,9 +14,8 @@ public class BoardFreeWriteOkController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath(null);
+		result.setPath(req.getContextPath() + "/boardListOk.boardFree");
 		result.setRedirect(REDIRECT);
-		result.setRedirect(FORWORD);
 		
 		return result;
 	}
