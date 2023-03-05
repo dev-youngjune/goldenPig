@@ -71,4 +71,11 @@
 		from view_boardFreeList
 		where board_id = #{boardId}
 	</select>
+	
+	<insert id="insertBoard" parameterType="map">
+		INSERT INTO tbl_board_free (member_id, board_title, board_content, board_register_date, board_update_date)
+		VALUES(#{memberId}, #{title}, #{content}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+	</insert>
+	
+	
 </mapper>
