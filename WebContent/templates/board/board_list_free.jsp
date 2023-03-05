@@ -82,17 +82,29 @@
 					<aside class="right-side-bar">
 						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
 					</aside>
-	                <div id="paging-wrap">
-	                    <a href="javascript:void(0)" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/img/board/prev.png" width="15px"></a>
-	                    <a href="javascript:void(0)" class="paging paging-checked">1</a>
-	                    <a href="javascript:void(0)" class="paging">2</a>
-	                    <a href="javascript:void(0)" class="paging">3</a>
-	                    <a href="javascript:void(0)" class="paging">4</a>
-	                    <a href="javascript:void(0)" class="paging">5</a>
-	                    <a href="javascript:void(0)" class="paging paging-move">
-	                    	<img src="${pageContext.request.contextPath}/static/img/board/next.png" width="15px">
-	                    </a>
-                    </div>
+	                <c:if test="${prev}">
+	                    <a href="javascript:location.href='/boardListOk.boardFree?page=${startPage - 1}&tag=${tag}&keyword=${keyword}'" class="paging paging-move">
+	                    	<img src="${pageContext.request.contextPath}/static/images/board/prev.png" width="15px"></a>
+                	</c:if>
+                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                    	<c:choose>
+                    		<c:when test="${i eq page}">
+			                    <a href="javascript:void(0)" class="paging paging-checked">
+			                    	<c:out value="${i}"/>
+			                    </a>
+                    		</c:when>
+                    		<c:otherwise>
+			                    <a href="javascript:location.href='/boardListOk.boardFree?page=${i}&sort=${sort}&type=${type}&keyword=${keyword}'" class="paging">
+			                    	<c:out value="${i}"/>
+		                    	</a>
+                    		</c:otherwise>
+                    	</c:choose>
+                    </c:forEach>
+                    <c:if test="${next}">
+                    	<a href="javascript:location.href='/boardListOk.boardFree?page=${endPage + 1}&tag=${tag}&keyword=${keyword}'" class="paging paging-move">
+                    		<img src="${pageContext.request.contextPath}/static/images/next.png" width="15px">
+                    	</a>
+                    </c:if>
 				</div>
 			</div>
 		</div>

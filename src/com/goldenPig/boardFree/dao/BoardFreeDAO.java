@@ -47,8 +47,10 @@ public class BoardFreeDAO {
 		List<BoardFreeDTO> result = null;
 		try {
 			result = sqlSession.selectList("boardFree.selectAll");
+			System.out.println(result.toString());
 		} catch (Exception e) {
 			System.err.println("selectAll error");
+			System.out.println(result);
 			e.printStackTrace();
 		} 
 		return result;

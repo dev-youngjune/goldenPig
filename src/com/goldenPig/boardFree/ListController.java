@@ -22,7 +22,7 @@ public class ListController implements Action {
 		
 		String path = req.getContextPath();
 		
-		result.setPath(path + "/boardFreeListOk.boardFree?page=1");
+		result.setPath(path + "/boardListOk.boardFree");
 		result.setRedirect(REDIRECT);
 		return result;
 	}
