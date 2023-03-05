@@ -42,6 +42,18 @@ public class BoardFreeDAO {
 		return result;
 	}
 	
+//	게시글 목록
+	public List<BoardFreeDTO> selectAll(Map<String, Object> pageMap){
+		List<BoardFreeDTO> result = null;
+		try {
+			result = sqlSession.selectList("boardFree.selectAll");
+		} catch (Exception e) {
+			System.err.println("selectAll error");
+			e.printStackTrace();
+		} 
+		return result;
+	}
+	
 //	게시글 총 개수
 	public Long getTotal(Map<String, Object> pageMap) {
 		return sqlSession.selectOne("boardFree.getTotal", pageMap);

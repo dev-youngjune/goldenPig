@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.goldenPig.board.domain.BoardFreeDTO;
+import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
@@ -44,7 +44,7 @@ public class BoardDAO {
 //		return sqlSession.selectOne("board.likeCount", boardId);
 //	}
 	
-	public List<BoardFreeDTO> allCounts() {
+	public List<BoardDTO> allCounts() {
 		return sqlSession.selectList("board.boardList");
 	}
 	
