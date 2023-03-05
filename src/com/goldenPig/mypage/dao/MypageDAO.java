@@ -36,8 +36,8 @@ public class MypageDAO {
 	}
 	
 //	모달 프로필 정보 조회
-	public void selectModalProfile(MoneyDTO moneyDTO) {
-		sqlSession.selectOne("mypage.selectProfile", moneyDTO);
+	public MoneyDTO selectModalProfile(Long memberId) {
+		return sqlSession.selectOne("mypage.selectProfile",memberId);
 	}
 	
 //	모달 프로필 멤버 정보 수정 
