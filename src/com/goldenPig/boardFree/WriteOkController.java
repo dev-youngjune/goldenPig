@@ -12,7 +12,7 @@ import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
-public class BoardFreeWriteOkController implements Action{
+public class WriteOkController implements Action{
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

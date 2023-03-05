@@ -15,7 +15,7 @@ import org.json.JSONObject;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.board.dao.BoardDAO;
-import com.goldenPig.board.domain.BoardDTO;
+import com.goldenPig.board.domain.BoardFreeDTO;
 
 public class BoardListController implements Action {
 
@@ -53,7 +53,7 @@ public class BoardListController implements Action {
 
 	public void paging(HttpServletRequest req) {
 		BoardDAO boardDAO = new BoardDAO();
-		List<BoardDTO> boardDTOList = boardDAO.allCounts();
+		List<BoardFreeDTO> boardDTOList = boardDAO.allCounts();
 
 		JSONArray jsons = new JSONArray();
 

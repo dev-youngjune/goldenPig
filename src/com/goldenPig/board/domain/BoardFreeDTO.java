@@ -1,6 +1,6 @@
 package com.goldenPig.board.domain;
 
-public class BoardDTO {
+public class BoardFreeDTO {
 	private Long boardId;
 	private Long memberId;
 	private String boardTitle;
@@ -29,7 +29,7 @@ public class BoardDTO {
 	private Long replyCount;
 	private Long likeCount;
 
-	public BoardDTO() {;}
+	public BoardFreeDTO() {;}
 
 	public Long getBoardId() {
 		return boardId;
