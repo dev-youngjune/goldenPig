@@ -80,7 +80,7 @@
 
 					<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
 					<aside class="right-side-bar">
-						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 질문하기</a>
+						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
 					</aside>
 				</div>
 				

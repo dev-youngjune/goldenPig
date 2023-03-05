@@ -32,7 +32,7 @@
 											<div class="qeusetion-body">
 												<div class="qeustion-content">
 													<div class="question-padding">
-														<textarea placeholder="연말정산에 질문을 해주세요."></textarea>
+														<textarea name="content" placeholder="연말정산에 질문을 해주세요."></textarea>
 														<div class="file-image-wrap">
 															<div class="file-image-path">
 																<span>X</span>

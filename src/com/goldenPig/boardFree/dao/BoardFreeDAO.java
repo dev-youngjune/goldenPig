@@ -1,11 +1,13 @@
 package com.goldenPig.boardFree.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
+import com.goldenPig.boardFree.domain.BoardFreeVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
@@ -49,5 +51,12 @@ public class BoardFreeDAO {
 	public Long getReplyCount(Long boardId) {
 		return sqlSession.selectOne("boardFree.getReplyCount", boardId);
 	}
+	
+//	게시글 작성
+	public void insertBoard(Map<String, Object> boardMap) {
+		sqlSession.insert("boardFree.insertBoard", boardMap);
+	}
+	
+	
 	
 }
