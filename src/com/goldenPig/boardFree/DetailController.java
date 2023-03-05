@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardFreeAnswerOkController implements Action {
-	
+public class DetailController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
@@ -20,5 +20,5 @@ public class BoardFreeAnswerOkController implements Action {
 		
 		return result;
 	}
-	
+
 }

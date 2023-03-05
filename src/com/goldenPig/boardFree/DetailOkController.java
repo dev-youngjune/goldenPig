@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardFreeDetailController implements Action {
+public class DetailOkController implements Action{
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -20,5 +20,4 @@ public class BoardFreeDetailController implements Action {
 		
 		return result;
 	}
-
 }
