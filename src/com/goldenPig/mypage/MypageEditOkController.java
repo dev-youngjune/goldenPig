@@ -20,11 +20,23 @@ public class MypageEditOkController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		MemberVO memberVO = new MemberVO();
 		MoneyVO moneyVO = new MoneyVO();
+		
 		Object reqNickname = req.getAttribute("newNickname");
 		String nickname = (String) reqNickname;
 		
 		
-		memberVO.setMemberNickName(req.getParameter("memberNickname"));
+		/*
+		 * memberVO.setMemberNickName(req.getParameter("memberNickname"));
+		 * memberVO.setmemberGreeting(req.getParameter("memberGreeting"));
+		 * 
+		 * moneyVO.setMoneyTarget((int)req.getParameter("moneyTarget"));
+		 * moneyVO.setMoneyTarget(req.getParameter("moneyTarget"));
+		 * 
+		 * moneyVO.setMoneyAmount(req.getParameter("moneyAmount"));
+		 * moneyVO.setMoneyRegisterDate(req.getParameter("moneyRegister"));
+		 * moneyVO.setMoneyExpiryDate(req.getParameter("moneyExpiry"));
+		 */
+		
 		
 //		모달프로필 멤버 정보 수정
 		mypageDAO.updateModalProfile(memberVO);
@@ -40,7 +52,7 @@ public class MypageEditOkController implements Action {
 		
 		
 		result.setPath("");
-		result.setRedirect(REDIRECT);
+		result.setRedirect(false);
 		return result;
 	}
 

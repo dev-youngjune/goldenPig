@@ -165,7 +165,7 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<span>세심한 곽두철</span>
+											<span>${memberSide.memberNickName}</span>
 										</div>
 										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
 										여러분들 반가워요!</p>
@@ -177,14 +177,14 @@
 														<img src="">
 															질문
 													</span>
-													<span>0개</span>
+													<span>${memberSide.savingWriteCount}개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 															답변
 													</span>
-													<span>0개</span>
+													<span>${memberSide.answerWriteCount}개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
@@ -194,21 +194,21 @@
 														<img src="">
 														질문 좋아요
 													</span>
-													<span>0회</span>
+													<span>${memberSide.savingLikeCount}회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														답변 좋아요
 													</span>
-													<span>0회</span>
+													<span>${memberSide.answerLikeCount}회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														관심 질문
 													</span>
-													<span>0회</span>
+													<span>${memberSide.favoriteTotal}회</span>
 												</div>
 											</div>
 										</div>
