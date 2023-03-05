@@ -44,7 +44,11 @@ public class BoardDAO {
 //		return sqlSession.selectOne("board.likeCount", boardId);
 //	}
 	
-	public List<BoardDTO> allCounts() {
+//	public List<BoardDTO> allCounts() {
+//		return sqlSession.selectList("board.boardList");
+//	}
+	
+	public List<BoardDTO> listPage() {
 		return sqlSession.selectList("board.boardList");
 	}
 	

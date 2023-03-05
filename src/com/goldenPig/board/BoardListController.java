@@ -53,7 +53,7 @@ public class BoardListController implements Action {
 
 	public void paging(HttpServletRequest req) {
 		BoardDAO boardDAO = new BoardDAO();
-		List<BoardDTO> boardDTOList = boardDAO.allCounts();
+		List<BoardDTO> boardDTOList = boardDAO.listPage();
 
 		JSONArray jsons = new JSONArray();
 
@@ -96,7 +96,7 @@ public class BoardListController implements Action {
 //	      pageMap.put("sort", sort);
 		pageMap.put("keyword", keyword);
 		pageMap.put("types", types);
-		boardDAO.allCounts().stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		boardDAO.listPage().stream().map(board -> new JSONObject(board)).forEach(jsons::put);
 		System.out.println(jsons.toString());
 		req.setAttribute("boards", jsons.toString());
 //		req.setAttribute("total", total);
