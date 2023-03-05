@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -68,7 +69,7 @@
 											<span class="info-tag">이름</span>
 											<!-- 이름 -->
 											<div class="info info-name">
-												<span>임**</span>
+												<span>${memberName}</span>
 											</div>
 										</div>	
 										<form action="">
@@ -76,20 +77,20 @@
 												<span class="info-tag">이메일</span>
 												<!-- 이메일 -->
 												<div class="info">
-													<input type="text" class="member-email" name="memberEmail">
+													<input type="text" class="member-email" name="memberEmail" value="${memberEmail}">
 												</div>
 											</div>
 											<div class="member-info-tag-box">
 												<span class="info-tag">생년월일</span>
 												<div class="info">
-													<input type="text" class="member-birth" name="memberBirth">
+													<input type="text" class="member-birth" name="memberBirth" value="${memberBirth}">
 												</div>
 											</div>
 											<div class="member-info-tag-box">
 												<span class="info-tag">핸드폰 번호</span>
 												<!-- 핸드폰 번호 -->
 												<div class="info">
-													<input type="text" class="member-phone" name="memberPhoneNumber">
+													<input type="text" class="member-phone" name="memberPhoneNumber" value="${memberPhoneNumber}">
 												</div>
 											</div>
 											<div class="button-box">

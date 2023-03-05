@@ -53,5 +53,9 @@
 		where board_id = #{boardId}
 	</delete>
 	
+		<!-- 회원 정보 수정  -->
+	<select id="memberInfoChange" parameterType="long" resultType="string">
+		update member_email, member_phonenumber, member_birth from tbl_member
+	</select>
 	
 </mapper>
