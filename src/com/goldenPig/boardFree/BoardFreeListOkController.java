@@ -94,7 +94,7 @@ public class BoardFreeListOkController implements Action {
 	
 	public String cutDate(String date) {
 		String result = null;
-		result = date.substring(date.length()-3);
+		result = date.replaceAll(date.substring(date.length()-3), "");
 		return result;
 	}
 	

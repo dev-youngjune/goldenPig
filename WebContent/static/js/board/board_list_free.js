@@ -7,6 +7,7 @@ function showList(){
 	let text = "";
 	console.log("JS들어옴");
 	boards.forEach(board => {
+		src = contextPath + "/static/img/board/no-image.png";
 		text += `
 			<li>
 				<div class="content-body">
@@ -15,11 +16,15 @@ function showList(){
 							<div class="card-main">
 								<header class="card-header">
 									<a href="${contextPath}/boardDetail.boardFree?boardId=${board.boardId}">
-					                    <div class="profile">
-					                        <div><img src="${board.profileImgPath}" width="15px"></div>
-					                        <h6 class="writer">${board.memberName}</h6>
+					                    <div class="profile" style=" display: flex; justify-content: space-between;">
+											<div style="display: inline-block;">
+						                        <h6 class="writer">${board.memberName}</h6>
+												<h1 class="card-header-title">${board.boardTitle}</h1>
+											</div>
+					                        <div style="display: inline-block;">
+												<img src="${board.boardImgPath || src}" width="15px">
+											</div>
 					                    </div>
-										<h1 class="card-header-title">${board.boardTitle}</h1>
 									</a>
 								</header>
 								<div class="card-content">

@@ -11,7 +11,7 @@ public class BoardFreeDTO {
 	private Long boardReadCount;
 	private Long boardReplyCount;
 	private Long boardLikeCount;
-	private String memberImgPath;
+	private String boardImgPath;
 	private String memberNickname;
 	
 	public BoardFreeDTO() {;}
@@ -56,11 +56,11 @@ public class BoardFreeDTO {
 	}
 
 	public String getProfileImgPath() {
-		return memberImgPath;
+		return boardImgPath;
 	}
 
 	public void setProfileImgPath(String profileImgPath) {
-		this.memberImgPath = profileImgPath;
+		this.boardImgPath = profileImgPath;
 	}
 
 	public String getMemberName() {
