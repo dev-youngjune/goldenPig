@@ -11,8 +11,10 @@ public class BoardFreeDTO {
 	private Long boardReadCount;
 	private Long boardReplyCount;
 	private Long boardLikeCount;
-	private String boardImgPath;
+	private String boardImgSystemName;
 	private String memberNickname;
+	private Long boardImgId;
+	private String boardImgName;
 	
 	public BoardFreeDTO() {;}
 
@@ -56,11 +58,11 @@ public class BoardFreeDTO {
 	}
 
 	public String getProfileImgPath() {
-		return boardImgPath;
+		return boardImgSystemName;
 	}
 
 	public void setProfileImgPath(String profileImgPath) {
-		this.boardImgPath = profileImgPath;
+		this.boardImgSystemName = profileImgPath;
 	}
 
 	public String getMemberName() {
@@ -70,6 +72,56 @@ public class BoardFreeDTO {
 	public void setMemberName(String memberName) {
 		this.memberNickname = memberName;
 	}
+
+	public Long getBoardReplyCount() {
+		return boardReplyCount;
+	}
+
+	public void setBoardReplyCount(Long boardReplyCount) {
+		this.boardReplyCount = boardReplyCount;
+	}
+
+	public Long getBoardLikeCount() {
+		return boardLikeCount;
+	}
+
+	public void setBoardLikeCount(Long boardLikeCount) {
+		this.boardLikeCount = boardLikeCount;
+	}
+
+	public String getBoardImgSystemName() {
+		return boardImgSystemName;
+	}
+
+	public void setBoardImgSystemName(String boardImgSystemName) {
+		this.boardImgSystemName = boardImgSystemName;
+	}
+
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+
+	public Long getBoardImgId() {
+		return boardImgId;
+	}
+
+	public void setBoardImgId(Long boardImgId) {
+		this.boardImgId = boardImgId;
+	}
+
+	public String getBoardImgName() {
+		return boardImgName;
+	}
+
+	public void setBoardImgName(String boardImgName) {
+		this.boardImgName = boardImgName;
+	}
+	
+	
 	
 	
 }

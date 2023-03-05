@@ -9,18 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardAnswerOkController implements Action {
-	
+public class AnswerController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		
-		
-		
-		result.setPath(req.getContextPath() + "/boardAnswer.board");
+		String uri = req.getRequestURI();
+		result.setPath(req.getContextPath() + "/board_detail.jsp");
 		result.setRedirect(false);
-		
 		return result;
+		
 	}
-	
+
 }

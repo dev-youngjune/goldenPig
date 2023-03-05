@@ -1,4 +1,4 @@
-package com.goldenPig.board;
+package com.goldenPig.boardFree;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardWriteOkController implements Action{
-	
+public class DetailController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
@@ -20,4 +20,5 @@ public class BoardWriteOkController implements Action{
 		
 		return result;
 	}
+
 }

@@ -13,9 +13,11 @@ function showList(){
 						<article class="card">
 							<div class="card-main">
 								<header class="card-header">
-									<a href="${contextPath}/boardDetail.board?boardId=${board.boardId}">
+									<a href="${contextPath}/boardDetail
+									
+									.board?boardId=${board.boardId}">
 					                    <div class="profile">
-					                        <div><img src="#" width="15px"></div>
+					                        <div><img src="/*${board.boardImgPath}*/" width="15px"></div>
 					                        <h6 class="writer">${board.memberName}</h6>
 					                    </div>
 										<h1 class="card-header-title">${board.boardTitle}</h1>
@@ -27,15 +29,15 @@ function showList(){
 											<div class="flex-items-center">
 												<div class="card-label-icon">
 													<img class="answer" src="${contextPath}/static/img/board/answer.png">
-													<span>${board.answerCount}</span>
+													<span>${board.answerCount || 0}</span>
 												</div>
 												<div class="card-label-icon">
 													<img class="star" src="${contextPath}/static/img/board/star-icon.png">
-													<span>${board.readCount}</span>
+													<span>${board.readCount || 0}</span>
 												</div>
 												<div class="card-label-icon">
 													<img class="heart" src="${contextPath}/static/img/board/heart.png">
-													<span>${board.likeCount}</span>
+													<span>${board.likeCount || 0}</span>
 												</div>
 											</div>
 											<span class="card-header-infomation">${board.boardRegisterDate}</span>
