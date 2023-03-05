@@ -17,7 +17,7 @@ import com.goldenPig.Result;
 import com.goldenPig.boardFree.dao.BoardFreeDAO;
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
 
-public class BoardFreeListOkController implements Action {
+public class ListOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -37,17 +37,17 @@ public class BoardFreeListOkController implements Action {
 		Map<String, Object> pageMap = new HashMap<String, Object>();
 		Map<String, Object> searchMap = new HashMap<String, Object>();
 
-		String type = req.getParameter("type");
+		String tag = req.getParameter("tag");
 		String keyword = req.getParameter("keyword");
-		String temp = req.getParameter("page"); 
+		String temp = req.getParameter("page");
 //		String sort = req.getParameter("sort");
-		String[] types = null;
+		String[] tags = null;
 		
-		types = type == null || type.equals("null") ? null : type.split("&");
+		tags = tag == null || tag.equals("null") ? null : tag.split("&");
 		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
 		
 		searchMap.put("keyword", keyword);
-		searchMap.put("types", types);
+		searchMap.put("tags", tags);
 		
 		Long total = boardFreeDAO.getTotal(searchMap);
 //		한 페이지에 출력되는 게시글의 개수
@@ -72,7 +72,7 @@ public class BoardFreeListOkController implements Action {
 		pageMap.put("startRow", startRow);
 //		pageMap.put("sort", sort);
 		pageMap.put("keyword", keyword);
-		pageMap.put("types", types);
+		pageMap.put("tags", tags);
 		
 		List<BoardFreeDTO> dtos = boardFreeDAO.selectAllSearch(pageMap); 
 		
@@ -89,7 +89,11 @@ public class BoardFreeListOkController implements Action {
 		req.setAttribute("next", next);
 //		req.setAttribute("sort", sort);
 		req.setAttribute("keyword", keyword);
-		req.setAttribute("type", type);
+		req.setAttribute("tag", tag);
+	}
+	
+	public void realPaging(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		
 	}
 	
 	public String cutDate(String date) {

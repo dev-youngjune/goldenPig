@@ -82,8 +82,18 @@
 					<aside class="right-side-bar">
 						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
 					</aside>
+	                <div id="paging-wrap">
+	                    <a href="javascript:void(0)" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/img/board/prev.png" width="15px"></a>
+	                    <a href="javascript:void(0)" class="paging paging-checked">1</a>
+	                    <a href="javascript:void(0)" class="paging">2</a>
+	                    <a href="javascript:void(0)" class="paging">3</a>
+	                    <a href="javascript:void(0)" class="paging">4</a>
+	                    <a href="javascript:void(0)" class="paging">5</a>
+	                    <a href="javascript:void(0)" class="paging paging-move">
+	                    	<img src="${pageContext.request.contextPath}/static/img/board/next.png" width="15px">
+	                    </a>
+                    </div>
 				</div>
-				
 			</div>
 		</div>
 	</div>
