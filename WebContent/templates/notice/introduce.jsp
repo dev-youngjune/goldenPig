@@ -73,20 +73,6 @@
 		</div>
 		</section>
 	</div>
-<!-- <script>
-    var count = 2;
-    window.onscroll = function(e) {
-      console.log(window.innerHeight , window.scrollY,document.body.offsetHeight)
-      if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { 
-        setTimeout(function(){
-          var addContent = document.createElement("div");
-          addContent.classList.add("box")
-          /* addContent.innerHTML = `<p>${++count}번째 블록</p>` */
-          document.querySelector('section').appendChild(addContent);
-        }, 1000)  
-      }
-    }
-</script> -->
 		
 	<!-- 푸터 -->
 	<jsp:include page="../header/footer-main.jsp" flush="false"/>

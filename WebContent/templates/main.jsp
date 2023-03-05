@@ -51,7 +51,7 @@
 						</a>
 					</div>
 					<div class="home-button-wrapper column is-one-quarter">
-						<a href="${pageContext.request.contextPath}/boardList.boardFree">
+						<a href="${pageContext.request.contextPath}/boardListOk.boardFree">
 							<button>
 								<img alt="" src="${pageContext.request.contextPath}/static/img/main/learn_owl-64.png">
 								<span>²ÜÆÁ °Ô½ÃÆÇ</span>

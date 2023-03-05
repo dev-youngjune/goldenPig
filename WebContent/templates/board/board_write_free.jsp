@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>질문 작성</title>
+<title>게시글 작성</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/board_write.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 				<div class="flex-justify-center">
 					<div class="main">
 						<div class="row">
-							<form action="${pageContext.request.contextPath}/boardWriteOk.board" name="writeForm">
+							<form action="${pageContext.request.contextPath}/boardWriteOk.boardFree" name="writeForm">
 								<div class="card">
 									<div class="qeustion-editor">
 										<div class="question-title-container">
