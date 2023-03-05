@@ -19,45 +19,45 @@ public class BoardFreeFrontController extends HttpServlet{
 		Result result = null;
 		
 		switch(target) {
-//			case "/boardList.boardFree":
-//				System.out.println("2. " + target);
-//				result = new BoardFreeListController().execute(req, resp);
-//				break;
+			case "/boardList.boardFree":
+				System.out.println("2. " + target);
+				result = new ListController().execute(req, resp);
+				break;
 			case "/boardListOk.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeListOkController().execute(req, resp);
+				result = new ListOkController().execute(req, resp);
 				break;
 			case "/boardWrite.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeWriteController().execute(req, resp);
+				result = new WriteController().execute(req, resp);
 				break;
 			case "/boardWriteOk.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeWriteOkController().execute(req, resp);
+				result = new WriteOkController().execute(req, resp);
 				break;
 			case "/boardAnswer.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeAnswerController().execute(req, resp);
+				result = new AnswerController().execute(req, resp);
 				break;
 			case "/boardAnswerOk.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeAnswerOkController().execute(req, resp);
+				result = new AnswerOkController().execute(req, resp);
 				break;
 			case "/boardDetail.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeDetailController().execute(req, resp);
+				result = new DetailController().execute(req, resp);
 				break;
 			case "/boardDetailOk.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeDetailOkController().execute(req, resp);
+				result = new DetailOkController().execute(req, resp);
 				break;
 			case "/boardModify.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeModifyController().execute(req, resp);
+				result = new ModifyController().execute(req, resp);
 				break;
 			case "/boardModifyOk.boardFree":
 				System.out.println("2. " + target);
-				result = new BoardFreeModifyOkController().execute(req, resp);
+				result = new ModifyOkController().execute(req, resp);
 				break;
 			default:
 				System.out.println("3. " + target);
