@@ -1,4 +1,4 @@
-package com.goldenPig.board;
+package com.goldenPig.boardFree;
 
 import java.io.IOException;
 
@@ -9,14 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardWriteController implements Action {
+public class DetailController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		String uri = req.getRequestURI();
-		result.setPath("/templates/board/board_write.jsp");
+		result.setPath(null);
+		result.setRedirect(REDIRECT);
 		result.setRedirect(FORWORD);
+		
 		return result;
 	}
 
