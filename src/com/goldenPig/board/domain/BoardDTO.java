@@ -28,6 +28,7 @@ public class BoardDTO {
 	private Long favoriteCount;
 	private Long replyCount;
 	private Long likeCount;
+	private Long answerCount;
 
 	public BoardDTO() {;}
 
@@ -247,6 +248,14 @@ public class BoardDTO {
 		this.likeCount = likeCount;
 	}
 
+	public Long getAnswerCount() {
+		return answerCount;
+	}
+
+	public void setAnswerCount(Long answerCount) {
+		this.answerCount = answerCount;
+	}
+
 	@Override
 	public String toString() {
 		return "BoardDTO [boardId=" + boardId + ", memberId=" + memberId + ", boardTitle=" + boardTitle
@@ -258,7 +267,7 @@ public class BoardDTO {
 				+ favoriteId + ", answerId=" + answerId + ", answerTitle=" + answerTitle + ", answerContent="
 				+ answerContent + ", answerRegisterDate=" + answerRegisterDate + ", answerUpdateDate="
 				+ answerUpdateDate + ", answerLikeId=" + answerLikeId + ", favoriteCount=" + favoriteCount
-				+ ", replyCount=" + replyCount + ", likeCount=" + likeCount + "]";
+				+ ", replyCount=" + replyCount + ", likeCount=" + likeCount + ", answerCount=" + answerCount + "]";
 	}
 
 	

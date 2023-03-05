@@ -16,10 +16,10 @@ public class BoardDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-////	게시글 목록
-//	public List<BoardDTO> selectAll(){
-//		return sqlSession.selectList("board.selectAll");
-//	}
+//	게시글 목록
+	public List<BoardDTO> selectAll(){
+		return sqlSession.selectList("board.selectAll");
+	}
 //	
 //	게시글 총 개수
 	public Long getTotal(Map<String, Object> searchMap) {
@@ -44,8 +44,17 @@ public class BoardDAO {
 //		return sqlSession.selectOne("board.likeCount", boardId);
 //	}
 	
-	public List<BoardDTO> allCounts() {
+//	public List<BoardDTO> allCounts() {
+//		return sqlSession.selectList("board.boardList");
+//	}
+	
+	public List<BoardDTO> listPage() {
 		return sqlSession.selectList("board.boardList");
+	}
+	
+//	게시글 작성
+	public void insertBoard(Map<String, Object> boardMap) {
+		sqlSession.insert("board.insertBoard", boardMap);
 	}
 	
 }

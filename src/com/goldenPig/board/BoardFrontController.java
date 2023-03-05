@@ -19,29 +19,29 @@ public class BoardFrontController extends HttpServlet {
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
 		if (target.equals("/boardList")) {
-			result = new BoardListController().execute(req, resp);
+			result = new ListController().execute(req, resp);
 			
 		} else if (target.equals("/boardWrite")) {
-			result = new BoardWriteController().execute(req, resp);
+			result = new WriteController().execute(req, resp);
 			
 		} else if (target.equals("/boardWriteOk")) {
-			result = new BoardWriteOkController().execute(req, resp);
+			result = new WriteOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardAnswer")) {
 			result = new Result();
 			result.setPath("/templates/board/board_answer.jsp");
 			
 		} else if (target.equals("/boardAnswerOk")) {
-			result = new BoardAnswerOkController().execute(req, resp);
+			result = new AnswerOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetail")) {
-			result = new BoardDetailController().execute(req, resp);
+			result = new DetailController().execute(req, resp);
 			
 		} else if (target.equals("/boardDetailOk")) {
-			result = new BoardDetailOkController().execute(req, resp);
+			result = new DetailOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardModify")) {
-			result = new BoardModifyController().execute(req, resp);
+			result = new ModifyController().execute(req, resp);
 			
 		} else if (target.equals("/boardModifyOk")) {
 			result = new BoardModifyOkController().execute(req, resp);

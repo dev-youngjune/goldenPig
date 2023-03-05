@@ -1,4 +1,4 @@
-package com.goldenPig.boardFree;
+package com.goldenPig.board;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
-public class BoardFreeWriteOkController implements Action{
+public class WriteOkController implements Action{
 	
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -20,7 +20,7 @@ public class BoardFreeWriteOkController implements Action{
 		
 		insertOk(req, resp);
 		
-		result.setPath(req.getContextPath() + "/boardListOk.boardFree");
+		result.setPath(req.getContextPath() + "/boardListOk.board");
 		result.setRedirect(REDIRECT);
 //		result.setRedirect(FORWORD);
 		return result;

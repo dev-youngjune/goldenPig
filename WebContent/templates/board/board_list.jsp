@@ -23,7 +23,7 @@
 								</a>
 							</label>
 							<label style="margin-left: 12px;">
-								<a class="" href="${pageContext.request.contextPath}/boardListOk.boardFree">
+								<a class="" href="${pageContext.request.contextPath}/boardList.boardFree">
 									<span class="bullet color-989898">자유 게시판</span>
 								</a>
 							</label>
