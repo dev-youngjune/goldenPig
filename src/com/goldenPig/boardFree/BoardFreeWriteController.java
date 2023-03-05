@@ -14,10 +14,9 @@ public class BoardFreeWriteController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		result.setPath(null);
-		result.setRedirect(REDIRECT);
+		result.setPath("templates/board/board_write_free.jsp");
+		req.setAttribute("board", "free");
 		result.setRedirect(FORWORD);
-		
 		return result;
 	}
 
