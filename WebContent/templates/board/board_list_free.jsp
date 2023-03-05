@@ -29,6 +29,9 @@
 							</label>
 							<!-- <hr class="tabs-line"> -->
 						</div>
+						<div>
+							총 게시글 수 : ${total}
+						</div>
 						
 					</div>
 					
@@ -77,7 +80,7 @@
 
 					<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
 					<aside class="right-side-bar">
-						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.board">나도 질문하기</a>
+						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 질문하기</a>
 					</aside>
 				</div>
 				
