@@ -16,8 +16,9 @@ import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.board.dao.BoardDAO;
 import com.goldenPig.board.domain.BoardDTO;
+import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
-public class BoardListController implements Action {
+public class ListController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -109,6 +110,18 @@ public class BoardListController implements Action {
 		req.setAttribute("keyword", keyword);
 		req.setAttribute("type", type);
 
+	}
+	public void paging(HttpServletRequest req, HttpServletResponse resp) {
+		BoardDAO boardDAO = new BoardDAO();
+		JSONArray jsons = new JSONArray();
+		try {
+			boardDAO.selectAll().stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		} catch (NullPointerException e) {
+			System.err.println("paging stream err");
+			e.printStackTrace();
+		}
+		req.setAttribute("boards", jsons.toString());
+		System.out.println(jsons.toString());
 	}
 
 }

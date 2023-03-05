@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 
-public class BoardDetailController implements Action {
+public class DetailController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
