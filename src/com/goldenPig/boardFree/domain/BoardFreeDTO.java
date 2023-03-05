@@ -9,7 +9,7 @@ public class BoardFreeDTO {
 	private String boardRegisterDate;
 	private String boardUpdateDate;
 	private Long boardReadCount;
-	private Long boardAnswerCount;
+	private Long boardReplyCount;
 	private Long boardLikeCount;
 	private String memberImgPath;
 	private String memberNickname;
@@ -40,11 +40,11 @@ public class BoardFreeDTO {
 	}
 
 	public Long getAnswerCount() {
-		return boardAnswerCount;
+		return boardReplyCount;
 	}
 
 	public void setAnswerCount(Long answerCount) {
-		this.boardAnswerCount = answerCount;
+		this.boardReplyCount = answerCount;
 	}
 
 	public Long getLikeCount() {

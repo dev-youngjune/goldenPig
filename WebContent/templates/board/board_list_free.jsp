@@ -29,6 +29,9 @@
 							</label>
 							<!-- <hr class="tabs-line"> -->
 						</div>
+						<div>
+							총 게시글 수 : ${total}
+						</div>
 						
 					</div>
 					

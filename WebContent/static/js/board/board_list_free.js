@@ -27,16 +27,16 @@ function showList(){
 										<div class="flex-justify-between">
 											<div class="flex-items-center">
 												<div class="card-label-icon">
-													<img class="answer" src="${contextPath}/static/img/board/answer.png">
-													<span>${board.answerCount}</span>
+													<img class="reply" src="${contextPath}/static/img/board/answer.png">
+													<span>${board.boardReplyCount || 0}</span>
 												</div>
 												<div class="card-label-icon">
 													<img class="star" src="${contextPath}/static/img/board/star-icon.png">
-													<span>${board.readCount}</span>
+													<span>${board.boardReadCount || 0}</span>
 												</div>
 												<div class="card-label-icon">
 													<img class="heart" src="${contextPath}/static/img/board/heart.png">
-													<span>${board.likeCount}</span>
+													<span>${board.boardLikeCount || 0}</span>
 												</div>
 											</div>
 											<span class="card-header-infomation">${board.boardRegisterDate}</span>

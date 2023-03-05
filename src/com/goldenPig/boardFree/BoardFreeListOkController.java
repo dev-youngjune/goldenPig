@@ -2,6 +2,7 @@ package com.goldenPig.boardFree;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import org.json.JSONObject;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.boardFree.dao.BoardFreeDAO;
+import com.goldenPig.boardFree.domain.BoardFreeDTO;
 
 public class BoardFreeListOkController implements Action {
 
@@ -72,7 +74,11 @@ public class BoardFreeListOkController implements Action {
 		pageMap.put("keyword", keyword);
 		pageMap.put("types", types);
 		
-		boardFreeDAO.selectAllSearch(pageMap).stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		List<BoardFreeDTO> dtos = boardFreeDAO.selectAllSearch(pageMap); 
+		
+		dtos.stream().forEach(board -> board.setBoardRegisterDate(cutDate(board.getBoardRegisterDate())));
+		dtos.stream().map(board -> new JSONObject(board)).forEach(jsons::put);
+		
 		
 		req.setAttribute("boards", jsons.toString());
 		req.setAttribute("total", total);
@@ -84,6 +90,12 @@ public class BoardFreeListOkController implements Action {
 //		req.setAttribute("sort", sort);
 		req.setAttribute("keyword", keyword);
 		req.setAttribute("type", type);
+	}
+	
+	public String cutDate(String date) {
+		String result = null;
+		result = date.substring(date.length()-3);
+		return result;
 	}
 	
 
