@@ -19,7 +19,6 @@
 		<typeAlias type="com.goldenPig.board.domain.BoardSavingLikeVO" alias="boardSavingLikeVO"/>
 		<typeAlias type="com.goldenPig.board.domain.BoardSavingReplyVO" alias="boardSavingReplyVO"/>
 		<typeAlias type="com.goldenPig.board.domain.BoardSavingTagVO" alias="boardSavingTagVO"/>
-		<typeAlias type="com.goldenPig.board.domain.BoardSavingVO" alias="boardSavingTagVO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeVO" alias="boardFreeVO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeDTO" alias="boardFreeDTO"/>
 		<typeAlias type="com.goldenPig.main.domain.MainDTO" alias="mainDTO"/>
@@ -27,7 +26,7 @@
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyDTO" alias="moneyDTO"/>
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyVO" alias="moneyVO"/>
 		<typeAlias type="com.goldenPig.notice.domain.NoticeVO" alias="noticeVO"/>
-		<typeAlias type="com.goldenPig.mypage.domain.MyapgeDTO" alias="mypageDTO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.MypageDTO" alias="mypageDTO"/>
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 		<typeAlias type="com.goldenPig.saving.domain.SavingVO" alias="savingVO"/>
 	</typeAliases>

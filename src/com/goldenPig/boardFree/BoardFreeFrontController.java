@@ -19,10 +19,10 @@ public class BoardFreeFrontController extends HttpServlet{
 		Result result = null;
 		
 		switch(target) {
-			case "/boardList.boardFree":
-				System.out.println("2. " + target);
-				result = new BoardFreeListController().execute(req, resp);
-				break;
+//			case "/boardList.boardFree":
+//				System.out.println("2. " + target);
+//				result = new BoardFreeListController().execute(req, resp);
+//				break;
 			case "/boardListOk.boardFree":
 				System.out.println("2. " + target);
 				result = new BoardFreeListOkController().execute(req, resp);
