@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,7 +124,19 @@
 
 							<!-- main -->
 							<main class="profile_main">
-								<article class="article_">
+								<div class="profile_mian_div">
+								
+								<!-- 목록에 없을 때 나올 곳 -->
+									<div class="no_main">
+										<div class="no_main_div">
+											<div class="no_main_inner">
+												<span> 등록된 답변이 없습니다.</span>
+											</div>
+										</div>
+									</div>
+								
+								<!-- 목록이 있을때 나올 곳 -->
+							<%-- 	<article class="article_">
 									<div class="card-main">
 										<header class="card-header">
 											<h1 class="card-header-title">
@@ -152,12 +165,12 @@
 										</div>
 										<footer class="card-footer">
 											<div class="footer_div">
-												<!-- <div class="star-icon position">
+												<div class="star-icon position">
 													<img src="../assets/img/board/star-class="absolute"> 
 														<span
 														class="margin-left color-blue star-text">관심질문 <span
 														class="star-count">0</span></span>
-												</div>				 -->	
+												</div>				 
 												<div>
 													<button class="interest_Button">
 														<img src="${pageContext.request.contextPath}/static/img/board/star-icon.png" class="scrpas-star-icon">
@@ -165,19 +178,12 @@
 														<span class="count-wrapper">1</span>
 													</button>
 												</div>
-																		
-												<!-- <div>
-													<span>
-														<button class="share_Button">
-															<svg width="20" height="20" color="#CED3D6" xmlns="http://www.w3.org/2000/svg" class="icon icon sprite-v2"><use href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-basket-and-arrow-up" xlink:href="/_nuxt/264193f1a6a3d255efd1068dc1c304a1.svg#i-basket-and-arrow-up"></use></svg>
-															공유하기
-														</button>
-													</span>
-												</div>	 -->
 											</div>
 										</footer>
 									</div>
-								</article>
+								</article> --%>
+								
+								</div>
 							</main>
 						</section>
 					</div>

@@ -34,10 +34,34 @@ public class MyPageOkController implements Action {
 		
 		memberVO = mypageDAO.select(USER);
 		System.out.println(moneyVO);
-		System.out.println(moneyVO.getMoneyAmount());
+		
+		
+//		---------------------------------------------
+//		마이페이지 왼쪽 사이드 조회 
+		mypageDTO = mypageDAO.selectSide(USER);
+//		req.getParameter(memberId);
+		
+//		저축목표 조회
+//		mypageDAO.selectMoney(USER);
+		
+//		모달 프로필 정보 조회
+//		mypageDAO.selectModalProfile(USER);
+		
+//		모달프로필 멤버 정보 수정
+//		mypageDAO.updateModalProfile(memberVO);
+		
+//		모달프로필 저축 목표 수정 
+//		mypageDAO.updateModalMoney(moneyVO);
+		
+		
+		
+		
+		
 		
 		req.setAttribute("meberInfo", memberVO);
 		req.setAttribute("memberMoney", mypageDAO.selectMoney(USER));
+		
+		
 		
 		result.setPath("/templates/member/myPage.jsp");
 		result.setRedirect(false);

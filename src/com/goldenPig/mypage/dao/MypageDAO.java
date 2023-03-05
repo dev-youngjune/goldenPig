@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
+import com.goldenPig.answer.domain.SavingAnswerVO;
 import com.goldenPig.board.domain.BoardVO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
@@ -55,7 +56,7 @@ public class MypageDAO {
 	}
 	
 //	답변 목록
-	public List<AnswerVO> selectAnswers(Long memberId) {
+	public List<SavingAnswerVO> selectAnswers(Long memberId) {
 		return sqlSession.selectList("mypage.selectAnswers", memberId);
 	}
 	

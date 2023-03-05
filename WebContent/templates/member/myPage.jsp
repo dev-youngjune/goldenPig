@@ -29,7 +29,6 @@
 									<div class="a-modal_inner">
 										<div class="a-modal_innerBody">
 											<button class="close_button">
-												<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use href="https://www.a-ha.io/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-cancel" xlink:href="https://www.a-ha.io/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-cancel"></use></svg>
 											</button>
 											<div class="a-model_inner_header">
 												<span >프로필 편집</span>
