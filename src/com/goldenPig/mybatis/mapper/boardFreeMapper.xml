@@ -83,7 +83,7 @@
 		on r.board_id = f.board_id 
 		group by board_id
 		order by board_id desc 
-		limit #{startRow}, #{rowCount}
+		limit 1, 5
 	</select>
 	
 	<select id="getTotal" parameterType="map" resultType="long">
@@ -100,6 +100,15 @@
 		INSERT INTO tbl_board_free (member_id, board_title, board_content, board_register_date, board_update_date)
 		VALUES(#{memberId}, #{title}, #{content}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
 	</insert>
+	
+	<select id="selectOneByBoardId" parameterType="long" resultType="boardFreeDTO">
+		select f.member_id, f.board_title, f.board_content, f.board_register_date, 
+		f.board_update_date, m.member_nickname
+		from tbl_board_free f
+		left outer join tbl_member m
+		on f.member_id = m.member_id
+		where board_id = #{boardId}
+	</select>
 	
 	
 </mapper>

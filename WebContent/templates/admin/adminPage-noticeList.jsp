@@ -78,26 +78,24 @@
 											</th>
 										</tr>
 									</thead>
-									
-										<c:forEach var="adminNotice" items="${adminNotices}">
-											<tr>
-												<td class="checkbox-line">
-													<input type="checkbox" name="check" value="${adminNotice.noticeId}">
-												</td>
-												<td class="noticeId"><c:out value="${adminNotice.noticeId}"/></td>
-												<td>
-													<a href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeDetail.admin?noticeId=${adminNotice.noticeId}&page=${page}'">
-														<c:out value="${adminNotice.noticeTitle}"/>
-													</a>
-												</td>
-												<td><c:out value="${adminNotice.noticeRegisterDate}"/></td>
-												<td><c:out value="${adminNotice.noticeUpdateDate}"/></td>
-												<td class="modify-button">
-													<a href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeModify.admin?noticeId=${adminNotice.noticeId}&page=${page}'">수정</a>
-												</td>
-											</tr>
-										</c:forEach>
-										
+									<c:forEach var="adminNotice" items="${adminNotices}">
+										<tr>
+											<td class="checkbox-line">
+												<input type="checkbox" name="check" value="${adminNotice.noticeId}">
+											</td>
+											<td class="noticeId"><c:out value="${adminNotice.noticeId}"/></td>
+											<td>
+												<a href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeDetail.admin?noticeId=${adminNotice.noticeId}&page=${page}'">
+													<c:out value="${adminNotice.noticeTitle}"/>
+												</a>
+											</td>
+											<td><c:out value="${adminNotice.noticeRegisterDate}"/></td>
+											<td><c:out value="${adminNotice.noticeUpdateDate}"/></td>
+											<td class="modify-button">
+												<a href="javascript:location.href='${pageContext.request.contextPath}/adminNoticeModify.admin?noticeId=${adminNotice.noticeId}&page=${page}'">수정</a>
+											</td>
+										</tr>
+									</c:forEach>
 								</table>
 							</div>
 						</div>

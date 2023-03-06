@@ -1,13 +1,13 @@
 package com.goldenPig.banner.domain;
 
 public class BannerVO {
-     
+
 	private Long bannerId;
-	private String bannerName;
-	private String bannerPath;
 	private String bannerSystemName;
+	private String bannerOriginalName;
+	private String bannerRegisterDate;
 	private Long bannerStatus;
-	
+
 	public BannerVO() {;}
 
 	public Long getBannerId() {
@@ -18,28 +18,28 @@ public class BannerVO {
 		this.bannerId = bannerId;
 	}
 
-	public String getBannerName() {
-		return bannerName;
-	}
-
-	public void setBannerName(String bannerName) {
-		this.bannerName = bannerName;
-	}
-
-	public String getBannerPath() {
-		return bannerPath;
-	}
-
-	public void setBannerPath(String bannerPath) {
-		this.bannerPath = bannerPath;
-	}
-
 	public String getBannerSystemName() {
 		return bannerSystemName;
 	}
 
 	public void setBannerSystemName(String bannerSystemName) {
 		this.bannerSystemName = bannerSystemName;
+	}
+
+	public String getBannerOriginalName() {
+		return bannerOriginalName;
+	}
+
+	public void setBannerOriginalName(String bannerOriginalName) {
+		this.bannerOriginalName = bannerOriginalName;
+	}
+
+	public String getBannerRegisterDate() {
+		return bannerRegisterDate;
+	}
+
+	public void setBannerRegisterDate(String bannerRegisterDate) {
+		this.bannerRegisterDate = bannerRegisterDate;
 	}
 
 	public Long getBannerStatus() {
@@ -52,8 +52,9 @@ public class BannerVO {
 
 	@Override
 	public String toString() {
-		return "BannerVO [bannerId=" + bannerId + ", bannerName=" + bannerName + ", bannerPath=" + bannerPath
-				+ ", bannerSystemName=" + bannerSystemName + ", bannerStatus=" + bannerStatus + "]";
+		return "BannerVO [bannerId=" + bannerId + ", bannerSystemName=" + bannerSystemName + ", bannerOriginalName="
+				+ bannerOriginalName + ", bannerRegisterDate=" + bannerRegisterDate + ", bannerStatus=" + bannerStatus
+				+ "]";
 	}
 
 	@Override
@@ -80,6 +81,4 @@ public class BannerVO {
 			return false;
 		return true;
 	}
-	
-	
 }

@@ -3,11 +3,11 @@ showList();
 
 function showList(){
 	boards = JSON.parse(boards);
-	const $ul = $("#content ul");
+	const $ul = $("#content div ul");
 	let text = "";
 	console.log("JS들어옴");
 	boards.forEach(board => {
-		src = contextPath + "/static/img/board/no-image.png";
+		src = contextPath + "/static/img/board/noImage.png";
 		text += `
 			<li>
 				<div class="content-body">
@@ -19,6 +19,7 @@ function showList(){
 					                    <div class="profile" style=" display: flex; justify-content: space-between;">
 											<div style="display: inline-block;">
 						                        <h6 class="writer">${board.memberName}</h6>
+						                        <h6 class="boardId">${board.boardId}</h6>
 												<h1 class="card-header-title">${board.boardTitle}</h1>
 											</div>
 					                        <div style="display: inline-block;">

@@ -17,20 +17,26 @@ public class AdminFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
-			
+		
 //		저축 게시판 목록
 		if(target.equals("/bankList")) {
 			result = new Result();
 			
-		}else if(target.equals("/bannerList")) {
-			new AdminBannerListController().execute(req, resp);
+		}else if(target.equals("/adminBannerList")) {
+			result = new AdminBannerListController().execute(req, resp);
 		
-		}else if(target.equals("/bannerRegister")) {
-			new AdminBannerRegisterController().execute(req, resp);
+		}else if(target.equals("/adminBannerRegister")) {
+			result = new AdminBannerRegisterController().execute(req, resp);
 			
-		}else if(target.equals("/bannerRegisterOk")) {
-			new AdminBannerRegisterOkController().execute(req, resp);
-
+		}else if(target.equals("/adminBannerRegisterOk")) {
+			result = new AdminBannerRegisterOkController().execute(req, resp);
+			
+		}else if(target.equals("/adminBannerDelete")) {
+			new AdminBannerDeleteOkController().execute(req, resp);
+			
+		}else if(target.equals("/adminBannerToggleUpdate")) {
+			new AdminBannerToggleUpdateController().execute(req, resp);
+			
 //		게시판 상세보기
 		}else if(target.equals("/adminBoardDetail")) {	// 저축 게시판 상세보기
 			result = new AdminBoardDetailController().execute(req, resp);
@@ -59,7 +65,8 @@ public class AdminFrontController extends HttpServlet {
 			
 //		회원정보 변경 페이지			
 		}else if(target.equals("/memberModify")) {
-			new AdminMemberModifyController().execute(req, resp);
+			
+			result = new AdminMemberModifyController().execute(req, resp);
 			
 		}else if(target.equals("/memberModifyOk")) {
 			new AdminMemberModifyOkController().execute(req, resp);
@@ -100,6 +107,6 @@ public class AdminFrontController extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		doGet(req, resp);
 	}
 }

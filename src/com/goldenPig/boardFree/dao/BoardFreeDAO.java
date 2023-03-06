@@ -1,13 +1,11 @@
 package com.goldenPig.boardFree.dao;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
-import com.goldenPig.boardFree.domain.BoardFreeVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
@@ -46,7 +44,7 @@ public class BoardFreeDAO {
 	public List<BoardFreeDTO> selectAll(Map<String, Object> pageMap){
 		List<BoardFreeDTO> result = null;
 		try {
-			result = sqlSession.selectList("boardFree.selectAll");
+			result = sqlSession.selectList("boardFree.selectAllSearch", pageMap);
 			System.out.println(result.toString());
 		} catch (Exception e) {
 			System.err.println("selectAll error");
@@ -71,6 +69,15 @@ public class BoardFreeDAO {
 		sqlSession.insert("boardFree.insertBoard", boardMap);
 	}
 	
+//	각 게시글 이미지 가져오기
+	public List<BoardFreeDTO> selectAllImgsByBoardId(Long boardId) {
+		return sqlSession.selectList("boardFreeImg.selectAllByBoardId", boardId);
+	}
+	
+//	게시글 상세보기
+	public BoardFreeDTO selectOneByBoardId(Long boardId) {
+		return sqlSession.selectOne("boardFree.selectOneByBoardId", boardId);
+	}
 	
 	
 }
