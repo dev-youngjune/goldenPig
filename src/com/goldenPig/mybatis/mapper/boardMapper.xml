@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="board">
-	<select id="selectAll" resultType="boardDTO">
-		select board_id, member_id, board_title, board_content, board_register_date, 
-		board_update_date, board_read_count
-		from tbl_board_saving 
-	</select>
-	
-	<!-- <select id="selectAllList"> select b.board_id, b.board_title, b.board_content, 
-		b.board_register_date, b.board_update_date, b.member_nickname, b.board_like_count, 
-		b.board_read_count, reply_count from view_boardfreelist limit #{startRow}, 
-		#{rowCount} </select> -->
-	<!-- <select id="detail"> select board_title, member_nickname, board_register_date, 
-		board_content, board_like_id, favorite_id, reply_id, reply_content, member_id, 
-		answer_id, answer_title, answer_content, answer_register_date, answer_update_date, 
-		answer_like_id </select> -->
-
-	<!-- <select id="getTotal" resultType="long"> select count(board_id) board_count 
-		from tbl_boardfree </select> -->
-
-	<!--<select id="getReplyCount" parameterType="long" resultType="long"> select 
-		reply_count from view_boardFreeList where board_id = #{boardId} select count(reply_id) 
-		from tbl_replyfree where board_id = #{boardId} </select> -->
-
-	<!-- <select id="boardList" resultType="boardDTO"> SELECT board_id, board_title, 
-		board_update_date, board_read_count, favorite_count, reply_count, like_count 
-		FROM goldenpig.view_board_list; </select> -->
-
-	<select id="boardList" resultType="boardDTO">
-		select f.board_id , f.member_id, f.member_nickname , f.board_title
-		, f.board_update_date, f.board_register_date , f.board_read_count
-		, ifnull(l.like_count, 0) board_like_count, ifnull(r.answer_count, 0) board_answer_count
-		, ifnull(favorite_count, 0) favorite_count
+	<select id="selectAllSearch" parameterType="map" resultType="boardDTO">
+		select f.board_id , f.member_id, f.member_nickname ,  f.board_title
+			, f.board_update_date, f.board_register_date , f.board_read_count ,
+			ifnull(l.like_count, 0) board_like_count, r.reply_count board_reply_count
 		from
 		(
-		select f.board_id , f.member_id, m.member_nickname , f.board_title
-		, f.board_update_date, f.board_register_date , f.board_read_count
-		from tbl_board_saving f
-		left outer join tbl_member m
-		on f.member_id = m.member_id
+			select f.board_id , f.member_id, m.member_nickname ,  f.board_title
+			, f.board_update_date, f.board_register_date , f.board_read_count 
+			from tbl_board_saving f
+			left outer join tbl_member m
+			on f.member_id = m.member_id
+			group by board_id
 		) f
-		left outer join
+		left outer join 
 		(
-		select l.board_id, count(l.board_like_id) like_count
-		from tbl_board_saving_like l
-		group by l.board_id
+			select l.board_id, count(l.board_like_id) like_count
+			from tbl_board_saving_like l
+			group by l.board_id 
 		) l
-		on l.board_id = f.board_id
+		on l.board_id = f.board_id 
 		left outer join
 		(
-		select r.board_id, count(r.answer_id) answer_count
-		from tbl_saving_answer r
-		group by r.board_id
+			select r.board_id, ifnull(count(r.reply_id),0) reply_count
+			from tbl_board_saving_reply r
+			group by r.board_id 
 		) r
-		on r.board_id = f.board_id
+		on r.board_id = l.board_id 
+		group by board_id
+		order by board_id desc 
+		limit #{startRow}, #{rowCount}
+	</select>
+	
+	<select id="selectAll" resultType="boardDTO">
+		select f.board_id , f.member_id, f.member_nickname ,  f.board_title, 
+		f.board_update_date, f.board_register_date , f.board_read_count , 
+		ifnull(l.like_count, 0) board_like_count, r.reply_count board_reply_count
+		from
+		(
+			select f.board_id , f.member_id, m.member_nickname ,  f.board_title
+			, f.board_update_date, f.board_register_date , f.board_read_count 
+			from tbl_board_saving f
+			left outer join tbl_member m
+			on f.member_id = m.member_id
+			group by board_id
+		) f
+		left outer join 
+		(
+			select l.board_id, count(l.board_like_id) like_count
+			from tbl_board_saving_like l
+			group by l.board_id 
+		) l
+		on l.board_id = f.board_id 
 		left outer join
 		(
-		select l.board_id, count(l.favorite_id) favorite_count
-		from tbl_favorite l
-		group by l.board_id
-		) fv
-		on fv.board_id = f.board_id
+			select r.board_id, ifnull(count(r.reply_id),0) reply_count
+			from tbl_board_saving_reply r
+			group by r.board_id 
+		) r
+		on r.board_id = l.board_id 
 		group by board_id
+		order by board_id desc 
+		limit #{startRow}, #{rowCount}
 	</select>
+	
 	<select id="getTotal" parameterType="map" resultType="long">
 		select count(board_id) from tbl_board_saving
 	</select>
@@ -74,8 +76,37 @@
 	</select>
 	
 	<insert id="insertBoard" parameterType="map">
-		insert into tbl_board_saving (member_id, board_title, board_content, board_register_date, board_update_date)
-		values(#{memberId}, #{title}, #{content}, current_timestamp, current_timestamp)
+		INSERT INTO tbl_board_saving (member_id, board_title, board_content, board_register_date, board_update_date)
+		VALUES(#{memberId}, #{title}, #{content}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
 	</insert>
+	
+	<!-- 답글 페이지 -->
+<!-- 	<select id="answer">
+		select m.member_img_path , m.member_nickname , s.answer_content  
+		from tbl_member m
+		left outer join tbl_saving_answer s
+		on m.member_id = s.member_id;
+	</select> -->
+	
+	<select id="answerImgPath" parameterType="long" resultType="string">
+		select member_img_path
+		from tbl_member
+		where member_id = #{memberId}
+	</select>
+	<select id="answerNickname" resultType="string">
+		select member_nickname
+		from tbl_member
+	</select>
+	<insert id="answerContent" parameterType="string">
+		INSERT INTO goldenpig.tbl_saving_answer
+		(answer_content)
+		VALUE(#{answerContent})
+	</insert>
+	
+	<select id="getMemberVO" parameterType="long" resultType="memberVO">
+		select member_id, member_nickname, member_img_path
+		from tbl_memeber
+		where member_id = #{memberId}
+	</select>
 </mapper>
 
