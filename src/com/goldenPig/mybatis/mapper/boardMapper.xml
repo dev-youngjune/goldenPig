@@ -102,5 +102,11 @@
 		(answer_content)
 		VALUE(#{answerContent})
 	</insert>
+	
+	<select id="getMemberVO" parameterType="long" resultType="memberVO">
+		select member_id, member_nickname, member_img_path
+		from tbl_memeber
+		where member_id = #{memberId}
+	</select>
 </mapper>
 

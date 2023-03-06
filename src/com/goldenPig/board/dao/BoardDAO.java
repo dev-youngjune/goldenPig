@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.board.domain.BoardDTO;
+import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
@@ -105,16 +106,20 @@ public class BoardDAO {
 		return sqlSession.selectOne("board.getReplyCount", boardId);
 	}
 //	답변
-	public String answerImgPath(String member_img_path) {
-		return sqlSession.selectOne("board.answerImgPath", member_img_path);
+	public String answerImgPath(String memberImgPath) {
+		return sqlSession.selectOne("board.answerImgPath", memberImgPath);
 	}
 	
-	public String answerNickName(String answer_nickname) {
-		return sqlSession.selectOne("board.answerNickname", answer_nickname);
+	public String answerNickName(String answerNickname) {
+		return sqlSession.selectOne("board.answerNickname", answerNickname);
 	}
 	
-	public void answerContent(String answer_content) {
-		sqlSession.insert("board.insertBoard", answer_content);
+	public void answerContent(String answerContent) {
+		sqlSession.insert("board.insertBoard", answerContent);
+	}
+	
+	public MemberVO getMemberVO(Long memberId) {
+		return sqlSession.selectOne("board.getMemberVO",memberId);
 	}
 	
 /*<select id="answerImgPath">
