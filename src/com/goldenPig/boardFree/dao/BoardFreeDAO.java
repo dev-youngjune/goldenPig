@@ -46,7 +46,7 @@ public class BoardFreeDAO {
 	public List<BoardFreeDTO> selectAll(Map<String, Object> pageMap){
 		List<BoardFreeDTO> result = null;
 		try {
-			result = sqlSession.selectList("boardFree.selectAll");
+			result = sqlSession.selectList("boardFree.selectAllSearch", pageMap);
 			System.out.println(result.toString());
 		} catch (Exception e) {
 			System.err.println("selectAll error");
