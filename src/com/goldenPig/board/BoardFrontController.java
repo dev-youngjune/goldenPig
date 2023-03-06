@@ -21,6 +21,9 @@ public class BoardFrontController extends HttpServlet {
 		if (target.equals("/boardList")) {
 			result = new ListController().execute(req, resp);
 			
+		} else if (target.equals("/boardListOk")) {
+			result = new WriteController().execute(req, resp);
+			
 		} else if (target.equals("/boardWrite")) {
 			result = new WriteController().execute(req, resp);
 			
@@ -44,7 +47,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new ModifyController().execute(req, resp);
 			
 		} else if (target.equals("/boardModifyOk")) {
-			result = new BoardModifyOkController().execute(req, resp);
+			result = new ModifyOkController().execute(req, resp);
 			
 		} else {
 			System.out.println(target);
