@@ -89,11 +89,11 @@
 						<aside class="right-side-bar">
 							<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
 						</aside>
-		                <c:if test="${prev}">
-		                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${startPage - 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
-		                    	<img src="${pageContext.request.contextPath}/static/images/board/prev.png" width="15px"></a>
-	                	</c:if>
 	                	<div class="paging-num-wrapper">
+			                <c:if test="${prev}">
+			                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${startPage - 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
+			                    	<img src="${pageContext.request.contextPath}/static/img/board/prev.png" width="15px"></a>
+		                	</c:if>
 		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
 		                    	<c:choose>
 		                    		<c:when test="${i eq page}">
@@ -108,13 +108,13 @@
 		                    		</c:otherwise>
 		                    	</c:choose>
 		                    </c:forEach>
+		                    <c:if test="${next}">
+		                    	<a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${endPage + 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
+		                    		<img src="${pageContext.request.contextPath}/static/img/board/next.png" width="15px">
+		                    	</a>
+		                    </c:if>
 	                    </div>
                     </div>
-                    <c:if test="${next}">
-                    	<a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${endPage + 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
-                    		<img src="${pageContext.request.contextPath}/static/images/next.png" width="15px">
-                    	</a>
-                    </c:if>
 				</div>
 			</div>
 		</div>
@@ -123,7 +123,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	let contextPath = "${pageContext.request.contextPath}";
 	let page = `${page}` || null;
 	let boards = `${boards}`;
 </script>
