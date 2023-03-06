@@ -9,22 +9,15 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/board/board_detail.css">
 </head>
 <body>
-<jsp:include page="../header/header.jsp" flush="false" />
+	<jsp:include page="../header/header.jsp" flush="false" />
 	<div class="wrap">
 		<div class="qeustion-detail">
 			<section>
 				<article class="article">
 					<div class="card-main">
-						<header class="card-header">
-							<h1 class="card-header-title">
-								<c:choose>
-									<c:when test="${board == 'free'}">
-										<span class="text-primary"> ${boardInfo.boardTitle}</span>
-									</c:when>
-									<c:otherwise>
-										<span class="text-primary">Q.</span> ${boardInfo.boardTitle}
-									</c:otherwise>
-								</c:choose>
+						<header class="card-header" id="card-header">
+<%-- 							<h1 class="card-header-title">
+								<span class="text-primary"><c:out value='${boardInfo.boardTitle}'/></span>
 							</h1>
 							<div class="flex-justify-between">
 								<div class="flex-items-center">
@@ -34,33 +27,33 @@
 											<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
 										</a>
 										<div class="user-name">
-											<span class="name">${boardInfo.memberNickName}</span>
+											<span class="name"><c:out value='${boardInfo.memberNickname}'/></span>
 										</div>
 									</div>
-									<span class="card-header-register-date">${boardInfo.boardRegisterDate}</span>
+									<span class="card-header-register-date"><c:out value='${boardInfo.boardRegisterDate}'/></span>
 								</div>
-							</div>
+							</div> --%>
 						</header>
-						<div class="card-content">
-							<div class="editor-content">
-								<p>${boardInfo.boardContent}</p>
-							</div>
+						<div class="card-content" id="card-content">
+<%-- 							<div class="editor-content">
+								<p><c:out value='${boardInfo.boardContent}'/></p>
+							</div> --%>
 						</div>
 						<footer class="card-footer">
 							<div class="flex">
-								<div class="buttons">
-									<div class="star-icon position">
+								<div class="buttons" id="iconButtons">
+<%-- 									<div class="star-icon position">
 										<img src="${pageContext.request.contextPath}/static/img/board/star-icon.png" class="absolute">
-										<span class="margin-left color-blue star-text">관심질문 <span class="star-count">${boardInfo.boardFavoriteCount}</span></span>
+										<span class="margin-left color-blue star-text">관심질문 <span class="star-count"><c:out value='${boardInfo.boardFavoriteCount}'/></span></span>
 									</div>
 									<div class="like-icon position">
 										<img src="${pageContext.request.contextPath}/static/img/board/like.png" class="absolute">
-										<span class="margin-left like-text">좋아요 <span class="like-count">${boardInfo.boardLikeCount}</span></span>
+										<span class="margin-left like-text">좋아요 <span class="like-count"><c:out value='${boardInfo.boardLikeCount}'/></span></span>
 									</div>
 									<div class="reply-icon position">
 										<img src="${pageContext.request.contextPath}/static/img/board/comment-icon.png" class="absolute">
-										<span class="margin-left comment-text">댓글 <span class="comment-count">${boardInfo.boardReplyCount}</span></span>
-									</div>	
+										<span class="margin-left comment-text">댓글 <span class="comment-count"><c:out value='${boardInfo.boardReplyCount}'/></span></span>
+									</div>	 --%>
 								</div>
 							</div>
 							
@@ -97,7 +90,7 @@
 									<!-- ----------------------댓글 목록---------------------- -->
 									
 									
-									<div class="comment-list-list" style="display: none">
+									<div class="comment-list-list" id="commentLists">
 									
 										<!-- <div class="comment-list-padding-top">
 											<div class="comment-list-padding-left">
@@ -132,7 +125,7 @@
 			
 			<!-- ----------------------------- 답변 ----------------------------- -->
 			
-			<c:choose>
+			<%-- <c:choose>
 				<c:when test="${board != 'free'}">
 					<div class="answer-wrap">
 						<div class="answer-button">
@@ -186,7 +179,7 @@
 										
 										
 										<div class="comment-wrap" style="display: none;">
-											<div class="comment-list">
+											<div class="comment-list" id="commentList">
 												<div class="comment-write">
 													<div class="comment-flex-justify-between">
 														<div class="comment-user-info">
@@ -208,8 +201,8 @@
 												<!-- ----------------------댓글 목록---------------------- -->
 												
 												
-												<div class="comment-list-list" style="display: none">
-													<div class="comment-list-padding-top">
+												<div class="comment-list-list">
+<!-- 													<div class="comment-list-padding-top">
 														<div class="comment-list-padding-left">
 															<div class="comment-list-flex-justify-between">
 																<div class="comment-list-user-info-flex">
@@ -229,7 +222,7 @@
 															</div>
 															<span class="card-header-register-date margin-left-32px">2023. 02. 18. 09:53</span>
 														</div>
-													</div>
+													</div> -->
 												</div>
 												
 												
@@ -242,17 +235,20 @@
 					</div>
 				</c:when>
 				<c:otherwise></c:otherwise>
-			</c:choose>
+			</c:choose> --%>
 		</div>
 	</div>
 <jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	let contextPath = "${pageContext.request.contextPath}";
 	let replyDTOs = `${replyDTOs}`;
+	let boardInfo = `${boardInfo}`;
+	let memberId = `${empty sessionScope.memberId}`
 </script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_detail_free.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_detail_saving.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_detail.js"></script>
 </html>
 
 
