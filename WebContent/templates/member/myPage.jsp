@@ -29,7 +29,6 @@
 									<div class="a-modal_inner">
 										<div class="a-modal_innerBody">
 											<button class="close_button">
-												<svg xmlns="http://www.w3.org/2000/svg" class="icon sprite-icons"><use href="https://www.a-ha.io/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-cancel" xlink:href="https://www.a-ha.io/_nuxt/e56a5e482f8c842b09cf0e958d429c23.svg#i-cancel"></use></svg>
 											</button>
 											<div class="a-model_inner_header">
 												<span >프로필 편집</span>
@@ -73,7 +72,7 @@
 															<div class="gray_box_description">
 																<div>
 																	<div class="div_relative">
-																		<input type="text" name="newNickname" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
+																		<input type="text" name="memberNickname" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
 																		<span class="available_length nickname_length"></span>
 																		<div class="description">
 																			<img src= "${pageContext.request.contextPath}/static/img/member/alert_.png" class="info_alet icons">
@@ -85,24 +84,24 @@
 															</div>
 															<div class="gray_box">
 																<div class=gray_box_title>목표 금액</div>
-																<input type="text" class="gray_box_Input" placeholder="목표 금액을 입력해주세요.">
+																<input type="text" class="gray_box_Input" placeholder="목표 금액을 입력해주세요." name="moneyTarget">
 															</div>
 															<div class="gray_box">
 																<div class=gray_box_title>현재 금액</div>
-																<input type="text" class="gray_box_Input" placeholder="현재 금액을 입력해주세요.">
+																<input type="text" class="gray_box_Input" placeholder="현재 금액을 입력해주세요." name="moneyAmount">
 															</div>
 															<div class="gray_box">
 																<div class=gray_box_title>목표 시작날짜</div>
-																<input type="text" class="gray_box_Input" placeholder="목표 시작일을 입력해주세요.">
+																<input type="text" class="gray_box_Input" placeholder="목표 시작일을 입력해주세요." name="moneyRegister">
 															</div>		
 															<div class="gray_box">
 																<div class=gray_box_title>목표 마감날짜</div>
-																<input type="text" class="gray_box_Input" placeholder="목표 마감일을 입력해주세요.">
+																<input type="text" class="gray_box_Input" placeholder="목표 마감일을 입력해주세요." name="moneyExpiry">
 															</div>		
 															<div class="gray_box">
 																<div class=gray_box_title>인사말</div>					
 																<div class="enroll_Textarea_Wrapper">
-																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60"></textarea>
+																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="memberGreeting"></textarea>
 																	<span class="available_length hi_length">(0 / 60자)</span>
 																</div>
 																<div class="gray_color">
@@ -133,11 +132,11 @@
 									<li class="profile_tabsItem">
 										<a class="myProfile_Index test" href="javascript:location.href='${pageContext.request.contextPath}/mypage.mypage'">마이 프로필</a>
 									</li>
- 									<li class="profile_tabsItem">
-										<a class="myProfile_Answers" href="javascript:location.href='${pageContext.request.contextPath}/answers.mypage'">답변</a>
-									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Questions" href="javascript:location.href='${pageContext.request.contextPath}/qustions.mypage'">질문</a>
+									</li>
+ 									<li class="profile_tabsItem">
+										<a class="myProfile_Answers" href="javascript:location.href='${pageContext.request.contextPath}/answers.mypage'">답변</a>
 									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Scraps" href="javascript:location.href='${pageContext.request.contextPath}/scraps.mypage'">관심 질문</a>
@@ -166,7 +165,7 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<span>세심한 곽두철</span>
+											<span>${memberSide.memberNickName}</span>
 										</div>
 										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
 										여러분들 반가워요!</p>
@@ -178,14 +177,14 @@
 														<img src="">
 															질문
 													</span>
-													<span>0개</span>
+													<span>${memberSide.savingWriteCount}개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 															답변
 													</span>
-													<span>0개</span>
+													<span>${memberSide.answerWriteCount}개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
@@ -195,21 +194,21 @@
 														<img src="">
 														질문 좋아요
 													</span>
-													<span>0회</span>
+													<span>${memberSide.savingLikeCount}회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														답변 좋아요
 													</span>
-													<span>0회</span>
+													<span>${memberSide.answerLikeCount}회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														관심 질문
 													</span>
-													<span>0회</span>
+													<span>${memberSide.favoriteTotal}회</span>
 												</div>
 											</div>
 										</div>

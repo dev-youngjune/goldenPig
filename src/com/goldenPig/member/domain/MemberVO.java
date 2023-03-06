@@ -9,7 +9,9 @@ public class MemberVO {
 	private String memberNickName;
 	private String memberPhoneNumber;
 	private String memberBirth;
-	private int memberStatus;
+	private String memberImgName;
+	private String memberImgPath;
+	private String memberGreeting;
 	
 	public MemberVO() {;}
 
@@ -17,7 +19,7 @@ public class MemberVO {
 		return memberId;
 	}
 
-	public void setMemberID(Long memberId) {
+	public void setMemberId(Long memberId) {
 		this.memberId = memberId;
 	}
 
@@ -69,19 +71,36 @@ public class MemberVO {
 		this.memberBirth = memberBirth;
 	}
 
-	public int getMemberStatus() {
-		return memberStatus;
+	public String getMemberImgName() {
+		return memberImgName;
 	}
 
-	public void setMemberStatus(int memberStatus) {
-		this.memberStatus = memberStatus;
+	public void setMemberImgName(String memberImgName) {
+		this.memberImgName = memberImgName;
+	}
+
+	public String getMemberImgPath() {
+		return memberImgPath;
+	}
+
+	public void setMemberImgPath(String memberImgPath) {
+		this.memberImgPath = memberImgPath;
+	}
+
+	public String getMemberGreeting() {
+		return memberGreeting;
+	}
+
+	public void setMemberGreeting(String memberGreeting) {
+		this.memberGreeting = memberGreeting;
 	}
 
 	@Override
 	public String toString() {
-		return "MemberVO [memberBirth=" + memberBirth + ", memberEmail=" + memberEmail + ", memberId=" + memberId
-				+ ", memberName=" + memberName + ", memberNickName=" + memberNickName + ", memberPassword="
-				+ memberPassword + ", memberPhoneNumber=" + memberPhoneNumber + ", memberStatus=" + memberStatus + "]";
+		return "MemberVO [memberId=" + memberId + ", memberEmail=" + memberEmail + ", memberPassword=" + memberPassword
+				+ ", memberName=" + memberName + ", memberNickName=" + memberNickName + ", memberPhoneNumber="
+				+ memberPhoneNumber + ", memberBirth=" + memberBirth + ", memberImgName=" + memberImgName
+				+ ", memberImgPath=" + memberImgPath + ", memberGreeting=" + memberGreeting + "]";
 	}
 
 	@Override
@@ -108,6 +127,6 @@ public class MemberVO {
 			return false;
 		return true;
 	}
-	
+
 	
 }

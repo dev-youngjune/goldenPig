@@ -19,18 +19,24 @@ public class MypageDTO {
 	private String boardRegisterDate;
 	private String boardUpdateDate;
 	private String boardReadCount;
+	private Long savingWriteCount;
+	
 	
 	private Long boardLikeId;
+	private Long savingLikeCount;
 	
 	private Long favoriteId;
+	private Long favoriteTotal;
 	
 	private Long answerId;
 	private String answerTitle;
 	private String answerContent;
 	private String answerRegisterDate;
 	private String answerUpdateDate;
+	private Long answerWriteCount;
 	
 	private Long answerLikeId;
+	private Long answerLikeCount;
 	
 	public MypageDTO() {;}
 
@@ -162,6 +168,14 @@ public class MypageDTO {
 		this.boardReadCount = boardReadCount;
 	}
 
+	public Long getSavingWriteCount() {
+		return savingWriteCount;
+	}
+
+	public void setSavingWriteCount(Long savingWriteCount) {
+		this.savingWriteCount = savingWriteCount;
+	}
+
 	public Long getBoardLikeId() {
 		return boardLikeId;
 	}
@@ -170,12 +184,28 @@ public class MypageDTO {
 		this.boardLikeId = boardLikeId;
 	}
 
+	public Long getSavingLikeCount() {
+		return savingLikeCount;
+	}
+
+	public void setSavingLikeCount(Long savingLikeCount) {
+		this.savingLikeCount = savingLikeCount;
+	}
+
 	public Long getFavoriteId() {
 		return favoriteId;
 	}
 
 	public void setFavoriteId(Long favoriteId) {
 		this.favoriteId = favoriteId;
+	}
+
+	public Long getFavoriteTotal() {
+		return favoriteTotal;
+	}
+
+	public void setFavoriteTotal(Long favoriteTotal) {
+		this.favoriteTotal = favoriteTotal;
 	}
 
 	public Long getAnswerId() {
@@ -218,12 +248,28 @@ public class MypageDTO {
 		this.answerUpdateDate = answerUpdateDate;
 	}
 
+	public Long getAnswerWriteCount() {
+		return answerWriteCount;
+	}
+
+	public void setAnswerWriteCount(Long answerWriteCount) {
+		this.answerWriteCount = answerWriteCount;
+	}
+
 	public Long getAnswerLikeId() {
 		return answerLikeId;
 	}
 
 	public void setAnswerLikeId(Long answerLikeId) {
 		this.answerLikeId = answerLikeId;
+	}
+
+	public Long getAnswerLikeCount() {
+		return answerLikeCount;
+	}
+
+	public void setAnswerLikeCount(Long answerLikeCount) {
+		this.answerLikeCount = answerLikeCount;
 	}
 
 	@Override
@@ -234,36 +280,14 @@ public class MypageDTO {
 				+ ", memberImgPath=" + memberImgPath + ", memberGreeting=" + memberGreeting + ", boardId=" + boardId
 				+ ", boardTitle=" + boardTitle + ", boardContent=" + boardContent + ", boardRegisterDate="
 				+ boardRegisterDate + ", boardUpdateDate=" + boardUpdateDate + ", boardReadCount=" + boardReadCount
-				+ ", boardLikeId=" + boardLikeId + ", favoriteId=" + favoriteId + ", answerId=" + answerId
-				+ ", answerTitle=" + answerTitle + ", answerContent=" + answerContent + ", answerRegisterDate="
-				+ answerRegisterDate + ", answerUpdateDate=" + answerUpdateDate + ", answerLikeId=" + answerLikeId
-				+ "]";
+				+ ", savingWriteCount=" + savingWriteCount + ", boardLikeId=" + boardLikeId + ", savingLikeCount="
+				+ savingLikeCount + ", favoriteId=" + favoriteId + ", favoriteTotal=" + favoriteTotal + ", answerId="
+				+ answerId + ", answerTitle=" + answerTitle + ", answerContent=" + answerContent
+				+ ", answerRegisterDate=" + answerRegisterDate + ", answerUpdateDate=" + answerUpdateDate
+				+ ", answerWriteCount=" + answerWriteCount + ", answerLikeId=" + answerLikeId + ", answerLikeCount="
+				+ answerLikeCount + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((memberId == null) ? 0 : memberId.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		MypageDTO other = (MypageDTO) obj;
-		if (memberId == null) {
-			if (other.memberId != null)
-				return false;
-		} else if (!memberId.equals(other.memberId))
-			return false;
-		return true;
-	}
 	
 	
 	
