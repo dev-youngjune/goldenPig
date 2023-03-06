@@ -15,6 +15,7 @@ public class WriteController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		result.setPath("templates/board/board_write_free.jsp");
+//		req.getParameter("")
 		req.setAttribute("board", "free");
 		result.setRedirect(FORWORD);
 		return result;
