@@ -7,7 +7,7 @@ function showList(){
 	let text = "";
 	console.log("JS들어옴");
 	boards.forEach(board => {
-		src = contextPath + "/static/img/board/no-image.png";
+		src = contextPath + "/static/img/board/noImage.png";
 		text += `
 			<li>
 				<div class="content-body">
