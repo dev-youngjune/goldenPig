@@ -3,26 +3,26 @@
 
 <mapper namespace="banner">
 	<select id="selectAllByStatus" parameterType="long" resultType="bannerVO">
-		select banner_id, banner_name, banner_path, banner_system_name 
+		select banner_id, banner_system_name, banner_original_name, banner_register_date, banner_status 
 		from tbl_banner 
 		where banner_status = #{bannerStatus}
 	</select>
 	
 	<select id="selectAll" resultType="bannerVO">
-		select banner_id, banner_name, banner_path, banner_system_name, banner_status
+		select banner_id, banner_system_name, banner_original_name, banner_register_date, banner_status
 		from tbl_banner
 	</select>
 	
 	<select id="select" parameterType="long" resultType="bannerVO">
-		select banner_id, banner_name, banner_path, banner_system_name, banner_status
+		select banner_id, banner_system_name, banner_original_name, banner_register_date, banner_status
 		from tbl_banner
 		where banner_id = #{bannerId}
 	</select>
 	
 	<insert id="insert" parameterType="bannerVO">
 		INSERT INTO tbl_banner
-		(banner_name, banner_path, banner_system_name, banner_status)
-		VALUES(#{bannerName}, #{bannerPath}, #{bannerSystemName}, 1);
+		(banner_original_name, banner_system_name, banner_register_date, banner_status)
+		VALUES(#{bannerOriginalName}, #{bannerSystemName}, #{bannerRegisterDate}, 1);
 	</insert>
 </mapper>
 
