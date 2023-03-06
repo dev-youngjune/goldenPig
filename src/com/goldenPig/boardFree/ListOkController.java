@@ -123,13 +123,13 @@ public class ListOkController implements Action {
 		req.setAttribute("tag", tag);
 	}
 	
-	public String cutDate(String date) {
+	protected String cutDate(String date) {
 		String result = null;
 		result = date.replaceAll(date.substring(date.length()-3), "");
 		return result;
 	}
 	
-	public void paging(HttpServletRequest req) {
+	protected void paging(HttpServletRequest req) {
 		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		JSONArray jsons = new JSONArray();
 		
