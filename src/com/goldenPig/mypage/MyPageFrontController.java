@@ -48,7 +48,7 @@ public class MyPageFrontController extends HttpServlet {
 		}else if(target.equals("/questions")) {
 			System.out.println("5." + target);
 			result = new Result();	
-			result.setPath("/templates/member/myPageQuestions.jsp");
+			result.setPath(req.getContextPath() + "/templates/member/myPageQuestions.jsp");
 			
 //			답변 목록의 데이터를 전송
 		}else if(target.equals("/answersOk")) {
@@ -59,7 +59,7 @@ public class MyPageFrontController extends HttpServlet {
 		}else if(target.equals("/answers")) {
 			System.out.println("7." + target);
 			result = new Result();	
-			result.setPath("/templates/member/myPageAnswers.jsp");
+			result.setPath(req.getContextPath() + "/templates/member/myPageAnswers.jsp");
 			
 //			관심 질문 목록의 데이터를 전송
 		}else if(target.equals("/scrapOk")) {
@@ -70,7 +70,7 @@ public class MyPageFrontController extends HttpServlet {
 		}else if(target.equals("/scraps")) {
 			System.out.println("9." + target);
 			result = new Result();	
-			result.setPath("/templates/member/myPageScraps.jsp");
+			result.setPath(req.getContextPath() + "/templates/member/myPageScraps.jsp");
 			
 		}else {
 			System.out.println("0. " + target);
