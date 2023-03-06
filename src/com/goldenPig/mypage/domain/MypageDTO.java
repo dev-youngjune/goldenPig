@@ -23,7 +23,7 @@ public class MypageDTO {
 	
 	
 	private Long boardLikeId;
-	private Long savingLikeCount;
+	private Long boardLikeCountTotal;
 	
 	private Long favoriteId;
 	private Long favoriteTotal;
@@ -36,7 +36,10 @@ public class MypageDTO {
 	private Long answerWriteCount;
 	
 	private Long answerLikeId;
-	private Long answerLikeCount;
+	private Long answerLikeCountTotal;
+	
+	
+	
 	
 	public MypageDTO() {;}
 
@@ -185,11 +188,11 @@ public class MypageDTO {
 	}
 
 	public Long getSavingLikeCount() {
-		return savingLikeCount;
+		return boardLikeCountTotal;
 	}
 
 	public void setSavingLikeCount(Long savingLikeCount) {
-		this.savingLikeCount = savingLikeCount;
+		this.boardLikeCountTotal = savingLikeCount;
 	}
 
 	public Long getFavoriteId() {
@@ -265,11 +268,11 @@ public class MypageDTO {
 	}
 
 	public Long getAnswerLikeCount() {
-		return answerLikeCount;
+		return answerLikeCountTotal;
 	}
 
 	public void setAnswerLikeCount(Long answerLikeCount) {
-		this.answerLikeCount = answerLikeCount;
+		this.answerLikeCountTotal = answerLikeCount;
 	}
 
 	@Override
@@ -281,11 +284,11 @@ public class MypageDTO {
 				+ ", boardTitle=" + boardTitle + ", boardContent=" + boardContent + ", boardRegisterDate="
 				+ boardRegisterDate + ", boardUpdateDate=" + boardUpdateDate + ", boardReadCount=" + boardReadCount
 				+ ", savingWriteCount=" + savingWriteCount + ", boardLikeId=" + boardLikeId + ", savingLikeCount="
-				+ savingLikeCount + ", favoriteId=" + favoriteId + ", favoriteTotal=" + favoriteTotal + ", answerId="
+				+ boardLikeCountTotal + ", favoriteId=" + favoriteId + ", favoriteTotal=" + favoriteTotal + ", answerId="
 				+ answerId + ", answerTitle=" + answerTitle + ", answerContent=" + answerContent
 				+ ", answerRegisterDate=" + answerRegisterDate + ", answerUpdateDate=" + answerUpdateDate
 				+ ", answerWriteCount=" + answerWriteCount + ", answerLikeId=" + answerLikeId + ", answerLikeCount="
-				+ answerLikeCount + "]";
+				+ answerLikeCountTotal + "]";
 	}
 
 	
