@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="true" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -7,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../static/css/admin/adminPage-bannerList.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/admin/adminPage-bannerList.css">
 </head>
 <body>
 	<div>
@@ -86,7 +87,9 @@
 						</div>
 						<div class="delete-box-layout ">
 								<div class="delete-box">
-									<button class="register-button">배너 등록</button>
+									<a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerRegister.admin'">
+										<button class="register-button">배너 등록</button>
+									</a>
 								</div>
 						</div>
 						<div class="delete-box-layout">
@@ -118,36 +121,43 @@
 											<th>관리</th>
 										</tr>
 									</thead>
+									
+									
 									<!-- 하나의 행 시작  -->
-									<tr class="load-data">
-										<td class="checkbox-line">
-											<input type="checkbox" name="check">
-										</td>
-										<!-- 배너 번호 -->
-										<td>1</td>
-										<!-- 이미지 이름 -->
-										<td>기본 배너</td>
-										<!-- 이미지 상태 ex) 사용 중 미사용 -->
-										<td class="use">사용 중지</td>
-										<td>2022.01.05</td>
-										<td class="toggle transparent">
-											<input id="toggle" class="toggle-button" type="checkbox">
-											<label class="toggle-item" for="toggle">
-												<span class="toggle-content"></span>
-											</label>
-										</td>
-									</tr>
+									
+									<c:forEach var="banner" items="${banners}">
+										<tr class="load-data">
+											<td class="checkbox-line">
+												<input type="checkbox" name="check">
+											</td>
+											<!-- 배너 번호 -->
+											<td class="bannerId"><c:out value="${banner.bannerId}"/></td>
+											<!-- 이미지 이름 -->
+											<td><c:out value="${banner.bannerOriginalName}"/></td>
+											<!-- 이미지 상태 ex) 사용 중 미사용 -->
+											<td class="use">사용 중지</td>
+											<td><c:out value="${banner.bannerRegisterDate}"/></td>
+											<td class="toggle transparent">
+												<input id="toggle" class="toggle-button" type="checkbox">
+												<label class="toggle-item" for="toggle">
+													<span class="toggle-content"></span>
+												</label>
+											</td>
+										</tr>
+									</c:forEach>
+										
+										
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
-									<tr class="load-data">
+									<!-- <tr class="load-data">
 										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
-										<!-- 배너 번호 -->
+										배너 번호
 										<td>1</td>
-										<!-- 이미지 이름 -->
+										이미지 이름
 										<td>기본 배너</td>
-										<!-- 이미지 상태 ex) 사용 중 미사용 -->
+										이미지 상태 ex) 사용 중 미사용
 										<td class="use">사용 중지</td>
 										<td>2022.01.05</td>
 										<td class="toggle transparent">
@@ -156,18 +166,18 @@
 												<span class="toggle-content"></span>
 											</label>
 										</td>
-									</tr>
+									</tr> -->
 									<!-- 하나의 행 끝  -->
 									<!-- 하나의 행 시작  -->
-									<tr class="load-data">
+									<!-- <tr class="load-data">
 										<td class="checkbox-line">
 											<input type="checkbox" name="check">
 										</td>
-										<!-- 배너 번호 -->
+										배너 번호
 										<td>1</td>
-										<!-- 이미지 이름 -->
+										이미지 이름
 										<td>기본 배너</td>
-										<!-- 이미지 상태 ex) 사용 중 미사용 -->
+										이미지 상태 ex) 사용 중 미사용
 										<td class="use">사용 중지</td>
 										<td>2022.01.05</td>
 										<td class="toggle transparent">
@@ -176,7 +186,7 @@
 												<span class="toggle-content"></span>
 											</label>
 										</td>
-									</tr>
+									</tr> -->
 									<!-- 하나의 행 끝  -->
 								</table>
 							</div>
@@ -184,7 +194,33 @@
 					</section>
 					
 					<!-- 페이지 버튼 -->
-					<div class="page-button-box-layout">
+					
+					
+					<section id="content-wrap">
+		                <ul></ul>
+		                <div id="paging-wrap">
+		                	<c:if test="${prev}">
+			                    <a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerList.admin?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
+		                	</c:if>
+		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
+		                    	<c:choose>
+		                    		<c:when test="${i eq page}">
+					                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+		                    		</c:when>
+		                    		<c:otherwise>
+					                    <a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerList.admin?page=${i}'" class="paging"><c:out value="${i}"/></a>
+		                    		</c:otherwise>
+		                    	</c:choose>
+		                    </c:forEach>
+		                    <c:if test="${next}">
+		                    	<a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerList.admin?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
+		                    </c:if>
+		                    <div></div>
+		                </div>
+	            	</section>
+					
+					
+					<%-- <div class="page-button-box-layout">
 						<div class="page-button-box">
 							<!-- 페이지 번호 -->
 							<div class="">
@@ -223,7 +259,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> --%>
 					<!-- 페이지 버튼 끝 -->
 				</div>
 			</div>
@@ -231,8 +267,9 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="../../static/js/admin/checkbox.js"></script>
-<script src="../../static/js/admin/page.js"></script>
-<script src="../../static/js/admin/slide.js"></script>
-<script src="../../static/js/admin/toggle.js"></script>
+<script>let contextPath = "${pageContext.request.contextPath}"</script>
+<script src="${pageContext.request.contextPath}/static/js/admin/checkbox.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/admin/admin-banner.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/admin/slide.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/admin/toggle.js"></script>
 </html>
