@@ -106,17 +106,16 @@ public class BoardDAO {
 		return sqlSession.selectOne("board.getReplyCount", boardId);
 	}
 //	답변
-	public String answerImgPath(String memberImgPath) {
-		return sqlSession.selectOne("board.answerImgPath", memberImgPath);
-	}
-	
-	public String answerNickName(String answerNickname) {
-		return sqlSession.selectOne("board.answerNickname", answerNickname);
-	}
-	
-	public void answerContent(String answerContent) {
-		sqlSession.insert("board.insertBoard", answerContent);
-	}
+	/*
+	 * public String answerImgPath(String memberImgPath) { return
+	 * sqlSession.selectOne("board.answerImgPath", memberImgPath); }
+	 * 
+	 * public String answerNickName(String answerNickname) { return
+	 * sqlSession.selectOne("board.answerNickname", answerNickname); }
+	 * 
+	 * public void answerContent(String answerContent) {
+	 * sqlSession.insert("board.insertBoard", answerContent); }
+	 */
 	
 	public MemberVO getMemberVO(Long memberId) {
 		return sqlSession.selectOne("board.getMemberVO",memberId);
