@@ -94,7 +94,7 @@
 								<div>
 									<img src="${pageContext.request.contextPath}/static/img/admin/banner_icon.png" class="icon">
 								</div> 
-								<a href="adminPage-bannerList.jsp"> 
+								<a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerList.admin'"> 
 									<span>배너 관리</span>
 								</a>
 							</div>
