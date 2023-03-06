@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>관리자 페이지- 배너 등록</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,26 +60,19 @@
 								</div>
 								<hr>
 								<div class="board-info-box">
-								<form action="">
+								<form action="${pageContext.request.contextPath}/adminBannerRegisterOk.admin" method="post" enctype="multipart/form-data">
 									<div class="banner-img-box">
 										<div class="info-margin-bottom">
 											<span class="info-tag">배너 이미지 파일</span>
 										</div>
 										<label class="banner-img">
 											<img src="${pageContext.request.contextPath}/static/img/admin/default_banner.png" class="banner">
-											<input type="file" style="display:none;">
+											<input type="file" name="banner" style="display:none;">
 										</label>
 									</div>
 									<div class="member-info-box">
-										<div class="member-info-tag-box">
-											<span class="info-tag">배너 명</span>
-											<!-- 이름 -->
-											<div class="info info-name">
-												<input type="text" class="banner-name" name="bannerName" placeholder="배너명을 입력해주세요.">
-											</div>
-										</div>	
 										<div class="button-box">
-											<button id="regist-button">등록</button>
+											<button type="submit" id="regist-button">등록</button>
 										</div>
 									</div>	
 								</form>
@@ -91,5 +87,5 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/admin/thumbnail.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/admin/adminPage-bannerRegister-registButton.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/static/js/admin/adminPage-bannerRegister-registButton.js"></script> --%>
 </html>
