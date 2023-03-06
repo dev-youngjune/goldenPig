@@ -14,15 +14,16 @@
 
 .swiper-slide {
 	display: inline-block;
-    /* width: 93vw; */
+    width: 91vw !important;
     margin: 0;
-	/* margin-right: 40px; */
+	margin-right: 2vw;
 	text-align: center;
 }
 
 .headerCarousel .swiper-container .swiper-slide {
     border-radius: 20px;
     padding-left: 0;
+    margin-left: 2vw !important;
 }
 
 .swiper-slide {
