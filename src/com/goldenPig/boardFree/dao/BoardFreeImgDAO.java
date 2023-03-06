@@ -18,4 +18,9 @@ public class BoardFreeImgDAO {
 	public List<BoardFreeImgVO> select(Long boardId) {
 		return sqlSession.selectList("boardFreeImg.select", boardId);
 	}
+	
+//	첨부파일 추가
+	public void insert(BoardFreeImgVO imgVO) {
+		sqlSession.insert("file.insert", imgVO);
+	}
 }

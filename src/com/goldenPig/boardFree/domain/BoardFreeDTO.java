@@ -11,10 +11,15 @@ public class BoardFreeDTO {
 	private Long boardReadCount;
 	private Long boardReplyCount;
 	private Long boardLikeCount;
+	private Long boardFavoriteCount;
 	private String boardImgSystemName;
 	private String memberNickname;
 	private Long boardImgId;
 	private String boardImgName;
+	private Long replyId;
+	private String replyContent;
+	private String replyRegisterDate;
+	private String replyUpdateDate;
 	
 	public BoardFreeDTO() {;}
 
@@ -120,8 +125,45 @@ public class BoardFreeDTO {
 	public void setBoardImgName(String boardImgName) {
 		this.boardImgName = boardImgName;
 	}
-	
-	
-	
+
+	public Long getBoardFavoriteCount() {
+		return boardFavoriteCount;
+	}
+
+	public void setBoardFavoriteCount(Long boardFavoriteCount) {
+		this.boardFavoriteCount = boardFavoriteCount;
+	}
+
+	public Long getReplyId() {
+		return replyId;
+	}
+
+	public void setReplyId(Long replyId) {
+		this.replyId = replyId;
+	}
+
+	public String getReplyContent() {
+		return replyContent;
+	}
+
+	public void setReplyContent(String replyContent) {
+		this.replyContent = replyContent;
+	}
+
+	public String getReplyRegisterDate() {
+		return replyRegisterDate;
+	}
+
+	public void setReplyRegisterDate(String replyRegisterDate) {
+		this.replyRegisterDate = replyRegisterDate;
+	}
+
+	public String getReplyUpdateDate() {
+		return replyUpdateDate;
+	}
+
+	public void setReplyUpdateDate(String replyUpdateDate) {
+		this.replyUpdateDate = replyUpdateDate;
+	}
 	
 }

@@ -11,11 +11,16 @@ public class MainDAO {
 	public SqlSession sqlSession;
 	
 	public MainDAO() {
-		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+		try {
+			sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+		} catch (Exception e) {
+			System.out.println("MainDAO");
+			e.printStackTrace();
+		}
 	}
 	
 	public List<BannerVO> selectAllBanners() {
-		return sqlSession.selectList("banner.selectAll");		
+		return sqlSession.selectList("banner.selectAll");
 	}
 	
 }
