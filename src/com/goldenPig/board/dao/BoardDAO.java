@@ -106,15 +106,15 @@ public class BoardDAO {
 	}
 //	답변
 	public String answerImgPath(String member_img_path) {
-		return sqlSession.selectOne("board.answerImgPath", memberId);
+		return sqlSession.selectOne("board.answerImgPath", member_img_path);
 	}
 	
 	public String answerNickName(String answer_nickname) {
-		return sqlSession.selectOne("board.answerNickname", memberId);
+		return sqlSession.selectOne("board.answerNickname", answer_nickname);
 	}
 	
-	public String answerContent(String answer_content) {
-		return sqlSession.selectOne("board.answerContent", )
+	public void answerContent(String answer_content) {
+		sqlSession.insert("board.insertBoard", answer_content);
 	}
 	
 /*<select id="answerImgPath">

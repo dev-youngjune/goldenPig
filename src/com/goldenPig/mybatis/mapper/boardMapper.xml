@@ -88,17 +88,19 @@
 		on m.member_id = s.member_id;
 	</select> -->
 	
-	<select id="answerImgPath">
+	<select id="answerImgPath" resultType="string">
 		select member_img_path
 		from tbl_member
 	</select>
-	<select id="answerNickname">
+	<select id="answerNickname" resultType="string">
 		select member_nickname
 		from tbl_member
 	</select>
-	<select id="answerContent">
-		select answer_content
-		from tbl_saving_answer
-	</select>
+	<insert id="answerContent" parameterType="string">
+	INSERT INTO goldenpig.tbl_saving_answer
+	(answer_content)
+	VALUES(#{answerContent});
+
+	</insert>
 </mapper>
 
