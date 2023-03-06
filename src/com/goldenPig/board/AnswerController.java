@@ -27,7 +27,7 @@ public class AnswerController implements Action {
 		System.out.println(boardInfo);
 		req.setAttribute("boardInfo", boardInfo);
 		
-		result.setPath(req.getContextPath() + "/board_detail.jsp");
+		result.setPath(req.getContextPath() + "/templates/board/board_answer.jsp");
 		result.setRedirect(false);
 		return result;
 		
