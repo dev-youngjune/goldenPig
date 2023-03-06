@@ -29,79 +29,89 @@
 							</label>
 							<!-- <hr class="tabs-line"> -->
 						</div>
-						<div>
-							총 게시글 수 : ${total}
+						<div class="boardHeaderWrapper">
+							<div class="boardTotal">
+								총 게시글 수 : ${total}
+							</div>
+							<div class="rowCount">
+								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=5&keyword=${keyword}&tag=${tag}">5 | </a>
+								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=10&keyword=${keyword}&tag=${tag}">10 | </a>
+								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=20&keyword=${keyword}&tag=${tag}">20</a>
+							</div>
 						</div>
-						
 					</div>
 					
 					<!-- ----------------------- 첫번째 게시물 -----------------------------  -->
-					<ul></ul>
-<%-- 				<c:forEach var="board" items="${boards}">
-	 					<div class="content-body">
-								<div class="question-card">
-									<article class="card">
-										<div class="card-main">
-											<header class="card-header">
-												<a href="${pageContext.request.contextPath}/boardDetail.board">
-													<h1 class="card-header-title">${board.boardTitle}</h1>
-												</a>
-											</header>
-											<div class="card-content">
-												<div class="card-footer">
-													<div class="flex-justify-between">
-														<div class="flex-items-center">
-															<div class="card-label-icon">
-																<img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png">
-																<span></span>
+					<div>
+						<ul></ul>
+	<%-- 				<c:forEach var="board" items="${boards}">
+		 					<div class="content-body">
+									<div class="question-card">
+										<article class="card">
+											<div class="card-main">
+												<header class="card-header">
+													<a href="${pageContext.request.contextPath}/boardDetail.board">
+														<h1 class="card-header-title">${board.boardTitle}</h1>
+													</a>
+												</header>
+												<div class="card-content">
+													<div class="card-footer">
+														<div class="flex-justify-between">
+															<div class="flex-items-center">
+																<div class="card-label-icon">
+																	<img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png">
+																	<span></span>
+																</div>
+																<div class="card-label-icon">
+																	<img class="star" src="${pageContext.request.contextPath}/static/img/board/star-icon.png">
+																	<span></span>
+																</div>
+																<div class="card-label-icon">
+																	<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
+																	<span>${board.likeCount}</span>
+																</div>
+																<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
+														 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>
+																<span class="card-label-icon"><img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png"> 0</span> -->
 															</div>
-															<div class="card-label-icon">
-																<img class="star" src="${pageContext.request.contextPath}/static/img/board/star-icon.png">
-																<span></span>
-															</div>
-															<div class="card-label-icon">
-																<img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png">
-																<span>${board.likeCount}</span>
-															</div>
-															<!-- <span class="card-label-icon"><img class="answer" src="${pageContext.request.contextPath}/static/img/board/answer.png"> 1</span>
-													 		<span class="card-label-icon"><img class="star" src="${pageContext.request.contextPath}/static/img/board/star.png"> 0</span>
-															<span class="card-label-icon"><img class="heart" src="${pageContext.request.contextPath}/static/img/board/heart.png"> 0</span> -->
+															<span class="card-header-infomation">${board.boardRegisterDate}</span>
 														</div>
-														<span class="card-header-infomation">${board.boardRegisterDate}</span>
 													</div>
 												</div>
 											</div>
-										</div>
-									</article>
+										</article>
+									</div>
 								</div>
-							</div>
-						</c:forEach> --%>
+							</c:forEach> --%>
 
 
-					<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
-					<aside class="right-side-bar">
-						<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
-					</aside>
-	                <c:if test="${prev}">
-	                    <a href="javascript:location.href='/boardListOk.boardFree?page=${startPage - 1}&tag=${tag}&keyword=${keyword}'" class="paging paging-move">
-	                    	<img src="${pageContext.request.contextPath}/static/images/board/prev.png" width="15px"></a>
-                	</c:if>
-                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
-                    	<c:choose>
-                    		<c:when test="${i eq page}">
-			                    <a href="javascript:void(0)" class="paging paging-checked">
-			                    	<c:out value="${i}"/>
-			                    </a>
-                    		</c:when>
-                    		<c:otherwise>
-			                    <a href="javascript:location.href='/boardListOk.boardFree?page=${i}&sort=${sort}&type=${type}&keyword=${keyword}'" class="paging">
-			                    	<c:out value="${i}"/>
-		                    	</a>
-                    		</c:otherwise>
-                    	</c:choose>
-                    </c:forEach>
+						<!-- ----------------------- 우측 하단 버튼 -----------------------------  -->
+						<aside class="right-side-bar">
+							<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
+						</aside>
+		                <c:if test="${prev}">
+		                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${startPage - 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
+		                    	<img src="${pageContext.request.contextPath}/static/images/board/prev.png" width="15px"></a>
+	                	</c:if>
+	                	<div class="paging-num-wrapper">
+		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
+		                    	<c:choose>
+		                    		<c:when test="${i eq page}">
+					                    <a href="javascript:void(0)" class="paging paging-checked">
+					                    	<c:out value="${i}"/>
+					                    </a>
+		                    		</c:when>
+		                    		<c:otherwise>
+					                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${i}&keyword=${keyword}&tag=${tag}'" class="paging">
+					                    	<c:out value="${i}"/>
+				                    	</a>
+		                    		</c:otherwise>
+		                    	</c:choose>
+		                    </c:forEach>
+	                    </div>
+                    </div>
                     <c:if test="${next}">
-                    	<a href="javascript:location.href='/boardListOk.boardFree?page=${endPage + 1}&tag=${tag}&keyword=${keyword}'" class="paging paging-move">
+                    	<a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${endPage + 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
                     		<img src="${pageContext.request.contextPath}/static/images/next.png" width="15px">
                     	</a>
                     </c:if>

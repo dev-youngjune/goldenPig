@@ -60,6 +60,7 @@ public class ListOkController implements Action {
 		String tag = req.getParameter("tag");
 		String keyword = req.getParameter("keyword");
 		String temp = req.getParameter("page"); 
+		int rowCount = Integer.parseInt(req.getParameter("rowCount") == null ? "5" : req.getParameter("rowCount"));
 		String[] tags = null;
 		
 		tags = tag == null || tag.equals("null") ? null : tag.split("&");
@@ -71,11 +72,11 @@ public class ListOkController implements Action {
 		Long total = boardFreeDAO.getTotal(searchMap);
 		
 //		한 페이지에 출력되는 게시글의 개수
-		int rowCount = 5;
+//		int rowCount = 5;
 		
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
-		int startRow = page * rowCount + 1;
+		int startRow = (page-1) * rowCount + 1;
 		
 		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
 		int startPage = endPage - (pageCount - 1);
