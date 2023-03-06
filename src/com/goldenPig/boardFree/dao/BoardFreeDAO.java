@@ -79,5 +79,10 @@ public class BoardFreeDAO {
 		return sqlSession.selectOne("boardFree.selectOneByBoardId", boardId);
 	}
 	
+//	현재 시퀀스 조회
+	public Long getCurrentSequence() {
+		return sqlSession.selectOne("boardFree.getCurrentSequence");
+	}
+	
 	
 }

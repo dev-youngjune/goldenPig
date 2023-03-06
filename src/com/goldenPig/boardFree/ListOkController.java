@@ -67,7 +67,7 @@ public class ListOkController implements Action {
 		
 		searchMap.put("keyword", keyword);
 		searchMap.put("tags", tags);
-		
+		System.out.println(rowCount);
 		Long total = boardFreeDAO.getTotal(searchMap);
 		
 //		한 페이지에 출력되는 게시글의 개수

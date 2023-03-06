@@ -20,35 +20,15 @@ public class DetailController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		Long boardId = Long.parseLong(req.getParameter("boardId"));
 		
-		detailOk(req, resp);
-		
-//		String contextPath = req.getContextPath();
-		result.setPath("/boardDetailOk.boardFree?boardId=");
-		result.setRedirect(FORWORD);
+		String contextPath = req.getContextPath();
+		result.setPath(contextPath + "/boardDetailOk.boardFree?boardId=" + boardId);
+		result.setRedirect(REDIRECT);
 		
 		return result;
 	}
 	
-	public Long detailOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
-		Long boardId = Long.parseLong(req.getParameter("boardId"));
-		BoardFreeDTO dto = boardFreeDAO.selectOneByBoardId(boardId);
-		
-		req.setAttribute("boardInfo", new JSONObject(dto).toString());
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		return boardId;
-	}
+
 
 }
