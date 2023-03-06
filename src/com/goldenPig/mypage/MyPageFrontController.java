@@ -31,6 +31,8 @@ public class MyPageFrontController extends HttpServlet {
 			System.out.println("2." + target);
 			result = new MyPageOkController().execute(req, resp);
 			
+			
+			
 //			마이 페이지 수정완료 컨트롤러
 		}else if(target.equals("/editOk")) {
 			System.out.println("3." + target);

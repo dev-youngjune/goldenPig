@@ -10,6 +10,7 @@ import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mypage.dao.MypageDAO;
+import com.goldenPig.mypage.domain.MoneyVO;
 
 public class MypageEditOkController implements Action {
 
@@ -18,17 +19,31 @@ public class MypageEditOkController implements Action {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		MemberVO memberVO = new MemberVO();
+		MoneyVO moneyVO = new MoneyVO();
 		
 		Object reqNickname = req.getAttribute("newNickname");
 		String nickname = (String) reqNickname;
 		
+		
+		
+//		memberVO.setMemberNickName(req.getParameter("memberNickname"));
+//		memberVO.setmemberGreeting(req.getParameter("memberGreeting"));
 //		
-		memberVO.setMemberNickName(nickname);
-//		memberVO.setMemberNickName((String)req.getAttribute("newNickname"));
+//		moneyVO.setMoneyTarget(req.getParameter("moneyTarget"));
+//		moneyVO.setMoneyTarget(req.getParameter("moneyTarget"));
+//		
+//		moneyVO.setMoneyAmount(req.getParameter("moneyAmount"));
+//		moneyVO.setMoneyRegisterDate(req.getParameter("moneyRegister"));
+//		moneyVO.setMoneyExpiryDate(req.getParameter("moneyExpiry"));
 		
-	
 		
-//		mypageDAO.updateModalProfile();
+		
+//		모달프로필 멤버 정보 수정
+		mypageDAO.updateModalProfile(memberVO);
+		
+		
+//		모달프로필 저축 목표 수정 
+		mypageDAO.updateModalMoney(moneyVO);
 		
 		
 		
@@ -37,7 +52,7 @@ public class MypageEditOkController implements Action {
 		
 		
 		result.setPath("");
-		result.setRedirect(REDIRECT);
+		result.setRedirect(false);
 		return result;
 	}
 
