@@ -16,7 +16,7 @@ public class QusetionsOkController implements Action {
 		Result result = new Result();
 		
 		
-		result.setPath("/templates/member/myPageQusetions.jsp");
+		result.setPath(req.getContextPath() + "/templates/member/myPageQusetions.jsp");
 		return null;
 	}
 

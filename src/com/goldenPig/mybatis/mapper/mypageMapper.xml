@@ -51,7 +51,7 @@
 	</select>
 	
 	<!-- 답변 리스트 조회 -->
-	<select id="selectAnswers" parameterType="Long" resultType="answerVO">
+	<select id="selectAnswers" parameterType="Long" resultType="savingAnswerVO">
 		SELECT answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
 		FROM tbl_saving_answer where member_id = #{memberId};
 	</select>
