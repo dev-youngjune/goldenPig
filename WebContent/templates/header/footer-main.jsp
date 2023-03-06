@@ -27,7 +27,7 @@
 							<li class="mr-3"><a href="#">서비스 이용약관</a></li>
 							<li class="mr-3"><a href="#">유료 서비스 이용약관</a></li>
 							<li class="mr-3"><a href="#">개인정보처리방침</a></li>
-							<li class="mr-3"><a href="#">자주 묻는 질문(FAQ)</a></li>
+							<li class="mr-3"><a href="javascript:void(0)" class="faq-a">자주 묻는 질문(FAQ)</a></li>
 							<li class="mr-3"><a href="#">채널톡 문의</a></li>
 							<li class="mr-3"><a href="#">광고 문의</a></li>
 						</ul>
@@ -48,4 +48,9 @@
 		</footer>
 	</div>
 </body>
+<script>
+	let contextPath = "${pageContext.request.contextPath}";
+</script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/header/footer.js"></script>
 </html>
