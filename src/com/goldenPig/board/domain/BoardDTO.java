@@ -31,6 +31,8 @@ public class BoardDTO {
 	private Long answerCount;
 	private String boardImgSystemName;
 	private String memberNickname;
+	private String memberImgPath;
+	private String memberNickName;
 
 	public BoardDTO() {;}
 
@@ -274,6 +276,22 @@ public class BoardDTO {
 		this.memberNickname = memberNickname;
 	}
 
+	public String getMemberImgPath() {
+		return memberImgPath;
+	}
+
+	public void setMemberImgPath(String memberImgPath) {
+		this.memberImgPath = memberImgPath;
+	}
+
+	public String getMemberNickName() {
+		return memberNickName;
+	}
+
+	public void setMemberNickName(String memberNickName) {
+		this.memberNickName = memberNickName;
+	}
+
 	@Override
 	public String toString() {
 		return "BoardDTO [boardId=" + boardId + ", memberId=" + memberId + ", boardTitle=" + boardTitle
@@ -287,9 +305,14 @@ public class BoardDTO {
 				+ answerUpdateDate + ", answerLikeId=" + answerLikeId + ", favoriteCount=" + favoriteCount
 				+ ", boardReplyCount=" + boardReplyCount + ", boardLikeCount=" + boardLikeCount + ", answerCount="
 				+ answerCount + ", boardImgSystemName=" + boardImgSystemName + ", memberNickname=" + memberNickname
-				+ "]";
+				+ ", memberImgPath=" + memberImgPath + ", memberNickName=" + memberNickName + "]";
 	}
+
+
+
+
+}
 
 	
 	
-}
+

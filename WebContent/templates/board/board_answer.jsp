@@ -23,16 +23,10 @@
 						<form action="${pageContext.request.contextPath}/boardDetail.board">
 							<div class="profile-image-box">
 								<div class="profile-image">
-								<c:choose>
-									<c:when test="${boardInfo.memberImgPath == null}">
 										<div class="file-image-path"></div>
-									</c:when>
-									<c:otherwise>
-										<div>
+<%-- 										<div>
 											<img alt="" src="${pageContext.request.contextPath}/static/img/member/${boardInfo.memberImgPath}">
-										</div>
-									</c:otherwise>
-								</c:choose>
+										</div> --%>
 								</div>
 <!--  								<div class="profile-image-editor">
 									<label for="image">
