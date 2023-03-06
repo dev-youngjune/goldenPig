@@ -15,7 +15,6 @@
 			<div class="content-wrap">
 				<div id="content">
 					<div class="tabs-wrap">
-					
 						<div class="tabs" style="display: flex;">
 							<label>
 								<a class="" href="${pageContext.request.contextPath}/boardList.board">
