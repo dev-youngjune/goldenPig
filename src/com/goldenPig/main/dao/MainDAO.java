@@ -15,7 +15,7 @@ public class MainDAO {
 	}
 	
 	public List<BannerVO> selectAllBanners() {
-		return sqlSession.selectList("banner.selectAllByStatus", 1);		
+		return sqlSession.selectList("banner.selectAll");		
 	}
 	
 }

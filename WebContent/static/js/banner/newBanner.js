@@ -9,6 +9,7 @@ function showList(){
 	const $button = $(".bannerButtonWrapper");
 	const $pagination = $(".swiper-pagination");
 	let text = "";
+	console.log("new Banner");
 	
 	banners.forEach(banner => {
 	text += `				
@@ -16,7 +17,7 @@ function showList(){
 					<div>
 						<label style="min-height: 250px">
 							<a>
-								<img alt="" src="${pageContext.request.contextPath}/static/img/banner/${banner.bannerSystemName}">
+								<img alt="" src="${contextPath}/static/img/banner/${banner.bannerSystemName}">
 							</a>
 						</label>
 					</div>

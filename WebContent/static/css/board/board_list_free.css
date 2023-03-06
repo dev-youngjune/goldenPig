@@ -220,6 +220,15 @@ div.boardHeaderWrapper div{
 
 .rowCount a {
 	cursor: pointer;
+	text-decoration: none;
+}
+
+.rowCount h4, .rowCount h5 {
+	margin: 0;
+}
+
+.paging img {
+	width: 12px;
 }
 
 

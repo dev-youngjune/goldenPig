@@ -84,6 +84,10 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript">
+	let contextPath = "${pageContext.request.contextPath}";
+	let banners = `${banners}`;
+</script>
 <script src="${pageContext.request.contextPath}/static/js/banner/newBanner.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/banner/banner.js"></script>
 </html>

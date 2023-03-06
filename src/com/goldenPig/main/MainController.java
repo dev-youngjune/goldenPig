@@ -33,7 +33,7 @@ public class MainController implements Action {
 		MainDAO mainDAO = new MainDAO();
 		JSONArray bannerJsons = new JSONArray();
 		mainDAO.selectAllBanners().stream().map(banner -> new JSONObject(banner)).forEach(bannerJsons::put);
-		
+		System.out.println(bannerJsons.toString());
 		req.setAttribute("banners", bannerJsons.toString());
 	}
 

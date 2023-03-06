@@ -19,6 +19,7 @@ function showList(){
 					                    <div class="profile" style=" display: flex; justify-content: space-between;">
 											<div style="display: inline-block;">
 						                        <h6 class="writer">${board.memberName}</h6>
+						                        <h6 class="boardId">${board.boardId}</h6>
 												<h1 class="card-header-title">${board.boardTitle}</h1>
 											</div>
 					                        <div style="display: inline-block;">
