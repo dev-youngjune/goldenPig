@@ -14,7 +14,7 @@ import com.goldenPig.member.domain.MemberVO;
 
 public class AdminMemberModifyOkController implements Action {
 
-
+// with 강사님
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();

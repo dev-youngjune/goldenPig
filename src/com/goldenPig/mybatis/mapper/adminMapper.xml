@@ -153,19 +153,12 @@
 
 
 	<!-- 회원 정보 수정 -->
-
 	<select id="memberInfoChange" parameterType="memberVO"
 		resultType="string">
 		update tbl_member
 		set member_email = #{memberEmail}, member_phonenumber =
 		#{memberPhoneNumber}, member_birth = #{memberBirth}
 		where member_id = #{memberId}
-	</select>
-	
-	<select id="memberInfoChange" parameterType="long"
-		resultType="string">
-		update member_email, member_phonenumber, member_birth from
-		tbl_member
 	</select>
 
 	<!-- 관리자 배너 전체 조회 -->
