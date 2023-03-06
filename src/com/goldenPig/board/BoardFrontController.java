@@ -18,6 +18,7 @@ public class BoardFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
+		System.out.println(target);
 		if (target.equals("/boardList")) {
 			result = new ListController().execute(req, resp);
 			

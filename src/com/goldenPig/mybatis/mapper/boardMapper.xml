@@ -3,7 +3,8 @@
 <mapper namespace="board">
 	<select id="selectAllSearch" parameterType="map" resultType="boardDTO">
 		select f.board_id , f.member_id, f.member_nickname ,  f.board_title
-			, f.board_update_date, f.board_register_date , f.board_read_count , ifnull(l.like_count, 0) board_like_count, ifnull(r.reply_count, 0) board_reply_count
+			, f.board_update_date, f.board_register_date , f.board_read_count ,
+			ifnull(l.like_count, 0) board_like_count, r.reply_count board_reply_count
 		from
 		(
 			select f.board_id , f.member_id, m.member_nickname ,  f.board_title
@@ -11,29 +12,31 @@
 			from tbl_board_saving f
 			left outer join tbl_member m
 			on f.member_id = m.member_id
+			group by board_id
 		) f
 		left outer join 
 		(
-			select l.board_id, count(l.like_id) like_count
+			select l.board_id, count(l.board_like_id) like_count
 			from tbl_board_saving_like l
 			group by l.board_id 
 		) l
 		on l.board_id = f.board_id 
 		left outer join
 		(
-			select r.board_id, count(r.reply_id) reply_count
+			select r.board_id, ifnull(count(r.reply_id),0) reply_count
 			from tbl_board_saving_reply r
 			group by r.board_id 
 		) r
-		on r.board_id = f.board_id 
+		on r.board_id = l.board_id 
 		group by board_id
 		order by board_id desc 
 		limit #{startRow}, #{rowCount}
 	</select>
 	
 	<select id="selectAll" resultType="boardDTO">
-		select f.board_id , f.member_id, f.member_nickname ,  f.board_title
-			, f.board_update_date, f.board_register_date , f.board_read_count , ifnull(l.like_count, 0) board_like_count, ifnull(r.reply_count, 0) board_reply_count
+		select f.board_id , f.member_id, f.member_nickname ,  f.board_title, 
+		f.board_update_date, f.board_register_date , f.board_read_count , 
+		ifnull(l.like_count, 0) board_like_count, r.reply_count board_reply_count
 		from
 		(
 			select f.board_id , f.member_id, m.member_nickname ,  f.board_title
@@ -41,21 +44,22 @@
 			from tbl_board_saving f
 			left outer join tbl_member m
 			on f.member_id = m.member_id
+			group by board_id
 		) f
 		left outer join 
 		(
-			select l.board_id, count(l.like_id) like_count
+			select l.board_id, count(l.board_like_id) like_count
 			from tbl_board_saving_like l
 			group by l.board_id 
 		) l
 		on l.board_id = f.board_id 
 		left outer join
 		(
-			select r.board_id, count(r.reply_id) reply_count
+			select r.board_id, ifnull(count(r.reply_id),0) reply_count
 			from tbl_board_saving_reply r
 			group by r.board_id 
 		) r
-		on r.board_id = f.board_id 
+		on r.board_id = l.board_id 
 		group by board_id
 		order by board_id desc 
 		limit #{startRow}, #{rowCount}

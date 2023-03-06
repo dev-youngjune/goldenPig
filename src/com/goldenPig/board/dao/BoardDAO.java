@@ -85,7 +85,7 @@ public class BoardDAO {
 	public List<BoardDTO> selectAll(Map<String, Object> pageMap){
 		List<BoardDTO> result = null;
 		try {
-			result = sqlSession.selectList("board.selectAll");
+			result = sqlSession.selectList("board.selectAllSearch", pageMap);
 			System.out.println(result.toString());
 		} catch (Exception e) {
 			System.err.println("selectAll error");
@@ -104,6 +104,7 @@ public class BoardDAO {
 	public Long getReplyCount(Long boardId) {
 		return sqlSession.selectOne("board.getReplyCount", boardId);
 	}
+	
 	
 }
 	
