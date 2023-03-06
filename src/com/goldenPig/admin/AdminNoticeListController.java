@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.goldenPig.Action;
 import com.goldenPig.Result;
 import com.goldenPig.admin.dao.AdminDAO;
+import com.goldenPig.notice.dao.NoticeDAO;
 
 public class AdminNoticeListController implements Action {
 
@@ -25,7 +26,7 @@ public class AdminNoticeListController implements Action {
 		
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 		
-		Long total = adminDAO.getTotal();
+		Long total = adminDAO.getTotalNotice();
 		
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 10;

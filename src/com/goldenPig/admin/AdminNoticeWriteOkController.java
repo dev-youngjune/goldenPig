@@ -20,6 +20,7 @@ public class AdminNoticeWriteOkController implements Action {
 		NoticeVO noticeVO = new NoticeVO();
 		String noticeTitle = req.getParameter("noticeTitle");
 		String noticeContent = req.getParameter("noticeContent");
+		String noticeRequired = req.getParameter("noticeRequired");
 		
 		noticeVO.setNoticeTitle(noticeTitle);
 		noticeVO.setNoticeContent(noticeContent);
