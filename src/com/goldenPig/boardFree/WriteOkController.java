@@ -43,6 +43,7 @@ public class WriteOkController implements Action{
 		boardMap.put("title", req.getParameter("title"));
 		boardMap.put("content", (String)req.getParameter("content"));
 		boardMap.put("memberId", memberId);
+		boardFreeDAO.insertBoard(boardMap);
 		
 		imageMap.put("", null);
 //		boardMap.put("memberId", (Long)req.getSession().getAttribute("memberId"));
@@ -52,12 +53,10 @@ public class WriteOkController implements Action{
 //		boardFreeVO.setBoardContent((String)req.getAttribute("content"));
 //		boardFreeVO.setMemberId((Long)req.getSession().getAttribute("memberId"));
 		
-		boardFreeDAO.insertBoard(boardMap);
 	}
 	
 	public void writeOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		req.setCharacterEncoding("UTF-8");
-		BoardFreeVO boardFreeVO = new BoardFreeVO();
 		BoardFreeImgVO imgVO = new BoardFreeImgVO();
 		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
 		BoardFreeImgDAO imgDAO = new BoardFreeImgDAO();
@@ -67,14 +66,14 @@ public class WriteOkController implements Action{
 		Long boardCurrentSequence = 0L;
 		MultipartRequest multipartRequest = new MultipartRequest(req, uploadPath, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		Map<String, Object> boardMap = new HashMap<String, Object>();
 		
+		memberId = memberId == null ? 1L : memberId;
 		
-		boardFreeVO.setBoardTitle(multipartRequest.getParameter("boardTitle"));
-		boardFreeVO.setBoardContent(multipartRequest.getParameter("boardContent"));
-		boardFreeVO.setMemberId(memberId == null ? 1L : memberId);
-		
-		boardFreeDAO.insertBoard(boardFreeVO);
-		
+		boardMap.put("title", req.getParameter("title"));
+		boardMap.put("content", (String)req.getParameter("content"));
+		boardMap.put("memberId", memberId);
+		boardFreeDAO.insertBoard(boardMap);
 		boardCurrentSequence = boardFreeDAO.getCurrentSequence();
 		
 		Enumeration<String> fileNames = multipartRequest.getFileNames();
@@ -86,8 +85,8 @@ public class WriteOkController implements Action{
 			
 			if(fileOriginalName == null) {continue;}
 			
-			imgVO.setFileOriginalName(fileOriginalName);
-			imgVO.setFileSystemName(fileSystemName);
+			imgVO.setBoardImgName(fileOriginalName);
+			imgVO.setBoardImgSystemName(fileSystemName);
 			imgVO.setBoardId(boardCurrentSequence);
 			
 			imgDAO.insert(imgVO);
