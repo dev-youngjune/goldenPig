@@ -8,8 +8,8 @@
 	
 	<!--  마이페이지 사이드 조회  -->
 	<select id="selectSide" parameterType="Long" resultType="mypageDTO">
-		select 	member_id, member_nickname, member_img_name, member_img_path, saving_write_count, answer_write_count, board_like_count, answer_like_count, favorite_total
-		from view_mypage_side;
+		SELECT member_id, member_nickname, member_img_name, member_img_path, saving_write_count, answer_write_count, board_like_count_total, answer_like_count_total, favorite_total
+		FROM view_mypage_side where member_id= #{memberId}
 	</select> 
 	
 	
@@ -27,16 +27,10 @@
 	
 	<!-- 모달 프로필 이미지 삭제  -->
 	
-	<!-- 모달 프로필 이미지 추가  -->
+	<!-- 모달 프로필 이미지 추가 -->
 		
 		
 	<!-- 모달 프로필 멤버 정보 수정  -->
-<!-- 	<update id="updateModalProfile" parameterType="memberVO">
-		update tbl_member
-		set  member_nickname=#{memberNickName}, member_img_name=#{memberImgName}, member_img_path=#{memberImgPath}, member_greeting=#{memberGreeting}
-		where member_id=#{memberId}
-	</update> -->
-	
 	<update id="updateModalProfile" parameterType="memberVO">
 		update tbl_member
 		set member_email=#{memberEmail}, member_password=#{memberPassword}, member_name=#{memberName}, member_nickname=#{memberNickName}, member_birth=#{memberBirth}, member_img_name=#{memberImgName}, member_img_path=#{memberImgPath}, member_greeting=#{memberGreeting}
@@ -52,20 +46,21 @@
 
 	<!-- 질문 리스트 조회 -->
  	<select id="selectQuestions" parameterType="long" resultType="questionDTO">
-		select board_id, member_id, board_title, board_content, board_register_date, member_nickname, member_ing_path
-		from view_qusetion_list;
+		select board_id, member_id, board_title, board_content, board_register_date, member_nickname, member_img_path
+		from view_qusetion_list where member_id = #{memberId}
 	</select>
 	
 	<!-- 답변 리스트 조회 -->
-<!-- 	<select id="selectAnswers" parameterType="Long" resultType="answerVO">
+	<select id="selectAnswers" parameterType="Long" resultType="savinganswerVO">
 		select answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
 		from tbl_saving_answer where member_id = #{memberId};
 	</select>
-	 -->
+
 	<!-- 관심 질문 리스트 조회  -->
-<!-- 	<select id="selectScraps" parameterType="Long" resultType="scr">
-		
-	</select> -->
+	<select id="selectScraps" parameterType="Long" resultType="scrapDTO">
+		SELECT favoriting_member_id, favoriting_member_nickname, board_id, saving_member_id, saving_member_nickname, board_title, board_content, board_register_date, member_img
+		FROM favorite_boards where favoriting_member_id = #{memberId}
+	</select>
 	
 </mapper>
 

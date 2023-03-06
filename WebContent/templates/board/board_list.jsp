@@ -290,7 +290,7 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
-	let contextPath = "${pageContext.request.contextPath}";
+	/* let contextPath = "${pageContext.request.contextPath}"; */
 	let page = `${page}` || null;
 	let boards = `${boards}`;
 </script>

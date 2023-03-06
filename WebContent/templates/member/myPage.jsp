@@ -68,7 +68,7 @@
 													</div>
 													<div class="user_info_box">
 														<div class="gray_box">
-															<div class="gray_box_title">닉네임</div>
+															<div class="gray_box_title">${modalSelect.memberNickName}</div>
 															<div class="gray_box_description">
 																<div>
 																	<div class="div_relative">
@@ -101,7 +101,7 @@
 															<div class="gray_box">
 																<div class=gray_box_title>인사말</div>					
 																<div class="enroll_Textarea_Wrapper">
-																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="newGreeting"></textarea>
+																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="newGreeting">${modalSelect.memberGreeting}</textarea>
 																	<span class="available_length hi_length">(0 / 60자)</span>
 																</div>
 																<div class="gray_color">
