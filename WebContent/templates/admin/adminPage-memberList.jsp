@@ -65,28 +65,26 @@
 											<th>닉네임</th>
 											<th>핸드폰 번호</th>
 											<th>가입 날짜</th>
-											<th></th>
 										</tr>
 									</thead>
-									<tr>
-										<td class="checkbox-line">
-											<input type="checkbox" name="check">
-										</td>
-										<td>1</td>
-										<td>
-											<a href="adminPage-member.jsp">ljw120@naver.com</a>
-										</td>
-										<td>멍충코딩</td>
-										<td>010-1234-1234</td>
-										<td>2023.01.11</td>
-										<td class="modify-button">
-											<a href="<!-- 수정 페이지 -->">수정</a>
-										</td>
-									</tr>
+									<c:forEach var="member" items="${members}">
+										<tr>
+											<td class="checkbox-line">
+												<input type="checkbox" name="check">
+											</td>
+											<td><c:out value="${member.memberId}"/></td>
+											<td>
+												<a href="adminPage-member.jsp"><c:out value="${member.memberEmail}"/></a> <!-- 디테일 컨트롤러 제작하고 연결  -->
+											</td>
+											<td><c:out value="${member.memberNickName}"/></td>
+											<td><c:out value="${member.memberPhoneNumber}"/></td>
+											<td><c:out value="${member.memberBirth}"/></td>
+										</tr>
+									</c:forEach>
 								</table>
 							</div>
 						</div>
-					</section>
+					</section><!-- 폼태그 -->
 					
 					<!-- 페이지 버튼 -->
 					<div class="page-button-box-layout">
