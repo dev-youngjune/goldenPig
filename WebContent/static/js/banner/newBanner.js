@@ -5,7 +5,9 @@ function showList(){
 	banners = JSON.parse(banners);
 	/*files = JSON.parse(files);*/
 	console.log(banners);
-	const $wrapper = $(".swiper-container");
+	const $wrapper = $(".swiper-wrapper");
+	const $button = $(".bannerButtonWrapper");
+	const $pagination = $(".swiper-pagination");
 	let text = "";
 	
 	banners.forEach(banner => {
@@ -14,19 +16,17 @@ function showList(){
 					<div>
 						<label style="min-height: 250px">
 							<a>
-								<img alt="" src="${banner.bannerSystemName}">
+								<img alt="" src="${pageContext.request.contextPath}/static/img/banner/${banner.bannerSystemName}">
 							</a>
 						</label>
 					</div>
-				</div>`
-				;
-		
+				</div>`;
 	});
 	
 	
 	
 	
-	text += `	<div class="swiper-wrapper">`;
+	/*text += `	<div class="swiper-wrapper">`;
 			
 	banners.forEach((banner) => {
 		text += `
@@ -73,7 +73,28 @@ function showList(){
 		    </li>
 			`;
 	});*/
+	
 	$wrapper.append(text);
+	
+	text = "";
+	let i = 0;
+	banners.forEach(banner => {
+		text += `
+				<a type="button" class="is-page${++i}"></a>
+		`;
+	});
+	
+	$button.append(text);
+	
+	text ="";
+	
+	banners.forEach(banner => {
+		text += `
+			<label class="swiper-pagination-bullet" style="cursor: pointer"><a></a></label>
+		`;
+	});
+	
+	$pagination.append(text);
 }
 
 

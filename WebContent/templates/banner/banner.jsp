@@ -21,7 +21,7 @@
 				<%-- 				<div id="slide-0${i}" class="swiper-slide"><label style="min-height: 250px"><a><img alt="" src="${banner.img}"></a></label></div>
 			<c:forEach items="${banners}" var="i">
 			</c:forEach> --%>
-				<div id="slide-01" class="swiper-slide">
+<%-- 				<div id="slide-01" class="swiper-slide">
 					<div>
 						<label style="min-height: 250px">
 							<a>
@@ -56,25 +56,27 @@
 							</a>
 						</label>
 					</div>
-				</div>
+				</div> --%>
 				<!--<div id="slide-05" class="swiper-slide"><label style="min-height: 250px"><a><img alt="" src="#"></a></label></div> -->
 			</div>
-			<div>
+			<div class="bannerButtonWrapper">
 				<%-- 			<c:forEach items="${banners}" var="i">
 				<a type="button" class="is-page${i}"></a>
 			</c:forEach>--%>
-				<a type="button" class="is-page1"></a> <a type="button"
-					class="is-page2"></a> <a type="button" class="is-page3"></a> <a
-					type="button" class="is-page4"></a>
+<!-- 				<a type="button" class="is-page1"></a>
+				<a type="button" class="is-page2"></a>
+				<a type="button" class="is-page3"></a>
+				<a type="button" class="is-page4"></a> -->
 			</div>
 			<div class="swiper-pagination">
 				<%-- 			<c:forEach items="${banners}" var="banner">
 				<span class="swiper-pagination-bullet"></span>
 			</c:forEach> --%>
+<!-- 				<label class="swiper-pagination-bullet" style="cursor: pointer"><a></a></label>
 				<label class="swiper-pagination-bullet" style="cursor: pointer"><a></a></label>
 				<label class="swiper-pagination-bullet" style="cursor: pointer"><a></a></label>
 				<label class="swiper-pagination-bullet" style="cursor: pointer"><a></a></label>
-				<label class="swiper-pagination-bullet" style="cursor: pointer"><a></a></label>
+				-->			
 			</div>
 			<span class="swiper-notification"></span>
 		</div>
@@ -82,6 +84,6 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script
-	src="${pageContext.request.contextPath}/static/js/banner/banner.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/banner/newBanner.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/banner/banner.js"></script>
 </html>
