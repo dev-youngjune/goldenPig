@@ -19,8 +19,11 @@ function showList(){
 					                    <div class="profile">
 					                        <div><img src="/*${board.boardImgPath}*/" width="15px"></div>
 					                        <h6 class="writer">${board.memberName}</h6>
+											<h1 class="card-header-title">${board.boardTitle}</h1>
 					                    </div>
-										<h1 class="card-header-title">${board.boardTitle}</h1>
+										<div style="display: inline-block;">
+											<img src="${board.boardImgPath || src}" width="15px">
+										</div>
 									</a>
 								</header>
 								<div class="card-content">
