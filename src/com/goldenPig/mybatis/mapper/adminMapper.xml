@@ -153,13 +153,12 @@
 
 
 	<!-- 회원 정보 수정 -->
-	<select id="memberInfoChange" parameterType="memberVO"
-		resultType="string">
+	<update id="memberInfoChange" parameterType="memberVO">
 		update tbl_member
 		set member_email = #{memberEmail}, member_phonenumber =
 		#{memberPhoneNumber}, member_birth = #{memberBirth}
 		where member_id = #{memberId}
-	</select>
+	</update>
 
 	<!-- 관리자 배너 전체 조회 -->
 	<select id="adminBannerSelectAll" parameterType="map"
@@ -192,4 +191,11 @@
 		set banner_status = #{count}
 		where banner_id = #{bannerId}
 	</update>
+	
+	<!--유저 상세보기 -->
+	<select id="adminMemberDetail">
+		select 
+	</select>
+	
+	
 </mapper>

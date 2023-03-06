@@ -40,9 +40,9 @@
 				<div class="container-margin">
 					<!-- 헤더 -->
 					<div class="delete-box-layout">
-							<div class="delete-box">
+<!-- 							<div class="delete-box">
 								<button class="delete-button">선택 게시물 삭제</button>
-							</div>
+							</div> -->
 					</div>
 					
 					<!-- 내용 섹션 -->

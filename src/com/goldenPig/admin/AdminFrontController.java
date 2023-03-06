@@ -55,7 +55,7 @@ public class AdminFrontController extends HttpServlet {
 			
 		}else if(target.equals("/adminFreeBoardDelete")) {	// 게시판 삭제
 			new AdminFreeBoardDeleteController().execute(req, resp);
-			
+//		회원정보 목록
 		}else if(target.equals("/memberList")) {
 			result = new AdminMemberListController().execute(req, resp);
 
