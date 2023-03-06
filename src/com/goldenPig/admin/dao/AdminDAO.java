@@ -19,8 +19,8 @@ public class AdminDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public List<MemberVO> selectAll() {
-		return sqlSession.selectList("admin.selectAll");
+	public List<MemberVO> selectAll(Map<String, Object> pageMap) {
+		return sqlSession.selectList("admin.selectAll", pageMap);
 	}
 	
 	public Long getTotalMember() {
@@ -125,14 +125,13 @@ public class AdminDAO {
 	}
 	
 //  관리자용 회원정보 수정
+	public void memberInfoChange(MemberVO memberVO) {
+		sqlSession.update("admin.memberInfoChange", memberVO);
+	}
 
 // 관리자용 회원정보 이메일 변경
-//	public void changeEmail(Long emailId) {
-//		sqlSession.update("email.update", emailId);
-//	}
-// 관리자용 회원정보 생년월일 변경
-	
-// 관리자용 회원정보 전화번호 변경
-	
-// 관리자용 회원 정보 수정
+	public void changeEmail(Long emailId) {
+		sqlSession.update("email.update", emailId);
+	}
+
 }
