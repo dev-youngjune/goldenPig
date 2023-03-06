@@ -83,7 +83,7 @@
 		on r.board_id = f.board_id 
 		group by board_id
 		order by board_id desc 
-		limit #{startRow}, #{rowCount}
+		limit 1, 5
 	</select>
 	
 	<select id="getTotal" parameterType="map" resultType="long">
