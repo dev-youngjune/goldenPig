@@ -7,6 +7,8 @@
 		let count = 1
 			$(e).click(function(){
 				console.log($message.text());
+				let bannerId = $(e).parent().siblings(".bannerId").text(); 
+								
 				if(count == 1){
 					$(e).css("background","#0080ff");
 					$span.css("translate","22px");	
@@ -20,5 +22,21 @@
 					$message.text("사용 중지");
 					count = 1;
 				}
+				
+				adminBannerService.update(bannerId ,count);
 			});
 	}); 
+	
+	
+/*---------------------- 배너 사용 여부 토글 ----------------------*/
+
+const adminBannerService = (function(){
+	function update(bannerId, count){
+		$.ajax({
+			url: contextPath + "/adminBannerToggleUpdate.admin",
+			data: {bannerId : bannerId, count: count}
+		})
+	}
+	
+	return {update: update}
+})();

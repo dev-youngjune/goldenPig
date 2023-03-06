@@ -40,10 +40,7 @@
 								<a href="javascript:location.href='${pageContext.request.contextPath}/noticeDetailOk.notice?noticeId=${notice.noticeId}'"> <!--공지사항 제목  -->
 									<h3 class="line-height">
 										<!--필독 라벨  -->
-										<span class="label pull-left"> <i
-											class="icon icon-check tw-text-white"> <!-- before?????????? -->
-										</i> 필독
-										</span> [공지] <c:out value="${notice.noticeTitle}"/>
+										[공지] <c:out value="${notice.noticeTitle}"/>
 									</h3>
 								</a>
 								<p class="cardFoot">
