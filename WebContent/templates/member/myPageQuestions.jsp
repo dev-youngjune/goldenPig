@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,11 +38,11 @@
 									<li class="profile_tabsItem">
 										<a class="myProfile_Index test" href="">마이 프로필</a>
 									</li>
- 									<li class="profile_tabsItem">
-										<a class="myProfile_Answers" href="">답변</a>
-									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Questions" href="">질문</a>
+									</li>
+ 									<li class="profile_tabsItem">
+										<a class="myProfile_Answers" href="">답변</a>
 									</li>
 									<li class="profile_tabsItem">
 										<a class="myProfile_Scraps" href="">관심 질문</a>
@@ -124,7 +125,18 @@
 							<!-- main -->
 							<main class="profile_main">
 								<div class="profile_mian_div">
-									<div class="">
+								
+									<!-- 목록에 없을 때 나올 곳 -->
+									<div class="no_main">
+										<div class="no_main_div">
+											<div class="no_main_inner">
+												<span> 등록된 답변이 없습니다.</span>
+											</div>
+										</div>
+									</div>
+									
+								<!-- 목록이 있을때 나올 곳 -->
+								<!-- 	<div class="">
 										<article class="article_">
 											<div class="card-main">
 												<header class="card-header">
@@ -134,7 +146,7 @@
 													<div class="flex-justify-between">
 														<div class="flex-items-center">
 															<div class="user-frofile">
-																<a class="user-img"> <!-- <span class=img></span> -->
+																<a class="user-img"> <span class=img></span>
 																	<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
 																</a>
 																<div class="user-name">
@@ -153,7 +165,7 @@
 															500만원정도 소득이 발생했습니다.. 그러면 제가 따로 5월에 신고 해야하나요?
 														</p>
 													</div>
-												</div>
+												</div>  -->
 												<!--<footer class="card-footer">
                									<div class="flex">
                   									<div class="buttons">
@@ -175,6 +187,7 @@
 											</div>
 										</article>
 									</div>
+									
 								</div>
 							</main>
 						</section>
