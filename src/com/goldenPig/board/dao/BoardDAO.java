@@ -104,7 +104,30 @@ public class BoardDAO {
 	public Long getReplyCount(Long boardId) {
 		return sqlSession.selectOne("board.getReplyCount", boardId);
 	}
+//	답변
+	public String answerImgPath(String member_img_path) {
+		return sqlSession.selectOne("board.answerImgPath", memberId);
+	}
 	
+	public String answerNickName(String answer_nickname) {
+		return sqlSession.selectOne("board.answerNickname", memberId);
+	}
 	
+	public String answerContent(String answer_content) {
+		return sqlSession.selectOne("board.answerContent", )
+	}
+	
+/*<select id="answerImgPath">
+	select member_img_path
+	from tbl_member
+</select>
+<select id="answerNickname">
+	select member_nickname
+	from tbl_member
+</select>
+<select id="answerContent">
+	select answer_content
+	from tbl_saving_answer
+</select>*/
 }
 	

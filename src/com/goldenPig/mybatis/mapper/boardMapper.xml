@@ -80,5 +80,25 @@
 		VALUES(#{memberId}, #{title}, #{content}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
 	</insert>
 	
+	<!-- 답글 페이지 -->
+<!-- 	<select id="answer">
+		select m.member_img_path , m.member_nickname , s.answer_content  
+		from tbl_member m
+		left outer join tbl_saving_answer s
+		on m.member_id = s.member_id;
+	</select> -->
+	
+	<select id="answerImgPath">
+		select member_img_path
+		from tbl_member
+	</select>
+	<select id="answerNickname">
+		select member_nickname
+		from tbl_member
+	</select>
+	<select id="answerContent">
+		select answer_content
+		from tbl_saving_answer
+	</select>
 </mapper>
 
