@@ -34,9 +34,11 @@
 								총 게시글 수 : ${total}
 							</div>
 							<div class="rowCount">
-								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=5&keyword=${keyword}&tag=${tag}">5 | </a>
-								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=10&keyword=${keyword}&tag=${tag}">10 | </a>
-								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=20&keyword=${keyword}&tag=${tag}">20</a>
+								<h4>페이지당 게시글 수</h4>
+								<h5>클릭 시 1페이지로 이동</h5>
+								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=1&keyword=${keyword}&tag=${tag}&rowCount=5">5 | </a>
+								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=1&keyword=${keyword}&tag=${tag}&rowCount=10">10 | </a>
+								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=1&keyword=${keyword}&tag=${tag}&rowCount=20">20</a>
 							</div>
 						</div>
 					</div>
@@ -89,11 +91,11 @@
 						<aside class="right-side-bar">
 							<a class="write-board" href="${pageContext.request.contextPath}/boardWrite.boardFree">나도 글쓰기</a>
 						</aside>
-		                <c:if test="${prev}">
-		                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${startPage - 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
-		                    	<img src="${pageContext.request.contextPath}/static/images/board/prev.png" width="15px"></a>
-	                	</c:if>
 	                	<div class="paging-num-wrapper">
+			                <c:if test="${prev}">
+			                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${startPage - 1}&keyword=${keyword}&tag=${tag}&rowCount=${rowCount}'" class="paging paging-move">
+			                    	<img src="${pageContext.request.contextPath}/static/img/board/prev.png" width="15px"></a>
+		                	</c:if>
 		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
 		                    	<c:choose>
 		                    		<c:when test="${i eq page}">
@@ -102,19 +104,19 @@
 					                    </a>
 		                    		</c:when>
 		                    		<c:otherwise>
-					                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${i}&keyword=${keyword}&tag=${tag}'" class="paging">
+					                    <a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${i}&keyword=${keyword}&tag=${tag}&rowCount=${rowCount}'" class="paging">
 					                    	<c:out value="${i}"/>
 				                    	</a>
 		                    		</c:otherwise>
 		                    	</c:choose>
 		                    </c:forEach>
+		                    <c:if test="${next}">
+		                    	<a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${endPage + 1}&keyword=${keyword}&tag=${tag}&rowCount=${rowCount}'" class="paging paging-move">
+		                    		<img src="${pageContext.request.contextPath}/static/img/board/next.png" width="15px">
+		                    	</a>
+		                    </c:if>
 	                    </div>
                     </div>
-                    <c:if test="${next}">
-                    	<a href="javascript:location.href='${pageContext.request.contextPath}/boardListOk.boardFree?page=${endPage + 1}&keyword=${keyword}&tag=${tag}'" class="paging paging-move">
-                    		<img src="${pageContext.request.contextPath}/static/images/next.png" width="15px">
-                    	</a>
-                    </c:if>
 				</div>
 			</div>
 		</div>

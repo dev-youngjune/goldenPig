@@ -1,13 +1,11 @@
 package com.goldenPig.boardFree.dao;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
-import com.goldenPig.boardFree.domain.BoardFreeVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
@@ -71,6 +69,10 @@ public class BoardFreeDAO {
 		sqlSession.insert("boardFree.insertBoard", boardMap);
 	}
 	
+//	각 게시글 이미지 가져오기
+	public List<BoardFreeDTO> selectAllImgsByBoardId(Long boardId) {
+		return sqlSession.selectList("boardFreeImg.selectAllByBoardId", boardId);
+	}
 	
 	
 }
