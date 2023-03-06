@@ -74,5 +74,10 @@ public class BoardFreeDAO {
 		return sqlSession.selectList("boardFreeImg.selectAllByBoardId", boardId);
 	}
 	
+//	게시글 상세보기
+	public BoardFreeDTO selectOneByBoardId(Long boardId) {
+		return sqlSession.selectOne("boardFree.selectOneByBoardId", boardId);
+	}
+	
 	
 }
