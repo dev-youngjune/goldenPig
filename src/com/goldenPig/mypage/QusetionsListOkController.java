@@ -8,33 +8,34 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
+import com.goldenPig.board.dao.BoardDAO;
 import com.goldenPig.mypage.dao.MypageDAO;
 import com.goldenPig.mypage.domain.MypageDTO;
+import com.goldenPig.mypage.domain.QuestionDTO;
 
-public class AnswersOkController implements Action {
+public class QusetionsListOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
-//		AnswerDTO answerDTO = new AnswerDTO();
+		QuestionDTO questionDTO = new QuestionDTO();
 		MypageDTO mypageDTO = new MypageDTO();
 		
 //		final Long USER = (Long)req.getSession().getAttribute("memberId");
 		
-		final Long USER = 2L;
+		final Long USER = 1L;
+		
 		
 		System.out.println("들어옴");
-//		req.setAttribute("answerList", mypageDAO.selectAnswers(USER));
+		req.setAttribute("questionList", mypageDAO.selectQuestions(USER));
 		
 		
 		
 		
 		
-		
-		result.setPath(req.getContextPath() + "/templates/member/myPageAnswers.jsp");
-		result.setRedirect(false);
-		return null;
+		result.setPath( "/templates/member/myPageQuestions.jsp");
+		return result;
 	}
 
 }
