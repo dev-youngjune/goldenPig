@@ -20,17 +20,17 @@ public class AdminMemberListController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		AdminDAO adminDAO = new AdminDAO();
-		MemberDAO memberDAO = new MemberDAO(); 
-
 		Result result = new Result();
-		JSONArray jsons = new JSONArray();
+		AdminDAO adminDAO = new AdminDAO();
+//		MemberDAO memberDAO = new MemberDAO(); 
+
+//		JSONArray jsons = new JSONArray();
 		
 		Map<String, Object> pageMap = new HashMap<String, Object>();
 
 		String temp = req.getParameter("page"); 
-		String sort = req.getParameter("sort");
-		String[] types = null;
+//		String sort = req.getParameter("sort");
+//		String[] types = null;
 		
 		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
 		
@@ -57,21 +57,21 @@ public class AdminMemberListController implements Action {
 		
 		pageMap.put("rowCount", rowCount);
 		pageMap.put("startRow", startRow);
-		pageMap.put("sort", sort);
+//		pageMap.put("sort", sort);
 		
-		adminDAO.selectAll().stream().map(member -> new JSONObject(member)).forEach(jsons::put);
+//		adminDAO.selectAll().stream().map(member -> new JSONObject(member)).forEach(jsons::put);
 		
-		req.setAttribute("members", jsons.toString());
+		req.setAttribute("members", adminDAO.selectAll(pageMap));
 		req.setAttribute("total", total);
 		req.setAttribute("startPage", startPage);
 		req.setAttribute("endPage", endPage);
 		req.setAttribute("page", page);
 		req.setAttribute("prev", prev);
 		req.setAttribute("next", next);
-		req.setAttribute("sort", sort);
+//		req.setAttribute("sort", sort);
 		
 		result.setPath("/templates/admin/adminPage-memberList.jsp");
-		result.setRedirect(false);
+//		result.setRedirect(false);
 		return result;
 	}
 

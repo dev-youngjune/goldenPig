@@ -65,7 +65,8 @@ public class AdminFrontController extends HttpServlet {
 			
 //		회원정보 변경 페이지			
 		}else if(target.equals("/memberModify")) {
-			new AdminMemberModifyController().execute(req, resp);
+			
+			result = new AdminMemberModifyController().execute(req, resp);
 			
 		}else if(target.equals("/memberModifyOk")) {
 			new AdminMemberModifyOkController().execute(req, resp);
