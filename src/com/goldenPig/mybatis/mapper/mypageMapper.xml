@@ -57,9 +57,9 @@
 	</select>
 	
 	<!-- 관심 질문 리스트 조회  -->
-	<select id="" parameterType="" resultType="">
+<!-- 	<select id="" parameterType="" resultType="">
 		
-	</select>
+	</select> -->
 	
 </mapper>
 
