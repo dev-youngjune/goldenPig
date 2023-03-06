@@ -3,7 +3,7 @@ package com.goldenPig.mypage.domain;
 public class MoneyDTO {
 
 	Long memberId;
-	String memberNickname;
+	String memberNickName;
 	String memberImgName;
 	String memberImgPath;
 	String memberGreeting;
@@ -22,12 +22,12 @@ public class MoneyDTO {
 		this.memberId = memberId;
 	}
 
-	public String getMemberNickname() {
-		return memberNickname;
+	public String getMemberNickName() {
+		return memberNickName;
 	}
 
-	public void setMemberNickname(String memberNickname) {
-		this.memberNickname = memberNickname;
+	public void setMemberNickName(String memberNickName) {
+		this.memberNickName = memberNickName;
 	}
 
 	public String getMemberImgName() {
@@ -88,7 +88,7 @@ public class MoneyDTO {
 
 	@Override
 	public String toString() {
-		return "MoneyDTO [memberId=" + memberId + ", memberNickname=" + memberNickname + ", memberImgName="
+		return "MoneyDTO [memberId=" + memberId + ", memberNickName=" + memberNickName + ", memberImgName="
 				+ memberImgName + ", memberImgPath=" + memberImgPath + ", memberGreeting=" + memberGreeting
 				+ ", moneyAmount=" + moneyAmount + ", moneyTarget=" + moneyTarget + ", moneyRegisterDate="
 				+ moneyRegisterDate + ", moneyExpiryDate=" + moneyExpiryDate + "]";
@@ -118,6 +118,7 @@ public class MoneyDTO {
 			return false;
 		return true;
 	}
+
 	
 	
 }

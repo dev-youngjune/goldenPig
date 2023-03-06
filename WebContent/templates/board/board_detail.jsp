@@ -18,8 +18,12 @@
 						<header class="card-header">
 							<h1 class="card-header-title">
 								<c:choose>
-									<c:if test="${board }"></c:if>
-								<span class="text-primary">Q.</span> 직장인 투잡 연말정산 어떻게 하나요?
+									<c:when test="${board == 'free'}">
+									
+									</c:when>
+									<c:otherwise>
+										<span class="text-primary">Q.</span> ${boardInfo.boardTitle};
+									</c:otherwise>
 								</c:choose>
 							</h1>
 							<div class="flex-justify-between">
