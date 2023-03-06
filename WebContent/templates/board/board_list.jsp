@@ -15,7 +15,6 @@
 			<div class="content-wrap">
 				<div id="content">
 					<div class="tabs-wrap">
-					
 						<div class="tabs" style="display: flex;">
 							<label  class="blue-line">
 								<a class="active" href="${pageContext.request.contextPath}/boardList.board">
@@ -29,7 +28,6 @@
 							</label>
 							<!-- <hr class="tabs-line"> -->
 						</div>
-						
 					</div>
 					<ul></ul>
 					

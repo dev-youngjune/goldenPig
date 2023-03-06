@@ -8,21 +8,21 @@
 		(
 			select f.board_id , f.member_id, m.member_nickname ,  f.board_title
 			, f.board_update_date, f.board_register_date , f.board_read_count 
-			from tbl_board_ f
+			from tbl_board_saving f
 			left outer join tbl_member m
 			on f.member_id = m.member_id
 		) f
 		left outer join 
 		(
 			select l.board_id, count(l.like_id) like_count
-			from tbl_board__like l
+			from tbl_board_saving_like l
 			group by l.board_id 
 		) l
 		on l.board_id = f.board_id 
 		left outer join
 		(
 			select r.board_id, count(r.reply_id) reply_count
-			from tbl_board_reply r
+			from tbl_board_saving_reply r
 			group by r.board_id 
 		) r
 		on r.board_id = f.board_id 
@@ -38,21 +38,21 @@
 		(
 			select f.board_id , f.member_id, m.member_nickname ,  f.board_title
 			, f.board_update_date, f.board_register_date , f.board_read_count 
-			from tbl_board_ f
+			from tbl_board_saving f
 			left outer join tbl_member m
 			on f.member_id = m.member_id
 		) f
 		left outer join 
 		(
 			select l.board_id, count(l.like_id) like_count
-			from tbl_board__like l
+			from tbl_board_saving_like l
 			group by l.board_id 
 		) l
 		on l.board_id = f.board_id 
 		left outer join
 		(
 			select r.board_id, count(r.reply_id) reply_count
-			from tbl_board__reply r
+			from tbl_board_saving_reply r
 			group by r.board_id 
 		) r
 		on r.board_id = f.board_id 
@@ -62,7 +62,7 @@
 	</select>
 	
 	<select id="getTotal" parameterType="map" resultType="long">
-		select count(board_id) from tbl_board_
+		select count(board_id) from tbl_board_saving
 	</select>
 	
 	<select id="getReplyCount" parameterType="long" resultType="long">
@@ -72,7 +72,7 @@
 	</select>
 	
 	<insert id="insertBoard" parameterType="map">
-		INSERT INTO tbl_board_ (member_id, board_title, board_content, board_register_date, board_update_date)
+		INSERT INTO tbl_board_saving (member_id, board_title, board_content, board_register_date, board_update_date)
 		VALUES(#{memberId}, #{title}, #{content}, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
 	</insert>
 	

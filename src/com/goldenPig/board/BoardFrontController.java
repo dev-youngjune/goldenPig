@@ -22,7 +22,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new ListController().execute(req, resp);
 			
 		} else if (target.equals("/boardListOk")) {
-			result = new WriteController().execute(req, resp);
+			result = new ListOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardWrite")) {
 			result = new WriteController().execute(req, resp);
