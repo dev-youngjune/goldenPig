@@ -11,29 +11,25 @@ import com.goldenPig.Result;
 import com.goldenPig.mypage.dao.MypageDAO;
 import com.goldenPig.mypage.domain.MypageDTO;
 
-public class AnswersOkController implements Action {
+public class ScrapListOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
-//		AnswerDTO answerDTO = new AnswerDTO();
+//		ScrapDTO scrapDTO = new ScrapDTO();
 		MypageDTO mypageDTO = new MypageDTO();
+		
 		
 //		final Long USER = (Long)req.getSession().getAttribute("memberId");
 		
-		final Long USER = 2L;
+		final Long USER = 2L;	
 		
 		System.out.println("들어옴");
-//		req.setAttribute("answerList", mypageDAO.selectAnswers(USER));
+//		req.setAttribute("scrapList", mypageDAO.selectScraps(USER));
 		
 		
-		
-		
-		
-		
-		result.setPath(req.getContextPath() + "/templates/member/myPageAnswers.jsp");
-		result.setRedirect(false);
+		result.setPath(req.getContextPath() + "/templates/member/myPageScraps.jsp");
 		return null;
 	}
 

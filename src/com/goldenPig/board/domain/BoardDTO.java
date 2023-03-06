@@ -7,7 +7,7 @@ public class BoardDTO {
 	private String boardContent;
 	private String boardRegisterDate;
 	private String boardUpdateDate;
-	private Long ReadCount;
+	private Long boardReadCount;
 	private Long boardImgId;
 	private String boardImgPath;
 	private String boardImgName;
@@ -26,9 +26,11 @@ public class BoardDTO {
 	private String answerUpdateDate;
 	private Long answerLikeId;
 	private Long favoriteCount;
-	private Long replyCount;
-	private Long likeCount;
+	private Long boardReplyCount;
+	private Long boardLikeCount;
 	private Long answerCount;
+	private String boardImgSystemName;
+	private String memberNickname;
 
 	public BoardDTO() {;}
 
@@ -80,12 +82,12 @@ public class BoardDTO {
 		this.boardUpdateDate = boardUpdateDate;
 	}
 
-	public Long getReadCount() {
-		return ReadCount;
+	public Long getBoardReadCount() {
+		return boardReadCount;
 	}
 
-	public void setReadCount(Long readCount) {
-		ReadCount = readCount;
+	public void setBoardReadCount(Long boardReadCount) {
+		this.boardReadCount = boardReadCount;
 	}
 
 	public Long getBoardImgId() {
@@ -232,20 +234,20 @@ public class BoardDTO {
 		this.favoriteCount = favoriteCount;
 	}
 
-	public Long getReplyCount() {
-		return replyCount;
+	public Long getBoardReplyCount() {
+		return boardReplyCount;
 	}
 
-	public void setReplyCount(Long replyCount) {
-		this.replyCount = replyCount;
+	public void setBoardReplyCount(Long boardReplyCount) {
+		this.boardReplyCount = boardReplyCount;
 	}
 
-	public Long getLikeCount() {
-		return likeCount;
+	public Long getBoardLikeCount() {
+		return boardLikeCount;
 	}
 
-	public void setLikeCount(Long likeCount) {
-		this.likeCount = likeCount;
+	public void setBoardLikeCount(Long boardLikeCount) {
+		this.boardLikeCount = boardLikeCount;
 	}
 
 	public Long getAnswerCount() {
@@ -256,18 +258,36 @@ public class BoardDTO {
 		this.answerCount = answerCount;
 	}
 
+	public String getBoardImgSystemName() {
+		return boardImgSystemName;
+	}
+
+	public void setBoardImgSystemName(String boardImgSystemName) {
+		this.boardImgSystemName = boardImgSystemName;
+	}
+
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+
 	@Override
 	public String toString() {
 		return "BoardDTO [boardId=" + boardId + ", memberId=" + memberId + ", boardTitle=" + boardTitle
 				+ ", boardContent=" + boardContent + ", boardRegisterDate=" + boardRegisterDate + ", boardUpdateDate="
-				+ boardUpdateDate + ", ReadCount=" + ReadCount + ", boardImgId=" + boardImgId + ", boardImgPath="
-				+ boardImgPath + ", boardImgName=" + boardImgName + ", boardLikeId=" + boardLikeId + ", replyId="
-				+ replyId + ", replyContent=" + replyContent + ", replyRegisterDate=" + replyRegisterDate
+				+ boardUpdateDate + ", boardReadCount=" + boardReadCount + ", boardImgId=" + boardImgId
+				+ ", boardImgPath=" + boardImgPath + ", boardImgName=" + boardImgName + ", boardLikeId=" + boardLikeId
+				+ ", replyId=" + replyId + ", replyContent=" + replyContent + ", replyRegisterDate=" + replyRegisterDate
 				+ ", replyUpdateDate=" + replyUpdateDate + ", tagId=" + tagId + ", tagName=" + tagName + ", favoriteId="
 				+ favoriteId + ", answerId=" + answerId + ", answerTitle=" + answerTitle + ", answerContent="
 				+ answerContent + ", answerRegisterDate=" + answerRegisterDate + ", answerUpdateDate="
 				+ answerUpdateDate + ", answerLikeId=" + answerLikeId + ", favoriteCount=" + favoriteCount
-				+ ", replyCount=" + replyCount + ", likeCount=" + likeCount + ", answerCount=" + answerCount + "]";
+				+ ", boardReplyCount=" + boardReplyCount + ", boardLikeCount=" + boardLikeCount + ", answerCount="
+				+ answerCount + ", boardImgSystemName=" + boardImgSystemName + ", memberNickname=" + memberNickname
+				+ "]";
 	}
 
 	

@@ -18,8 +18,12 @@ public class BoardFrontController extends HttpServlet {
 		String contextPath = req.getContextPath();
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
+		System.out.println(target);
 		if (target.equals("/boardList")) {
 			result = new ListController().execute(req, resp);
+			
+		} else if (target.equals("/boardListOk")) {
+			result = new ListOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardWrite")) {
 			result = new WriteController().execute(req, resp);
@@ -28,8 +32,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new WriteOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardAnswer")) {
-			result = new Result();
-			result.setPath("/templates/board/board_answer.jsp");
+			result = new AnswerController().execute(req, resp);
 			
 		} else if (target.equals("/boardAnswerOk")) {
 			result = new AnswerOkController().execute(req, resp);
@@ -44,7 +47,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new ModifyController().execute(req, resp);
 			
 		} else if (target.equals("/boardModifyOk")) {
-			result = new BoardModifyOkController().execute(req, resp);
+			result = new ModifyOkController().execute(req, resp);
 			
 		} else {
 			System.out.println(target);
