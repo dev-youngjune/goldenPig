@@ -33,9 +33,11 @@
 								총 게시글 수 : ${total}
 							</div>
 							<div class="rowCount">
-								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=5&keyword=${keyword}&tag=${tag}">5 | </a>
-								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=10&keyword=${keyword}&tag=${tag}">10 | </a>
-								<a href="${pageContext.request.contextPath}/boardListOk.boardFree?page=${page}&rowCount=20&keyword=${keyword}&tag=${tag}">20</a>
+								<h4>페이지당 게시글 수</h4>
+								<h5>클릭 시 1페이지로 이동</h5>
+								<a href="${pageContext.request.contextPath}/boardListOk.board?page=${page}&rowCount=5&keyword=${keyword}&tag=${tag}">5 | </a>
+								<a href="${pageContext.request.contextPath}/boardListOk.board?page=${page}&rowCount=10&keyword=${keyword}&tag=${tag}">10 | </a>
+								<a href="${pageContext.request.contextPath}/boardListOk.board?page=${page}&rowCount=20&keyword=${keyword}&tag=${tag}">20</a>
 							</div>
 						</div>
 					</div>
