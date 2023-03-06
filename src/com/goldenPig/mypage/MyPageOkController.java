@@ -13,20 +13,19 @@ import com.goldenPig.Result;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mypage.dao.MypageDAO;
 import com.goldenPig.mypage.domain.MoneyVO;
-import com.goldenPig.mypage.domain.MypageDTO;
 
 public class MyPageOkController implements Action {
 
-	public void getInfo(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+	@Override
+	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		Result result = new Result();
 		MypageDAO mypageDAO = new MypageDAO();
 		MemberVO memberVO = new MemberVO();
 		MoneyVO moneyVO = new MoneyVO();
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
 		
-//		final Long USER = (Long)req.getSession().getAttribute("memberId");
-		
-		final Long USER = 1L;
-		JSONObject mypageJSON = new JSONObject(mypageDAO.selectSide(USER));
-		
+//		final Long USER = 1L;
+		JSONObject mypageJSON = new JSONObject(mypageDAO.selectSide(memberId));
 		
 		
 		
@@ -34,22 +33,16 @@ public class MyPageOkController implements Action {
 //		마이페이지 왼쪽 사이드 조회 
 		req.setAttribute("memberSide", mypageJSON.toString());
 		
-//		저축목표 조회
-		mypageDAO.selectMoney(USER);
-		req.setAttribute("money",new JSONObject(mypageDAO.selectMoney(USER)).toString());
-		
 //		모달 프로필 정보 조회
-		mypageDAO.selectModalProfile(USER);
-		req.setAttribute("modalSelect", new JSONObject(mypageDAO.selectModalProfile(USER)).toString());
+		mypageDAO.selectModalProfile(memberId);
+		req.setAttribute("modalSelect", new JSONObject(mypageDAO.selectModalProfile(memberId)).toString());
 		
-	}
-	
-	@Override
-	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		Result result = new Result();
+//		저축목표 조회
+		mypageDAO.selectMoney(memberId);
+		req.setAttribute("money",new JSONObject(mypageDAO.selectMoney(memberId)).toString());
 		
 		
-		getInfo(req, resp);
+		
 		
 		
 		result.setPath(req.getContextPath() + "/templates/member/myPage.jsp");
