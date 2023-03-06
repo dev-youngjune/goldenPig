@@ -72,7 +72,7 @@
 															<div class="gray_box_description">
 																<div>
 																	<div class="div_relative">
-																		<input type="text" name="memberNickname" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
+																		<input type="text" name="newNickname" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
 																		<span class="available_length nickname_length"></span>
 																		<div class="description">
 																			<img src= "${pageContext.request.contextPath}/static/img/member/alert_.png" class="info_alet icons">
@@ -84,24 +84,24 @@
 															</div>
 															<div class="gray_box">
 																<div class=gray_box_title>목표 금액</div>
-																<input type="text" class="gray_box_Input" placeholder="목표 금액을 입력해주세요." name="moneyTarget">
+																<input type="text" class="gray_box_Input" placeholder="목표 금액을 입력해주세요." name="newMoneyTarget">
 															</div>
 															<div class="gray_box">
 																<div class=gray_box_title>현재 금액</div>
-																<input type="text" class="gray_box_Input" placeholder="현재 금액을 입력해주세요." name="moneyAmount">
+																<input type="text" class="gray_box_Input" placeholder="현재 금액을 입력해주세요." name="newMoneyAmount">
 															</div>
 															<div class="gray_box">
 																<div class=gray_box_title>목표 시작날짜</div>
-																<input type="text" class="gray_box_Input" placeholder="목표 시작일을 입력해주세요." name="moneyRegister">
+																<input type="text" class="gray_box_Input" placeholder="목표 시작일을 입력해주세요." name="newMoneyRegister">
 															</div>		
 															<div class="gray_box">
 																<div class=gray_box_title>목표 마감날짜</div>
-																<input type="text" class="gray_box_Input" placeholder="목표 마감일을 입력해주세요." name="moneyExpiry">
+																<input type="text" class="gray_box_Input" placeholder="목표 마감일을 입력해주세요." name="newMoneyExpiry">
 															</div>		
 															<div class="gray_box">
 																<div class=gray_box_title>인사말</div>					
 																<div class="enroll_Textarea_Wrapper">
-																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="memberGreeting"></textarea>
+																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="newGreeting"></textarea>
 																	<span class="available_length hi_length">(0 / 60자)</span>
 																</div>
 																<div class="gray_color">

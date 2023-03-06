@@ -26,15 +26,14 @@ public class MypageEditOkController implements Action {
 		
 		
 		
-//		memberVO.setMemberNickName(req.getParameter("memberNickname"));
-//		memberVO.setmemberGreeting(req.getParameter("memberGreeting"));
+		memberVO.setMemberNickName(req.getParameter("newNickname"));
+		memberVO.setMemberGreeting(req.getParameter("newGreeting"));
+		
+//		moneyVO.setMoneyTarget(req.getParameter("newMoneyTarget"));
 //		
-//		moneyVO.setMoneyTarget(req.getParameter("moneyTarget"));
-//		moneyVO.setMoneyTarget(req.getParameter("moneyTarget"));
-//		
-//		moneyVO.setMoneyAmount(req.getParameter("moneyAmount"));
-//		moneyVO.setMoneyRegisterDate(req.getParameter("moneyRegister"));
-//		moneyVO.setMoneyExpiryDate(req.getParameter("moneyExpiry"));
+//		moneyVO.setMoneyAmount(req.getParameter("newMoneyAmount"));
+//		moneyVO.setMoneyRegisterDate(req.getParameter("newMoneyRegister"));
+//		moneyVO.setMoneyExpiryDate(req.getParameter("newMoneyExpiry"));
 		
 		
 		
