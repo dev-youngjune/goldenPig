@@ -13,6 +13,10 @@
     font-style: normal;
 }
 
+li {
+	list-style: none;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -67,6 +71,7 @@ body {
 .blue-line {
 	border-bottom: 3px solid #2553e5;
 	width: auto;
+	margin-left: 12px;
 }
 
 .color-989898 {
@@ -121,7 +126,7 @@ body {
     position: relative;
 }
 
-.card-label-icon .answer {
+.card-label-icon img {
 	width: 18px;
 	height: 18px;
 	margin-right: 2px;
@@ -164,20 +169,65 @@ body {
 
 .right-side-bar {
 	float: right;
+	display: flex;
+    height: 3rem;
+    background: #22252b;
+    border-radius: 8px;
+    text-align: center;
 }
 
 .write-board {
+	margin: auto 0;
+	display: inline-block;
 	width: 285px;
     font-size: 1rem;
-    /*font-weight: 700;*/
-    height: 3rem;
-    /*border-radius: 8px;*/
-    /*background: #22252b;*/
-    color: #333;
+    font-weight: 700;
+    color: #ffffff;
     cursor: pointer;
+    text-decoration: none;
+}
+
+div.profile div img {
+	width: 134px;
+}
+
+.paging-num-wrapper {
+    text-align: center;
+}
+
+.paging-num-wrapper a {
 	text-decoration: none;
 }
 
+#content div ul {
+	padding: 0;
+}
 
+/* div.boardTotal {
+	display: inline-block;
+    margin-top: 12px;
+} */
 
+div.boardHeaderWrapper {
+	display: flex;
+    justify-content: space-between;
+}
+
+div.boardHeaderWrapper div{
+	display: inline-block;
+    margin-top: 12px;
+}
+
+.rowCount a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.rowCount h4, .rowCount h5 {
+	margin: 0;
+}
+
+.paging img {
+	width: 12px;
+}
 

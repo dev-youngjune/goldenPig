@@ -1,10 +1,10 @@
 package com.goldenPig.board.domain;
 
 public class BoardSavingImgVO {
-	Long boardImgId;
-	String boardImgPath;
-	String boardImgName;
-	Long boardId;
+	private Long boardImgId;
+	private String boardImgName;
+	private String boardImgSystemName;
+	private Long boardId;
 	
 	public BoardSavingImgVO() {;}
 
@@ -16,20 +16,20 @@ public class BoardSavingImgVO {
 		this.boardImgId = boardImgId;
 	}
 
-	public String getBoardImgPath() {
-		return boardImgPath;
-	}
-
-	public void setBoardImgPath(String boardImgPath) {
-		this.boardImgPath = boardImgPath;
-	}
-
 	public String getBoardImgName() {
 		return boardImgName;
 	}
 
 	public void setBoardImgName(String boardImgName) {
 		this.boardImgName = boardImgName;
+	}
+
+	public String getBoardImgSystemName() {
+		return boardImgSystemName;
+	}
+
+	public void setBoardImgSystemName(String boardImgSystemName) {
+		this.boardImgSystemName = boardImgSystemName;
 	}
 
 	public Long getBoardId() {
@@ -42,9 +42,8 @@ public class BoardSavingImgVO {
 
 	@Override
 	public String toString() {
-		return "BoardSavingImg [boardImgId=" + boardImgId + ", boardImgPath=" + boardImgPath + ", boardImgName="
-				+ boardImgName + ", boardId=" + boardId + "]";
+		return "BoardSavingImgVO [boardImgId=" + boardImgId + ", boardImgName=" + boardImgName + ", boardImgSystemName="
+				+ boardImgSystemName + ", boardId=" + boardId + "]";
 	}
-	
 	
 }
