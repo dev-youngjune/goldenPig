@@ -248,7 +248,11 @@
 <jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-<script src="${pageContext.request.contextPath}/static/js/board/board_detail.js"></script>
+<script>
+	let contextPath = "${pageContext.request.contextPath}";
+	let replyDTOs = `${replyDTOs}`;
+</script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_detail_free.js"></script>
 </html>
 
 

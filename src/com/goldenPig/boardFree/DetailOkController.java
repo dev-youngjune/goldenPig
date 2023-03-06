@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.goldenPig.Action;
@@ -33,15 +34,16 @@ public class DetailOkController implements Action {
 		MemberDAO memberDAO = new MemberDAO();
 		Long boardId = Long.parseLong(req.getParameter("boardId"));
 		BoardFreeDTO dto = boardFreeDAO.selectOneByBoardId(boardId);
+		JSONArray replyJsons = new JSONArray();
+		
+		boardFreeDAO.selectAllRepliesByBoardId(boardId).stream().map(reply -> new JSONObject(reply)).forEach(replyJsons::put);
 
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
 		
 		req.setAttribute("board", "free");
 		req.setAttribute("boardInfo", new JSONObject(dto).toString());
 		req.setAttribute("memberVO", new JSONObject(memberDAO.select(memberId)).toString());
-		req.setAttribute("replyDTOs", new JSONObject().toString());
-		
-//		return boardId;
+		req.setAttribute("replyDTOs", replyJsons.toString());
 	}
 
 }
