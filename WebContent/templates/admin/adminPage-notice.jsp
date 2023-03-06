@@ -59,9 +59,9 @@
 							<hr>
 							<div class="info-table">
 								<div class="info-member">
-										<span class="span-bold">제목 :</span> 
-										<!-- 제목  -->
-										<span>[공지] <c:out value="${adminNotice.noticeTitle}"/></span>
+									<span class="span-bold">제목 :</span> 
+									<!-- 제목  -->
+									<span>[공지] <c:out value="${adminNotice.noticeTitle}"/></span>
 								</div>
 								<div class="info-member">
 									<span class="span-bold">작성 날짜 :</span>

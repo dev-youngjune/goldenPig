@@ -1,7 +1,6 @@
 package com.goldenPig.notice.domain;
 
 public class NoticeVO {
-	
 	Long noticeId;
 	String noticeTitle;
 	String noticeContent;
@@ -80,7 +79,4 @@ public class NoticeVO {
 			return false;
 		return true;
 	}
-	
-	
-	
 }
