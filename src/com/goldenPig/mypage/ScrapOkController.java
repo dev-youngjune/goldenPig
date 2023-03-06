@@ -16,7 +16,7 @@ public class ScrapOkController implements Action {
 		Result result = new Result();
 		
 		
-		result.setPath("/templates/member/myPageScraps.jsp");
+		result.setPath(req.getContextPath() + "/templates/member/myPageScraps.jsp");
 		return null;
 	}
 

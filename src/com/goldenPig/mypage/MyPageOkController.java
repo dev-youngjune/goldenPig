@@ -23,6 +23,7 @@ public class MyPageOkController implements Action {
 		MoneyVO moneyVO = new MoneyVO();
 		
 //		final Long USER = (Long)req.getSession().getAttribute("memberId");
+		
 		final Long USER = 1L;
 		JSONObject mypageJSON = new JSONObject(mypageDAO.selectSide(USER));
 		
@@ -51,7 +52,7 @@ public class MyPageOkController implements Action {
 		getInfo(req, resp);
 		
 		
-		result.setPath("/templates/member/myPage.jsp");
+		result.setPath(req.getContextPath() + "/templates/member/myPage.jsp");
 		result.setRedirect(false);
 		return result;
 	}
