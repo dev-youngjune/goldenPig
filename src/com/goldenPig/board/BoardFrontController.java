@@ -40,9 +40,6 @@ public class BoardFrontController extends HttpServlet {
 		} else if (target.equals("/boardDetail")) {
 			result = new DetailController().execute(req, resp);
 			
-		} else if (target.equals("/boardDetailOk")) {
-			result = new DetailOkController().execute(req, resp);
-			
 		} else if (target.equals("/boardModify")) {
 			result = new ModifyController().execute(req, resp);
 			

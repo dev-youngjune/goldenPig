@@ -32,6 +32,7 @@
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 		<typeAlias type="com.goldenPig.saving.domain.SavingVO" alias="savingVO"/>
 		<typeAlias type="com.goldenPig.mypage.domain.QuestionDTO" alias="questionDTO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.ScrapDTO" alias="scrapDTO"/>
 	</typeAliases>
 		
 	<environments default="mysql">

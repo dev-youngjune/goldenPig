@@ -62,8 +62,8 @@ public class MypageEditOkController implements Action {
 		
 		
 		
-		result.setPath("");
-		result.setRedirect(false);
+		result.setPath(req.getContextPath() + "/mypageOK.mypage");
+		result.setRedirect(REDIRECT);
 		return result;
 	}
 
