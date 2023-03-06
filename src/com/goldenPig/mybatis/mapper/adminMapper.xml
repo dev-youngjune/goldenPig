@@ -192,9 +192,17 @@
 		where banner_id = #{bannerId}
 	</update>
 	
-	<!--유저 상세보기 -->
+	<!-- 유저 상세보기 (가입일 추가해야함) -->
 	<select id="adminMemberDetail">
-		select 
+		select member_id, member_email, member_password, member_name, member_nickname, member_phonenumber, member_birth,
+		(select count(board_id) FROM goldenpig.tbl_board where member_id = ${memberID})
+		from tbl_member
+	</select>
+	
+		<!-- 유저 리스트 페이징 처리 -->
+	<select id="getTotalMember" resultType="long">
+		select count(member_id)
+		from tbl_member
 	</select>
 	
 	

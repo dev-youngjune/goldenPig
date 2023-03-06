@@ -72,7 +72,7 @@
 											<td class="checkbox-line">
 												<input type="checkbox" name="check">
 											</td>
-											<td><c:out value="${member.memberId}"/></td>
+											<td><c:out value="${member.memberId}"/></td> <!-- No. -->
 											<td>
 												<a href="adminPage-member.jsp"><c:out value="${member.memberEmail}"/></a> <!-- 디테일 컨트롤러 제작하고 연결  -->
 											</td>
