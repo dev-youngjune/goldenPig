@@ -32,8 +32,7 @@ public class BoardFrontController extends HttpServlet {
 			result = new WriteOkController().execute(req, resp);
 			
 		} else if (target.equals("/boardAnswer")) {
-			result = new Result();
-			result.setPath("/templates/board/board_answer.jsp");
+			result = new AnswerController().execute(req, resp);
 			
 		} else if (target.equals("/boardAnswerOk")) {
 			result = new AnswerOkController().execute(req, resp);
