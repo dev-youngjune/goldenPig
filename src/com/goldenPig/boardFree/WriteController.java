@@ -21,14 +21,4 @@ public class WriteController implements Action {
 		return result;
 	}
 	
-	public void writeOk(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-//		BoardFreeDAO boardFreeDAO = new BoardFreeDAO();
-//		Long boardId = Long.parseLong(req.getParameter("boardId"));
-//		boardFreeDAO.selectOneByBoardId(boardId);
-		
-		
-		
-		
-	}
-
 }

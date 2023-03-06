@@ -110,5 +110,9 @@
 		where board_id = #{boardId}
 	</select>
 	
+	<select id="getCurrentSequence" resultType="long">
+		select last_insert_id()
+	</select>
+	
 	
 </mapper>
