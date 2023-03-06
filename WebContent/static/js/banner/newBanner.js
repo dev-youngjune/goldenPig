@@ -7,23 +7,42 @@ function showList(){
 	console.log(banners);
 	const $wrapper = $(".swiper-container");
 	let text = "";
+	
+	banners.forEach(banner => {
+	text += `				
+				<div id="slide-${banner.bannerId}" class="swiper-slide">
+					<div>
+						<label style="min-height: 250px">
+							<a>
+								<img alt="" src="${banner.bannerSystemName}">
+							</a>
+						</label>
+					</div>
+				</div>`
+				;
+		
+	});
+	
+	
+	
+	
 	text += `	<div class="swiper-wrapper">`;
 			
-	banners.forEach((banner, i) => {
+	banners.forEach((banner) => {
 		text += `
-					<div id="slide-0${i}" class="swiper-slide"><label style="min-height: 250px"><a><img alt="" src="${banner.bannerSystemName}"></a></label></div>
+					<div id="slide-${banner.bannerId}" class="swiper-slide"><label style="min-height: 250px"><a><img alt="" src="${banner.bannerSystemName}"></a></label></div>
 				`});
 				
 	text += `	</div>
 				<div>`;
-	banners.forEach((banner, i) => {
-		`<a type="button" class="is-page${i}"></a>`
+	banners.forEach((banner) => {
+		`<a type="button" class="is-page${banner.bannerId}"></a>`
 	});
 	
 	text += `	</div>
 				<div class="swiper-pagination">`;
 				
-	banners.forEach((banner, i) => {
+	banners.forEach((banner) => {
 		`<span class="swiper-pagination-bullet"></span>`
 	});
 	
