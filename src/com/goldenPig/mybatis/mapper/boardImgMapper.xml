@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="boardImg">
+<mapper namespace="boardSavingImg">
+	<select id="select" parameterType="long" resultType="boardSavingImgVO">
+		select board_img_id, board_img_name, board_img_system_name, board_id
+		from tbl_board_saving_img where board_id = #{boardId}
+	</select>
 </mapper>
