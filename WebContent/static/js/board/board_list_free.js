@@ -3,7 +3,7 @@ showList();
 
 function showList(){
 	boards = JSON.parse(boards);
-	const $ul = $("#content ul");
+	const $ul = $("#content div ul");
 	let text = "";
 	console.log("JS들어옴");
 	boards.forEach(board => {

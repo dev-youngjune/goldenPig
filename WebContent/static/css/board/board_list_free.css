@@ -191,6 +191,37 @@ div.profile div img {
 	width: 134px;
 }
 
+.paging-num-wrapper {
+    text-align: center;
+}
+
+.paging-num-wrapper a {
+	text-decoration: none;
+}
+
+#content div ul {
+	padding: 0;
+}
+
+/* div.boardTotal {
+	display: inline-block;
+    margin-top: 12px;
+} */
+
+div.boardHeaderWrapper {
+	display: flex;
+    justify-content: space-between;
+}
+
+div.boardHeaderWrapper div{
+	display: inline-block;
+    margin-top: 12px;
+}
+
+.rowCount a {
+	cursor: pointer;
+}
+
 
 
 
