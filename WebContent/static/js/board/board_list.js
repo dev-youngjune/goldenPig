@@ -14,7 +14,7 @@ function showList(){
 						<article class="card">
 							<div class="card-main">
 								<header class="card-header">
-									<a href="${contextPath}/boardDetail.board?boardId=${board.boardId}">
+									<a href="${contextPath}/boardDetailOk.board?boardId=${board.boardId}">
 					                    <div class="profile" style=" display: flex; justify-content: space-between;>
 					                        <div style="display: inline-block;">
 						                        <h6 class="writer">${board.memberName}</h6>

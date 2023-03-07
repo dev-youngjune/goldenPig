@@ -125,7 +125,7 @@
 			
 			<!-- ----------------------------- 답변 ----------------------------- -->
 			
-			<%-- <c:choose>
+			<c:choose>
 				<c:when test="${board != 'free'}">
 					<div class="answer-wrap">
 						<div class="answer-button">
@@ -235,7 +235,7 @@
 					</div>
 				</c:when>
 				<c:otherwise></c:otherwise>
-			</c:choose> --%>
+			</c:choose>
 		</div>
 	</div>
 <jsp:include page="../header/footer-main.jsp" flush="false" />
