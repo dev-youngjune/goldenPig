@@ -1,4 +1,4 @@
-package com.goldenPig.boardFree;
+package com.goldenPig.board;
 
 import java.io.IOException;
 
@@ -51,10 +51,8 @@ public class DetailOkController implements Action {
 		JSONArray replyJsons = new JSONArray();
 		JSONObject dtoJson = new JSONObject(dto);
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
-		
 		memberId = memberId == null ? 1L : memberId;
 		System.out.println("memberId : "+ memberId);
-		
 		MemberVO memberVO = memberDAO.select(memberId);
 		String memberVOJson = new JSONObject(memberVO).toString();
 		
@@ -71,7 +69,6 @@ public class DetailOkController implements Action {
 		req.setAttribute("memberVO", memberVOJson);
 		
 //		댓글 정보
-		System.out.println("replyDTOs : " + replyJsons.toString());
 		req.setAttribute("replyDTOs", replyJsons.toString());
 	}
 

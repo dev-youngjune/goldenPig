@@ -61,7 +61,7 @@
 							<!-- ----------------------댓글 작성---------------------- -->
 							
 							
-							<div class="comment-wrap" style="display: none;">
+							<div class="comment-wrap">
 								<div class="comment-list">
 									<c:choose>
 										<c:when test="${empty sessionScope.memberId}">
@@ -73,7 +73,7 @@
 													<div class="comment-user-info">
 														<div class="comment-user-image">
 															<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
-															<span>${memberVO.memberNickName}</span>
+															<span><c:out value='${memberVO.memberNickName} || 0'></c:out></span>
 														</div>
 														<div class="comment-input-button">
 															<input type="button" value="댓글 등록">
@@ -125,7 +125,7 @@
 			
 			<!-- ----------------------------- 답변 ----------------------------- -->
 			
-			<%-- <c:choose>
+			<c:choose>
 				<c:when test="${board != 'free'}">
 					<div class="answer-wrap">
 						<div class="answer-button">
@@ -235,7 +235,7 @@
 					</div>
 				</c:when>
 				<c:otherwise></c:otherwise>
-			</c:choose> --%>
+			</c:choose>
 		</div>
 	</div>
 <jsp:include page="../header/footer-main.jsp" flush="false" />
@@ -243,6 +243,7 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 	let replyDTOs = `${replyDTOs}`;
+	let memberVO = `${memberVO}`;
 	let boardInfo = `${boardInfo}`;
 	let memberId = `${empty sessionScope.memberId}`
 </script>

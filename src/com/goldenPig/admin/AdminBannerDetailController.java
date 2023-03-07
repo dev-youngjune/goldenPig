@@ -1,4 +1,4 @@
-package com.goldenPig.board;
+package com.goldenPig.admin;
 
 import java.io.IOException;
 
@@ -8,18 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
+import com.goldenPig.admin.dao.AdminDAO;
 
-public class DetailController implements Action {
+public class AdminBannerDetailController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
-		Long boardId = Long.parseLong(req.getParameter("boardId"));
+		AdminDAO adminDAO = new AdminDAO();
+		Long bannerId = Long.parseLong(req.getParameter("bannerId"));
 		
-		String contextPath = req.getContextPath();
-		result.setPath(contextPath + "/boardDetailOk.board?boardId=" + boardId);
-		result.setRedirect(REDIRECT);
+		req.setAttribute("banner", adminDAO.adminBannerSelect(bannerId));
 		
+		result.setPath("/templates/admin/adminPage-bannerDetail.jsp");
 		return result;
 	}
 
