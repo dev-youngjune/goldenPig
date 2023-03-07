@@ -58,6 +58,28 @@
 										<span>배너 등록</span>
 									</div>
 								</div>
+								<div class="info-table">
+									<div class="info-member">
+											<span class="span-bold">번호 :</span> 
+											<!-- 제목  -->
+											<span><c:out value="${board.boardTitle}"/></span>
+									</div>
+									<div class="info-member">
+										<span class="span-bold">배너명 :</span>
+										<!-- 작성자 명  -->
+										<span><c:out value="${board.memberName}"/></span>
+									</div>
+									<%-- <div class="info-member">
+										<span class="span-bold">좋아요 :</span>
+										<!-- 좋아요 갯수  -->
+										<span><c:out value="${board.likeCount}"/></span>
+									</div> --%>
+									<div class="info-member">
+										<span class="span-bold">등록 날짜 :</span>
+										<!-- 작성 날짜  -->
+										<span><c:out value="${board.boardRegisterDate}"/></span>
+									</div>
+								</div>
 								<hr>
 								<div class="board-info-box">
 								<form action="${pageContext.request.contextPath}/adminBannerRegisterOk.admin" method="post" enctype="multipart/form-data">
@@ -67,14 +89,14 @@
 										</div>
 										<label class="banner-img">
 											<img src="${pageContext.request.contextPath}/static/img/admin/default_banner.png" class="banner">
-											<input type="file" name="banner" style="display:none;">
+											<!-- <input type="file" name="banner" style="display:none;"> -->
 										</label>
 									</div>
-									<div class="member-info-box">
+									<!-- <div class="member-info-box">
 										<div class="button-box">
 											<button type="submit" id="regist-button">등록</button>
 										</div>
-									</div>	
+									</div> -->	
 								</form>
 							</div>
 						</section>

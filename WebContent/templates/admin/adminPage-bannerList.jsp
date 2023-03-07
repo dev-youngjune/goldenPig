@@ -133,7 +133,11 @@
 											<!-- 배너 번호 -->
 											<td class="bannerId"><c:out value="${banner.bannerId}"/></td>
 											<!-- 이미지 이름 -->
-											<td><c:out value="${banner.bannerOriginalName}"/></td>
+											<td>
+												<a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerDetail.admin?bannerId=${banner.bannerId}'">
+													<c:out value="${banner.bannerOriginalName}"/>
+												</a>	
+											</td>
 											<!-- 이미지 상태 ex) 사용 중 미사용 -->
 											<td class="use">사용 중지</td>
 											<td><c:out value="${banner.bannerRegisterDate}"/></td>

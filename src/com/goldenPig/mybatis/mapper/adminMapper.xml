@@ -118,6 +118,12 @@
 		limit #{startRow}, #{rowCount}
 	</select>
 	
+	<!-- 관리자 배너 상세보기 -->
+	<select id="adminbannerDetail" parameterType="long" resultType="bannerVO">
+		select banner_id, banner_system_name, banner_original_name, DATE_FORMAT(banner_register_date, '%Y-%m-%d') AS banner_register_date, banner_status
+		from tbl_banner
+	</select>
+	
 	<!-- 관리자 배너 등록 -->
 	<insert id="adminBannerInsert" parameterType="bannerVO">
 		insert into tbl_banner(banner_system_name, banner_original_name)

@@ -24,6 +24,9 @@ public class AdminFrontController extends HttpServlet {
 			
 		}else if(target.equals("/adminBannerList")) {
 			result = new AdminBannerListController().execute(req, resp);
+			
+		}else if(target.equals("/adminBannerDetail")) {
+			result = new AdminBannerDetailController().execute(req, resp);
 		
 		}else if(target.equals("/adminBannerRegister")) {
 			result = new AdminBannerRegisterController().execute(req, resp);

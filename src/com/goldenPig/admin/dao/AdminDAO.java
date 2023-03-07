@@ -107,6 +107,11 @@ public class AdminDAO {
 		return sqlSession.selectList("admin.adminBannerSelectAll", pageMap);
 	}
 	
+//	관리자 배너 상세보기
+	public BannerVO adminbannerDetail(Long bannerId) {
+		return sqlSession.selectOne("admin.adminbannerDetail", bannerId);
+	}
+	
 //	관리자 배너 등록
 	public void adminBannerInsert(BannerVO bannerVO) {
 		sqlSession.insert("admin.adminBannerInsert", bannerVO);
