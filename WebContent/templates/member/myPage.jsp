@@ -311,9 +311,6 @@
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
 
-/* 카운트 셀렉트 */
-const $jsonSide = ''
-
 
 
 /* 모달 창 --------------------------------------------------------------- */

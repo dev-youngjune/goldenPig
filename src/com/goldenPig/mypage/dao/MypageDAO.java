@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.answer.domain.SavingAnswerVO;
+import com.goldenPig.board.domain.BoardVO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 import com.goldenPig.mypage.domain.MoneyDTO;
@@ -64,6 +65,11 @@ public class MypageDAO {
 //	질문 목록 
 	public List<QuestionDTO> selectQuestions(Long memberId) {
 		return sqlSession.selectList("mypage.selectQuestions", memberId);
+	}
+	
+//	질문 목록 카운트
+	public Long questionCount(Long memberId) {
+		return sqlSession.selectOne("mypage.questionCount",memberId);
 	}
 	
 //	답변 목록

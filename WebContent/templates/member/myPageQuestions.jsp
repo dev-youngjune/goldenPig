@@ -125,9 +125,9 @@
 							<main class="profile_main">
 								<div class="profile_mian_div">
 								
-							<%-- 		<c:choose>
-									<c:when test='${empty questionList.boardTitle}'>
-								 --%>
+								<c:choose>
+									<c:when test='${questionsListCount == 0}'>
+								 
 										<!-- 목록에 없을 때 나올 곳 -->
 										<div class="no_main">
 											<div class="no_main_div">
@@ -136,17 +136,17 @@
 												</div>
 											</div>
 										</div>
-									<%-- </c:when>
+									</c:when>
 									<c:otherwise>	
 									
-									<c:forEach var="questionList" items="${questionList}"> --%>
+									<c:forEach var="questionList" items="${questionList}">
 									 	<div class="">
 										<!-- 목록이 있을때 나올 곳 -->
 											<article class="article_">
 												<div class="card-main">
 													<header class="card-header">
 														<h1 class="card-header-title">
-															<span class="text-primary">Q.<c:out value="${questionList.boardTitle}"/></span>
+															<span class="text-primary">Q. ${questionList.boardTitle}</span>
 														</h1>
 														<div class="flex-justify-between">
 															<div class="flex-items-center">
@@ -155,24 +155,24 @@
 																		<img src="">
 																	</a>
 																	<div class="user-name">
-																		<span class="name"><c:out value="${questionList.memberNickname}"/></span>
+																		<span class="name">${questionList.memberNickName}</span>
 																	</div>
 																</div>
-																<span class="card-header-register-date"><c:out value="${questionList.boardRegisterDate}"/></span>
+																<span class="card-header-register-date">${questionList.boardRegisterDate}</span>
 															</div>
 														</div>
 													</header>
 													<div class="card-content">
 														<div class="editor-content">
-															<p><c:out value="${questionList.boardContent}"/></p>
+															<p>${questionList.boardContent}</p>
 														</div>
 													</div>  
 												</div>
 											</article>
 										</div>
-								<%-- 	</c:forEach>
+									</c:forEach>
 									</c:otherwise>	
-									</c:choose> --%>
+									</c:choose>
 									
 								</div>
 							</main>
@@ -185,4 +185,5 @@
 	</div>
 	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </html>
