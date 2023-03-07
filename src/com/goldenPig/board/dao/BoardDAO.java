@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.board.domain.BoardDTO;
 import com.goldenPig.board.domain.BoardReplyDTO;
+import com.goldenPig.boardFree.domain.BoardFreeDTO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
@@ -123,9 +124,9 @@ public class BoardDAO {
 		return sqlSession.selectOne("board.getMemberVO",memberId);
 	}
 	
-	public List<BoardDTO> selectAllImgsByBoardId(Long boardId) {
-		return sqlSession.selectList("boardImg.selectAllByBoardId", boardId);
-	}
+//	public List<BoardDTO> selectAllImgsByBoardId(Long boardId) {
+//		return sqlSession.selectList("boardImg.selectAllByBoardId", boardId);
+//	}
 	
 //	게시글 상세보기
 	public BoardDTO selectOneByBoardId(Long boardId) {
@@ -139,6 +140,11 @@ public class BoardDAO {
 	
 	public List<BoardReplyDTO> selectAllRepliesByBoardId(Long boardId) {
 		return sqlSession.selectList("board.selectAllRepliesByBoardId", boardId);
+	}
+	
+//	각 게시글 이미지 가져오기
+	public List<BoardDTO> selectAllImgsByBoardId(Long boardId) {
+		return sqlSession.selectList("boardImg.selectAllByBoardId", boardId);
 	}
 }
 	

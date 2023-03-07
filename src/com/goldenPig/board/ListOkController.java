@@ -75,7 +75,7 @@ public class ListOkController implements Action {
 		
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
-		int startRow = (page-1) * rowCount + 1;
+		int startRow = (page-1) * rowCount;
 		
 		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
 		int startPage = endPage - (pageCount - 1);
@@ -92,9 +92,12 @@ public class ListOkController implements Action {
 		pageMap.put("tags", tags);
 		
 		boardList = boardDAO.selectAll(pageMap);
+		boardDAO.selectAllImgsByBoardId(1L);
 		System.out.println(boardList);
 		
 //		JSONObject jsonObj = new JSONObject(mypageDTO);
+		
+		boardList.stream().forEach(board -> board.setBoardRegisterDate(cutDate(board.getBoardRegisterDate())));
 		
 		boardList.stream().map(board -> new JSONObject(board)).forEach(boardJsons::put);
 		
@@ -124,13 +127,13 @@ public class ListOkController implements Action {
 		req.setAttribute("tag", tag);
 	}
 	
-	public String cutDate(String date) {
+	protected String cutDate(String date) {
 		String result = null;
 		result = date.replaceAll(date.substring(date.length()-3), "");
 		return result;
 	}
 	
-	public void paging(HttpServletRequest req) {
+	protected void paging(HttpServletRequest req) {
 		BoardDAO boardDAO = new BoardDAO();
 		JSONArray jsons = new JSONArray();
 		

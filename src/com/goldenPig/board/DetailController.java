@@ -14,12 +14,12 @@ public class DetailController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		Long boardId = Long.parseLong(req.getParameter("boardId"));
 		
+		String contextPath = req.getContextPath();
+		result.setPath(contextPath + "/boardDetailOk.board?boardId=" + boardId);
+		result.setRedirect(REDIRECT);
 		
-		String boardId = req.getParameter("boardId");
-		req.setAttribute("boardId", boardId);
-		result.setPath("/templates/board/board_detail.jsp?boardId="+ boardId);
-		result.setRedirect(FORWORD);
 		return result;
 	}
 
