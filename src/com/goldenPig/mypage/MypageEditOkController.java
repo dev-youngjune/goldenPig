@@ -21,8 +21,11 @@ public class MypageEditOkController implements Action {
 		MemberVO memberVO = new MemberVO();
 		MoneyVO moneyVO = new MoneyVO();
 		
+		
+		
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
-		memberVO = mypageDAO.select(memberId);
+		
+		
 		boolean isUpdateNickName = memberVO.getMemberNickName() != req.getParameter("newNickName") && !(req.getParameter("newNickName") == "" || req.getParameter("newNickName") == null);
 												//	기존의 닉네임 값과 newNickName 값이 다르면 업데이트 해라 	// 빈문자열이거나 널값이라면  false => update가 아니다!
 //		boolean isUpdateImgName= memberVO.getMemberImgName() != req.getParameter() 

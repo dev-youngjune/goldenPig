@@ -24,21 +24,23 @@ public class QusetionsListOkController implements Action {
 		QuestionDTO questionDTO = new QuestionDTO();
 		MypageDTO mypageDTO = new MypageDTO();
 		
-//		Long user = (Long)req.getSession().getAttribute("memberId");
+//		Long memberId = (Long)req.getSession().getAttribute("memberId");
 		
-		final Long USER = 1L;
 		
-		Long memberId = (Long)req.getSession().getAttribute("memberId");
-		JSONObject mypageJSON = new JSONObject(mypageDAO.selectSide(memberId));
-
+		Long memberId = 1L;	
+		req.getSession().setAttribute("memberId", 1L);
+		
 //		---------------------------------------------
 //		마이페이지 왼쪽 사이드 조회 
-		req.setAttribute("memberSide", mypageJSON.toString());
+		req.setAttribute("memberSide", mypageDAO.selectSide(memberId));
 		
+//		질문리스트 카운트
+		req.setAttribute("questionsListCount", mypageDAO.questionCount(memberId));
+		
+//		질문 리스트 조회 
 		System.out.println("들어옴");
-//		req.setAttribute("questionList", mypageDAO.selectQuestions(USER));
-		req.setAttribute("questionList", new JSONObject(mypageDAO.selectQuestions(USER)).toString());
-		
+		req.setAttribute("questionList", mypageDAO.selectQuestions(memberId));
+//		req.setAttribute("questionList", new JSONObject(mypageDAO.selectQuestions(memberId)).toString());
 		
 		
 		

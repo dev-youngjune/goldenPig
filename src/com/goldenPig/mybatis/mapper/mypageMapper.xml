@@ -8,8 +8,8 @@
 	
 	<!--  마이페이지 사이드 조회  -->
 	<select id="selectSide" parameterType="Long" resultType="mypageDTO">
-		SELECT member_id, member_nickname, member_img_name, member_img_path, saving_write_count, answer_write_count, board_like_count_total, answer_like_count_total, favorite_total
-		FROM view_mypage_side where member_id= #{memberId}
+		select member_id, member_nickname, member_img_name, member_img_path, member_greeting, saving_write_count, answer_write_count, board_like_count_total, answer_like_count_total, favorite_total
+		from view_mypage_side where member_id= #{memberId}
 	</select> 
 	
 	
@@ -22,7 +22,7 @@
 	<!-- 모달 프로필 조회 -->
 	<select id="selectModalProfile" parameterType="Long" resultType="moneyDTO">
 		select member_nickname, member_img_name, member_img_path, member_greeting, money_amount, money_target, money_register_date, money_expiry_date
-		from view_profile_modal where member_id =#{memberId)}
+		from view_profile_modal where member_id =#{memberId}
 	</select>	
 	
 	<!-- 모달 프로필 이미지 삭제  -->
@@ -50,16 +50,23 @@
 		from view_qusetion_list where member_id = #{memberId}
 	</select>
 	
-	<!-- 답변 리스트 조회 -->
-	<select id="selectAnswers" parameterType="Long" resultType="savinganswerVO">
-		select answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
-		from tbl_saving_answer where member_id = #{memberId};
+	<!-- 질문 조회 카운트 -->
+	<select id="questionCount" parameterType="long"  resultType="long">
+		select member_id, count(board_id) from tbl_board_saving where member_id = #{memberId} group by board_id
 	</select>
+	
+	<!-- 답변 리스트 조회 -->
+	<select id="selectAnswers" parameterType="long" resultType="savinganswerVO">
+		select answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
+		from tbl_saving_answer where member_id = #{memberId}
+	</select>
+	
+	<!-- 질문 조회 카운트 -->
 
 	<!-- 관심 질문 리스트 조회  -->
-	<select id="selectScraps" parameterType="Long" resultType="scrapDTO">
-		SELECT favoriting_member_id, favoriting_member_nickname, board_id, saving_member_id, saving_member_nickname, board_title, board_content, board_register_date, member_img
-		FROM favorite_boards where favoriting_member_id = #{memberId}
+	<select id="selectScraps" parameterType="long" resultType="scrapDTO">
+		select favoriting_member_id, favoriting_member_nickname, board_id, saving_member_id, saving_member_nickname, board_title, board_content, board_register_date, member_img
+		from favorite_boards where favoriting_member_id = #{memberId}
 	</select>
 	
 </mapper>
