@@ -16,6 +16,7 @@ import com.goldenPig.member.dao.MemberDAO;
 import com.goldenPig.member.domain.MemberVO;
 
 public class AdminMemberModifyController implements Action{
+// 유저 수정페이지
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		// TODO Auto-generated method stub

@@ -33,7 +33,7 @@ public class AdminMemberListController implements Action {
 //		String[] types = null;
 		
 		int page = temp == null || temp.equals("null") ? 1 : Integer.parseInt(temp);
-		
+		System.out.println("page: "+page);
 //		모든 회원의 수
 		Long total = adminDAO.getTotalMember();
 		
@@ -56,7 +56,9 @@ public class AdminMemberListController implements Action {
 //		sort = sort == null ? "recent" : sort;
 		
 		pageMap.put("rowCount", rowCount);
+		System.out.println(rowCount);
 		pageMap.put("startRow", startRow);
+		System.err.println(startRow);
 //		pageMap.put("sort", sort);
 		
 //		adminDAO.selectAll().stream().map(member -> new JSONObject(member)).forEach(jsons::put);

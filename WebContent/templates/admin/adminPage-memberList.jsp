@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,6 +87,30 @@
 						</div>
 					</section><!-- 폼태그 -->
 					
+					
+					<section id="content-wrap">
+		                <ul></ul>
+		                <div id="paging-wrap">
+		                	<c:if test="${prev}">
+			                    <a href="javascript:location.href='${pageContext.request.contextPath}/getMemberList.admin?page=${startPage - 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/prev.png" width="15px"></a>
+		                	</c:if>
+		                    <c:forEach var="i" begin="${startPage}" end="${endPage}">
+		                    	<c:choose>
+		                    		<c:when test="${i eq page}">
+					                    <a href="javascript:void(0)" class="paging paging-checked"><c:out value="${i}"/></a>
+		                    		</c:when>
+		                    		<c:otherwise>
+					                    <a href="javascript:location.href='${pageContext.request.contextPath}/getMemberList.admin?page=${i}'" class="paging"><c:out value="${i}"/></a>
+		                    		</c:otherwise>
+		                    	</c:choose>
+		                    </c:forEach>
+		                    <c:if test="${next}">
+		                    	<a href="javascript:location.href='${pageContext.request.contextPath}/getMemberList.admin?page=${endPage + 1}'" class="paging paging-move"><img src="${pageContext.request.contextPath}/static/images/next.png" width="15px"></a>
+		                    </c:if>
+		                    <div></div>
+		                </div>
+	            	</section>
+				<%-- 	
 					<!-- 페이지 버튼 -->
 					<div class="page-button-box-layout">
 						<div class="page-button-box">
@@ -127,7 +152,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- 페이지 버튼 끝 -->
+					<!-- 페이지 버튼 끝 --> --%>
 				</div>
 			</div>
 		</div>
