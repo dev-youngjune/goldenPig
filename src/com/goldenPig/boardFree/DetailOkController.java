@@ -51,8 +51,10 @@ public class DetailOkController implements Action {
 		JSONArray replyJsons = new JSONArray();
 		JSONObject dtoJson = new JSONObject(dto);
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		
 		memberId = memberId == null ? 1L : memberId;
 		System.out.println("memberId : "+ memberId);
+		
 		MemberVO memberVO = memberDAO.select(memberId);
 		String memberVOJson = new JSONObject(memberVO).toString();
 		
