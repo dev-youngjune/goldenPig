@@ -20,13 +20,13 @@
 				</header>
 				<div class="box">
 					<div class="box-row">
-						<form action="${pageContext.request.contextPath}/boardDetail.board">
-							<div class="profile-image-box">
+						<form id="answer_form" action="${pageContext.request.contextPath}/boardDetail.board">
+				<%-- 			<div class="profile-image-box">
 								<div class="profile-image">
 										<div class="file-image-path"></div>
-<%-- 										<div>
+ 										<div>
 											<img alt="" src="${pageContext.request.contextPath}/static/img/member/${boardInfo.memberImgPath}">
-										</div> --%>
+										</div> 
 								</div>
 <!--  								<div class="profile-image-editor">
 									<label for="image">
@@ -53,7 +53,7 @@
 									<span style="display: inline-block; margin-top: 19px; width: 100%; text-align: center;">이전</span>
 								</a>
 								<input type="submit" value="제출하기">
-							</div>
+							</div> --%>
 						</form>
 					</div>
 				</div>
@@ -63,5 +63,8 @@
 <jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	let boardInfo = ${boardInfo};
+</script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_answer.js"></script>
 </html>
