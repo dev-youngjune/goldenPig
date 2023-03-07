@@ -3,6 +3,12 @@
 <mapper namespace="boardSavingImg">
 	<select id="select" parameterType="long" resultType="boardSavingImgVO">
 		select board_img_id, board_img_name, board_img_system_name, board_id
-		from tbl_board_saving_img where board_id = #{boardId}
+		from tbl_board_free_img where board_id = #{boardId}
+	</select>
+	
+	<select id="selectAllByBoardId" parameterType="long" resultType="boardDTO">
+		select board_img_system_name
+		from tbl_board_saving_img
+		where board_id = #{boardId}
 	</select>
 </mapper>

@@ -18,4 +18,9 @@ public class BoardSavingImgDAO {
 	public List<BoardSavingImgVO> select(Long boardId) {
 		return sqlSession.selectList("boardSavingImg.select", boardId);
 	}
+	
+//	첨부파일 추가
+	public void insert(BoardSavingImgVO imgVO) {
+		sqlSession.insert("file.insert", imgVO);
+	}
 }
