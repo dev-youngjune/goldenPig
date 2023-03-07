@@ -46,7 +46,7 @@
 		select notice_id, notice_title, notice_content,
 		DATE_FORMAT(notice_register_date, '%Y-%m-%d') AS notice_register_date,
 		DATE_FORMAT(notice_update_date, '%Y-%m-%d') AS notice_update_date from
-		tbl_notice
+		tbl_notice order by notice_id desc
 		limit #{startRow}, #{rowCount}
 	</select>
 
@@ -152,6 +152,7 @@
 	</delete>
 
 	<!-- 관리자 회원 정보 수정 -->
+	<!-- 회원 정보 수정 -->
 	<update id="memberInfoChange" parameterType="memberVO">
 		update tbl_member
 		set member_email = #{memberEmail}, member_phonenumber =
@@ -165,8 +166,15 @@
 		select banner_id, banner_system_name, banner_original_name,
 		DATE_FORMAT(banner_register_date, '%Y-%m-%d') AS banner_register_date,
 		banner_status
-		from tbl_banner
+		from tbl_banner order by banner_id desc
 		limit #{startRow}, #{rowCount}
+	</select>
+
+	<!-- 관리자 배너 상세보기 -->
+	<select id="adminBannerSelect" parameterType="long" resultType="bannerVO">
+		select banner_id, banner_system_name, banner_original_name, DATE_FORMAT(banner_register_date, '%Y-%m-%d') AS banner_register_date, banner_status
+		from tbl_banner
+		where banner_id = #{bannerId}
 	</select>
 
 	<!-- 관리자 배너 등록 -->

@@ -25,7 +25,7 @@ public class AdminFreeBoardListController implements Action {
 
 		int page = temp == null ? 1 : Integer.parseInt(temp);
 
-		Long total = adminDAO.getTotalSaving();
+		Long total = adminDAO.getTotalFree();
 
 //		한 페이지에 출력되는 게시글의 개수
 		int rowCount = 10;
