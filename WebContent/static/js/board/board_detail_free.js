@@ -7,7 +7,7 @@ function showReplyList() {
 	boardInfo = JSON.parse(boardInfo);
 	replyDTOs = JSON.parse(replyDTOs);
 	memberVO = JSON.parse(memberVO);
-	
+
 	/*const $ul = $("#content div ul");*/
 	const $header = $("#card-header");
 	const $card = $("#card-content");
@@ -24,7 +24,8 @@ function showReplyList() {
 							<div class="user-frofile">
 								<a class="user-img">
 									<!-- <span class=img></span> -->
-									<img src="` + ${contextPath} + '/static/upload/${boardInfo.memberImgPath}' || '${contextPath}/static/img/admin/user_icon.png' + `" alt="">
+									<img src="`;
+	text += `${boardInfo.memberImgPath == null ? 'https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg' : contextPath + '/static/upload/' + boardInfo.memberImgPath}">
 								</a>
 								<div class="user-name">
 									<span class="name">${boardInfo.memberNickname}</span>
@@ -97,7 +98,7 @@ function showReplyList() {
 				<div class="comment-list-padding-left">
 					<div class="comment-list-flex-justify-between">`;
 
-			text += `
+		text += `
 						<div class="comment-list-user-info-flex">
 							<div class="comment-user-image">
 								<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
@@ -126,7 +127,7 @@ function showReplyList() {
 	});
 
 	$replyLists.append(text);
-	
-	
+
+
 	/*$ul.append(text);*/
 }
