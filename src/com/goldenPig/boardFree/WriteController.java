@@ -8,16 +8,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.goldenPig.Action;
 import com.goldenPig.Result;
+import com.goldenPig.boardFree.dao.BoardFreeDAO;
 
 public class WriteController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		
 		result.setPath("templates/board/board_write_free.jsp");
-		req.setAttribute("board", "free");
 		result.setRedirect(FORWORD);
 		return result;
 	}
-
+	
 }

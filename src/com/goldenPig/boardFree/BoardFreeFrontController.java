@@ -35,14 +35,6 @@ public class BoardFreeFrontController extends HttpServlet{
 				System.out.println("2. " + target);
 				result = new WriteOkController().execute(req, resp);
 				break;
-			case "/boardAnswer.boardFree":
-				System.out.println("2. " + target);
-				result = new AnswerController().execute(req, resp);
-				break;
-			case "/boardAnswerOk.boardFree":
-				System.out.println("2. " + target);
-				result = new AnswerOkController().execute(req, resp);
-				break;
 			case "/boardDetail.boardFree":
 				System.out.println("2. " + target);
 				result = new DetailController().execute(req, resp);

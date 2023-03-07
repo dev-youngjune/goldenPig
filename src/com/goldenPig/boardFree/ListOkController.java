@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -60,7 +59,7 @@ public class ListOkController implements Action {
 		String tag = req.getParameter("tag");
 		String keyword = req.getParameter("keyword");
 		String temp = req.getParameter("page"); 
-		int rowCount = Integer.parseInt(req.getParameter("rowCount") == null ? "5" : req.getParameter("rowCount"));
+		int rowCount = Integer.parseInt((req.getParameter("rowCount") == null || req.getParameter("rowCount") == "") ? "5" : req.getParameter("rowCount"));
 		String[] tags = null;
 		
 		tags = tag == null || tag.equals("null") ? null : tag.split("&");
@@ -68,7 +67,7 @@ public class ListOkController implements Action {
 		
 		searchMap.put("keyword", keyword);
 		searchMap.put("tags", tags);
-		
+		System.out.println(rowCount);
 		Long total = boardFreeDAO.getTotal(searchMap);
 		
 //		한 페이지에 출력되는 게시글의 개수
@@ -76,7 +75,7 @@ public class ListOkController implements Action {
 		
 //		한 페이지에서 나오는 페이지 버튼의 개수
 		int pageCount = 5;
-		int startRow = (page-1) * rowCount + 1;
+		int startRow = (page-1) * rowCount;
 		
 		int endPage = (int)(Math.ceil(page / (double)pageCount) * pageCount);
 		int startPage = endPage - (pageCount - 1);
@@ -93,8 +92,11 @@ public class ListOkController implements Action {
 		pageMap.put("tags", tags);
 		
 		boardList = boardFreeDAO.selectAll(pageMap);
-		
+		boardFreeDAO.selectAllImgsByBoardId(1L);
 //		JSONObject jsonObj = new JSONObject(mypageDTO);
+		boardList.stream().forEach(board -> board.setBoardRegisterDate(cutDate(board.getBoardRegisterDate())));
+//		boardList.stream().forEach(board -> board.setBoardImgSystemName();
+		
 		
 		boardList.stream().map(board -> new JSONObject(board)).forEach(boardJsons::put);
 		

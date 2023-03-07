@@ -68,11 +68,11 @@
 													</div>
 													<div class="user_info_box">
 														<div class="gray_box">
-															<div class="gray_box_title">닉네임</div>
+															<div class="gray_box_title">${modalSelect.memberNickName}</div>
 															<div class="gray_box_description">
 																<div>
 																	<div class="div_relative">
-																		<input type="text" name="newNickname" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
+																		<input type="text" name="newNickName" placeholder="최소 3자에서 최대 16자까지 입력할 수 있어요" maxlength="16" class="enroll_Input">
 																		<span class="available_length nickname_length"></span>
 																		<div class="description">
 																			<img src= "${pageContext.request.contextPath}/static/img/member/alert_.png" class="info_alet icons">
@@ -101,7 +101,7 @@
 															<div class="gray_box">
 																<div class=gray_box_title>인사말</div>					
 																<div class="enroll_Textarea_Wrapper">
-																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="newGreeting"></textarea>
+																	<textarea placeholder="최대 60자까지 입력할 수 있어요." class="enroll_Textarea" maxlength="60" name="newGreeting">${modalSelect.memberGreeting}</textarea>
 																	<span class="available_length hi_length">(0 / 60자)</span>
 																</div>
 																<div class="gray_color">
@@ -167,8 +167,7 @@
 										<div class="aside_user_nickname">
 											<span>${memberSide.memberNickName}</span>
 										</div>
-										<p id="hihorse">열심히 활동하는 세심한 곽두철입니다. 
-										여러분들 반가워요!</p>
+										<p id="hihorse">${memberSide.memberGreeting}</p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
 												<h5>나의활동</h5>
@@ -225,7 +224,7 @@
 												
 												<div class="profile_Card_Content">
 												<c:choose>
-													<c:when test='${memberMoney.moneyAmount == 0}'>
+													<c:when test='${empty money.moneyAmount}'>
 														<div class="profile_Card_Content_noItem">
 															<div class="profile_Card_Content_noItem_Inner">
 																<img src="">
@@ -237,7 +236,7 @@
 														<ul class="stepperList">
 															<li>
 																<div class="ripple"></div>
-																<div class="text-font-base-medium">목표 금액 <c:out value='${memberMoney.moneyAmount}'/>만원!!</div>
+																<div class="text-font-base-medium">목표 금액 <c:out value='${money.moneyAmount}'/>만원!!</div>
 															</li>
 														</ul>
 													</c:otherwise>	
@@ -249,7 +248,7 @@
 													<h4 class="profile_Card_Title">현재 금액</h4>
 													<div class="profile_Card_Content">
 													<c:choose>
-														<c:when test='${memberMoney.moneyTarget  == 0}'>
+														<c:when test='${empty money.moneyTarget}'>
 														<div class="profile_Card_Content_noItem">
 															<div class="profile_Card_Content_noItem_Inner">
 																<img src="">
@@ -261,7 +260,7 @@
 														<ul class="stepperList">
 															<li>
 																<div class="ripple"></div>
-																<div class="text-font-base-medium">현재 금액 <c:out value='${memberMoney.moneyTarget}'/>만원!!</div>
+																<div class="text-font-base-medium">현재 금액 <c:out value='${money.moneyTarget}'/>만원!!</div>
 															</li>
 														</ul>
 														</c:otherwise>
@@ -273,7 +272,7 @@
 													<h4 class="profile_Card_Title">목표기간</h4>
 													<div class="profile_Card_Content">
 													<c:choose>
-													<c:when test='${empty memberMoney.moneyExpiryDate}'>
+													<c:when test='${empty money.moneyExpiryDate}'>
 														<div class="profile_Card_Content_noItem">
 															<div class="profile_Card_Content_noItem_Inner">
 																<img src="">
@@ -285,7 +284,7 @@
 														<ul class="stepperList">
 															<li>
 																<div class="ripple"></div>
-																<div class="text-font-base-medium">	<c:out value='${memberMoney.moneyRegisterDate}'/> ~ <c:out value='${memberMoney.moneyExpiryDate}'/>	 </div>
+																<div class="text-font-base-medium">	<c:out value='${money.moneyRegisterDate}'/> ~ <c:out value='${money.moneyExpiryDate}'/>	 </div>
 															</li>
 														</ul>
 													</c:otherwise>	

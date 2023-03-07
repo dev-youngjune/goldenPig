@@ -11,7 +11,7 @@
 		<typeAlias type="com.goldenPig.answer.domain.FavoriteVO" alias="favoriteVO"/>
 		<typeAlias type="com.goldenPig.answer.domain.SavingAnswerVO" alias="savingAnswerVO"/>
 		<typeAlias type="com.goldenPig.answer.domain.SavingAnswerLikeVO" alias="savingAnswerLikeVO"/>
-		<typeAlias type="com.goldenPig.answer.domain.SavingAnswerReplyVO" alias="savingAnswerReplyVO"/>
+		<!-- <typeAlias type="com.goldenPig.answer.domain.SavingAnswerReplyVO" alias="savingAnswerReplyVO"/> -->
 		<typeAlias type="com.goldenPig.banner.domain.BannerVO" alias="bannerVO"/>
 		<typeAlias type="com.goldenPig.board.domain.BoardVO" alias="boardVO"/>
 		<typeAlias type="com.goldenPig.board.domain.BoardDTO" alias="boardDTO"/>
@@ -22,6 +22,7 @@
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeVO" alias="boardFreeVO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeDTO" alias="boardFreeDTO"/>
 		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeImgVO" alias="boardFreeImgVO"/>
+		<typeAlias type="com.goldenPig.boardFree.domain.BoardFreeReplyDTO" alias="boardFreeReplyDTO"/>
 		<typeAlias type="com.goldenPig.main.domain.MainDTO" alias="mainDTO"/>
 		<typeAlias type="com.goldenPig.member.domain.MemberVO" alias="memberVO"/>
 		<typeAlias type="com.goldenPig.mypage.domain.MoneyDTO" alias="moneyDTO"/>
@@ -30,6 +31,8 @@
 		<typeAlias type="com.goldenPig.mypage.domain.MypageDTO" alias="mypageDTO"/>
 		<typeAlias type="com.goldenPig.reply.domain.ReplyVO" alias="replyVO"/>
 		<typeAlias type="com.goldenPig.saving.domain.SavingVO" alias="savingVO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.QuestionDTO" alias="questionDTO"/>
+		<typeAlias type="com.goldenPig.mypage.domain.ScrapDTO" alias="scrapDTO"/>
 	</typeAliases>
 		
 	<environments default="mysql">

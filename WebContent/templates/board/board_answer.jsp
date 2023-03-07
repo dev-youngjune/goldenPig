@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,19 +23,22 @@
 						<form action="${pageContext.request.contextPath}/boardDetail.board">
 							<div class="profile-image-box">
 								<div class="profile-image">
-									<div class="file-image-path"></div>
+										<div class="file-image-path"></div>
+<%-- 										<div>
+											<img alt="" src="${pageContext.request.contextPath}/static/img/member/${boardInfo.memberImgPath}">
+										</div> --%>
 								</div>
-								<div class="profile-image-editor">
+<!--  								<div class="profile-image-editor">
 									<label for="image">
 										<div class="profile-edit-button">프로필 사진 수정</div>
 									</label>
 									<input type="file" id="image" style="display: none;">
-								</div>
+								</div>  -->
 							</div>
 							<div class="user-info-box">
 								<div class="gray-box">
 									<div class="gray-title">이름</div>
-									<div class="gray-box-description">정지영</div>
+									<div class="gray-box-description">${boardInfo.memberNickName}</div>
 								</div>
 								<div class="gray-box margin-top">
 									<div class="gray-title">답변글</div>

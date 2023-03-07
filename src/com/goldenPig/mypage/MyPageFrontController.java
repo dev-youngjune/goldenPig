@@ -19,18 +19,11 @@ public class MyPageFrontController extends HttpServlet {
 		Result result = null;
 		System.out.println("1." + target);
 		
-		
-//			컨트롤러를 통해 마이 페이지로 데이터를 전송
-//		if(target.equals("/mypage")) {
-//			System.out.println("22." + target);
-//			result = new Result();
-//			result.setPath("/templates/member/myPage.jsp");
 			
 //			컨트롤러를 통해 마이 페이지로 데이터를 전송
 		if(target.equals("/mypageOk")) {
 			System.out.println("2." + target);
 			result = new MyPageOkController().execute(req, resp);
-			
 			
 			
 //			마이 페이지 수정완료 컨트롤러
@@ -40,37 +33,22 @@ public class MyPageFrontController extends HttpServlet {
 //
 			
 //			질문 목록의 데이터를 전송
-		}else if(target.equals("/questionOk")) {
+		}else if(target.equals("/questionListOk")) {
 			System.out.println("4." + target);
-			result = new QusetionsOkController().execute(req, resp);
+			result = new QusetionsListOkController().execute(req, resp);
 			
-//			질문 목록으로 이동 
-		}else if(target.equals("/questions")) {
-			System.out.println("5." + target);
-			result = new Result();	
-			result.setPath(req.getContextPath() + "/templates/member/myPageQuestions.jsp");
 			
 //			답변 목록의 데이터를 전송
 		}else if(target.equals("/answersOk")) {
-			System.out.println("6." + target);
+			System.out.println("5." + target);
 			result = new AnswersOkController().execute(req, resp);
 			
-//			답변 목록으로 이동
-		}else if(target.equals("/answers")) {
-			System.out.println("7." + target);
-			result = new Result();	
-			result.setPath(req.getContextPath() + "/templates/member/myPageAnswers.jsp");
-			
-//			관심 질문 목록의 데이터를 전송
-		}else if(target.equals("/scrapOk")) {
-			System.out.println("8." + target);
-			result = new ScrapOkController().execute(req, resp);
 			
 //			관심 질문 목록으로 이동 
-		}else if(target.equals("/scraps")) {
-			System.out.println("9." + target);
-			result = new Result();	
-			result.setPath(req.getContextPath() + "/templates/member/myPageScraps.jsp");
+		}else if(target.equals("/scrapsOk")) {
+			System.out.println("6." + target);
+			result = new ScrapListOkController().execute(req, resp);
+
 			
 		}else {
 			System.out.println("0. " + target);

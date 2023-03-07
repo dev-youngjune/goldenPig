@@ -21,37 +21,49 @@ public class MypageEditOkController implements Action {
 		MemberVO memberVO = new MemberVO();
 		MoneyVO moneyVO = new MoneyVO();
 		
-		Object reqNickname = req.getAttribute("newNickname");
-		String nickname = (String) reqNickname;
+		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		memberVO = mypageDAO.select(memberId);
+		boolean isUpdateNickName = memberVO.getMemberNickName() != req.getParameter("newNickName") && !(req.getParameter("newNickName") == "" || req.getParameter("newNickName") == null);
+												//	기존의 닉네임 값과 newNickName 값이 다르면 업데이트 해라 	// 빈문자열이거나 널값이라면  false => update가 아니다!
+//		boolean isUpdateImgName= memberVO.getMemberImgName() != req.getParameter() 
+		boolean isUpdateGreeting = (memberVO.getMemberGreeting() != req.getParameter("newGreeting") || memberVO.getMemberGreeting() == null) && !(req.getParameter("newGreeting") == "" || req.getParameter("newGreeting") == null);
+//									memberVO에서 실제로 있는 이미 들어가 있는 값이 새로운 값과 같지 않거나 			기존 값이 null인 경우  true 					가져온 값이 빈 문자열이거나 널값이라면  false => update가 아니다!						
 		
-		
-		
-		memberVO.setMemberNickName(req.getParameter("newNickname"));
-		memberVO.setMemberGreeting(req.getParameter("newGreeting"));
-		
-//		moneyVO.setMoneyTarget(req.getParameter("newMoneyTarget"));
-//		
-//		moneyVO.setMoneyAmount(req.getParameter("newMoneyAmount"));
-//		moneyVO.setMoneyRegisterDate(req.getParameter("newMoneyRegister"));
-//		moneyVO.setMoneyExpiryDate(req.getParameter("newMoneyExpiry"));
-		
+		boolean isUpdateMoney = (Long.parseLong(moneyVO.getMoneyTarget() +"") != Long.parseLong(req.getParameter("newMoneyTarget"))  || ((Long)Long.parseLong(moneyVO.getMoneyTarget() + "") == null) && !(req.getParameter("newMoneyTarget") == "" || req.getParameter("newMoneyTarget") == null)); 
+		boolean isInsertMoney = !((Long)Long.parseLong(moneyVO.getMoneyTarget() + "") == null) && !(req.getParameter("newMoneyTarget") == "" || req.getParameter("newMoneyTarget") == null);		
 		
 		
 //		모달프로필 멤버 정보 수정
-		mypageDAO.updateModalProfile(memberVO);
+		if(isUpdateNickName || isUpdateGreeting) {
+			memberVO.setMemberNickName(req.getParameter("newNickname"));
+			memberVO.setMemberGreeting(req.getParameter("newGreeting"));
+			mypageDAO.updateModalProfile(memberVO);
+		}
 		
+		if(isUpdateMoney) {
+		moneyVO.setMoneyTarget(Integer.parseInt(req.getParameter("newMoneyTarget")));
+		moneyVO.setMoneyAmount(Integer.parseInt(req.getParameter("newMoneyAmount")));
+		moneyVO.setMoneyRegisterDate(req.getParameter("newMoneyRegister"));
+		moneyVO.setMoneyExpiryDate(req.getParameter("newMoneyExpiry"));
 		
 //		모달프로필 저축 목표 수정 
 		mypageDAO.updateModalMoney(moneyVO);
 		
+		} else if(isInsertMoney) {
+//			mypageDAO.insertMoney
+		}
+		
+
+		
+
 		
 		
 		
 		
 		
 		
-		result.setPath("");
-		result.setRedirect(false);
+		result.setPath(req.getContextPath() + "/mypageOK.mypage");
+		result.setRedirect(REDIRECT);
 		return result;
 	}
 

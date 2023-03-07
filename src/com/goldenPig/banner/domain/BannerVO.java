@@ -1,11 +1,12 @@
 package com.goldenPig.banner.domain;
 
 public class BannerVO {
-	Long bannerId;
-	String bannerSystemName;
-	String bannerOriginalName;
-	String bannerRegisterDate;
-	int bannerStatus;
+
+	private Long bannerId;
+	private String bannerSystemName;
+	private String bannerOriginalName;
+	private String bannerRegisterDate;
+	private Long bannerStatus;
 
 	public BannerVO() {;}
 
@@ -41,11 +42,11 @@ public class BannerVO {
 		this.bannerRegisterDate = bannerRegisterDate;
 	}
 
-	public int getBannerStatus() {
+	public Long getBannerStatus() {
 		return bannerStatus;
 	}
 
-	public void setBannerStatus(int bannerStatus) {
+	public void setBannerStatus(Long bannerStatus) {
 		this.bannerStatus = bannerStatus;
 	}
 

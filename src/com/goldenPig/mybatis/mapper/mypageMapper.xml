@@ -5,16 +5,11 @@
 <mapper namespace="mypage">
 
 	<!-- id => 메소드 이름이 -->
-	<!-- 회원 정보 조회 -->
-	<select id="select" parameterType="long" resultType="memberVO">
-		select member_email, member_password, member_name, member_nickname, member_phonenumber, member_birth,  member_id
-		from tbl_member where member_id = #{memberId}
-	</select>
 	
 	<!--  마이페이지 사이드 조회  -->
 	<select id="selectSide" parameterType="Long" resultType="mypageDTO">
-		SELECT member_id, member_nickname, member_img_name, member_img_path, member_greeting, saving_write_count, answer_write_count, board_id, saving_like_count, answer_like_count, favorite_total
-		FROM view_mypage_asdie_total where member_id = #{memberId};
+		SELECT member_id, member_nickname, member_img_name, member_img_path, saving_write_count, answer_write_count, board_like_count_total, answer_like_count_total, favorite_total
+		FROM view_mypage_side where member_id= #{memberId}
 	</select> 
 	
 	
@@ -26,40 +21,46 @@
 	
 	<!-- 모달 프로필 조회 -->
 	<select id="selectModalProfile" parameterType="Long" resultType="moneyDTO">
-		SELECT member_nickname, member_img_name, member_img_path, member_greeting, money_amount, money_target, money_register_date, money_expiry_date
-		FROM view_profile_modal where member_id =#{memberId)}
+		select member_nickname, member_img_name, member_img_path, member_greeting, money_amount, money_target, money_register_date, money_expiry_date
+		from view_profile_modal where member_id =#{memberId)}
 	</select>	
+	
+	<!-- 모달 프로필 이미지 삭제  -->
+	
+	<!-- 모달 프로필 이미지 추가 -->
+		
 		
 	<!-- 모달 프로필 멤버 정보 수정  -->
 	<update id="updateModalProfile" parameterType="memberVO">
-		UPDATE tbl_member
-		SET member_email=#{memberEmail}, member_password=#{memberPassword}, member_name=#{memberName}, member_nickname=#{memberNickName}, member_birth=#{memberBirth}, member_img_name=#{memberImgName}, member_img_path=#{memberImgPath}, member_greeting=#{memberGreeting}
-		WHERE member_id=#{memberId}
+		update tbl_member
+		set member_email=#{memberEmail}, member_password=#{memberPassword}, member_name=#{memberName}, member_nickname=#{memberNickName}, member_birth=#{memberBirth}, member_img_name=#{memberImgName}, member_img_path=#{memberImgPath}, member_greeting=#{memberGreeting}
+		where member_id=#{memberId}
 	</update>
 	
 	<!-- 모달 프로필 저축 목표 수정 -->	
 	<update id="updateModalMoney" parameterType="moneyVO">
-		UPDATE tbl_money
-		SET money_amount=#{moneyAmount}, money_target=#{moneyTarget}, money_register_date=#{moneyRegisterDate}, money_expiry_date=#{moneyExpiryDate}
-		WHERE member_id=#{memberId};
+		update tbl_money
+		set money_amount=#{moneyAmount}, money_target=#{moneyTarget}, money_register_date=#{moneyRegisterDate}, money_expiry_date=#{moneyExpiryDate}
+		where member_id=#{memberId};
 	</update>
 
 	<!-- 질문 리스트 조회 -->
-	<select id="selectQuestions" parameterType="long" resultType="boardVO">
-		SELECT board_id, member_id, board_title, board_content, board_register_date, board_update_date, board_read_count
-		FROM tbl_board_saving where member_id = #{memberId}
+ 	<select id="selectQuestions" parameterType="long" resultType="questionDTO">
+		select board_id, member_id, board_title, board_content, board_register_date, member_nickname, member_img_path
+		from view_qusetion_list where member_id = #{memberId}
 	</select>
 	
 	<!-- 답변 리스트 조회 -->
-	<select id="selectAnswers" parameterType="Long" resultType="savingAnswerVO">
-		SELECT answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
-		FROM tbl_saving_answer where member_id = #{memberId};
+	<select id="selectAnswers" parameterType="Long" resultType="savinganswerVO">
+		select answer_id, board_id, member_id, answer_title, answer_content, answer_register_date, answer_update_date
+		from tbl_saving_answer where member_id = #{memberId};
 	</select>
-	
+
 	<!-- 관심 질문 리스트 조회  -->
-<!-- 	<select id="" parameterType="" resultType="">
-		
-	</select> -->
+	<select id="selectScraps" parameterType="Long" resultType="scrapDTO">
+		SELECT favoriting_member_id, favoriting_member_nickname, board_id, saving_member_id, saving_member_nickname, board_title, board_content, board_register_date, member_img
+		FROM favorite_boards where favoriting_member_id = #{memberId}
+	</select>
 	
 </mapper>
 

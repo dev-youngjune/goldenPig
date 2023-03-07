@@ -5,12 +5,13 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.answer.domain.SavingAnswerVO;
-import com.goldenPig.board.domain.BoardVO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 import com.goldenPig.mypage.domain.MoneyDTO;
 import com.goldenPig.mypage.domain.MoneyVO;
 import com.goldenPig.mypage.domain.MypageDTO;
+import com.goldenPig.mypage.domain.QuestionDTO;
+import com.goldenPig.mypage.domain.ScrapDTO;
 
 public class MypageDAO {
 	public SqlSession sqlSession;
@@ -40,6 +41,16 @@ public class MypageDAO {
 		return sqlSession.selectOne("mypage.selectProfile",memberId);
 	}
 	
+//	모달 프로필 이미지 삭제
+	public void deleteImg() {
+		
+	}
+	
+//	모달 프로필 이미지 추가 
+	public void insertImg() {
+		
+	}
+	
 //	모달 프로필 멤버 정보 수정 
 	public void updateModalProfile(MemberVO memberVO) {
 		sqlSession.update("mypage.updateModalProfile", memberVO);
@@ -51,7 +62,7 @@ public class MypageDAO {
 	}
 	
 //	질문 목록 
-	public List<BoardVO> selectQuestions(Long memberId) {
+	public List<QuestionDTO> selectQuestions(Long memberId) {
 		return sqlSession.selectList("mypage.selectQuestions", memberId);
 	}
 	
@@ -61,8 +72,8 @@ public class MypageDAO {
 	}
 	
 //	관심 질문 목록
-	public void selectScraps() {
-		
+	public List<ScrapDTO> selectScraps(Long memberId) {
+		return sqlSession.selectList("mypage.selectScraps", memberId);
 	}
 	
 }
