@@ -5,7 +5,7 @@ showReplyList();
 function showReplyList(){
 /*	boards = JSON.parse(boards);*/
 	boardInfo = JSON.parse(boardInfo);
-	const $ul = $("#content div ul");
+	/*const $ul = $("#content div ul");*/
 	const $header = $("#card-header");
 	const $card = $("#card-content");
 	const $buttons = $("#iconButtons");

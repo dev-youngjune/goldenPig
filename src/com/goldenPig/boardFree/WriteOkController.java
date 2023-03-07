@@ -14,7 +14,6 @@ import com.goldenPig.Result;
 import com.goldenPig.boardFree.dao.BoardFreeDAO;
 import com.goldenPig.boardFree.dao.BoardFreeImgDAO;
 import com.goldenPig.boardFree.domain.BoardFreeImgVO;
-import com.goldenPig.boardFree.domain.BoardFreeVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
