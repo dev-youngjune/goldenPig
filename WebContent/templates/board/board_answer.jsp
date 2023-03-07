@@ -24,9 +24,9 @@
 							<div class="profile-image-box">
 								<div class="profile-image">
 										<div class="file-image-path"></div>
-<%-- 										<div>
+ 										<div>
 											<img alt="" src="${pageContext.request.contextPath}/static/img/member/${boardInfo.memberImgPath}">
-										</div> --%>
+										</div> 
 								</div>
 <!--  								<div class="profile-image-editor">
 									<label for="image">

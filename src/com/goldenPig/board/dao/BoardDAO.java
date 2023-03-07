@@ -6,6 +6,8 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.board.domain.BoardDTO;
+import com.goldenPig.boardFree.domain.BoardFreeDTO;
+import com.goldenPig.boardFree.domain.BoardFreeReplyDTO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
@@ -121,17 +123,22 @@ public class BoardDAO {
 		return sqlSession.selectOne("board.getMemberVO",memberId);
 	}
 	
-/*<select id="answerImgPath">
-	select member_img_path
-	from tbl_member
-</select>
-<select id="answerNickname">
-	select member_nickname
-	from tbl_member
-</select>
-<select id="answerContent">
-	select answer_content
-	from tbl_saving_answer
-</select>*/
+	public List<BoardFreeDTO> selectAllImgsByBoardId(Long boardId) {
+		return sqlSession.selectList("boardFreeImg.selectAllByBoardId", boardId);
+	}
+	
+//	게시글 상세보기
+	public BoardFreeDTO selectOneByBoardId(Long boardId) {
+		return sqlSession.selectOne("boardFree.selectOneByBoardId", boardId);
+	}
+	
+//	현재 시퀀스 조회
+	public Long getCurrentSequence() {
+		return sqlSession.selectOne("boardFree.getCurrentSequence");
+	}
+	
+	public List<BoardFreeReplyDTO> selectAllRepliesByBoardId(Long boardId) {
+		return sqlSession.selectList("boardFree.selectAllRepliesByBoardId", boardId);
+	}
 }
 	
