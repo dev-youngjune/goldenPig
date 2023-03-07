@@ -25,7 +25,8 @@ input, button, span{
 			<div>
 				<div id="secession_board">
 					<header>
-						<img alt="" src="${pageContext.request.contextPath}/static/img/account/logo.png">
+						<img src="${pageContext.request.contextPath}/static/img/admin/logo_icon.png" class="logo-img"> 
+							<img class="a_headerLogo" src="${pageContext.request.contextPath}/static/img/header/logo_title_icon.png">
 					</header>
 					<div id="withdrawal_select">
 						<h1 style="position: relative">

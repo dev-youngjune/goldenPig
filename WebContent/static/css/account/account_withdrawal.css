@@ -54,7 +54,8 @@ header{
 	position: absolute;
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    top: -68px;
+   	top: -95px;
+    left: -20px;
 }
 #withdrawal_select{
 	height: 100%;
@@ -157,6 +158,15 @@ footer{
     width: 100%;
 }
 
+.logo-img {
+	filter: invert(75%) sepia(74%) saturate(1021%) hue-rotate(356deg) brightness(104%) contrast(110%);
+	width: 55px;
+	padding-top: 4px;
+}
 
+.a_headerLogo {
+	width: 100px;
+    margin-left: 5px;
+}
 
 
