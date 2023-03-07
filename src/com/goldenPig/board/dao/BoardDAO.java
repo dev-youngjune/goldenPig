@@ -6,8 +6,8 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.board.domain.BoardDTO;
-import com.goldenPig.boardFree.domain.BoardFreeDTO;
-import com.goldenPig.boardFree.domain.BoardFreeReplyDTO;
+import com.goldenPig.board.domain.BoardDTO;
+import com.goldenPig.board.domain.BoardReplyDTO;
 import com.goldenPig.member.domain.MemberVO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
@@ -123,22 +123,22 @@ public class BoardDAO {
 		return sqlSession.selectOne("board.getMemberVO",memberId);
 	}
 	
-	public List<BoardFreeDTO> selectAllImgsByBoardId(Long boardId) {
-		return sqlSession.selectList("boardFreeImg.selectAllByBoardId", boardId);
+	public List<BoardDTO> selectAllImgsByBoardId(Long boardId) {
+		return sqlSession.selectList("boardImg.selectAllByBoardId", boardId);
 	}
 	
 //	게시글 상세보기
-	public BoardFreeDTO selectOneByBoardId(Long boardId) {
-		return sqlSession.selectOne("boardFree.selectOneByBoardId", boardId);
+	public BoardDTO selectOneByBoardId(Long boardId) {
+		return sqlSession.selectOne("board.selectOneByBoardId", boardId);
 	}
 	
 //	현재 시퀀스 조회
 	public Long getCurrentSequence() {
-		return sqlSession.selectOne("boardFree.getCurrentSequence");
+		return sqlSession.selectOne("board.getCurrentSequence");
 	}
 	
-	public List<BoardFreeReplyDTO> selectAllRepliesByBoardId(Long boardId) {
-		return sqlSession.selectList("boardFree.selectAllRepliesByBoardId", boardId);
+	public List<BoardReplyDTO> selectAllRepliesByBoardId(Long boardId) {
+		return sqlSession.selectList("board.selectAllRepliesByBoardId", boardId);
 	}
 }
 	

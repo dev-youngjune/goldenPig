@@ -58,3 +58,51 @@ $file.on("change", function(e) {
 		}
 	};
 });
+
+
+
+const $form = $("#answer_form");
+
+let text = "";
+	text += `		
+							<div class="profile-image-box">
+								<div class="profile-image">
+										<div class="file-image-path"></div>
+ 										<div>
+											<img alt="" src="${contextPath}/static/img/member/${boardInfo.memberImgPath}">
+										</div> 
+								</div>
+<!--  								<div class="profile-image-editor">
+									<label for="image">
+										<div class="profile-edit-button">프로필 사진 수정</div>
+									</label>
+									<input type="file" id="image" style="display: none;">
+								</div>  -->
+							</div>
+							<div class="user-info-box">
+								<div class="gray-box">
+									<div class="gray-title">이름</div>
+									<div class="gray-box-description">${boardInfo.memberNickName}</div>
+								</div>
+								<div class="gray-box margin-top">
+									<div class="gray-title">답변글</div>
+									<div class="gray-textarea-box">
+										<textarea maxlength="59" placeholder="최대 60자까지 입력할 수 있어요."></textarea>
+										<span class="available-length">0 / 60자</span>
+									</div>
+								</div>
+							</div>
+							<div class="box-flex-justify-center">
+								<a type="button" href="${contextPath}/boardDetail.board">
+									<span style="display: inline-block; margin-top: 19px; width: 100%; text-align: center;">이전</span>
+								</a>
+								<input type="submit" value="제출하기">
+							</div>
+							
+	`;
+	$form.append(text);
+	
+	text = "";
+	
+							
+	
