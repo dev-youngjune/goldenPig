@@ -71,6 +71,7 @@ public class DetailOkController implements Action {
 		req.setAttribute("memberVO", memberVOJson);
 		
 //		댓글 정보
+		System.out.println("replyDTOs : " + replyJsons.toString());
 		req.setAttribute("replyDTOs", replyJsons.toString());
 	}
 

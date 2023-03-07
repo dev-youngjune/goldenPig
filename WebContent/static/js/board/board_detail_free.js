@@ -2,9 +2,12 @@
 /*게시글 목록*/
 showReplyList();
 
-function showReplyList(){
-/*	boards = JSON.parse(boards);*/
+function showReplyList() {
+	/*	boards = JSON.parse(boards);*/
 	boardInfo = JSON.parse(boardInfo);
+	replyDTOs = JSON.parse(replyDTOs);
+	memberVO = JSON.parse(memberVO);
+	
 	/*const $ul = $("#content div ul");*/
 	const $header = $("#card-header");
 	const $card = $("#card-content");
@@ -21,7 +24,7 @@ function showReplyList(){
 							<div class="user-frofile">
 								<a class="user-img">
 									<!-- <span class=img></span> -->
-									<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+									<img src="` + ${contextPath} + '/static/upload/${boardInfo.memberImgPath}' || '${contextPath}/static/img/admin/user_icon.png' + `" alt="">
 								</a>
 								<div class="user-name">
 									<span class="name">${boardInfo.memberNickname}</span>
@@ -32,16 +35,16 @@ function showReplyList(){
 					</div>
 	`;
 	$header.append(text);
-	
+
 	text = "";
-	
+
 	text += `
 							<div class="editor-content">
 								<p>${boardInfo.boardContent}</p>
 							</div>
 	`;
 	$card.append(text);
-	
+
 	text = "";
 	text += `
 					<div class="star-icon position">
@@ -58,16 +61,16 @@ function showReplyList(){
 					</div>	
 	`;
 	$buttons.append(text);
-	
+
 	text = "";
-	
-	if(!memberId){
+
+	if (!memberId) {
 		text += `
 					<div class="comment-write">
 						<div class="comment-flex-justify-between">
 							<div class="comment-user-info">
 								<div class="comment-user-image">
-									<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+									<img src="${contextPath}/upload/${memberVO.memberImgPath}">
 									<span>${memberVO.memberNickName}</span>
 								</div>
 								<div class="comment-input-button">
@@ -79,31 +82,38 @@ function showReplyList(){
 					<div class="comment-editor">
 						<textarea rows="6" cols="6" placeholder="댓글을 입력해주세요."></textarea>
 					</div>
-		`; 
+		`;
 	}
 	$commentList.append(text);
-	
+
 	text = "";
-	
-	
-	
+
+
+
 	replyDTOs.forEach(replyDTO => {
 		/*src = contextPath + "/static/img/board/noImage.png";*/
-	text += `
+		text += `
 			<div class="comment-list-padding-top">
 				<div class="comment-list-padding-left">
-					<div class="comment-list-flex-justify-between">
+					<div class="comment-list-flex-justify-between">`;
+
+			text += `
 						<div class="comment-list-user-info-flex">
 							<div class="comment-user-image">
 								<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
-								<span>${replyDTO.memberNickname}</span>
+								<span>${replyDTO.memberNickName}</span>
 							</div>
-						</div>
+						</div>`
+		if (replyDTO.memberId == memberVO.memberId) {
+			text += `
 						<div class="comment-list-buttons">
 							<input type="button" value="수정">
 							<span>|</span>
 							<input type="button" value="삭제">
 						</div>
+						`;
+		}
+		text += `
 					</div>
 					<div class="margin-top-left">
 						<p class="comment-list-reply">${replyDTO.replyContent}</p>
@@ -111,9 +121,10 @@ function showReplyList(){
 					<span class="card-header-register-date margin-left-32px">${replyDTO.replyRegisterDate}</span>
 				</div>
 			</div>
+						
 	`;
 	});
-	
+
 	$replyLists.append(text);
 	
 	
