@@ -71,9 +71,9 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<span>${memberSide.memberNickName}</span>
+											<span> ${memberSide.memberNickName} </span>
 										</div>
-										<p id="hihorse">${memberSide.memberGreeting}</p>
+										<p id="hihorse"> ${memberSide.memberGreeting} </p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
 												<h5>나의활동</h5>
@@ -82,14 +82,14 @@
 														<img src="">
 															질문
 													</span>
-													<span>${memberSide.savingWriteCount}개</span>
+													<span>${memberSide.savingWriteCount} 개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 															답변
 													</span>
-													<span>${memberSide.answerWriteCount}개</span>
+													<span>${memberSide.answerWriteCount} 개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
@@ -99,21 +99,21 @@
 														<img src="">
 														질문 좋아요
 													</span>
-													<span>${memberSide.savingLikeCount}회</span>
+													<span>${memberSide.boardLikeCountTotal} 회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														답변 좋아요
 													</span>
-													<span>${memberSide.answerLikeCount}회</span>
+													<span>${memberSide.answerLikeCountTotal} 회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														관심 질문
 													</span>
-													<span>${memberSide.favoriteTotal}회</span>
+													<span>${memberSide.favoriteTotal} 회</span>	
 												</div>
 											</div>
 										</div>
@@ -125,9 +125,9 @@
 							<main class="profile_main">
 								<div class="profile_mian_div">
 								
-									<c:choose>
-									<c:when test='${empty questionList.boardTitle}'>
-								
+								<c:choose>
+									<c:when test='${questionsListCount == 0}'>
+								 
 										<!-- 목록에 없을 때 나올 곳 -->
 										<div class="no_main">
 											<div class="no_main_div">
@@ -146,7 +146,7 @@
 												<div class="card-main">
 													<header class="card-header">
 														<h1 class="card-header-title">
-															<span class="text-primary">Q.<c:out value="${questionList.boardTitle}"/></span>
+															<span class="text-primary">Q. ${questionList.boardTitle}</span>
 														</h1>
 														<div class="flex-justify-between">
 															<div class="flex-items-center">
@@ -155,16 +155,16 @@
 																		<img src="">
 																	</a>
 																	<div class="user-name">
-																		<span class="name"><c:out value="${questionList.memberNickname}"/></span>
+																		<span class="name">${questionList.memberNickName}</span>
 																	</div>
 																</div>
-																<span class="card-header-register-date"><c:out value="${questionList.boardRegisterDate}"/></span>
+																<span class="card-header-register-date">${questionList.boardRegisterDate}</span>
 															</div>
 														</div>
 													</header>
 													<div class="card-content">
 														<div class="editor-content">
-															<p><c:out value="${questionList.boardContent}"/></p>
+															<p>${questionList.boardContent}</p>
 														</div>
 													</div>  
 												</div>
@@ -185,4 +185,5 @@
 	</div>
 	<jsp:include page="../header/footer-main.jsp" flush="false" />
 </body>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </html>
