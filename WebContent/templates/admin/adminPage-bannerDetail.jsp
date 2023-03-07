@@ -59,24 +59,47 @@
 									</div>
 								</div>
 								<hr>
-								<div class="board-info-box">
-								<form action="${pageContext.request.contextPath}/adminBannerRegisterOk.admin" method="post" enctype="multipart/form-data">
-									<div class="banner-img-box">
-										<div class="info-margin-bottom">
-											<span class="info-tag">배너 이미지 파일</span>
-										</div>
-										<label class="banner-img">
-											<img src="${pageContext.request.contextPath}/static/img/admin/default_banner.png" class="banner">
-											<input type="file" name="banner" style="display:none;">
-										</label>
+								<div class="info-table">
+									<div class="info-member">
+										<span class="span-bold">번호 :</span> 
+										<!-- 제목  -->
+										<span><c:out value="${banner.bannerId}"/></span>
 									</div>
-									<div class="member-info-box">
-										<div class="button-box">
-											<button type="submit" id="regist-button">등록</button>
+									<div class="info-member">
+										<span class="span-bold">배너명 :</span>
+										<!-- 작성자 명  -->
+										<span><c:out value="${banner.bannerOriginalName}"/></span>
+									</div>
+									<%-- <div class="info-member">
+										<span class="span-bold">좋아요 :</span>
+										<!-- 좋아요 갯수  -->
+										<span><c:out value="${board.likeCount}"/></span>
+									</div> --%>
+									<div class="info-member">
+										<span class="span-bold">등록 날짜 :</span>
+										<!-- 작성 날짜  -->
+										<span><c:out value="${banner.bannerRegisterDate}"/></span>
+									</div>
+								</div>
+								<hr>
+								<div class="board-info-box" style="margin-bottom: 30px;">
+									<form action="${pageContext.request.contextPath}/adminBannerRegisterOk.admin" method="post" enctype="multipart/form-data">
+										<div class="banner-img-box">
+											<div class="info-margin-bottom">
+												<span class="info-tag">배너 이미지 파일</span>
+											</div>
+											<label class="banner-img">
+												<img src="${pageContext.request.contextPath}/upload/${banner.bannerSystemName}" class="banner">
+												<!-- <input type="file" name="banner" style="display:none;"> -->
+											</label>
 										</div>
-									</div>	
-								</form>
-							</div>
+										<!-- <div class="member-info-box">
+											<div class="button-box">
+												<button type="submit" id="regist-button">등록</button>
+											</div>
+										</div> -->	
+									</form>
+								</div>
 						</section>
 					</div>
 				</div>

@@ -1,6 +1,5 @@
 /*게시글 목록*/
 showList();
-
 function showList(){
 	boards = JSON.parse(boards);
 	const $ul = $("#content div ul");
