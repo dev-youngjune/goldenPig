@@ -8,8 +8,8 @@
 	
 	<!--  마이페이지 사이드 조회  -->
 	<select id="selectSide" parameterType="Long" resultType="mypageDTO">
-		SELECT member_id, member_nickname, member_img_name, member_img_path, saving_write_count, answer_write_count, board_like_count_total, answer_like_count_total, favorite_total
-		FROM view_mypage_side where member_id= #{memberId}
+		select member_id, member_nickname, member_img_name, member_img_path, member_greeting, saving_write_count, answer_write_count, board_like_count_total, answer_like_count_total, favorite_total
+		from view_mypage_side where member_id= #{memberId}
 	</select> 
 	
 	
@@ -58,8 +58,8 @@
 
 	<!-- 관심 질문 리스트 조회  -->
 	<select id="selectScraps" parameterType="Long" resultType="scrapDTO">
-		SELECT favoriting_member_id, favoriting_member_nickname, board_id, saving_member_id, saving_member_nickname, board_title, board_content, board_register_date, member_img
-		FROM favorite_boards where favoriting_member_id = #{memberId}
+		select favoriting_member_id, favoriting_member_nickname, board_id, saving_member_id, saving_member_nickname, board_title, board_content, board_register_date, member_img
+		from favorite_boards where favoriting_member_id = #{memberId}
 	</select>
 	
 </mapper>

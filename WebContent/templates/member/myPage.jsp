@@ -68,7 +68,7 @@
 													</div>
 													<div class="user_info_box">
 														<div class="gray_box">
-															<div class="gray_box_title"><%-- <c:out value="${modalSelect.memberNickName}" /> --%></div>
+															<div class="gray_box_title"> ${modalProfile.memberNickName} </div>
 															<div class="gray_box_description">
 																<div>
 																	<div class="div_relative">
@@ -165,9 +165,9 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<span> 닉네임 </span>
+											<span> ${memberSide.memberNickName} </span>
 										</div>
-										<p id="hihorse"> 인사말 </p>
+										<p id="hihorse"> ${memberSide.memberGreeting} </p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
 												<h5>나의활동</h5>
@@ -176,14 +176,14 @@
 														<img src="">
 															질문
 													</span>
-													<span>개</span>
+													<span>${memberSide.savingWriteCount} 개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 															답변
 													</span>
-													<span>개</span>
+													<span>${memberSide.answerWriteCount} 개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
@@ -193,21 +193,21 @@
 														<img src="">
 														질문 좋아요
 													</span>
-													<span>회</span>
+													<span>${memberSide.boardLikeCountTotal} 회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														답변 좋아요
 													</span>
-													<span>회</span>
+													<span>${memberSide.answerLikeCountTotal} 회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														관심 질문
 													</span>
-													<span>회</span>	
+													<span>${memberSide.favoriteTotal} 회</span>	
 												</div>
 											</div>
 										</div>
@@ -221,66 +221,81 @@
 										<div class="profile_main_body">
 											<div class="profile_Card">
 												<h4 class="profile_Card_Title">목표 금액</h4>
-												
 												<div class="profile_Card_Content">
 												
-														<div class="profile_Card_Content_noItem">
-															<div class="profile_Card_Content_noItem_Inner">
-																<img src="">
-																<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 금액이 없어요</span>
-															</div>
-														</div> 
-														
-														<ul class="stepperList">
-															<li>
-																<div class="ripple"></div>
-																<div class="text-font-base-medium">목표 금액  만원!!</div>
-															</li>
-														</ul>
-														
-													</div>
-												</div>
-												
-												<div class="profile_Card">
-													<h4 class="profile_Card_Title">현재 금액</h4>
-													<div class="profile_Card_Content">
-														<div class="profile_Card_Content_noItem">
-															<div class="profile_Card_Content_noItem_Inner">
-																<img src="">
-																<span class="profile_Card_Content_noItem_Inner_span">등록된 현재 금액이 없어요</span>
-															</div>
+												<c:choose>
+													<c:when test='${empty money.moneyAmount}'>
+													<div class="profile_Card_Content_noItem">
+														<div class="profile_Card_Content_noItem_Inner">
+															<img src="">
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 금액이 없어요</span>
 														</div>
-														
-														<ul class="stepperList">
-															<li>
-																<div class="ripple"></div>
-																<div class="text-font-base-medium">현재 금액 만원!!</div>
-															</li>
-														</ul>
-														
 													</div>
-												</div>
-												
-												<div class="profile_Card">
-													<h4 class="profile_Card_Title">목표기간</h4>
-													<div class="profile_Card_Content">
+													</c:when>
 													
-														<div class="profile_Card_Content_noItem">
-															<div class="profile_Card_Content_noItem_Inner">
-																<img src="">
-																<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 기간이 없어요</span>
-															</div>
-														</div>
-														
-														<ul class="stepperList">
-															<li>
-																<div class="ripple"></div>
-																<div class="text-font-base-medium">	 ~ 	 </div>
-															</li>
-														</ul>
-														
-													</div>
+													<c:otherwise>	
+													<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">목표 금액 ${money.moneyTarget} 원!!</div>
+														</li>
+													</ul>
+													</c:otherwise>	
+												</c:choose>	
 												</div>
+											</div>
+												
+											<div class="profile_Card">
+												<h4 class="profile_Card_Title">현재 금액</h4>
+												<div class="profile_Card_Content">
+												
+												<c:choose>
+													<c:when test='${empty money.moneyTarget}'>
+													<div class="profile_Card_Content_noItem">
+														<div class="profile_Card_Content_noItem_Inner">
+															<img src="">
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 현재 금액이 없어요</span>
+														</div> 
+													</div>
+													</c:when>
+													<c:otherwise> 
+													<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium">현재 금액 ${money.moneyAmount} 원!!</div>
+														</li>
+													</ul>
+													</c:otherwise>
+												</c:choose> 
+												</div>
+											</div>
+											
+											<div class="profile_Card">
+												<h4 class="profile_Card_Title">목표기간</h4>
+												<div class="profile_Card_Content">
+												
+												<c:choose>
+													<c:when test='${empty money.moneyExpiryDate}'>
+													<div class="profile_Card_Content_noItem">
+														<div class="profile_Card_Content_noItem_Inner">
+															<img src="">
+															<span class="profile_Card_Content_noItem_Inner_span">등록된 목표 기간이 없어요</span>
+														</div>
+													</div>
+													</c:when>
+													
+													<c:otherwise>
+													<ul class="stepperList">
+														<li>
+															<div class="ripple"></div>
+															<div class="text-font-base-medium"> ${money.moneyRegisterDate} ~ ${money.moneyExpiryDate} </div>
+														</li>
+													</ul>
+													</c:otherwise>	
+												</c:choose>
+													
+												</div>
+											</div>
 										</div>
 									</div> 
 								</main>					
@@ -295,6 +310,9 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 <script>
+
+/* 카운트 셀렉트 */
+const $jsonSide = ''
 
 
 

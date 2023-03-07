@@ -52,6 +52,7 @@ public class MyPageFrontController extends HttpServlet {
 			
 		}else {
 			System.out.println("0. " + target);
+			System.err.println("cant find path");
 		}
 		
 		if(result != null) {

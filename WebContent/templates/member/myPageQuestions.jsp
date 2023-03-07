@@ -71,9 +71,9 @@
 											</div>
 										</div>
 										<div class="aside_user_nickname">
-											<span>${memberSide.memberNickName}</span>
+											<span> ${memberSide.memberNickName} </span>
 										</div>
-										<p id="hihorse">${memberSide.memberGreeting}</p>
+										<p id="hihorse"> ${memberSide.memberGreeting} </p>
 										<div class="aside_user_body">
 											<div class="aside_user_status">
 												<h5>나의활동</h5>
@@ -82,14 +82,14 @@
 														<img src="">
 															질문
 													</span>
-													<span>${memberSide.savingWriteCount}개</span>
+													<span>${memberSide.savingWriteCount} 개</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 															답변
 													</span>
-													<span>${memberSide.answerWriteCount}개</span>
+													<span>${memberSide.answerWriteCount} 개</span>
 												</div>
 											</div>
 											<div class="aside_user_status">
@@ -99,21 +99,21 @@
 														<img src="">
 														질문 좋아요
 													</span>
-													<span>${memberSide.savingLikeCount}회</span>
+													<span>${memberSide.boardLikeCountTotal} 회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														답변 좋아요
 													</span>
-													<span>${memberSide.answerLikeCount}회</span>
+													<span>${memberSide.answerLikeCountTotal} 회</span>
 												</div>
 												<div class="profile_user_status_item">
 													<span class="profile_user_status_item_span">
 														<img src="">
 														관심 질문
 													</span>
-													<span>${memberSide.favoriteTotal}회</span>
+													<span>${memberSide.favoriteTotal} 회</span>	
 												</div>
 											</div>
 										</div>
