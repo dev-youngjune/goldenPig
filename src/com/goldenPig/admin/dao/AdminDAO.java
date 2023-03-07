@@ -107,6 +107,11 @@ public class AdminDAO {
 		return sqlSession.selectList("admin.adminBannerSelectAll", pageMap);
 	}
 	
+//	관리자 배너 상세보기
+	public BannerVO adminBannerSelect(Long bannerId) {
+		return sqlSession.selectOne("admin.adminBannerSelect", bannerId);
+	}
+	
 //	관리자 배너 등록
 	public void adminBannerInsert(BannerVO bannerVO) {
 		sqlSession.insert("admin.adminBannerInsert", bannerVO);
@@ -119,8 +124,6 @@ public class AdminDAO {
 	
 //	관리자 배너 토글 상태 수정
 	public void adminBannerToggleUpdate(Map<String, Long> toggle) {
-		System.out.println(toggle);
-		
 		sqlSession.update("admin.adminBannerToggleUpdate", toggle);
 	}
 	
@@ -133,5 +136,4 @@ public class AdminDAO {
 	public void changeEmail(Long emailId) {
 		sqlSession.update("email.update", emailId);
 	}
-
 }
