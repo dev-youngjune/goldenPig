@@ -1,135 +1,121 @@
-/**
- * 
- */
- 
-const $starIcon = $(".star-icon");
-const $likeIcons = $(".like-icon");
-const $replyIcons = $(".reply-icon");
-
-
-$starIcon.on("click", function(e) {
-    const $starText = $starIcon.children(".margin-left");
-    
-    if($starIcon.hasClass('background-color')) {
-        $starIcon.removeClass("background-color");
-        $starText.css("color", "#2553E5");
-    } else {
-        $starIcon.addClass("background-color");
-        $starText.css("color", "#ffffff");
-    }
-});
-
-$likeIcons.each((i, likeIcon) => {
-    const $likeIcon = $(likeIcon);
-
-    $likeIcon.on("click", function(e) {
-        
-        const $likeIconSpan = $($likeIcon.children()[1]);
-
-        if($likeIconSpan.hasClass("color-blue")) {
-            $likeIconSpan.removeClass("color-blue");
-        } else {
-            $likeIconSpan.addClass("color-blue");
-        }
-    });
-});
-
-$replyIcons.each((i, replyIcon) => {
-    const $replyIcon = $(replyIcon);
-    var $commentWraps = $($(".comment-wrap")[i]);
-
-    $replyIcon.on("click", function(e) {
-        const $replyIconSpan = $($replyIcon.children()[1]);
-
-        $commentWraps.css("display", "block");
-        if($replyIconSpan.hasClass("color-black")) {
-            $replyIconSpan.removeClass("color-black");
-
-            $commentWraps.each((i, commentWrap) => {
-                const $commentWrap = $(commentWrap);
-
-                $commentWrap.css("display", "none");
-            });
-        } else {
-            $replyIconSpan.addClass("color-black");
-        }
-    });
-});
-
 
 /*게시글 목록*/
 showReplyList();
 
 function showReplyList(){
-	boards = JSON.parse(boards);
+/*	boards = JSON.parse(boards);*/
+	boardInfo = JSON.parse(boardInfo);
 	const $ul = $("#content div ul");
+	const $header = $("#card-header");
+	const $card = $("#card-content");
+	const $buttons = $("#iconButtons");
+	const $commentList = $("#commentList");
+	const $replyLists = $("#commentLists");
 	let text = "";
-	console.log("JS들어옴");
-	boards.forEach(board => {
-		src = contextPath + "/static/img/board/noImage.png";
-		text += `
-			<li>
-				<div class="content-body">
-					<div class="question-card">
-						<article class="card">
-							<div class="card-main">
-								<header class="card-header">
-									<a href="${contextPath}/boardDetailOk.boardFree?boardId=${board.boardId}">
-					                    <div class="profile" style=" display: flex; justify-content: space-between;">
-											<div style="display: inline-block;">
-						                        <h6 class="writer">${board.memberName}</h6>
-						                        <h6 class="boardId">${board.boardId}</h6>
-												<h1 class="card-header-title">${board.boardTitle}</h1>
-											</div>
-					                        <div style="display: inline-block;">
-												<img src="${board.boardImgPath || src}" width="15px">
-											</div>
-					                    </div>
-									</a>
-								</header>
-								<div class="card-content">
-									<div class="card-footer">
-										<div class="flex-justify-between">
-											<div class="flex-items-center">
-												<div class="card-label-icon">
-													<img class="reply" src="${contextPath}/static/img/board/answer.png">
-													<span>${board.boardReplyCount || 0}</span>
-												</div>
-												<div class="card-label-icon">
-													<img class="star" src="${contextPath}/static/img/board/star-icon.png">
-													<span>${board.boardReadCount || 0}</span>
-												</div>
-												<div class="card-label-icon">
-													<img class="heart" src="${contextPath}/static/img/board/heart.png">
-													<span>${board.boardLikeCount || 0}</span>
-												</div>
-											</div>
-											<span class="card-header-infomation">${board.boardRegisterDate}</span>
-										</div>
-									</div>
+	text += `
+					<h1 class="card-header-title">
+						<span class="text-primary">${boardInfo.boardTitle}</span>
+					</h1>
+					<div class="flex-justify-between">
+						<div class="flex-items-center">
+							<div class="user-frofile">
+								<a class="user-img">
+									<!-- <span class=img></span> -->
+									<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+								</a>
+								<div class="user-name">
+									<span class="name">${boardInfo.memberNickname}</span>
 								</div>
 							</div>
-						</article>
+							<span class="card-header-register-date">${boardInfo.boardRegisterDate}</span>
+						</div>
 					</div>
+	`;
+	$header.append(text);
+	
+	text = "";
+	
+	text += `
+							<div class="editor-content">
+								<p>${boardInfo.boardContent}</p>
+							</div>
+	`;
+	$card.append(text);
+	
+	text = "";
+	text += `
+					<div class="star-icon position">
+						<img src="${contextPath}/static/img/board/star-icon.png" class="absolute">
+						<span class="margin-left color-blue star-text">관심질문 <span class="star-count">${boardInfo.boardFavoriteCount || 0}</span></span>
+					</div>
+					<div class="like-icon position">
+						<img src="${contextPath}/static/img/board/like.png" class="absolute">
+						<span class="margin-left like-text">좋아요 <span class="like-count">${boardInfo.boardLikeCount || 0}</span></span>
+					</div>
+					<div class="reply-icon position">
+						<img src="${contextPath}/static/img/board/comment-icon.png" class="absolute">
+						<span class="margin-left comment-text">댓글 <span class="comment-count">${boardInfo.boardReplyCount || 0}</span></span>
+					</div>	
+	`;
+	$buttons.append(text);
+	
+	text = "";
+	
+	if(!memberId){
+		text += `
+					<div class="comment-write">
+						<div class="comment-flex-justify-between">
+							<div class="comment-user-info">
+								<div class="comment-user-image">
+									<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+									<span>${memberVO.memberNickName}</span>
+								</div>
+								<div class="comment-input-button">
+									<input type="button" value="댓글 등록">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="comment-editor">
+						<textarea rows="6" cols="6" placeholder="댓글을 입력해주세요."></textarea>
+					</div>
+		`; 
+	}
+	$commentList.append(text);
+	
+	text = "";
+	
+	
+	
+	replyDTOs.forEach(replyDTO => {
+		/*src = contextPath + "/static/img/board/noImage.png";*/
+	text += `
+			<div class="comment-list-padding-top">
+				<div class="comment-list-padding-left">
+					<div class="comment-list-flex-justify-between">
+						<div class="comment-list-user-info-flex">
+							<div class="comment-user-image">
+								<img src="https://www.a-ha.io/_nuxt/img/default_profile.f2e66ea.svg">
+								<span>${replyDTO.memberNickname}</span>
+							</div>
+						</div>
+						<div class="comment-list-buttons">
+							<input type="button" value="수정">
+							<span>|</span>
+							<input type="button" value="삭제">
+						</div>
+					</div>
+					<div class="margin-top-left">
+						<p class="comment-list-reply">${replyDTO.replyContent}</p>
+					</div>
+					<span class="card-header-register-date margin-left-32px">${replyDTO.replyRegisterDate}</span>
 				</div>
-		    </li>
-			`;
+			</div>
+	`;
 	});
-/*		        <div>
-		            <a href="javascript:location.href='${contextPath}/board/detailOk.board?boardId=${board.boardId}&page=${page}&keyword=${keyword}'">
-		                <section class="content-container">
-		                    <div class="profile">
-		                        <div><img src="${contextPath}/static/images/profile.png" width="15px"></div>
-		                        <h6 class="writer">${board.memberName}</h6>
-		                    </div>
-		                    <h4 class="title">${board.boardTitle}</h4>
-		                    <h6 clss="board-info">
-		                        <span class="read-count">조회 ${board.boardReadCount}</span>
-		                        <span>·</span>
-		                        <span class="date">`+ elapsedTime(board.boardRegisterDate) +`</span>
-		                    </h6>
-		                </section>
-		            </a>
-		        </div>*/
-	$ul.append(text);
+	
+	$replyLists.append(text);
+	
+	
+	/*$ul.append(text);*/
 }

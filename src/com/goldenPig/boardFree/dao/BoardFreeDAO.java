@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.goldenPig.boardFree.domain.BoardFreeDTO;
+import com.goldenPig.boardFree.domain.BoardFreeReplyDTO;
 import com.goldenPig.mybatis.config.MyBatisConfig;
 
 
@@ -83,6 +84,12 @@ public class BoardFreeDAO {
 	public Long getCurrentSequence() {
 		return sqlSession.selectOne("boardFree.getCurrentSequence");
 	}
+	
+	public List<BoardFreeReplyDTO> selectAllRepliesByBoardId(Long boardId) {
+		return sqlSession.selectList("boardFree.selectAllRepliesByBoardId", boardId);
+	}
+
+		
 	
 	
 }

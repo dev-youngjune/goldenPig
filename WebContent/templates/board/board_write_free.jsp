@@ -22,8 +22,8 @@
 										<div class="question-title-container">
 											<div class="question-title">
 												<div class="flex">
-													<span class="text-primary">Q.</span> 
-													<input type="text" class="input-text" name="title" maxlength="79" placeholder="물음표로 끝나는 제목을 입력해보세요.">
+													<span class="text-primary"></span> 
+													<input type="text" class="input-text" name="title" maxlength="79" placeholder="제목을 입력해보세요.">
 													<span class="title-number-check">(0/80자)</span>
 												</div>
 											</div>
@@ -32,7 +32,7 @@
 											<div class="qeusetion-body">
 												<div class="qeustion-content">
 													<div class="question-padding">
-														<textarea name="content" placeholder="연말정산에 질문을 해주세요."></textarea>
+														<textarea name="content" placeholder="자유롭게 글을 써주세요."></textarea>
 														<div class="file-image-wrap">
 															<div class="file-image-path">
 																<span>X</span>
@@ -76,7 +76,7 @@
 									</div>
 								</div>
 								<div class="form-footer">
-									<input type="submit" value="질문 등록">
+									<input type="submit" value="게시글 등록">
 								</div>
 							</form>
 						</div>
