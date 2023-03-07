@@ -125,8 +125,8 @@
 							<main class="profile_main">
 								<div class="profile_mian_div">
 								
-									<c:choose>
-									<c:when test='${empty scrapList.boardTitle}'>
+									<%-- <c:choose>
+									<c:when test='${empty scrapList.boardTitle}'> --%>
 										
 											<!-- 목록에 없을 때 나올 곳 -->
 											<div class="no_main">
@@ -136,10 +136,10 @@
 													</div>
 												</div>
 											</div> 
-									</c:when>
-									<c:otherwise>	
+									<%-- </c:when>
+									<c:otherwise>	 --%>
 										
-									<c:forEach var="scrapList" items="${scrapList}">
+									<%-- <c:forEach var="scrapList" items="${scrapList}"> --%>
 										<!-- 목록이 있을때 나올 곳 -->
 										<article class="article_">
 											<div class="card-main">
@@ -183,9 +183,9 @@
 												</footer>
 											</div>
 										</article>
-										</c:forEach>
+										<%-- </c:forEach>
 										</c:otherwise>	
-										</c:choose>
+										</c:choose> --%>
 								
 								</div>
 							</main>

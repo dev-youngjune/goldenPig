@@ -125,9 +125,9 @@
 							<main class="profile_main">
 								<div class="profile_mian_div">
 								
-									<c:choose>
+							<%-- 		<c:choose>
 									<c:when test='${empty questionList.boardTitle}'>
-								
+								 --%>
 										<!-- 목록에 없을 때 나올 곳 -->
 										<div class="no_main">
 											<div class="no_main_div">
@@ -136,10 +136,10 @@
 												</div>
 											</div>
 										</div>
-									</c:when>
+									<%-- </c:when>
 									<c:otherwise>	
 									
-									<c:forEach var="questionList" items="${questionList}">
+									<c:forEach var="questionList" items="${questionList}"> --%>
 									 	<div class="">
 										<!-- 목록이 있을때 나올 곳 -->
 											<article class="article_">
@@ -170,9 +170,9 @@
 												</div>
 											</article>
 										</div>
-									</c:forEach>
+								<%-- 	</c:forEach>
 									</c:otherwise>	
-									</c:choose>
+									</c:choose> --%>
 									
 								</div>
 							</main>

@@ -40,7 +40,7 @@ public class MyPageOkController implements Action {
 //		mypageDAO.selectMoney(memberId);
 		req.setAttribute("money",new JSONObject(mypageDAO.selectMoney(memberId)).toString());
 		
-		
+		System.out.println("들어옴");
 		
 		
 		
