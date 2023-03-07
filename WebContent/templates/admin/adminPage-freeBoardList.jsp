@@ -61,7 +61,7 @@
 												<input type="checkbox" id="allSelect">
 											</th>
 											<th>No</th>
-											<th>카테고리</th>
+											<!-- <th>카테고리</th> -->
 											<th>게시판 제목</th>
 											<th>작성자 명</th>
 											<th>작성 날짜</th>
@@ -73,7 +73,7 @@
 											<input type="checkbox" name="check">
 										</td>
 										<td class="noticeId"><c:out value="${freeBoard.boardId}"/></td>
-										<td>자유 게시판</td>
+										<!-- <td>자유 게시판</td> -->
 										<td>
 											<a href="javascript:location.href='${pageContext.request.contextPath}/adminFreeBoardDetail.admin?page=${page}&boardId=${freeBoard.boardId}'">
 												<c:out value="${freeBoard.boardTitle}"/>
