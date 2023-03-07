@@ -11,6 +11,7 @@ import com.goldenPig.mypage.domain.MoneyDTO;
 import com.goldenPig.mypage.domain.MoneyVO;
 import com.goldenPig.mypage.domain.MypageDTO;
 import com.goldenPig.mypage.domain.QuestionDTO;
+import com.goldenPig.mypage.domain.ScrapDTO;
 
 public class MypageDAO {
 	public SqlSession sqlSession;
@@ -66,13 +67,13 @@ public class MypageDAO {
 	}
 	
 //	답변 목록
-//	public List<AnswerDTO> selectAnswers(Long memberId) {
-//		return sqlSession.selectList("mypage.selectAnswers", memberId);
-//	}
+	public List<SavingAnswerVO> selectAnswers(Long memberId) {
+		return sqlSession.selectList("mypage.selectAnswers", memberId);
+	}
 	
 //	관심 질문 목록
-//	public List<FavoriteDTO> selectScraps() {
-//		return sqslSession.selectList("mypage.selectScraps", memberId);
-//	}
+	public List<ScrapDTO> selectScraps(Long memberId) {
+		return sqlSession.selectList("mypage.selectScraps", memberId);
+	}
 	
 }

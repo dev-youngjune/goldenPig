@@ -102,12 +102,54 @@
 	</insert>
 	
 	<select id="selectOneByBoardId" parameterType="long" resultType="boardFreeDTO">
-		select f.member_id, f.board_title, f.board_content, f.board_register_date, 
-		f.board_update_date, m.member_nickname
-		from tbl_board_free f
-		left outer join tbl_member m
-		on f.member_id = m.member_id
-		where board_id = #{boardId}
+select b.board_id, b.member_id, b.board_title, b.board_content, b.board_register_date
+			,b.board_update_date, b.member_nickname, c.favorite_count board_favorite_count
+			, c.reply_count board_reply_count, c.like_count board_like_count, b.board_read_count
+		from (
+			select f.board_id, f.member_id, f.board_title, f.board_content, f.board_register_date, 
+			f.board_update_date, m.member_nickname, f.board_read_count
+			from tbl_board_free f
+			left outer join tbl_member m
+			on f.member_id = m.member_id
+		) b left outer join (
+				select f.board_id , f.favorite_count, r.reply_count, l.like_count
+			from (
+				select s.board_id, sum(if(ifnull(f.favorite_id , 0)=0, 0, 1)) favorite_count
+				from tbl_board_saving s left outer join tbl_favorite f 
+				on s.board_id = f.board_id
+				group by board_id
+			) f left outer join (
+				select s.board_id , sum(if(ifnull(r.reply_id, 0)=0, 0, 1)) reply_count
+				from tbl_board_saving s left outer join tbl_board_saving_reply r
+				on s.board_id = r.board_id
+				group by board_id
+			) r
+			on f.board_id = r.board_id
+			left outer join (
+				select s.board_id , sum(if(ifnull(l.board_like_id, 0)=0, 0, 1)) like_count  
+				from tbl_board_saving s left outer join tbl_board_saving_like l
+				on s.board_id = l.board_id
+				group by board_id
+			) l
+			on f.board_id = l.board_id
+			group by board_id
+		) c
+		on b.board_id = c.board_id
+		where b.board_id = #{boardId}
+	</select>
+	
+	<select id="getCurrentSequence" resultType="long">
+		select last_insert_id()
+	</select>
+	
+	<select id="selectAllRepliesByBoardId" parameterType="long" resultType="boardFreeReplyDTO">
+		select m.member_id, m.member_nickname, m.member_img_path
+			,r.reply_id, r.reply_content, r.reply_register_date, r.reply_update_date
+			, r.member_id, r.board_id
+		from tbl_member m
+		join tbl_board_free_reply r 
+		on m.member_id = r.member_id
+		where r.board_id = #{boardId}
 	</select>
 	
 	
