@@ -22,12 +22,16 @@ public class MyPageOkController implements Action {
 		MypageDAO mypageDAO = new MypageDAO();
 		MemberVO memberVO = new MemberVO();
 		MoneyVO moneyVO = new MoneyVO();
-		
+		System.out.println("들어옴1");
 //		Long user = (Long)req.getSession().getAttribute("memberId");
 		
-		Long memberId = (Long)req.getSession().getAttribute("memberId");
+//		Long memberId = (Long)req.getSession().getAttribute("memberId");
+		
+		Long memberId = 1L;	
+		req.getSession().setAttribute("memberId", 1L);
+		
 		JSONObject mypageJSON = new JSONObject(mypageDAO.selectSide(memberId));
-
+		System.out.println("들어옴2");
 //		---------------------------------------------
 //		마이페이지 왼쪽 사이드 조회 
 		req.setAttribute("memberSide", mypageJSON.toString());
@@ -40,11 +44,11 @@ public class MyPageOkController implements Action {
 //		mypageDAO.selectMoney(memberId);
 		req.setAttribute("money",new JSONObject(mypageDAO.selectMoney(memberId)).toString());
 		
-		System.out.println("들어옴");
+		System.out.println("들어옴3");
 		
 		
 		
-		result.setPath(req.getContextPath() + "/templates/member/myPage.jsp");
+		result.setPath("/templates/member/myPage.jsp");
 		result.setRedirect(false);
 		return result;
 	}

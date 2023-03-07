@@ -22,7 +22,7 @@
 	<!-- 모달 프로필 조회 -->
 	<select id="selectModalProfile" parameterType="Long" resultType="moneyDTO">
 		select member_nickname, member_img_name, member_img_path, member_greeting, money_amount, money_target, money_register_date, money_expiry_date
-		from view_profile_modal where member_id =#{memberId)}
+		from view_profile_modal where member_id =#{memberId}
 	</select>	
 	
 	<!-- 모달 프로필 이미지 삭제  -->

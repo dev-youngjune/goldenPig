@@ -23,8 +23,8 @@ public class MemberSMSController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		
-		String api_key = "";
-		String api_secret = "";
+		String api_key = "NCSSJHRC2MJLJCUB";
+		String api_secret = "HPMLM8ZX4IXDEBWLXU0TNB6RFDTJIZZ3";
 	    Message coolsms = new Message(api_key, api_secret);
 		PrintWriter out = resp.getWriter();
 		MemberDAO memberDAO = new MemberDAO();
