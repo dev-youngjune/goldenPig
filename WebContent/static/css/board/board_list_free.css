@@ -193,6 +193,7 @@ div.profile div img {
 
 .paging-num-wrapper {
     text-align: center;
+    min-width: 120px;
 }
 
 .paging-num-wrapper a {
@@ -229,6 +230,10 @@ div.boardHeaderWrapper div{
 
 .paging img {
 	width: 12px;
+}
+
+.upload-img-wrap div {
+	min-height: 43px;
 }
 
 

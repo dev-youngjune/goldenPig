@@ -45,7 +45,7 @@ public class MyPageFrontController extends HttpServlet {
 			
 			
 //			관심 질문 목록으로 이동 
-		}else if(target.equals("/scraps")) {
+		}else if(target.equals("/scrapsOk")) {
 			System.out.println("6." + target);
 			result = new ScrapListOkController().execute(req, resp);
 

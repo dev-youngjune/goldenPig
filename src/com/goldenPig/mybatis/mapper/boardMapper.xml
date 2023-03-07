@@ -88,7 +88,7 @@
 		on m.member_id = s.member_id;
 	</select> -->
 	
-	<select id="answerImgPath" parameterType="long" resultType="string">
+<!-- 	<select id="answerImgPath" parameterType="long" resultType="string">
 		select member_img_path
 		from tbl_member
 		where member_id = #{memberId}
@@ -98,14 +98,13 @@
 		from tbl_member
 	</select>
 	<insert id="answerContent" parameterType="string">
-		INSERT INTO goldenpig.tbl_saving_answer
-		(answer_content)
-		VALUE(#{answerContent})
-	</insert>
+		insert into tbl_saving_answer(answer_content)
+		value(#{answerContent})
+	</insert> -->
 	
 	<select id="getMemberVO" parameterType="long" resultType="memberVO">
 		select member_id, member_nickname, member_img_path
-		from tbl_memeber
+		from tbl_member
 		where member_id = #{memberId}
 	</select>
 </mapper>
