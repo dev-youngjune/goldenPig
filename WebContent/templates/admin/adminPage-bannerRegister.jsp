@@ -44,7 +44,7 @@
 					<div style="margin: 0 auto;width: 70%;">
 						<div class="prev-button-layout">
 							<div>
-								<a href="javascript:location.href='${pageContext.request.contextPath}/adminBannerList.admin'">
+								<a href="">
 									<img src="${pageContext.request.contextPath}/static/img/admin/prev_icon.png" class="prev-icon">
 									<span class="prev-title">리스트로 돌아가기</span>
 								</a>
