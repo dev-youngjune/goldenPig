@@ -41,9 +41,11 @@
 				<div class="container-margin">
 					<!-- 헤더 -->
 					<div class="delete-box-layout">
-<!-- 							<div class="delete-box">
-								<button class="delete-button">선택 게시물 삭제</button>
-							</div> -->
+							<div class="delete-box">
+								<button class="delete-button">
+									선택 게시물 삭제
+								</button>
+							</div>
 					</div>
 					
 					<!-- 내용 섹션 -->
@@ -159,6 +161,29 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+	let contextPath = "${pageContext.request.contextPath}";
+</script>
 <script src="${pageContext.request.contextPath}/static/js/admin/checkbox.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/admin/page.js"></script>
+<script>
+	const $deletebutton = $(".delete-button");
+	
+	$deletebutton.click(function(){
+		$.ajax({
+			url : contextPath + "/adminMemberListDeleteOk.admin"
+			data:
+			success: function(result){
+				
+				if(callback){
+					callback(result);
+					
+				}
+			}
+			
+		});
+		
+		
+	});
+</script>
 </html>

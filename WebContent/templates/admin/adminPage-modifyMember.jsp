@@ -28,7 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="wrap"> 
+		<div class="wrap">
 		
 			<!-- 사이드 바 -->
 			<div id="side-bar">
