@@ -89,6 +89,7 @@ public class BoardFreeDAO {
 		return sqlSession.selectList("boardFree.selectAllRepliesByBoardId", boardId);
 	}
 
+//	로그인한 memberId와 boardId를 이용해 좋아요, 관심 여부
 		
 	
 	

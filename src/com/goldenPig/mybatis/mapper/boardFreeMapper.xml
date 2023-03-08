@@ -102,7 +102,7 @@
 	</insert>
 	
 	<select id="selectOneByBoardId" parameterType="long" resultType="boardFreeDTO">
-select b.board_id, b.member_id, b.board_title, b.board_content, b.board_register_date
+		select b.board_id, b.member_id, b.board_title, b.board_content, b.board_register_date
 			,b.board_update_date, b.member_nickname, c.favorite_count board_favorite_count
 			, c.reply_count board_reply_count, c.like_count board_like_count, b.board_read_count
 		from (

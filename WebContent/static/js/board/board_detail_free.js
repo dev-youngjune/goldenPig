@@ -48,17 +48,17 @@ function showReplyList() {
 
 	text = "";
 	text += `
-					<div class="star-icon position">
+					<div class="star-icon position" style="display: none;">
 						<img src="${contextPath}/static/img/board/star-icon.png" class="absolute">
-						<span class="margin-left color-blue star-text">관심질문 <span class="star-count">${boardInfo.boardFavoriteCount || 0}</span></span>
+						<span id="favoriteButton" class="margin-left color-blue star-text">관심질문 <span class="star-count">${boardInfo.boardFavoriteCount || 0}</span></span>
 					</div>
 					<div class="like-icon position">
 						<img src="${contextPath}/static/img/board/like.png" class="absolute">
-						<span class="margin-left like-text">좋아요 <span class="like-count">${boardInfo.boardLikeCount || 0}</span></span>
+						<span id="likeButton" class="margin-left like-text">좋아요 <span class="like-count">${boardInfo.boardLikeCount || 0}</span></span>
 					</div>
 					<div class="reply-icon position">
 						<img src="${contextPath}/static/img/board/comment-icon.png" class="absolute">
-						<span class="margin-left comment-text">댓글 <span class="comment-count">${boardInfo.boardReplyCount || 0}</span></span>
+						<span id="commentsButton" class="margin-left comment-text">댓글 <span class="comment-count">${boardInfo.boardReplyCount || 0}</span></span>
 					</div>	
 	`;
 	$buttons.append(text);

@@ -126,7 +126,7 @@
 			<!-- ----------------------------- 답변 ----------------------------- -->
 			
 			<c:choose>
-				<c:when test="${board != 'free'}">
+				<c:when test="${boardType != 'free'}">
 					<div class="answer-wrap">
 						<div class="answer-button">
 							<form>
@@ -234,7 +234,10 @@
 						</div>
 					</div>
 				</c:when>
+				
+				<%-- boardType=='free' --%>
 				<c:otherwise></c:otherwise>
+				
 			</c:choose>
 		</div>
 	</div>
@@ -246,6 +249,8 @@
 	let memberVO = `${memberVO}`;
 	let boardInfo = `${boardInfo}`;
 	let memberId = `${empty sessionScope.memberId}`
+	let isBoardFree = `${boardType == 'free'}`
+	console.log(isBoardFree);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_detail_free.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_detail_saving.js"></script>

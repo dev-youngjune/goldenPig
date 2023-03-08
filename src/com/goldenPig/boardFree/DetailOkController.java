@@ -62,7 +62,8 @@ public class DetailOkController implements Action {
 
 		
 //		보드 타입
-		req.setAttribute("board", "free");
+		req.setAttribute("boardType", "free");
+		
 //		board의 게시자 및 게시글 정보
 		System.out.println(dtoJson.toString());
 		req.setAttribute("boardInfo", dtoJson.toString());

@@ -1,7 +1,7 @@
 const $starIcon = $(".star-icon");
 const $likeIcons = $(".like-icon");
 const $replyIcons = $(".reply-icon");
-
+const $isBoardFree = isBoardFree;
 
 $starIcon.on("click", function(e) {
     const $starText = $starIcon.children(".margin-left");
@@ -51,3 +51,38 @@ $replyIcons.each((i, replyIcon) => {
         }
     });
 });
+
+
+
+
+const buttonService = (function(){
+	function favorite(favoriteInfo, callback){
+		$.ajax({
+			url: contextPath + ($isBoardFree ? "/boardFavoriteOk.boardFree" : "/boardFavoriteOk.board"),
+			data: favoriteInfo,
+			success: function(){
+				if(callback){callback();}
+			}
+		})
+	}
+	
+	function like(likeInfo, callback){
+		$.ajax({
+			url: contextPath + ($isBoardFree ? "/boardLikeOk.boardFree" : "/boardLikeOk.board"),
+			data: likeInfo,
+			success: function(){
+				if(callback) {callback();}
+			}
+		})
+	}
+	return {favorite: favorite, like: like};
+/*	function name(data, callback){
+		$.ajax({
+			url: contextPath + "",
+			data: data,
+			success: function(){
+				if(callback){callback();}
+			}
+		})
+	}*/
+})();
