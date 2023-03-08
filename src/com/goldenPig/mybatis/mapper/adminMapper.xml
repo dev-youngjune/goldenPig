@@ -16,6 +16,13 @@
 		#{startRow}, #{rowCount}
 	</select>
 
+<!-- 관리자 리스트 삭제 -->
+	<delete id="adminMemberDelete">
+		delete from
+		tbl_member
+		where member_id = #{memberId};
+	</delete>
+	
 	<!-- 관리자 저축 게시판 페이징 처리 -->
 	<select id="getTotalSaving" resultType="long">
 		select count(board_id)

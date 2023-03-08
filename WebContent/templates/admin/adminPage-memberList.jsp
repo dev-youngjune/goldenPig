@@ -167,12 +167,12 @@
 <script src="${pageContext.request.contextPath}/static/js/admin/checkbox.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/admin/page.js"></script>
 <script>
-	const $deletebutton = $(".delete-button");
+/* 	const $deletebutton = $(".delete-button");
 	
 	$deletebutton.click(function(){
 		$.ajax({
 			url : contextPath + "/adminMemberListDeleteOk.admin"
-			data:
+			data: {}
 			success: function(result){
 				
 				if(callback){
@@ -184,6 +184,45 @@
 		});
 		
 		
+	}); */
+	
+
+	/*체크 된 게시물의 번호 가져오기*/
+	const $checkBoxs = $("input[type=checkbox]");
+	const $deleteButton = $(".delete-button");
+	
+	$deleteButton.on("click", function(e) {
+		let noticeIdArr = [];
+		
+		$checkBoxs.each((i, checkBox) => {
+			if($(checkBox).prop("checked")) {
+				memberIdArr.push($(checkBox).parent().siblings(".memberId").text());
+			} 
+		})
+		if(memberIdArr) {
+			confirm(memberIdArr + "번을 삭제하시겠습니까?");
+		} else {
+			confirm("공지사항 게시글을 선택해주세요.");
+		}
+		console.log(memberIdArr);
+		console.log(contextPath);
+		adminNoticeService.remove(memberIdArr);
 	});
+	
+	const adminListDelete = (function(){
+		function remove(memberIdArr) {
+			$.ajax({
+				traditional: true,
+				url: contextPath + "/adminMemberListDeleteOk.admin",
+				data: {memberIdArr : memberIdArr},
+				success: function() {
+					location.reload();
+				}
+			});
+		};
+		
+		return {remove: remove}
+	})();
+
 </script>
 </html>

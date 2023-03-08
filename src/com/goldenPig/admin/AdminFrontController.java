@@ -18,6 +18,7 @@ public class AdminFrontController extends HttpServlet {
 		String target = uri.replace(contextPath , "").split("\\.")[0];
 		Result result = null;
 		
+		
 //		저축 게시판 목록
 		if(target.equals("/bankList")) {
 			result = new Result();
@@ -94,6 +95,10 @@ public class AdminFrontController extends HttpServlet {
 			
 		}else if(target.equals("/adminNoticeDeleteOk")) {
 			new AdminNoticeDeleteOkController().execute(req, resp);
+
+//		관리자 회원정보 삭제
+		}else if(target.equals("/adminMemberListDeleteOk")) {
+			new AdminMemberListDeleteOkController().execute(req, resp);
 			
 		}else {
 			System.out.println(target);

@@ -26,6 +26,10 @@ public class AdminDAO {
 	public Long getTotalMember() {
 		return sqlSession.selectOne("admin.getTotalMember");
 	}
+//	관리자 리스트 삭제
+	public void adminMemberDelete(Long memberId) {
+		sqlSession.delete("admin.adminMemberDelete", memberId);
+	}
 	
 //	ㄱ관리자 저축 게시글 총 개수
 	public Long getTotalSaving() {

@@ -74,20 +74,23 @@
 										</div>	
 										<form action="">
 											<div class="member-info-tag-box">
-												<span class="info-tag">이메일<c:out value="${memberInfoChange.memberEmail}"/></span>
+												<span class="info-tag">이메일</span>
+													<span><c:out value="${memberInfoChange.memberEmail}"/></span>
 												<!-- 이메일 -->
 												<div class="info">
 													<input type="text" class="member-email" name="memberEmail" value="${memberEmail}">
 												</div>
 											</div>
 											<div class="member-info-tag-box">
-												<span class="info-tag">생년월일<c:out value="${memberInfoChange.memberBirth}"/></span>
+												<span class="info-tag">생년월일</span>
+													<span><c:out value="${memberInfoChange.memberBirth}"/></span>
 												<div class="info">
 													<input type="text" class="member-birth" name="memberBirth" value="${memberBirth}">
 												</div>
 											</div>
 											<div class="member-info-tag-box">
-												<span class="info-tag">핸드폰 번호<c:out value="${memberInfoChange.memberPhoneNumber}"/></span>
+												<span class="info-tag">핸드폰 번호</span>
+													<span><c:out value="${memberInfoChange.memberPhoneNumber}"/></span>
 												<!-- 핸드폰 번호 -->
 												<div class="info">
 													<input type="text" class="member-phone" name="memberPhoneNumber" value="${memberPhoneNumber}">
