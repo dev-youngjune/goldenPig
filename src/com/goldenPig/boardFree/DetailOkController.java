@@ -1,6 +1,8 @@
 package com.goldenPig.boardFree;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -50,19 +52,24 @@ public class DetailOkController implements Action {
 		BoardFreeDTO dto = boardFreeDAO.selectOneByBoardId(boardId);
 		JSONArray replyJsons = new JSONArray();
 		JSONObject dtoJson = new JSONObject(dto);
+//		Map<String, Long> likeInfo = new HashMap<String, Long>();
+		
 		Long memberId = (Long)req.getSession().getAttribute("memberId");
 		
 		memberId = memberId == null ? 1L : memberId;
 		System.out.println("memberId : "+ memberId);
-		
 		MemberVO memberVO = memberDAO.select(memberId);
 		String memberVOJson = new JSONObject(memberVO).toString();
+		
+//		likeInfo.put("memberId", memberId);
+//		likeInfo.put("boardId", boardId);
 		
 		boardFreeDAO.selectAllRepliesByBoardId(boardId).stream().map(reply -> new JSONObject(reply)).forEach(replyJsons::put);
 
 		
 //		보드 타입
-		req.setAttribute("board", "free");
+		req.setAttribute("boardType", "free");
+		
 //		board의 게시자 및 게시글 정보
 		System.out.println(dtoJson.toString());
 		req.setAttribute("boardInfo", dtoJson.toString());
@@ -73,6 +80,9 @@ public class DetailOkController implements Action {
 //		댓글 정보
 		System.out.println("replyDTOs : " + replyJsons.toString());
 		req.setAttribute("replyDTOs", replyJsons.toString());
+		
+//		좋아요 정보
+//		req.setAttribute("likeInfo", new JSONObject(boardFreeDAO.selectOneByBoardIdForLike(likeInfo)).toString());
 	}
 
 }

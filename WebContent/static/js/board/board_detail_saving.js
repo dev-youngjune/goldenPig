@@ -1,6 +1,4 @@
-/**
- * 
- */
+/*
  
 const $starIcon = $(".star-icon");
 	const $likeIcons = $(".like-icon");
@@ -54,4 +52,4 @@ const $starIcon = $(".star-icon");
                 $replyIconSpan.addClass("color-black");
             }
         });
-    });
+    });*/
