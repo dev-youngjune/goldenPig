@@ -51,6 +51,18 @@ public class BoardFreeFrontController extends HttpServlet{
 				System.out.println("2. " + target);
 				result = new ModifyOkController().execute(req, resp);
 				break;
+			case "/boardLikeOk.boardFree":
+				System.out.println("2. " + target);
+				/* result = */new LikeOkController().execute(req, resp);
+				break;
+//			case "/boardFavoriteOk.boardFree":
+//				System.out.println("2. " + target);
+//				result = new FavoriteOkController().execute(req, resp);
+//				break;
+//			case "/boardReplyOk.boardFree":
+//				System.out.println("2. " + target);
+//				result = new ReplyOkController().execute(req, resp);
+//				break;
 			default:
 				System.out.println("3. " + target);
 				System.err.println("cant find path");
@@ -65,6 +77,7 @@ public class BoardFreeFrontController extends HttpServlet{
 			}
 		}else {
 			System.err.println("result == null");
+			System.out.println("is this Ajax?");
 		}
 	}
 	

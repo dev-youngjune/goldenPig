@@ -3,9 +3,9 @@ const $likeIcons = $(".like-icon");
 const $replyIcons = $(".reply-icon");
 
 
+
 $starIcon.on("click", function(e) {
     const $starText = $starIcon.children(".margin-left");
-    
     if($starIcon.hasClass('background-color')) {
         $starIcon.removeClass("background-color");
         $starText.css("color", "#2553E5");
@@ -17,7 +17,6 @@ $starIcon.on("click", function(e) {
 
 $likeIcons.each((i, likeIcon) => {
     const $likeIcon = $(likeIcon);
-
     $likeIcon.on("click", function(e) {
         
         const $likeIconSpan = $($likeIcon.children()[1]);
@@ -51,3 +50,6 @@ $replyIcons.each((i, replyIcon) => {
         }
     });
 });
+
+
+

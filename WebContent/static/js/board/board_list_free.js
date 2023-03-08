@@ -33,15 +33,15 @@ function showList(){
 											<div class="flex-items-center">
 												<div class="card-label-icon">
 													<img class="reply" src="${contextPath}/static/img/board/answer.png">
-													<span>${board.boardReplyCount || 0}</span>
+													<span id="reply-count">${board.boardReplyCount || 0}</span>
 												</div>
 												<div class="card-label-icon">
 													<img class="star" src="${contextPath}/static/img/board/star-icon.png">
-													<span>${board.boardReadCount || 0}</span>
+													<span id="read-count">${board.boardReadCount || 0}</span>
 												</div>
 												<div class="card-label-icon">
 													<img class="heart" src="${contextPath}/static/img/board/heart.png">
-													<span>${board.boardLikeCount || 0}</span>
+													<span id="like-count">${board.boardLikeCount || 0}</span>
 												</div>
 											</div>
 											<span class="card-header-infomation">${board.boardRegisterDate}</span>
