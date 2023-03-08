@@ -248,13 +248,20 @@
 	let replyDTOs = `${replyDTOs}`;
 	let memberVO = `${memberVO}`;
 	let boardInfo = `${boardInfo}`;
-	let memberId = `${empty sessionScope.memberId}`
-	let isBoardFree = `${boardType == 'free'}`
-	console.log(isBoardFree);
+	let isLogin = `${!(empty sessionScope.memberId)}`;
+	let memberId = `${sessioScope.memberId}`;
+	let boardId = JSON.parse(boardInfo).boardId;
+	let isBoardFree = `${boardType == 'free'}`;
+	let likeInfo = `${likeInfo}`;
+	console.log("login : " + isLogin);
+	console.log("isFree : " + isBoardFree);
+	console.log("memberId : " + memberId);
+	console.log("boardId : " + boardId);
 </script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_detail_free.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_detail_saving.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/board/board_detail.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/board/board_likeOk_Free.js"></script>
 </html>
 
 

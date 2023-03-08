@@ -53,7 +53,7 @@ public class BoardFreeFrontController extends HttpServlet{
 				break;
 			case "/boardLikeOk.boardFree":
 				System.out.println("2. " + target);
-				result = new LikeOkController().execute(req, resp);
+				/* result = */new LikeOkController().execute(req, resp);
 				break;
 //			case "/boardFavoriteOk.boardFree":
 //				System.out.println("2. " + target);

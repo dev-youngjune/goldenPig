@@ -54,7 +54,7 @@ function showReplyList() {
 					</div>
 					<div class="like-icon position">
 						<img src="${contextPath}/static/img/board/like.png" class="absolute">
-						<span id="likeButton" class="margin-left like-text">좋아요 <span class="like-count">${boardInfo.boardLikeCount || 0}</span></span>
+						<span id="likeButton" class="margin-left ${likeInfo.likeId == null || likeInfo.likeId == '' || likeInfo.likeId == 'null' ? '' : 'color-blue'} like-text">좋아요 <span class="like-count">${boardInfo.boardLikeCount || 0}</span></span>
 					</div>
 					<div class="reply-icon position">
 						<img src="${contextPath}/static/img/board/comment-icon.png" class="absolute">
@@ -65,7 +65,7 @@ function showReplyList() {
 
 	text = "";
 
-	if (!memberId) {
+	if (!isLogin) {
 		text += `
 					<div class="comment-write">
 						<div class="comment-flex-justify-between">

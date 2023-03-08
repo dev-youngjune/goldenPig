@@ -138,6 +138,11 @@
 		where b.board_id = #{boardId}
 	</select>
 	
+<!-- 	<select id="selectOneByBoardIdForLike" parameterType="map">
+		select like_id, member_id, board_id from tbl_board_free_like
+		where board_id = #{boardId} and member_id = #{memberId}
+	</select> -->
+	
 	<select id="getCurrentSequence" resultType="long">
 		select last_insert_id()
 	</select>
